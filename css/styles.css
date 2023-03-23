@@ -1,0 +1,11 @@
+:root {
+  --my-blue-color: rgb(0, 115, 255);
+}
+
+html {
+  background-color: whitesmoke;
+}
+
+.main-title {
+  color: var(--my-blue-color);
+}
