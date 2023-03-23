@@ -1,47 +1,102 @@
 :root {
-  --my-blue-color: rgb(0, 115, 255);
+  --my-text-color: #172B4D;
+  --my-green-color: green;
+  --my-gray-color: #505F79;
 }
 
 html {
-  background-color: whitesmoke;
+  background-color: none;
 }
-
-.main-title {
-  color: var(--my-blue-color);
-}
-
 
 /*
-
 Nav Section
-
+Contains the union and the settings
 */
 
-.nav {
-
+#settings {
+  width: 90vw;
+  height: 20%;
+  display: flex;
+  justify-content: flex-end;
 }
 
-.nav-link {
-
+#settings i {
+  color: black;
+  width: 17.99px;
+  height: 19.62px;
 }
 
-
-
+#union {
+  width: 90vw;
+  display: flex;
+  justify-content: flex-end;
+}
 
 /*
-
 Headline Section
-
 */
+
+.headline {
+  display: flex;
+}
+
+.headline-text {
+  /* background-image: url(../images/Header-llustration-desktop@2x.png); */
+  width: 60vw;
+  min-height: 100vh;
+  padding: auto;
+  display: flex;
+  flex-direction: column;
+  margin: 100px auto 0 auto;
+  
+}
 
 #headline-bg {
-
+  position: absolute;
+  max-width: 100%;
+  min-height: 100%;
+  left: 0px;
+  top: 0px;
 }
 
 .headline h1 {
-
+  color: var(--my-text-color);
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+  text-align: center
 }
 
 .green {
-    
+  color: var(--my-green-color);
+}
+
+.headline h2 {
+  columns: var(--my-text-color);
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+}
+
+.social {
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social a {
+  flex: 1;
+  align-self: center;
+}
+
+.social i {
+  color: var(--my-gray-color);
+  width: 17.99px;
+  height: 19.62px;
 }
