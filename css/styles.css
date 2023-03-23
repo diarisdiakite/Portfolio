@@ -1,11 +1,12 @@
 :root {
-  --my-text-color: #172B4D;
+  --my-text-color: #172B4d;
   --my-green-color: green;
-  --my-gray-color: #505F79;
+  --my-gray-color: #505f79;
 }
 
 html {
   background-color: none;
+  font-family: Inter, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 /*
@@ -15,19 +16,29 @@ Contains the union and the settings
 
 #settings {
   width: 90vw;
-  height: 20%;
+  display: flex;
+}
+
+#settings-date {
+  width: 45vw;
+  display: flex;
+  justify-content: flex-start;
+}
+
+#settings-fa {
+  width: 45vw;
   display: flex;
   justify-content: flex-end;
 }
 
-#settings i {
+#settings-fa i {
   color: black;
-  width: 17.99px;
-  height: 19.62px;
+  width: 20%; /* 2% for large screen */
 }
 
 #union {
   width: 90vw;
+  height: 10vh;
   display: flex;
   justify-content: flex-end;
 }
@@ -44,16 +55,14 @@ Headline Section
   /* background-image: url(../images/Header-llustration-desktop@2x.png); */
   width: 60vw;
   min-height: 100vh;
-  padding: auto;
   display: flex;
   flex-direction: column;
-  margin: 100px auto 0 auto;
-  
+  margin: 1% auto 0 auto;
 }
 
 #headline-bg {
   position: absolute;
-  max-width: 100%;
+  width: 100%;
   min-height: 100%;
   left: 0px;
   top: 0px;
@@ -66,7 +75,7 @@ Headline Section
   font-weight: 700;
   font-size: 40px;
   line-height: 52px;
-  text-align: center
+  text-align: center;
 }
 
 .green {
@@ -87,16 +96,53 @@ Headline Section
   width: 75%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; /* Try to find out how to properly center with flex box*/
+  margin: auto;
 }
 
 .social a {
   flex: 1;
   align-self: center;
+  justify-content: space-around;
 }
 
-.social i {
+.social a i {
   color: var(--my-gray-color);
-  width: 17.99px;
-  height: 19.62px;
+  width: 5%;
+  height: 2%;
+  font-size: x-large;
+}
+
+@media (min-width: 375px) {
+  /*
+  This property is for testing purpose
+  body {
+    background: blue;
+  }
+  */
+  .social {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #settings-fa i {
+    color: black;
+    width: 12%; 
+  }
+}
+
+@media (min-width: 768px) {
+  /*
+  This property is for testing purpose
+  body {
+    background: red;
+  }
+  */
+
+  #settings-fa i {
+    color: black;
+    width: 10%; 
+  }
 }
