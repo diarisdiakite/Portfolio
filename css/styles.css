@@ -70,7 +70,6 @@ Headline Section
 
 .headline h1 {
   color: var(--my-text-color);
-  font-family: 'Inter';
   font-style: normal;
   font-weight: 700;
   font-size: 40px;
@@ -84,7 +83,6 @@ Headline Section
 
 .headline h2 {
   columns: var(--my-text-color);
-  font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
