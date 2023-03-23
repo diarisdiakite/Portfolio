@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Inter');
+
 :root {
-  --my-text-color: #172B4d;
+  --my-text-color: #172b4d;
   --my-green-color: green;
   --my-gray-color: #505f79;
 }
@@ -25,13 +27,13 @@ Contains the union and the settings
   justify-content: flex-start;
 }
 
-#settings-fa {
+.settings-fa {
   width: 45vw;
   display: flex;
   justify-content: flex-end;
 }
 
-#settings-fa i {
+.settings-fa i {
   color: black;
   width: 20%; /* 2% for large screen */
 }
@@ -64,8 +66,6 @@ Headline Section
   position: absolute;
   width: 100%;
   min-height: 100%;
-  left: 0px;
-  top: 0px;
 }
 
 .headline h1 {
@@ -96,7 +96,7 @@ Headline Section
   width: 75%;
   display: flex;
   justify-content: center;
-  align-items: center; /* Try to find out how to properly center with flex box*/
+  align-items: center; /* Try to find out how to properly center with flex box */
   margin: auto;
 }
 
@@ -126,11 +126,12 @@ Headline Section
     justify-content: center;
     align-items: center;
   }
-  
+
   #settings-fa i {
     color: black;
     width: 12%; 
   }
+
 }
 
 @media (min-width: 768px) {
@@ -145,4 +146,5 @@ Headline Section
     color: black;
     width: 10%; 
   }
+
 }
