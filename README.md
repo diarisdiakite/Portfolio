@@ -10,9 +10,19 @@ Database [MongoDB]
 ## Key Features
 [Hello-Microverse] key features are:
 
-[feature-1]
-[feature-2]
-[feature-3]
+``
+[Project-1](Setup and mobile version skeleton)
+[Project-2](Mobile version)
+[Project-3](Contact form)
+[Project-4](Desktop version)
+[Project-5](Application deploy)
+[Project-6](Evaluate accessibility)
+[Project-7](Mobile menu)
+[Project-8](Details modal)
+[Project-9](Validate contact form)
+[Project-10](Preserve data in the browser)
+``
+
 (back to top)
 
 

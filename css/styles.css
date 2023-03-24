@@ -9,3 +9,38 @@ html {
 .main-title {
   color: var(--my-blue-color);
 }
+
+
+/*
+Recent-work section
+Contains The 10 microverse projects
+*/
+.recent-work {
+  display: grid;
+}
+
+.project {
+  display: flex;
+}
+
+/*
+About-myself section
+languages, frameworks and skills
+*/
+.about-myself {
+  display: grid;
+}
+
+.languages {
+  display: flex;
+}
+
+.frameworks {
+  display: flex;
+
+}
+
+.skills {
+  display: flex;
+
+}
