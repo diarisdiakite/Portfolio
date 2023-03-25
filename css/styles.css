@@ -24,7 +24,7 @@ body {
 buttons
 This is a requirement of linters
 Expected selector ".project-buttons a" to come before selector ".social li a"
-So I move my buttons
+So I grouped all my buttons here
 */
 .project-buttons a {
   background-color: var(--my-project-boutton-color);
@@ -38,11 +38,12 @@ So I move my buttons
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 0% auto 0% auto;
+  margin: 0% auto 1% auto;
   border-radius: 4px;
 }
 
 .see-resume-button a {
+  padding: 10%;
   margin: 3% auto 30% auto;
   width: max-content;
 }
@@ -147,11 +148,7 @@ h3 {
   color: var(--my-green-color);
 }
 
-br {
-  line-height: 0px;
-}
-
-.headline p {
+.headline p, .about-myself p {
   columns: var(--my-text-color);
   font-style: normal;
   font-weight: 400;
@@ -210,17 +207,31 @@ Contains The 10 microverse projects
   height: fit-content;
 }
 
+.recent-work header { /* See if relevant */
+  display: flex;
+  flex-direction: column;
+}
+
 .recent-work header,
 .about-myself header {
   width: 100%;
   margin: 0 auto 10% auto;
 }
 
-hr {
-  width: 8%;
-  height: 8%;
-  margin: 5% auto 5% auto;
-  font-weight: 900;
+.recent-work header h2,
+.about-myself header h2 {
+  color: var(--my-text-color);
+}
+
+.recent-work header img {
+  width: 10%;
+  position: relative;
+  margin: 10% auto 0% auto;
+}
+
+.about-myself p {
+  margin-top: 0%;
+  text-align: center;
 }
 
 .projects {
@@ -261,9 +272,12 @@ hr {
 }
 
 .sections-title h3 {
-  height: 18%;
+  max-height: 10%;
   width: 100%;
   text-align: center;
+  padding: auto;
+  margin-bottom: 0%;
+  margin-top: 5%;
 }
 
 .project-built-with,
@@ -274,8 +288,13 @@ hr {
   justify-content: space-evenly;
   align-content: center;
   height: 15%;
-  padding: 0% 3%;
+  width: auto;
+  padding: 1% 3% 1% 3%;
   flex-wrap: wrap;
+}
+
+.project-built-with:first-child {
+  margin-bottom: 10%;
 }
 
 .project-built-with li {
@@ -289,9 +308,13 @@ hr {
 .list-competences li a {
   text-decoration: none;
   display: flex;
+  min-height: 10%;
+  min-width: 40px;
   flex: 1;
   align-items: center;
   border-radius: 2px;
+  padding: 0% 3%;
+  color: var(--my-text-color);
 }
 
 /*
@@ -304,9 +327,17 @@ languages, frameworks and skills
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 10% auto 0 auto;
 }
 
-.about-myself header {
+.about-myself-text {
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  margin: -1% auto 0 auto;
+}
+
+.about-myself-text header {
   width: 100%;
   margin: 20% auto 10% auto;
 }
@@ -321,6 +352,7 @@ languages, frameworks and skills
 }
 
 .competences-image {
+  margin: 15% auto 3% auto;
   width: 100%;
   height: 30%;
   border-radius: 8px;
@@ -344,7 +376,7 @@ languages, frameworks and skills
 .frameworks,
 .skills {
   display: flex;
-  background-color: var(--my-competences-boxes-color);
+  background-color: var(--image-placeholder-color1);
 }
 
 .list-competences li {
