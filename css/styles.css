@@ -190,8 +190,8 @@ hr {
   height: 100%; 
   display: grid;
   grid-template-columns: repeat(1, 92%);
-  grid-template-rows: repeat(5, 150%);
-  gap: 10%;
+  grid-template-rows: repeat(5, 50%);
+  gap: 3%;
 }
 
 .project {
@@ -200,7 +200,6 @@ hr {
   flex-direction: column;
   text-align: center;
   width: 100%;
-  height: 90%;
   margin: 0 5% 0 5%; /* will need to be changed afterwards */
   border: 1px solid var(--image-placeholder-color);
   border-radius: 8px;
@@ -209,27 +208,37 @@ hr {
 .project-image {
   background-color: var(--image-placeholder-color);
   width: 100%;
-  height: 60%;
+  height: 55%;
   border-radius: 8px;
 }
 
 .project-title {
-
+  height: 18%;
 }
 
 .project-built-with {
   list-style-type: none;
   text-decoration: none;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-evenly;
+  align-content: flex-start;
   height: 10%;
+  left: 0;
 }
 
-.project-built-with a {
+.project-built-with li {
   background-color: var(--image-placeholder-color);
   display: flex;
+  height: 100%;
+  width:max-content;
+}
+
+
+.project-built-with li a {
+  text-decoration: none;
+  display: flex;
   flex: 1;
+  align-items: center;
 }
 
 button .project-buttons {
