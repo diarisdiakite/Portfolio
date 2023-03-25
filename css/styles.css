@@ -42,6 +42,7 @@ Headline Section
   display: flex;
   flex-direction: column;
   margin: -1% auto 0 auto;
+
 }
 
 h1 {
@@ -52,6 +53,104 @@ h1 {
   line-height: 52px;
   text-align: center;
   letter-spacing: 1px;
+}
+
+.headline h1 {
+  color: var(--my-text-color);
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 52px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.headline h2 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 52px;
+  text-align: center;
+  margin: -10px auto -5px auto;
+  letter-spacing: 1px;
+}
+
+.green {
+  color: var(--my-green-color);
+}
+
+br {
+  line-height: 0px;
+}
+
+.headline p {
+  columns: var(--my-text-color);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+}
+
+.social {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Try to find out how to properly center with flex box */
+  margin: auto;
+}
+
+.social li {
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Try to find out how to properly center with flex box */
+  margin: auto;
+}
+
+.social li a {
+  flex: 1;
+  align-self: center;
+  justify-content: space-around;
+}
+
+.social li a i {
+  color: var(--my-gray-color);
+  width: 5%;
+  height: 2%;
+  font-size: x-large;
+}
+
+@media (min-width: 375px) {
+  /*
+  This property is for testing purpose
+  body {
+    background: blue;
+  }
+  */
+  .social li a i {
+    color: var(--my-gray-color);
+    width: 15%;
+    height: 2%;
+    font-size: x-large;
+  }
+}
+
+@media (min-width: 768px) {
+  /*
+  This property is for testing purpose
+  body {
+    background: red;
+  }
+  */
+
+  .social li a i {
+    color: var(--my-gray-color);
+    width: 5%;
+    height: 2%;
+    font-size: x-large;
+  }
+
 }
 
 .headline h2, h2 {
