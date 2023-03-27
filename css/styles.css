@@ -12,19 +12,23 @@
 
 html {
   background-color: none;
-  font-family: 'Inter', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
 }
 
 body {
   display: flex;
   flex-direction: column;
+  font-family: 'Inter', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: auto;
 }
 
 /*
-buttons
-This is a requirement of linters
-Expected selector ".project-buttons a" to come before selector ".social li a"
-So I grouped all my buttons here
+All the buttons are grouped here following the linters error
+Linters error : Expected selector ".project-buttons a" to come before selector ".social li a"
 */
 .project-buttons a {
   background-color: var(--my-project-boutton-color);
@@ -89,10 +93,10 @@ Headline Section
 
 .headline-text {
   width: 80vw;
-  min-height: 100vh;
+  max-height: 100vh;
   display: flex;
   flex-direction: column;
-  margin: -1% auto 0 auto;
+  margin: -1% auto 10% auto;
 }
 
 h1 {
@@ -139,9 +143,17 @@ h3 {
   font-size: 40px;
   line-height: 52px;
   text-align: center;
-  margin: -10px auto -5px auto;
   letter-spacing: 1px;
 }
+
+.space-less {
+  margin: -10px auto -5px auto;
+}
+
+.spacing-default {
+  margin: 10px auto 5px auto;
+}
+
 
 .green {
   color: var(--my-green-color);
@@ -157,12 +169,16 @@ h3 {
   text-align: center;
 }
 
+.headline p {
+  margin: 5% 0%;
+}
+
 .social {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center; /* Try to find out how to properly center with flex box */
-  margin: auto;
+  margin: 10% 5%;
 }
 
 .social li {
@@ -176,7 +192,7 @@ h3 {
 .social li a {
   flex: 1;
   align-self: center;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .social li a i {
@@ -284,12 +300,10 @@ Contains The 5 microverse projects
 .list-competences {
   list-style-type: none;
   text-decoration: none;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-wrap: wrap;
   width: 100%;
-  margin: 10% -10%;
+  margin: 10% 0%;
+  display: inline-block;
+  align-content: center;
 }
 
 .project-built-with:first-child {
@@ -301,6 +315,7 @@ Contains The 5 microverse projects
   border-radius: 8px;
   margin: 0.5%;
   padding: 3%;
+  float: left;
 }
 
 .list-competences li {
@@ -308,6 +323,7 @@ Contains The 5 microverse projects
   border-radius: 8px;
   margin: 1%;
   padding: 3%;
+  float: left;
 }
 
 .project-built-with li a,
