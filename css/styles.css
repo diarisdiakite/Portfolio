@@ -61,13 +61,13 @@ So I grouped all my buttons here
 
 .project-buttons:hover,
 .see-resume-button:hover {
-  background-color: #36B37F;
-  color: #ffffff;
+  background-color: var(--my-project-boutton-color);
+  color: #fff;
 }
 
 .project-buttons:enabled,
 .see-resume-button:enabled {
-  background-color: #36B37F;
+  background-color: var(--my-project-boutton-color);
 }
 
 /*
