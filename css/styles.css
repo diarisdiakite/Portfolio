@@ -23,6 +23,7 @@ html {
 body {
   display: flex;
   flex-direction: column;
+  gap: 1%;
 }
 
 /*
@@ -51,6 +52,15 @@ So I grouped all my buttons here
   padding: 10%;
   margin: 3% auto 30% auto;
   width: max-content;
+}
+
+button {
+  background-color: var(--my-project-boutton-color);
+  color: white;
+  padding: 3% 3%;
+  margin: 3% auto 10% auto;
+  width: max-content;
+  border-radius: 4%;
 }
 
 .project-buttons:active,
@@ -105,7 +115,7 @@ Headline Section
 
 .headline-text {
   width: 80vw;
-  max-height: 100vh;
+  max-height: 100vh; /* HEIGHT ISSUE TO FIX */
   display: flex;
   flex-direction: column;
   margin: -1% auto 0 auto; /* TRY TO FIX THAT AFTERWARDS */
@@ -115,8 +125,8 @@ h1 {
   color: var(--my-text-color);
   font-style: normal;
   font-weight: 800;
-  font-size: 40px;
-  line-height: 52px;
+  font-size: 2.5rem;
+  line-height: 3.25rem;
   text-align: center;
   letter-spacing: 1px;
 }
@@ -124,8 +134,8 @@ h1 {
 h2 {
   font-style: normal;
   font-weight: 600;
-  font-size: 40px;
-  line-height: 52px;
+  font-size: 2.5rem;
+  line-height: 3.25rem;
   text-align: center;
   letter-spacing: 1px;
 }
@@ -147,8 +157,8 @@ h3 {
   color: var(--my-text-color);
   font-style: normal;
   font-weight: 800;
-  font-size: 40px;
-  line-height: 52px;
+  font-size: 2.5rem;
+  line-height: 3.25rem;
   text-align: center;
   letter-spacing: 1px;
 }
@@ -156,8 +166,8 @@ h3 {
 .headline h2 {
   font-style: normal;
   font-weight: 600;
-  font-size: 40px;
-  line-height: 52px;
+  font-size: 2.5rem;
+  line-height: 3.25rem;
   text-align: center;
   letter-spacing: 1px;
 }
@@ -167,17 +177,23 @@ h3 {
 }
 
 .headline p,
-.about-myself p {
+.about-myself p
+.footer-text p {
   columns: var(--my-text-color);
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 28px;
+  font-size: 1,25rem;
+  line-height: 1,75rem;
   text-align: center;
 }
 
 .social {
-  width: 100%;
+  width: 10.63rem;
+  height: 1.226rem;
+  /*
+  top: 35.556rem; //to remoce
+  left: 6.563rem; //to remoce
+  */
   display: flex;
   justify-content: center;
   align-items: center; /* Try to find out how to properly center with flex box */
@@ -194,7 +210,7 @@ h3 {
 .social li a i {
   color: var(--my-gray-color);
   width: 5%;
-  height: 5%;
+  height: 5%;           /* HEIGHT ISSUE TO FIX */
   font-size: x-large;
 }
 
@@ -215,7 +231,7 @@ Contains The 5 microverse projects
 */
 .recent-work { /* See if relevant */
   width: 100%;
-  height: fit-content;
+  height: fit-content;                          /* HEIGHT ISSUE TO FIX */
   margin-top: 30%;
 }
 
@@ -247,7 +263,7 @@ Contains The 5 microverse projects
 
 .projects {
   width: 100%;
-  min-height: 100%;
+  min-height: 100%;                           /* HEIGHT ISSUE TO FIX */
   display: grid;
   grid-template-columns: repeat(1, 92%);
   grid-template-rows: repeat(5, 1fr);
@@ -264,26 +280,30 @@ Contains The 5 microverse projects
   flex-direction: column;
   text-align: center;
   width: 100%;
-  height: 100%;
+  height: 19,75rem;                               /* HEIGHT ISSUE TO FIX 48.35rem */
   margin: 0 4% 0 4%;
   border: 1px solid var(--image-placeholder-color);
   border-radius: 8px;
 }
 
+.project {
+  height: 48.35rem;
+}
+
 .project-image {
   background-color: var(--image-placeholder-color1);
   width: 100%;
-  height: 60%;
+  height: 60%;                                /* HEIGHT ISSUE TO FIX */
   border-radius: 8px;
 }
 
 .img-placeholder {
   width: 100%;
-  height: 0%;
+  height: 0%;                                 /* HEIGHT ISSUE TO FIX */
 }
 
 .sections-title h3 {
-  max-height: 10%;
+  max-height: 10%;                            /* HEIGHT ISSUE TO FIX */
   width: 100%;
   text-align: center;
   padding: auto;
@@ -360,7 +380,7 @@ languages, frameworks and skills
 
 .competences {
   width: 100%;
-  height: 100%;
+  height: 100%;                             /* HEIGHT ISSUE TO FIX */
   display: grid;
   grid-template-columns: repeat(1, 92%);
   grid-template-rows: auto;
@@ -370,13 +390,13 @@ languages, frameworks and skills
 .competences-image {
   margin: 15% auto 3% auto;
   width: 100%;
-  height: 30%;
+  height: 30%;                              /* HEIGHT ISSUE TO FIX */
   border-radius: 8px;
 }
 
 .competences .sections-title {
   width: 100%;
-  height: 20%;
+  height: 20%;                              /* HEIGHT ISSUE TO FIX */
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -390,6 +410,60 @@ languages, frameworks and skills
   background-color: var(--image-placeholder-color1);
 }
 
+/*
+Contact form section
+Contains a text in a header and the form
+*/
+
+.contact-form {
+  width: 100%;
+  height: 100%;                             /* HEIGHT ISSUE TO FIX */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30% auto 30 auto;
+}
+
+form ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+
+form ul li {
+  width: 20.438rem;
+  height: 3rem;
+  margin: 1% auto;
+  border: 1px solid #60c095;
+  border-radius: 4%;
+}
+
+textarea li {
+  height: 7,125rem;
+  color:#008552;
+}
+
+textarea {
+  text-align: left;
+}
+
+
+/*
+Footer 
+Contains email and socials
+*/
+
+.footer {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer p {
+
+}
+
 @media (min-width: 375px) {
   /*
   This property is for testing purpose
@@ -400,7 +474,7 @@ languages, frameworks and skills
   .social li a i {
     color: var(--my-gray-color);
     width: 15%;
-    height: 2%;
+    height: 2%;                             /* HEIGHT ISSUE TO FIX */
     font-size: x-large;
   }
 }
@@ -416,16 +490,16 @@ languages, frameworks and skills
   .social li a i {
     color: var(--my-gray-color);
     width: 5%;
-    height: 2%;
+    height: 2%;                               /* HEIGHT ISSUE TO FIX */
     font-size: x-large;
   }
 
   .projects {
     width: 100%;
-    height: 100%;
+    height: 100%;                            /* HEIGHT ISSUE TO FIX */
     display: grid;
     grid-template-columns: repeat(3, 33%);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(auto, 1fr);
     gap: 1%;
   }
 }
