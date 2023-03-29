@@ -273,6 +273,7 @@ Contains The 5 microverse projects
   flex: 1;
   flex-direction: column;
   text-align: center;
+  width: 92%;
   height: 19,75rem;                               /* HEIGHT ISSUE TO FIX 48.35rem */
   margin: 0 4%;
   border: 1px solid var(--image-placeholder-color);
@@ -454,8 +455,7 @@ form {
 }
 
 input[type="text"], 
-input[type="email"], 
-textarea {
+input[type="email"] {
   width: 100%;
   padding: 5% 0;
   margin: 3% auto;
@@ -464,10 +464,11 @@ textarea {
 }
 
 textarea {
+  width: 95%;
+  padding-left: 5%;
   outline: none !important;
   border: 1px solid #60C095;
   resize:both;
-  padding: 5%;
   font-family: 'Inter';
 }
 
@@ -507,8 +508,9 @@ Contains email and socials
   align-items: center;
 }
 
-.footer-text img {
-  align-self: flex-end;
+.footer-background {
+  background-image: url(../images/mask-group-footer.png) no-repeat;
+  bottom: 0;
 }
 
 @media (min-width: 375px) {
@@ -519,7 +521,7 @@ Contains email and socials
   }
   */
   .projects {
-    width: 100%;
+    width: 90%;
     min-height: 100%;                           /* HEIGHT ISSUE TO FIX */
     display: grid;
     gap: 1%;
@@ -548,7 +550,7 @@ Contains email and socials
   }
 
   .projects {
-    width: 100%;
+    width: 90%;
     height: 100%;                            /* HEIGHT ISSUE TO FIX */
     display: grid;
     grid-template-columns: repeat(3, 33%);
