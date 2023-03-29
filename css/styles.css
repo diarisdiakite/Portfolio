@@ -467,7 +467,7 @@ textarea {
   outline: none !important;
   border: 1px solid #60c095;
   resize: both;
-  font-family: 'Inter';
+  font-family: 'Inter', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 textarea::-webkit-resizer {
