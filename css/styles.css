@@ -422,7 +422,7 @@ Contains a text in a header and the form
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 30% auto 30 auto;
+  margin: 30% auto 30% auto;
 }
 
 form ul {
