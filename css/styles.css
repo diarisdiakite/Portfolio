@@ -552,4 +552,13 @@ Contains email and socials
     grid-template-rows: repeat(auto, 1fr);
     gap: 1%;
   }
+
+  .competences {
+    width: 100%;
+    height: 100%;                            /* HEIGHT ISSUE TO FIX */
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    grid-template-rows: repeat(auto, 1fr);
+    gap: 1%;
+  }
 }
