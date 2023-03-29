@@ -11,7 +11,6 @@
 }
 
 html {
-  background-color: none;
   font-family: 'Inter', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -21,6 +20,7 @@ html {
 }
 
 body {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   gap: 1%;
@@ -106,7 +106,7 @@ Headline Section
 
 .headline {
   display: flex;
-  background: url(../images/header-illsutration-mobile@2x.png);
+  background-image: url(../images/header-illsutration-mobile@2x.png);
   background-repeat: no-repeat;
   background-size: 100vw;
   margin-top: 10%;
@@ -190,15 +190,13 @@ h3 {
 .social {
   width: 10.63rem;
   height: 1.226rem;
-  /*
-  top: 35.556rem; //to remoce
-  left: 6.563rem; //to remoce
-  */
+  top: 35.556rem; 
+  left: 6.563rem; 
   display: flex;
   justify-content: center;
   align-items: center; /* Try to find out how to properly center with flex box */
-  margin: 10% auto;
   list-style-type: none;
+  margin: 10% auto;
 }
 
 .social li {
@@ -232,26 +230,25 @@ Contains The 5 microverse projects
 .recent-work { /* See if relevant */
   width: 100%;
   height: fit-content;                          /* HEIGHT ISSUE TO FIX */
-  margin-top: 30%;
 }
 
-.recent-work header { /* See if relevant */
+.recent-work-text { /* See if relevant */
   display: flex;
   flex-direction: column;
 }
 
-.recent-work header,
-.about-myself header {
+.recent-work-text,
+.about-myself-text {
   width: 100%;
   margin: 0 auto 10% auto;
 }
 
-.recent-work header h2,
-.about-myself header h2 {
+.recent-work-text h2,
+.about-myself-text h2 {
   color: var(--my-text-color);
 }
 
-.recent-work header img {
+.recent-work-text img {
   width: 10%;
   position: relative;
   margin: 10% auto 0% auto;
@@ -265,12 +262,10 @@ Contains The 5 microverse projects
   width: 100%;
   min-height: 100%;                           /* HEIGHT ISSUE TO FIX */
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(5, 1fr);
   gap: 1%;
 }
 
-.project,
+
 .languages,
 .frameworks,
 .skills { /* Apply to competences sections too */
@@ -279,26 +274,41 @@ Contains The 5 microverse projects
   flex-direction: column;
   text-align: center;
   height: 19,75rem;                               /* HEIGHT ISSUE TO FIX 48.35rem */
-  margin: 0 4% 0 4%;
+  margin: 0 4%;
   border: 1px solid var(--image-placeholder-color);
   border-radius: 8px;
 }
 
 .project {
-  height: 48.35rem;
-  background-color: none; /* for testing purpose */
+  flex: 1;
+  width: 100%;
+  height: 29,625rem;
+  display: flex;
+  flex-direction: column-reverse;
+  border: 1px solid var(--image-placeholder-color);
+  margin: 0 4%;
+  position: relative;
 }
 
 .project-image {
   background-color: var(--image-placeholder-color1);
   width: 100%;
-  height: 60%;                                /* HEIGHT ISSUE TO FIX */
-  border-radius: 8px;
+  height: 100%;                                
 }
 
 .img-placeholder {
   width: 100%;
-  height: 0%;                                 /* HEIGHT ISSUE TO FIX */
+  height: 100%;                                 /* HEIGHT ISSUE TO FIX */
+}
+
+.project-wrapped-text {
+  width: 100%;
+  min-height: auto;
+  position: absolute;
+  background-color: white;
+  margin-bottom: 0%;
+  border-bottom: 1px solid var(--image-placeholder-color);
+  text-align: center;
 }
 
 .sections-title h3 {
@@ -307,7 +317,7 @@ Contains The 5 microverse projects
   text-align: center;
   padding: auto;
   margin-bottom: 0%;
-  margin-top: 5%;
+  margin-top: 3%;
 }
 
 .project-built-with,
@@ -319,11 +329,11 @@ Contains The 5 microverse projects
   align-content: center;
   flex-wrap: wrap;
   width: 100%;
-  margin: 10% 0;
+  margin: 5% 0;
 }
 
 .project-built-with {
-  margin-bottom: 10%;
+  margin-bottom: 5%;
 }
 
 .project-built-with li {
@@ -410,17 +420,22 @@ Contact form section
 Contains a text in a header and the form
 */
 
-.container {
+.contact-form-text {
   width: 90%;
+  margin: 0% auto;
 }
 
 .contact-heading {
-font-weight: 700;
-font-size: 40px;
-line-height: 130%;
-text-align: center;
-color: #172B4D;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 130%;
+  text-align: center;
+  color: #172b4d;
+}
 
+.contact-form-container {
+  width: 90%;
+  margin: 10% auto;
 }
 
 .contact-form {
@@ -430,7 +445,7 @@ color: #172B4D;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 30% auto 30% auto;
+  margin: 0% auto;
 }
 
 form {
@@ -438,54 +453,59 @@ form {
   flex-direction: column;
 }
 
-input[type="text"], input[type="email"], textarea {
+input[type="text"], 
+input[type="email"], 
+textarea {
   width: 100%;
   padding: 5% 0;
-}
-
-input[type="text"], input[type="email"]::placeholder {
-  font-style: italic;
-font-weight: 400;
-font-size: 15px;
-line-height: 160%;
-}
-
-form ul {
-  list-style-type: none;
-  display: flex;
-  flex-direction: column;
-}
-
-form ul li {
-  outline: none !important;
-  margin: 1% auto;
-  border: 1px solid #60c095;
-  border-radius: 4%;
-}
-
-textarea li {
-  height: 7,125rem;
-  color:#008552;
+  margin: 3% auto;
+  border: 1px solid #d0d9d4;
+  border-radius: 4px;
 }
 
 textarea {
-  text-align: left;
+  outline: none !important;
+  border: 1px solid #60C095;
+  resize: both;
 }
 
+textarea::-webkit-resizer {
+  background: url(../images/Icons/Union.png);
+}
+
+input[type="text"]::placeholder, 
+input[type="email"]::placeholder {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0,9375rem;
+  line-height: 160%;
+  padding: 1rem;
+}
+
+textarea::placeholder {
+  text-align: left;
+  min-height: 7.125rem;
+}
 
 /*
 Footer
 Contains email and socials
 */
 
-.footer {
+#footer {
   width: 90%;
   display: flex;
   flex-direction: column;
 }
 
-.footer p {
+.footer-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.footer-text img {
+  align-self: flex-end;
 }
 
 @media (min-width: 375px) {
@@ -495,6 +515,12 @@ Contains email and socials
     background: blue;
   }
   */
+  .projects {
+    width: 100%;
+    min-height: 100%;                           /* HEIGHT ISSUE TO FIX */
+    display: grid;
+    gap: 1%;
+  }
   .social li a i {
     color: var(--my-gray-color);
     width: 15%;
