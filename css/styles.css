@@ -265,7 +265,7 @@ Contains The 5 microverse projects
   width: 100%;
   min-height: 100%;                           /* HEIGHT ISSUE TO FIX */
   display: grid;
-  grid-template-columns: repeat(1, 92%);
+  grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(5, 1fr);
   gap: 1%;
 }
@@ -274,12 +274,10 @@ Contains The 5 microverse projects
 .languages,
 .frameworks,
 .skills { /* Apply to competences sections too */
-  background-color: none; /* for testing purpose */
   display: flex;
   flex: 1;
   flex-direction: column;
   text-align: center;
-  width: 100%;
   height: 19,75rem;                               /* HEIGHT ISSUE TO FIX 48.35rem */
   margin: 0 4% 0 4%;
   border: 1px solid var(--image-placeholder-color);
@@ -288,6 +286,7 @@ Contains The 5 microverse projects
 
 .project {
   height: 48.35rem;
+  background-color: none; /* for testing purpose */
 }
 
 .project-image {
@@ -379,12 +378,10 @@ languages, frameworks and skills
 }
 
 .competences {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100%;                             /* HEIGHT ISSUE TO FIX */
-  display: grid;
-  grid-template-columns: repeat(1, 92%);
-  grid-template-rows: auto;
-  gap: 3%;
 }
 
 .competences-image {
@@ -403,17 +400,28 @@ languages, frameworks and skills
   text-align: center;
 }
 
-.languages,
-.frameworks,
-.skills {
-  display: flex;
+.competences-card {
   background-color: var(--image-placeholder-color1);
+  margin-bottom: 1.5rem;
 }
 
 /*
 Contact form section
 Contains a text in a header and the form
 */
+
+.container {
+  width: 90%;
+}
+
+.contact-heading {
+font-weight: 700;
+font-size: 40px;
+line-height: 130%;
+text-align: center;
+color: #172B4D;
+
+}
 
 .contact-form {
   width: 100%;
@@ -425,6 +433,23 @@ Contains a text in a header and the form
   margin: 30% auto 30 auto;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"], input[type="email"], textarea {
+  width: 100%;
+  padding: 5% 0;
+}
+
+input[type="text"], input[type="email"]::placeholder {
+  font-style: italic;
+font-weight: 400;
+font-size: 15px;
+line-height: 160%;
+}
+
 form ul {
   list-style-type: none;
   display: flex;
@@ -432,8 +457,7 @@ form ul {
 }
 
 form ul li {
-  width: 20.438rem;
-  height: 3rem;
+  outline: none !important;
   margin: 1% auto;
   border: 1px solid #60c095;
   border-radius: 4%;
@@ -450,7 +474,7 @@ textarea {
 
 
 /*
-Footer 
+Footer
 Contains email and socials
 */
 
