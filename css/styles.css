@@ -15,6 +15,11 @@ html {
   font-family: 'Inter', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+* {
+  margin: 0;
+  padding: 0%;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -48,20 +53,21 @@ So I grouped all my buttons here
   width: max-content;
 }
 
-.project-buttons:hover {
-  background-color: black;
+.project-buttons:active,
+.see-resume-button:active {
+  background-color: #008552;
+  color: white;
 }
 
-.project-buttons:enabled {
-  background-color: white;
-}
-
+.project-buttons:hover,
 .see-resume-button:hover {
-  background-color: black;
+  background-color: var(--my-project-boutton-color);
+  color: #fff;
 }
 
+.project-buttons:enabled,
 .see-resume-button:enabled {
-  background-color: white;
+  background-color: var(--my-project-boutton-color);
 }
 
 /*
@@ -69,11 +75,19 @@ Nav Section
 Contains the union and the settings
 */
 
-#union {
-  width: 90vw;
-  height: 10vh;
+header {
+  width: 100vw;
+  height: 3vh;
   display: flex;
   justify-content: flex-end;
+  align-items: flex-end;
+  margin: 10% -10%;
+}
+
+#union {
+  width: 10%;
+  height: 10%;
+  align-self: flex-end;
 }
 
 /*
@@ -85,14 +99,16 @@ Headline Section
   background: url(../images/header-illsutration-mobile@2x.png);
   background-repeat: no-repeat;
   background-size: 100vw;
+  margin-top: 10%;
+  height: auto;
 }
 
 .headline-text {
   width: 80vw;
-  min-height: 100vh;
+  max-height: 100vh;
   display: flex;
   flex-direction: column;
-  margin: -1% auto 0 auto;
+  margin: -1% auto 0 auto; /* TRY TO FIX THAT AFTERWARDS */
 }
 
 h1 {
@@ -123,6 +139,10 @@ h3 {
   text-align: center;
 }
 
+.spacing-default {
+  margin: 5% auto;
+}
+
 .headline h1 {
   color: var(--my-text-color);
   font-style: normal;
@@ -139,7 +159,6 @@ h3 {
   font-size: 40px;
   line-height: 52px;
   text-align: center;
-  margin: -10px auto -5px auto;
   letter-spacing: 1px;
 }
 
@@ -162,27 +181,20 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center; /* Try to find out how to properly center with flex box */
-  margin: auto;
+  margin: 10% auto;
+  list-style-type: none;
 }
 
 .social li {
   width: 75%;
-  display: flex;
-  justify-content: center;
-  align-items: center; /* Try to find out how to properly center with flex box */
-  margin: auto;
-}
-
-.social li a {
   flex: 1;
-  align-self: center;
-  justify-content: space-around;
+  text-align: center;
 }
 
 .social li a i {
   color: var(--my-gray-color);
   width: 5%;
-  height: 2%;
+  height: 5%;
   font-size: x-large;
 }
 
@@ -193,7 +205,6 @@ Contains The 10 microverse projects
 
 .arrow {
   width: 100%;
-  margin: 10% auto 10% auto;
   background-color: transparent;
   border: none;
 }
@@ -205,6 +216,7 @@ Contains The 5 microverse projects
 .recent-work { /* See if relevant */
   width: 100%;
   height: fit-content;
+  margin-top: 30%;
 }
 
 .recent-work header { /* See if relevant */
@@ -230,7 +242,6 @@ Contains The 5 microverse projects
 }
 
 .about-myself p {
-  margin-top: 0%;
   text-align: center;
 }
 
@@ -240,7 +251,7 @@ Contains The 5 microverse projects
   display: grid;
   grid-template-columns: repeat(1, 92%);
   grid-template-rows: repeat(5, 1fr);
-  gap: 3%;
+  gap: 1%;
 }
 
 .project,
@@ -254,7 +265,7 @@ Contains The 5 microverse projects
   text-align: center;
   width: 100%;
   height: 100%;
-  margin: 0 4% 0 4%; /* will need to be changed afterwards */
+  margin: 0 4% 0 4%;
   border: 1px solid var(--image-placeholder-color);
   border-radius: 8px;
 }
@@ -266,9 +277,9 @@ Contains The 5 microverse projects
   border-radius: 8px;
 }
 
-#img-placeholder {
+.img-placeholder {
   width: 100%;
-  height: 55%;
+  height: 0%;
 }
 
 .sections-title h3 {
@@ -289,10 +300,10 @@ Contains The 5 microverse projects
   align-content: center;
   flex-wrap: wrap;
   width: 100%;
-  margin: 10% -10%;
+  margin: 10% 0;
 }
 
-.project-built-with:first-child {
+.project-built-with {
   margin-bottom: 10%;
 }
 
@@ -332,14 +343,14 @@ languages, frameworks and skills
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 10% auto 0 auto;
+  margin: 30% auto 0 auto;
 }
 
 .about-myself-text {
   width: 80vw;
   display: flex;
   flex-direction: column;
-  margin: -1% auto 0 auto;
+  margin: 10% auto 0 auto;
 }
 
 .about-myself-text header {
@@ -415,6 +426,6 @@ languages, frameworks and skills
     display: grid;
     grid-template-columns: repeat(3, 33%);
     grid-template-rows: repeat(2, 1fr);
-    gap: 3%;
+    gap: 1%;
   }
 }
