@@ -1,5 +1,31 @@
 @import url('https://fonts.googleapis.com/css?family=Inter');
 
+ @-webkit-keyframes roll-in-left {
+  0% {
+    -webkit-transform: translateX(-800px) rotate(-540deg);
+            transform: translateX(-800px) rotate(-540deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) rotate(0deg);
+            transform: translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+@keyframes roll-in-left {
+  0% {
+    -webkit-transform: translateX(-800px) rotate(-540deg);
+            transform: translateX(-800px) rotate(-540deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) rotate(0deg);
+            transform: translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+
 :root {
   --my-text-color: #172b4d;
   --my-green-color: #36b37e;
@@ -24,6 +50,11 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1%;
+}
+
+.roll-in-left {
+	-webkit-animation: roll-in-left 2s ease-out both;
+	        animation: roll-in-left 2s ease-out both;
 }
 
 /*
