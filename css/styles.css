@@ -44,7 +44,7 @@ So I grouped all my buttons here
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 0% auto 1% auto;
+  margin: 0% auto 5% auto;
   border-radius: 4px;
 }
 
@@ -114,8 +114,8 @@ Headline Section
 }
 
 .headline-text {
-  width: 80vw;
-  max-height: 100vh; /* HEIGHT ISSUE TO FIX */
+  width: 90%;
+  height: 100%; /* HEIGHT ISSUE TO FIX */
   display: flex;
   flex-direction: column;
   margin: -1% auto 0 auto; /* TRY TO FIX THAT AFTERWARDS */
@@ -176,18 +176,17 @@ h3 {
   color: var(--my-green-color);
 }
 
-.about-myself p {
-  text-align: center;
-}
-
 .headline p,
-.about-myself p .footer-text p {
+.about-myself p {
   columns: var(--my-text-color);
+  width: 100%;
+  height: 100%;
   font-style: normal;
   font-weight: 400;
-  font-size: 1, 25rem;
-  line-height: 1, 75rem;
+  font-size: 1.9rem;
+  line-height: 2.25rem;
   text-align: center;
+  letter-spacing: 1px;
 }
 
 .social {
@@ -503,6 +502,17 @@ Contains email and socials
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.footer div {
+  width: 33%;
+}
+
+.footer-text p {
+  height: 10%;
+  text-align: center;
+  font-size: 1.25rem;
+  margin-top: 0 auto;
 }
 
 .footer-background {
