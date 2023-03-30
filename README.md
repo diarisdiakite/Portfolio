@@ -1,4 +1,4 @@
-# 📖 [My-portfolio]
+# 📖 [My-portfolio](#my-portfolio)
 
 [My-Portfolio] is project to show my main projects in the MIcroverse programme.
 
@@ -34,7 +34,8 @@ database: PostgreSQL
 ## 🚀 Live Demo
 
 Live Demo Link
-(back to top)
+
+([`Back-to-top`](#my-portfolio))
 
 # 💻 Getting Started
 
@@ -71,9 +72,19 @@ You can deploy the portfolio projects using: google cloud, Microsoft Azure, Netl
 👤 Didy
 
 GitHub: github.com/diarisdiakite
-Twitter: @diarisdiakite
-LinkedIn: LinkedIn
+<br> Twitter: @diarisdiakite
+<br>LinkedIn: LinkedInhttps://www.linkedin.com/in/diariatou-diakite-67ab80165/
+<br><br>
 
+👤 Contributor1: Romans Spilaks
+
+GitHub: github.com/@obj583
+<br><br>
+
+👤 Contributor2: Benson
+
+GitHub: github.com/BenMKT
+<br><br>
 
 # 🔭 Future Features
 Upcoming features will include:
@@ -99,7 +110,7 @@ Please follow us on @linkedin.com/diarisd and @twitter.com/diarisd
 # 🙏 Acknowledgments
 I would like to thank the Microverse community to inspire and encourage everyday programmers and aspiring programmers.
 
-Many thanks to my coding parteners particularly to @Roman-adi (@obj583) for his great contribution and hints for this project. 
+Many thanks to my coding partners particularly to @Roman-adi (@obj583) for his great contribution and hints for this project. 
 
 (back to top)
 

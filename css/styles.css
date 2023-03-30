@@ -32,26 +32,31 @@ This is a requirement of linters
 Expected selector ".project-buttons a" to come before selector ".social li a"
 So I grouped all my buttons here
 */
-.project-buttons a {
+
+.project-buttons,
+.see-resume-button,
+.form-button {
   background-color: var(--my-project-boutton-color);
   width: fit-content;
   border: none;
-  color: white;
-  padding: 3% 3%;
   justify-content: center;
-  align-content: center;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 0% auto 5% auto;
   border-radius: 4px;
+  padding: 3% 3%;
+  margin: 1% auto 5% auto;
 }
 
-.see-resume-button a {
-  padding: 10%;
-  margin: 3% auto 30% auto;
-  width: max-content;
+.project-buttons a,
+.see-resume-button a,
+.form-button a {
+  text-decoration: none;
+  color: white;
+  width: 100%;
+  padding: inherit;
+  margin: inherit;
+  align-content: center;
+  text-align: center;
+  display: inline-block;
+  font-size: 1rem;
 }
 
 button {
@@ -60,23 +65,29 @@ button {
   padding: 3% 3%;
   margin: 3% auto 10% auto;
   width: max-content;
+  display: inline-block;
   border-radius: 4%;
 }
 
 .project-buttons:active,
-.see-resume-button:active {
+.see-resume-button:active,
+.form-button:active {
   background-color: #008552;
+  box-shadow: 0 5px  #008552;
+  transform: translateY(1%);
   color: white;
 }
 
 .project-buttons:hover,
-.see-resume-button:hover {
+.see-resume-button:hover,
+.form-button:hover {
   background-color: var(--my-project-boutton-color);
-  color: #fff;
+  box-shadow: 0 8px 16px var(--my-project-boutton-color);
 }
 
 .project-buttons:enabled,
-.see-resume-button:enabled {
+.see-resume-button:enabled,
+.form-button:enabled {
   background-color: var(--my-project-boutton-color);
 }
 
@@ -219,10 +230,11 @@ Recent-work section
 Contains The 10 microverse projects
 */
 
-.arrow {
+button .arrow {
   width: 100%;
-  background-color: transparent;
+  background-color: white;
   border: none;
+  color: white;
 }
 
 /*
@@ -496,6 +508,7 @@ Contains email and socials
   width: 90%;
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
 }
 
 .footer-text {
@@ -512,7 +525,6 @@ Contains email and socials
   height: 10%;
   text-align: center;
   font-size: 1.25rem;
-  margin-top: 0 auto;
 }
 
 .footer-background {
@@ -566,6 +578,11 @@ Contains email and socials
     gap: 1%;
   }
 
+  .project,
+  .competences-card {
+    flex: 1;
+  }
+
   .competences {
     width: 100%;
     height: 100%;                            /* HEIGHT ISSUE TO FIX */
@@ -573,5 +590,11 @@ Contains email and socials
     grid-template-columns: repeat(3, 33%);
     grid-template-rows: repeat(auto, 1fr);
     gap: 1%;
+  }
+
+  .see-resume-button,
+  .form-button {
+    padding: 1% 1%;
+    margin: 2% auto 5% auto;
   }
 }

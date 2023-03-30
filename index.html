@@ -56,9 +56,9 @@
   </section>
 
 
-  <button class="arrow spacing-default">
+  <div class="arrow spacing-default">
     <img src="images/buttons/Disabled.png" alt="">
-  </button>
+  </div>
 
   <section class="recent-work spacing-default">
     <div class="recent-work-text">
@@ -212,7 +212,7 @@
       </p>
     </div>
 
-    <div class="project-buttons see-resume-button spacing-default">
+    <div class="see-resume-button spacing-default">
       <a href="">Get my resume</a>
     </div>
 
@@ -290,18 +290,16 @@
     <form action="https://formspree.io/f/mqkoykyv" method="POST" class="contact-form-container">
 
       <label>
-        <input type="text" name="full-name" placeholder="Full name">
+        <input type="text" name="full-name" maxlength="30" placeholder="Full name" required>
       </label>
         
       <label>
-        <input type="email" name="email" placeholder="Email address">
+        <input type="email" name="email" placeholder="Email address" required>
       </label>
         
+      <textarea name="" id="" rows="10" maxlength="500" placeholder="Hey, I would like to connect to..." required></textarea>
         
-      <textarea name="" id="" rows="10" placeholder="Hey, I would like to connect to..."></textarea>
-        
-        
-      <button type="submit"> Get in touch </button>
+      <div class="form-button" type="submit"> <a href="https://formspree.io/f/mqkoykyv">Get in touch</a> </div>
 
     </form>
 
