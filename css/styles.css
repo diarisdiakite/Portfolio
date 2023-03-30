@@ -25,6 +25,11 @@
   }
 }
 
+textarea:focus {
+  transform: scale(1.5) translate(-60%, 50%);
+  background-color: transparent;
+  width: 80%;
+}
 
 :root {
   --my-text-color: #172b4d;
@@ -510,6 +515,7 @@ textarea {
   border: 1px solid #60c095;
   resize: both;
   font-family: 'Inter', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  transition: all 1.4s ease-in-out;
 }
 
 textarea::-webkit-resizer {
