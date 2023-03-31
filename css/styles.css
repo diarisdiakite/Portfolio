@@ -683,6 +683,14 @@ Contains email and socials
   .project {
     min-height: 29.625rem;
     margin: 0 0.1%;
+    transition: 1s all ease-in;
+  }
+
+  .project:hover {
+    transform: translateY(-5%) scale(1.2);
+    z-index: 99;
+    box-shadow: 0 0 20px #35b17dbe;
+
   }
 
   .competences {
@@ -738,7 +746,7 @@ Contains email and socials
     padding: 0.5% auto;
   }
 
- 
+
   textarea {
     width: 98%;
     padding-left: 1%;
@@ -758,7 +766,7 @@ Contains email and socials
     background: url(../images/desktop-bg/illustration-1-contact-form-desktop.png) no-repeat ;
     position: relative;
   }
-  
+
   .img1 {
     background: url(../images/desktop-bg/footer1.png) no-repeat ;
     z-index: 1;
@@ -820,7 +828,7 @@ Contains email and socials
     width: 92%;
     margin: 0 4%;
   }
-  
+
   .competences-card {
     width: 30%
   }
@@ -846,7 +854,7 @@ Contains email and socials
     height: 30vh;
     background-color: lightblue;
   }
-  
+
   .img1 {
     background: url(../images/desktop-bg/footer1.png) no-repeat ;
     z-index: 1;
