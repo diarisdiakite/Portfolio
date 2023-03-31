@@ -262,7 +262,7 @@ Contains The 5 microverse projects
 */
 .recent-work { /* See if relevant */
   width: 100%;
-  height: fit-content;                          /* HEIGHT ISSUE TO FIX */
+  height: fit-content;
 }
 
 .recent-work-text { /* See if relevant */
@@ -288,28 +288,16 @@ Contains The 5 microverse projects
 }
 
 .projects {
-  width: 100%;
+  min-width: 100%;
   min-height: 100%;                           /* HEIGHT ISSUE TO FIX */
   display: grid;
   gap: 1%;
-}
-
-.languages,
-.frameworks,
-.skills { /* Apply to competences sections too */
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  text-align: center;
-  width: 92%;
-  margin: 0 4%;
-  border: 1px solid var(--image-placeholder-color);
-  border-radius: 8px;
+  margin: 0;
 }
 
 .project {
   flex: 1;
-  width: 100%;
+  width: 92%;
   height: 100%;
   display: flex;
   flex-direction: column-reverse;
@@ -440,7 +428,11 @@ languages, frameworks and skills
 
 .competences-card {
   background-color: var(--image-placeholder-color1);
+  display: flex;
+  flex-direction: column;
   margin-bottom: 1.5rem;
+  width: 33%;
+  margin: 0 4%;
 }
 
 /*
@@ -550,20 +542,37 @@ Contains email and socials
   bottom: 0;
 }
 
-@media (min-width: 375px) {
+@media (max-width: 375px) {
   /*
   This property is for testing purpose
   body {
     background: blue;
   }
   */
-  header #navbar {
+  * {
+    margin: auto;
+    width: 100%;
+  }
+  
+}
+
+@media (min-width: 375px) and (max-width: 768px) {
+
+  .display-desktop {
     display: none;
   }
 
-  .desktop-fields {
-    display: none;
+  header .display-mobile {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
   }
+
+  header .display-mobile img {
+    align-self: flex-end;
+  }
+
 }
 
 @media (min-width: 768px) {
@@ -574,16 +583,27 @@ Contains email and socials
   }
   */
 
+  body {
+    width: 100%;
+  }
+
+  .about-myself {
+    width: 100%;
+  }
+
   header {
     height: 8vh;
   }
 
-  header #union {
+  .display-mobile,
+  header .display-mobile {
     display: none;
   }
 
-  header #navbar {
+  header .display-desktop {
+    width: 100%;
     display: flex;
+    justify-content: center;
   }
 
   .about-myself {
@@ -595,7 +615,7 @@ Contains email and socials
   }
 
   .header-bg {
-    background-image: url(../images/Header-llustration-desktop.png);
+    background-image: url(../images/desktop-bg/Header-llustration-desktop.png);
   }
 
   .spacing-default {
@@ -641,43 +661,32 @@ Contains email and socials
   }
 
   .projects {
-    width: 100%;
-    height: 100%;                            /* HEIGHT ISSUE TO FIX */
-    display: grid;
-    grid-template-columns: repeat(3, 33%);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(auto, 1fr);
-    gap: 1%;
+    gap: 1% 0%;
     margin-left: 0;
   }
 
-  .projects::before {
-    gap: 0;
-  }
-
-  .projects:first-child {
-    gap: 0;
-  }
-
-  .competences-card {
-    width: 23.063rem;
-    height: 19.75rem;
-    border-radius: 0.5rem;
-    margin: 1% 0.5%;
-  }
-
   .project {
-    height: 29.625rem;
+    min-height: 29.625rem;
+    margin: 0 0.1%;
   }
 
   .competences {
+    width: 92%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 73.25rem;
-    height: 22.188rem;
-    flex: none;
+    flex: 1;
     order: 1;
-    flex-grow: 0;
+    margin: 0;
+  }
+
+  .competences-card {
+    flex: 1;
+    height: 19.75rem;
+    border-radius: 0.5rem;
+    margin: 1% 0.5%;
   }
 
   .competences-image {
@@ -701,27 +710,113 @@ Contains email and socials
     gap: 1%;
   }
 
-  .mobile-fields {
-    display: none;
-  }
-
-  input[class="desktop-fields"] {
-    width: 49%;
-    display: inline-flex;
-  }
-
-  form input:first-child {
-    background-color: transparent;
-  }
-
   .form-button {
     margin-left: 0;
-    width: 20%; /* TO FIX */
+    width: 6.563; /* TO FIX */
+    height: 1.5rem;
     height: 100%;
+    padding: 3% 3%;
+  }
+
+  textarea,
+  input[type="text"],
+  input[type="email"] {
+    margin: 1% auto;
+    padding: 0.5% auto;
+  }
+
+ 
+  textarea {
+    width: 98%;
+    padding-left: 1%;
+    outline: none !important;
+    font-family: 'Inter', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+  textarea::placeholder {
+    padding: 2% 1.5%;
+  }
+
+  .form-bg-image {
+    display: flex;
+    flex-direction: row;
+    height: 30vh;
+    background-color: white; /* FOR TESTING PURPOSE */
+    background: url(../images/desktop-bg/illustration-1-contact-form-desktop.png) no-repeat ;
+    margin-top: 0;
+    margin-right: 0;
+  }
+  
+  .img1 {
+    background: url(../images/desktop-bg/illustration-1-contact-form-desktop.png) no-repeat ;
+    z-index: 1;
+    background-color: red;
   }
 
   footer {
+    height: 20%;
     background: url(../images/mask-group-footer.png);
     background-repeat: no-repeat;
   }
+
+  footer::after {
+    content: "";
+    width: 100%;
+    background-image: url(../images/contact\ form-illustratoin-3-desktop.png) no-repeat top right;
+    position: absolute;
+    display: flex;
+  }
+
+  hr .display-desktop {
+    height: 10%;
+    margin-bottom: 0%;
+  }
+  footer .social {
+    margin-bottom: 3%;
+  }
 }
+
+@media (min-width:768) {
+  body {
+    width: 100%;
+  }
+
+  .about-myself {
+    width: 92%;
+  }
+  .competences {
+    width: 92%;
+    margin: 0 4%;
+  }
+  
+  .competences-card {
+    width: 30%
+  }
+
+  .footer {
+    height: 1120rem;
+  }
+
+  /* TRYING WITH THE PSEUDO SELCTORS*/
+  .form-bg-image::before {
+    content: "";
+    width: 100%;
+    background-image: url(../images/desktop-bg/illustration-1-contact-form-desktop.png) no-repeat top right;
+    position: absolute;
+    display: flex;
+    top: 10%;
+  }
+
+  /* TRYING WITH THE DIV INSIDE A CONTAINER*/
+
+  .form-bg-image {
+    height: 30vh;
+    background-color: red;
+  }
+  
+  .form-bg-image div[class="img1"] {
+    background-image: url(../images/desktop-bg/illustration-1-contact-form-desktop.png) no-repeat;
+    top: 10%;
+  }
+}
+
