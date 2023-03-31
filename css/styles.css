@@ -100,9 +100,8 @@ header {
   width: 100vw;
   height: 3vh;
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  margin: 10% -10%;
+  justify-content: center;
+  align-items: center;
 }
 
 #union {
@@ -111,21 +110,41 @@ header {
   align-self: flex-end;
 }
 
+.navbar {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--my-text-color);
+  padding: 1% 5%;
+}
+
 /*
 Headline Section
 */
 
 .headline {
   display: flex;
-  background-image: url(../images/header-illsutration-mobile@2x.png);
-  background-repeat: no-repeat;
-  background-size: 100vw;
   margin-top: 10%;
   height: auto;
 }
 
+.header-bg {
+  background-image: url(../images/header-illsutration-mobile.png);
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  width: 100%;
+  height: 50%;
+  z-index: -1;
+}
+
 .headline-text {
-  width: 90%;
+  width: 60%;
   height: 100%; /* HEIGHT ISSUE TO FIX */
   display: flex;
   flex-direction: column;
@@ -538,18 +557,12 @@ Contains email and socials
     background: blue;
   }
   */
-  .projects {
-    width: 90%;
-    min-height: 100%;                           /* HEIGHT ISSUE TO FIX */
-    display: grid;
-    gap: 1%;
+  header #navbar {
+    display: none;
   }
 
-  .social li a i {
-    color: var(--my-gray-color);
-    width: 15%;
-    height: 2%;                             /* HEIGHT ISSUE TO FIX */
-    font-size: x-large;
+  .desktop-fields {
+    display: none;
   }
 }
 
@@ -561,47 +574,63 @@ Contains email and socials
   }
   */
 
+  header {
+    height: 8vh;
+  }
 
-    .headline,
-    .about-myself {
-      margin: 0;
-    }
+  header #union {
+    display: none;
+  }
 
-    .spacing-default {
-      margin: 2% auto;
-    }
+  header #navbar {
+    display: flex;
+  }
 
-    .arrow {
-      margin-bottom: 0;
-    }
+  .about-myself {
+    margin: 0;
+  }
 
-    .recent-work {
-      width: 92%;
-    }
+  .headline {
+    margin-top: 5%;
+  }
 
-    .recent-work-text,
-    .about-myself-text {
-      margin: 0 auto 5% auto;
-    }
+  .header-bg {
+    background-image: url(../images/Header-llustration-desktop.png);
+  }
 
-    .recent-work-text img {
-      width: auto;
-      position: relative;
-      margin: 1% auto 0% auto;
-    }
+  .spacing-default {
+    margin: 2% auto;
+  }
 
-    .headline p,
-    .about-myself p {
+  .arrow {  /* TO CENTER */
+    margin: 0% auto 20% auto;
+  }
+
+  .recent-work {
+    width: 92%;
+  }
+
+  .recent-work-text,
+  .about-myself-text {
+    margin: 0 auto 5% auto;
+  }
+
+  .recent-work-text img {
+    width: auto;
+    position: relative;
+    margin: 1% auto 0% auto;
+  }
+
+  .headline p,
+  .about-myself p {
     columns: var(--my-text-color);
     width: 100%;
     height: 100%;
     font-style: normal;
     text-align: center;
     letter-spacing: 1px;
-    
     font-size: 20px;
     line-height: 32px;
-    text-align: center;
   }
 
   .social li a i {
@@ -615,15 +644,25 @@ Contains email and socials
     width: 100%;
     height: 100%;                            /* HEIGHT ISSUE TO FIX */
     display: grid;
-    grid-template-columns: repeat(3, 33.33%);
+    grid-template-columns: repeat(3, 33%);
     grid-template-rows: repeat(auto, 1fr);
     gap: 1%;
+    margin-left: 0;
+  }
+
+  .projects::before {
+    gap: 0;
+  }
+
+  .projects:first-child {
+    gap: 0;
   }
 
   .competences-card {
-    Width: 23.063rem;
-    Height: 19.75rem;
+    width: 23.063rem;
+    height: 19.75rem;
     border-radius: 0.5rem;
+    margin: 1% 0.5%;
   }
 
   .project {
@@ -641,12 +680,8 @@ Contains email and socials
     flex-grow: 0;
   }
 
-  .competences-card {
-    margin: 1% 0.5%;
-  }
-
   .competences-image {
-    margin: 5% auto 3% auto;;
+    margin: 5% auto 3% auto;
   }
 
   .list-competences {
@@ -664,5 +699,29 @@ Contains email and socials
     display: flex;
     flex-direction: row;
     gap: 1%;
+  }
+
+  .mobile-fields {
+    display: none;
+  }
+
+  input[class="desktop-fields"] {
+    width: 49%;
+    display: inline-flex;
+  }
+
+  form input:first-child {
+    background-color: transparent;
+  }
+
+  .form-button {
+    margin-left: 0;
+    width: 20%; /* TO FIX */
+    height: 100%;
+  }
+
+  footer {
+    background: url(../images/mask-group-footer.png);
+    background-repeat: no-repeat;
   }
 }

@@ -10,54 +10,62 @@
   <title>My Portfolio</title>
 </head>
 <body>
+  <div class="header-bg">
+    <header>
+      <nav class="navbar">
+        <a href="">Portfolio</a>
+        <a href="">About</a>
+        <a href="">Contact</a>
+      </nav>
+      <div id="union">
+        <img src="images/Icons/Icon - Menu.png" alt="union">
+      </div>
+    </header>
 
-  <header>
-    <nav id="union">
-      <img src="images/Icons/Icon - Menu.png" alt="union">
-    </nav>
+    <section class="headline">
 
-  </header>
+      <div class="headline-text">
+        <h1>
+          Hey there.
+          <br>
+          I’m Didy.
+          <br>
+          <span class="green">I’m a Full Stack developer from Microverse</span>
+        </h1>
 
-  <section class="headline">
+        <p class="spacing-default">
+          I can help you build a product, feature or website Look through some of my work and experience! If you like what you see and have a project you need coded,
+          don’t hesitate to contact me.
+        </p>
 
-    <div class="headline-text">
-      <h1>
-        Hey there.
-        <br>
-        I’m Didy.
-        <br>
-        <span class="green">I’m a Full Stack developer from Microverse</span>
-      </h1>
+        <ul class="social spacing-default">
+          <li><a href="https://twitter.com/diarisdiakite">
+            <i class="fab fa-twitter"></i>
+          </a></li>
+          <li><a href="https://www.linkedin.com/diarisdiakite/">
+            <i class="fab fa-linkedin-in"></i></li>
+          </a></li>
+          <li><a href="https://www.medium.com/#">
+            <i class="fab fa-medium"></i>
+          </a></li>
+          <li><a href="https://www.github.com/diarisdiakite">
+            <i class="fab fa-github"></i>
+          </a></li>
+          <li><a href="https://www.angellist.com/#">
+            <i class="fab fa-angellist"></i>
+          </a></li>
+        </ul>
+      </div>
 
-      <p class="spacing-default">
-        I can help you build a product, feature or website Look through some of my work and experience! If you like what you see and have a project you need coded,
-        don’t hesitate to contact me.
-      </p>
+    </section>
 
-      <ul class="social spacing-default">
-        <li><a href="https://twitter.com/diarisdiakite">
-          <i class="fab fa-twitter"></i>
-        </a></li>
-        <li><a href="https://www.linkedin.com/diarisdiakite/">
-          <i class="fab fa-linkedin-in"></i></li>
-        </a></li>
-        <li><a href="https://www.medium.com/#">
-          <i class="fab fa-medium"></i>
-        </a></li>
-        <li><a href="https://www.github.com/diarisdiakite">
-          <i class="fab fa-github"></i>
-        </a></li>
-        <li><a href="https://www.angellist.com/#">
-          <i class="fab fa-angellist"></i>
-        </a></li>
-      </ul>
+  
+
+
+    <div class="arrow spacing-default">
+      <img src="images/buttons/Disabled.png" alt="">
     </div>
 
-  </section>
-
-
-  <div class="arrow spacing-default">
-    <img src="images/buttons/Disabled.png" alt="">
   </div>
 
   <section class="recent-work spacing-default">
@@ -290,8 +298,18 @@
     <form action="https://formspree.io/f/mqkoykyv" method="POST" class="contact-form-container">
 
       <label>
-        <input type="text" name="full-name" maxlength="30" placeholder="Full name" required>
+        <input class="mobile-fields" type="text" name="full-name" maxlength="30" placeholder="Full Name" required>
       </label>
+
+      <div>
+        <label for="">
+          <input class="desktop-fields" type="text" name="first-name" placeholder="Name" required>
+        </label>
+
+        <label for="">
+          <input class="desktop-fields" type="text" name="last-name" placeholder="Last Name" requires>
+        </label>
+      </div>
         
       <label>
         <input type="email" name="email" placeholder="Email address" required>
@@ -305,7 +323,7 @@
 
   </section>
 
-  <section id="footer">
+  <footer id="footer">
     <div class="footer-text">
       <div></div>
       <div><p>diarisdiakite@gmail.com</p></div>
@@ -329,7 +347,7 @@
         <i class="fab fa-angellist"></i>
       </a></li>
     </ul>
-  </section>
+  </footer>
 
 </body>
 </html>
