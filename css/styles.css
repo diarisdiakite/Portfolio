@@ -412,7 +412,7 @@ languages, frameworks and skills
 
 .competences-image {
   margin: 15% auto 3% auto;
-  width: 100%;
+  width: fit-content;
   height: 30%;                              /* HEIGHT ISSUE TO FIX */
   border-radius: 8px;
 }
@@ -431,8 +431,8 @@ languages, frameworks and skills
   display: flex;
   flex-direction: column;
   margin-bottom: 1.5rem;
-  width: 33%;
-  margin: 0 4%;
+  width: 92%;
+  margin: 1% 4%;
 }
 
 /*
@@ -551,9 +551,22 @@ Contains email and socials
   */
   * {
     margin: auto;
+    width: auto;
+  }
+  ul li {
     width: 100%;
   }
-  
+
+  .competences-image {
+    width: 20%;
+    height: 20%;
+    margin-right: 0;
+  }
+
+  .display-desktop,
+  header .display-desktop {
+    display: none;
+  }
 }
 
 @media (min-width: 375px) and (max-width: 768px) {
@@ -741,21 +754,40 @@ Contains email and socials
     display: flex;
     flex-direction: row;
     height: 30vh;
-    background-color: white; /* FOR TESTING PURPOSE */
+    background-color: lightyellow; /* FOR TESTING PURPOSE */
     background: url(../images/desktop-bg/illustration-1-contact-form-desktop.png) no-repeat ;
-    margin-top: 0;
-    margin-right: 0;
+    position: relative;
   }
   
   .img1 {
-    background: url(../images/desktop-bg/illustration-1-contact-form-desktop.png) no-repeat ;
+    background: url(../images/desktop-bg/footer1.png) no-repeat ;
     z-index: 1;
-    background-color: red;
+    background-color: white; /* FOR TESTING PURPOSE */
+    position: absolute;
+    margin-top: 0;
+    margin-right: 0;
+  }
+
+  .img2 {
+    background: url(../images/desktop-bg/footer1.png) no-repeat ;
+    z-index: 1;
+    background-color: white; /* FOR TESTING PURPOSE */
+    position: absolute;
+    margin-top: 0;
+    margin-right: 0;
+  }
+
+  .img3 {
+    background: url(../images/desktop-bg/footer1.png) no-repeat ;
+    z-index: 1;
+    background-color: white; /* FOR TESTING PURPOSE */
+    position: absolute;
+    margin-top: 0;
+    margin-right: 0;
   }
 
   footer {
     height: 20%;
-    background: url(../images/mask-group-footer.png);
     background-repeat: no-repeat;
   }
 
@@ -776,7 +808,7 @@ Contains email and socials
   }
 }
 
-@media (min-width:768) {
+@media (min-width:768px) {
   body {
     width: 100%;
   }
@@ -810,13 +842,42 @@ Contains email and socials
   /* TRYING WITH THE DIV INSIDE A CONTAINER*/
 
   .form-bg-image {
+    display: none;
     height: 30vh;
-    background-color: red;
+    background-color: lightblue;
   }
   
-  .form-bg-image div[class="img1"] {
-    background-image: url(../images/desktop-bg/illustration-1-contact-form-desktop.png) no-repeat;
-    top: 10%;
+  .img1 {
+    background: url(../images/desktop-bg/footer1.png) no-repeat ;
+    z-index: 1;
+    background-color: transparent; /* FOR TESTING PURPOSE */
+    position: absolute;
+    margin-top: 0;
+    margin-right: 0;
+  }
+
+  .img2 {
+    background: url(../images/desktop-bg/footer-middle.png) no-repeat ;
+    z-index: 1;
+    background-color: transparent; /* FOR TESTING PURPOSE */
+    position: absolute;
+    margin-top: 0;
+    margin-right: 0;
+  }
+
+  .img3 {
+    background: url(../images/desktop-bg/footer3.png) no-repeat ;
+    z-index: 1;
+    background-color: transparent; /* FOR TESTING PURPOSE */
+    position: absolute;
+    margin-top: 0;
+    margin-right: 0;
+    top: 75;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    display: flex;
   }
 }
 
