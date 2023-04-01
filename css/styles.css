@@ -59,6 +59,15 @@ h3 {
   margin: 5% auto;
 }
 
+p {
+  columns: var(--my-text-color);
+  width: 100%;
+  height: 100%;
+  font-style: normal;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
 /*
 buttons
 This is a requirement of linters
@@ -209,15 +218,9 @@ Headline Section
 
 .headline p,
 .about-myself p {
-  columns: var(--my-text-color);
-  width: 100%;
-  height: 100%;
-  font-style: normal;
   font-weight: 400;
   font-size: 1.9rem;
   line-height: 2.25rem;
-  text-align: center;
-  letter-spacing: 1px;
 }
 
 .social {
@@ -539,10 +542,6 @@ Contains email and socials
   align-items: center;
 }
 
-.footer div {
-  width: 33%;
-}
-
 .footer-text p {
   height: 10%;
   text-align: center;
@@ -632,18 +631,6 @@ Contains email and socials
     width: auto;
     position: relative;
     margin: 1% auto 0% auto;
-  }
-
-  .headline p,
-  .about-myself p {
-    columns: var(--my-text-color);
-    width: 100%;
-    height: 100%;
-    font-style: normal;
-    text-align: center;
-    letter-spacing: 1px;
-    font-size: 20px;
-    line-height: 32px;
   }
 
   .social li a i {
@@ -805,6 +792,14 @@ Contains email and socials
     width: 92%;
   }
 
+  .headline p,
+  .about-myself p {
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    text-align: center;
+  }
+
   .competences {
     width: 92%;
     margin: 0 4%;
@@ -818,16 +813,6 @@ Contains email and socials
     margin: 1% auto;
   }
 
-  /* TRYING WITH THE PSEUDO SELCTORS */
-  .form-bg-image::before {
-    content: "";
-    width: 100%;
-    background-image: url(../images/desktop-bg/illustration-1-contact-form-desktop.png) no-repeat top right;
-    position: absolute;
-    display: flex;
-    top: 10%;
-  }
-
   /* TRYING WITH THE DIV INSIDE A CONTAINER */
 
   .form-bg-image {
@@ -835,19 +820,6 @@ Contains email and socials
     display: flex;
     height: 30vh;
     background-color: white; /* FOR TESTING PURPOSE */
-  }
-
-  .img1 {
-    width: 30%;
-    height: 150%;
-    background: url(../images/desktop-bg/footer1.png) no-repeat;
-    z-index: 1;
-    background-color: transparent; /* FOR TESTING PURPOSE */
-    position: absolute;
-    top: -75%;
-    left: 0;
-    background-size: contain;
-    display: flex;
   }
 
   .img2 {
@@ -863,15 +835,35 @@ Contains email and socials
     display: flex;
   }
 
-  .img3 {
-    width: 70%;
-    height: 250%;
-    background: url(../images/desktop-bg/footer3.png) no-repeat;
+  /* TRYING PSEUDO SELECTORS */
+  .contact-form::before {
+    content: "";
+    width: 30%;
+    height: 50%;
+    background: url(../images/desktop-bg/footer1.png) no-repeat;
+    background-position: right;
+    filter: brightness(1);
+    position: absolute;
     z-index: 1;
     background-color: transparent; /* FOR TESTING PURPOSE */
+    top: 202.79rem;
+    left: -20%;
+    background-size: contain;
+    display: flex;
+  }
+
+  .contact-form::after {
+    content: "";
+    background: url(../images/desktop-bg/footer3.png) no-repeat;
+    background-position: left;
+    filter: brightness(1);
     position: absolute;
-    top: -150%;
-    left: 80%;
+    width: 70%;
+    height: 80%;
+    z-index: 1;
+    background-color: transparent; /* FOR TESTING PURPOSE */
+    top: 192.581rem;
+    right: -50%;
     background-size: contain;
     display: flex;
   }
