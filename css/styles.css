@@ -20,10 +20,52 @@ html {
 }
 
 body {
+  width: 100%;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   gap: 1%;
+}
+
+h1 {
+  color: var(--my-text-color);
+  font-style: normal;
+  font-weight: 800;
+  font-size: 2.5rem;
+  line-height: 3.25rem;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.5rem;
+  line-height: 3.25rem;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+h3 {
+  color: #3a4a42;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+}
+
+.spacing-default {
+  margin: 5% auto;
+}
+
+p {
+  columns: var(--my-text-color);
+  width: 100%;
+  height: 100%;
+  font-style: normal;
+  text-align: center;
+  letter-spacing: 1px;
 }
 
 /*
@@ -100,9 +142,8 @@ header {
   width: 100vw;
   height: 3vh;
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  margin: 10% -10%;
+  justify-content: center;
+  align-items: center;
 }
 
 #union {
@@ -111,57 +152,45 @@ header {
   align-self: flex-end;
 }
 
+.navbar {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--my-text-color);
+  padding: 1% 5%;
+}
+
 /*
 Headline Section
 */
 
 .headline {
   display: flex;
-  background-image: url(../images/header-illsutration-mobile@2x.png);
-  background-repeat: no-repeat;
-  background-size: 100vw;
   margin-top: 10%;
   height: auto;
 }
 
+.header-bg {
+  background-image: url(../images/header-illsutration-mobile.png);
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  width: 100vw;
+  height: 100%;
+  z-index: -1;
+}
+
 .headline-text {
-  width: 90%;
+  width: 60%;
   height: 100%; /* HEIGHT ISSUE TO FIX */
   display: flex;
   flex-direction: column;
   margin: -1% auto 0 auto; /* TRY TO FIX THAT AFTERWARDS */
-}
-
-h1 {
-  color: var(--my-text-color);
-  font-style: normal;
-  font-weight: 800;
-  font-size: 2.5rem;
-  line-height: 3.25rem;
-  text-align: center;
-  letter-spacing: 1px;
-}
-
-h2 {
-  font-style: normal;
-  font-weight: 600;
-  font-size: 2.5rem;
-  line-height: 3.25rem;
-  text-align: center;
-  letter-spacing: 1px;
-}
-
-h3 {
-  color: #3a4a42;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 32px;
-  text-align: center;
-}
-
-.spacing-default {
-  margin: 5% auto;
 }
 
 .headline h1 {
@@ -189,15 +218,9 @@ h3 {
 
 .headline p,
 .about-myself p {
-  columns: var(--my-text-color);
-  width: 100%;
-  height: 100%;
-  font-style: normal;
   font-weight: 400;
   font-size: 1.9rem;
   line-height: 2.25rem;
-  text-align: center;
-  letter-spacing: 1px;
 }
 
 .social {
@@ -235,6 +258,11 @@ button .arrow {
   background-color: white;
   border: none;
   color: white;
+  display: block;
+}
+
+.arrow img {
+  margin: 0 49%;
 }
 
 /*
@@ -243,7 +271,7 @@ Contains The 5 microverse projects
 */
 .recent-work { /* See if relevant */
   width: 100%;
-  height: fit-content;                          /* HEIGHT ISSUE TO FIX */
+  height: fit-content;
 }
 
 .recent-work-text { /* See if relevant */
@@ -269,30 +297,17 @@ Contains The 5 microverse projects
 }
 
 .projects {
-  width: 100%;
+  min-width: 100%;
   min-height: 100%;                           /* HEIGHT ISSUE TO FIX */
   display: grid;
   gap: 1%;
-}
-
-.languages,
-.frameworks,
-.skills { /* Apply to competences sections too */
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  text-align: center;
-  width: 92%;
-  height: 19, 75rem;                               /* HEIGHT ISSUE TO FIX 48.35rem */
-  margin: 0 4%;
-  border: 1px solid var(--image-placeholder-color);
-  border-radius: 8px;
+  margin: 0;
 }
 
 .project {
   flex: 1;
-  width: 100%;
-  height: 29, 625rem;
+  width: 92%;
+  height: 100%;
   display: flex;
   flex-direction: column-reverse;
   border: 1px solid var(--image-placeholder-color);
@@ -401,13 +416,28 @@ languages, frameworks and skills
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100%;                             /* HEIGHT ISSUE TO FIX */
+  height: 100%;
+  gap: 1%;                             /* HEIGHT ISSUE TO FIX */
+}
+
+.competences-card {
+  background-color: var(--image-placeholder-color1);
+  display: flex;
+  flex-direction: column;
+  width: 92%;
+  margin: 1% 4%;
 }
 
 .competences-image {
-  margin: 15% auto 3% auto;
   width: 100%;
+  margin: 15% auto 3% auto;
   height: 30%;                              /* HEIGHT ISSUE TO FIX */
+  border-radius: 8px;
+}
+
+.competences-image img {
+  width: 100%;
+  margin: auto;
   border-radius: 8px;
 }
 
@@ -418,11 +448,6 @@ languages, frameworks and skills
   justify-content: center;
   align-items: center;
   text-align: center;
-}
-
-.competences-card {
-  background-color: var(--image-placeholder-color1);
-  margin-bottom: 1.5rem;
 }
 
 /*
@@ -504,7 +529,7 @@ Footer
 Contains email and socials
 */
 
-#footer {
+.footer {
   width: 90%;
   display: flex;
   flex-direction: column;
@@ -515,10 +540,6 @@ Contains email and socials
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.footer div {
-  width: 33%;
 }
 
 .footer-text p {
@@ -533,24 +554,19 @@ Contains email and socials
 }
 
 @media (min-width: 375px) {
-  /*
-  This property is for testing purpose
-  body {
-    background: blue;
-  }
-  */
-  .projects {
-    width: 90%;
-    min-height: 100%;                           /* HEIGHT ISSUE TO FIX */
-    display: grid;
-    gap: 1%;
+  .display-desktop {
+    display: none;
   }
 
-  .social li a i {
-    color: var(--my-gray-color);
-    width: 15%;
-    height: 2%;                             /* HEIGHT ISSUE TO FIX */
-    font-size: x-large;
+  header .display-mobile {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  header .display-mobile img {
+    align-self: flex-end;
   }
 }
 
@@ -562,6 +578,61 @@ Contains email and socials
   }
   */
 
+  body {
+    width: 100%;
+  }
+
+  .about-myself {
+    width: 100%;
+    margin: 0;
+  }
+
+  header {
+    height: 8vh;
+  }
+
+  .display-mobile,
+  header .display-mobile {
+    display: none;
+  }
+
+  header .display-desktop {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .headline {
+    margin-top: 5%;
+  }
+
+  .header-bg {
+    background-image: url(../images/desktop-bg/Header-llustration-desktop.png);
+  }
+
+  .spacing-default {
+    margin: 2% auto;
+  }
+
+  .arrow {  /* TO CENTER */
+    margin: 0% auto 20% auto;
+  }
+
+  .recent-work {
+    width: 92%;
+  }
+
+  .recent-work-text,
+  .about-myself-text {
+    margin: 0 auto 5% auto;
+  }
+
+  .recent-work-text img {
+    width: auto;
+    position: relative;
+    margin: 1% auto 0% auto;
+  }
+
   .social li a i {
     color: var(--my-gray-color);
     width: 5%;
@@ -570,31 +641,252 @@ Contains email and socials
   }
 
   .projects {
-    width: 90%;
-    height: 100%;                            /* HEIGHT ISSUE TO FIX */
-    display: grid;
-    grid-template-columns: repeat(3, 33%);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(auto, 1fr);
-    gap: 1%;
+    gap: 1% 0%;
+    margin-left: 0;
   }
 
-  .project,
-  .competences-card {
-    flex: 1;
+  .project {
+    min-height: 29.625rem;
+    margin: 0 0.1%;
   }
 
   .competences {
+    width: 92%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex: 1;
+    order: 1;
+    margin: 0;
+  }
+
+  .competences-card {
+    width: 33.333%;
+    align-self: stretch;
+    height: 19.75rem;
+    border-radius: 0.5rem;
+    margin: 1% 0.5%;
+  }
+
+  .competences-image {
     width: 100%;
-    height: 100%;                            /* HEIGHT ISSUE TO FIX */
-    display: grid;
-    grid-template-columns: repeat(3, 33%);
-    grid-template-rows: repeat(auto, 1fr);
-    gap: 1%;
+    margin: 5% auto 3% auto;
+  }
+
+  .list-competences {
+    margin: 5% auto 5% auto;
   }
 
   .see-resume-button,
   .form-button {
     padding: 1% 1%;
     margin: 2% auto 5% auto;
+  }
+
+  .contact-form {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    gap: 1%;
+  }
+
+  .form-button {
+    margin-left: 0;
+    width: 6.563; /* TO FIX */
+    height: 1.5rem;
+    height: 100%;
+    padding: 3% 3%;
+  }
+
+  textarea,
+  input[type="text"],
+  input[type="email"] {
+    margin: 1% auto;
+    padding: 0.5% auto;
+  }
+
+  textarea {
+    width: 98%;
+    padding-left: 1%;
+    outline: none !important;
+    font-family: 'Inter', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+  textarea::placeholder {
+    padding: 2% 1.5%;
+  }
+
+  .form-bg-image {
+    position: relative;
+    display: flex;
+    height: 30vh;
+    background-color: white; /* FOR TESTING PURPOSE */
+  }
+
+  .img1 {
+    width: 30%;
+    height: 150%;
+    background: url(../images/desktop-bg/footer1.png) no-repeat;
+    z-index: 1;
+    background-color: transparent; /* FOR TESTING PURPOSE */
+    position: absolute;
+    top: -75%;
+    left: 0;
+    background-size: contain;
+    display: flex;
+  }
+
+  .img2 {
+    width: 10%;
+    height: 60%;
+    background: url(../images/desktop-bg/footer-middle.png) no-repeat;
+    z-index: 1;
+    background-color: transparent; /* FOR TESTING PURPOSE */
+    position: absolute;
+    bottom: 5%;
+    right: 70%;
+    background-size: contain;
+    display: flex;
+  }
+
+  .img3 {
+    width: 80%;
+    height: 100%;
+    background: url(../images/desktop-bg/footer3.png) no-repeat;
+    z-index: 1;
+    background-color: transparent; /* FOR TESTING PURPOSE */
+    position: absolute;
+    top: -150%;
+    left: 60%;
+    background-size: contain;
+    display: flex;
+  }
+
+  .footer {
+    height: 1%;
+    background-repeat: no-repeat;
+    border-top: 1px solid var(--my-text-color);
+  }
+
+  footer::after {
+    content: "";
+    width: 100%;
+    background-image: url(../images/contact\ form-illustratoin-3-desktop.png) no-repeat top right;
+    position: absolute;
+    display: flex;
+  }
+
+  footer .social {
+    margin-bottom: 1%;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    width: 100%;
+  }
+
+  .about-myself {
+    width: 92%;
+  }
+
+  .headline p,
+  .about-myself p {
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    text-align: center;
+  }
+
+  .competences {
+    width: 92%;
+    margin: 0 4%;
+  }
+
+  .competences-card {
+    width: 30%;
+  }
+
+  .competences-card .competences-image img {
+    margin: 1% auto;
+  }
+
+  /* TRYING WITH THE DIV INSIDE A CONTAINER */
+
+  .form-bg-image {
+    position: relative;
+    display: flex;
+    height: 30vh;
+    background-color: white; /* FOR TESTING PURPOSE */
+  }
+
+  .img2 {
+    width: 10%;
+    height: 60%;
+    background: url(../images/desktop-bg/footer-middle.png) no-repeat;
+    z-index: 1;
+    background-color: transparent; /* FOR TESTING PURPOSE */
+    position: absolute;
+    bottom: 5%;
+    right: 70%;
+    background-size: contain;
+    display: flex;
+  }
+
+  /* TRYING PSEUDO SELECTORS */
+  .contact-form::before {
+    content: "";
+    width: 30%;
+    height: 50%;
+    background: url(../images/desktop-bg/footer1.png) no-repeat;
+    background-position: right;
+    filter: brightness(1);
+    position: absolute;
+    z-index: 1;
+    background-color: transparent; /* FOR TESTING PURPOSE */
+    top: 202.79rem;
+    left: -20%;
+    background-size: contain;
+    display: flex;
+  }
+
+  .contact-form::after {
+    content: "";
+    background: url(../images/desktop-bg/footer3.png) no-repeat;
+    background-position: left;
+    filter: brightness(1);
+    position: absolute;
+    width: 70%;
+    height: 80%;
+    z-index: 1;
+    background-color: transparent; /* FOR TESTING PURPOSE */
+    top: 192.581rem;
+    right: -50%;
+    background-size: contain;
+    display: flex;
+  }
+
+  .footer {
+    width: 100%;
+    height: 1%;
+    margin-bottom: 1%;
+  }
+
+  .headline .display-desktop,
+  .footer .display-desktop {
+    display: flex;
+    width: 10.63rem;
+    justify-content: center;
+    align-items: center; /* Try to find out how to properly center with flex box */
+    list-style-type: none;
+    margin: 1% auto;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    width: 100vw;
   }
 }
