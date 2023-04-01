@@ -20,10 +20,43 @@ html {
 }
 
 body {
+  width: 100%;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   gap: 1%;
+}
+
+h1 {
+  color: var(--my-text-color);
+  font-style: normal;
+  font-weight: 800;
+  font-size: 2.5rem;
+  line-height: 3.25rem;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.5rem;
+  line-height: 3.25rem;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+h3 {
+  color: #3a4a42;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+}
+
+.spacing-default {
+  margin: 5% auto;
 }
 
 /*
@@ -151,38 +184,6 @@ Headline Section
   margin: -1% auto 0 auto; /* TRY TO FIX THAT AFTERWARDS */
 }
 
-h1 {
-  color: var(--my-text-color);
-  font-style: normal;
-  font-weight: 800;
-  font-size: 2.5rem;
-  line-height: 3.25rem;
-  text-align: center;
-  letter-spacing: 1px;
-}
-
-h2 {
-  font-style: normal;
-  font-weight: 600;
-  font-size: 2.5rem;
-  line-height: 3.25rem;
-  text-align: center;
-  letter-spacing: 1px;
-}
-
-h3 {
-  color: #3a4a42;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 32px;
-  text-align: center;
-}
-
-.spacing-default {
-  margin: 5% auto;
-}
-
 .headline h1 {
   color: var(--my-text-color);
   font-style: normal;
@@ -258,7 +259,7 @@ button .arrow {
 }
 
 .arrow img {
-  margin: 0 48%;
+  margin: 0 49%;
 }
 
 /*
@@ -433,7 +434,7 @@ languages, frameworks and skills
 
 .competences-image img {
   width: 100%;
-  margin: 15% auto 3% auto;
+  margin: auto;
   border-radius: 8px;
 }
 
@@ -525,7 +526,7 @@ Footer
 Contains email and socials
 */
 
-#footer {
+.footer {
   width: 90%;
   display: flex;
   flex-direction: column;
@@ -776,8 +777,8 @@ Contains email and socials
     display: flex;
   }
 
-  footer {
-    height: 5%;
+  .footer {
+    height: 1%;
     background-repeat: no-repeat;
     border-top: 1px solid var(--my-text-color);
   }
@@ -811,6 +812,10 @@ Contains email and socials
 
   .competences-card {
     width: 30%;
+  }
+
+  .competences-card .competences-image img {
+    margin: 1% auto;
   }
 
   /* TRYING WITH THE PSEUDO SELCTORS */
@@ -871,18 +876,25 @@ Contains email and socials
     display: flex;
   }
 
-  #footer {
+  .footer {
+    width: 100%;
     height: 1%;
     margin-bottom: 1%;
   }
 
   .headline .display-desktop,
-  #footer .display-desktop {
+  .footer .display-desktop {
     display: flex;
     width: 10.63rem;
     justify-content: center;
     align-items: center; /* Try to find out how to properly center with flex box */
     list-style-type: none;
-    margin: 5% auto;
+    margin: 1% auto;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    width: 100vw;
   }
 }
