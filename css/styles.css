@@ -407,11 +407,6 @@ languages, frameworks and skills
   margin: 10% auto 0 auto;
 }
 
-.about-myself-text header {
-  width: 100%;
-  margin: 20% auto 10% auto;
-}
-
 .competences {
   display: flex;
   flex-direction: column;
@@ -553,6 +548,36 @@ Contains email and socials
   bottom: 0;
 }
 
+/* HEADER AND FOOTER DISPLAY OPTIONS */
+
+header .display-desktop {
+  display: none;
+}
+
+header .display-mobile {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+header .display-mobile img {
+  align-self: flex-end;
+}
+
+.headline .display-desktop,
+.footer .display-desktop {
+  display: none;
+}
+
+@media (max-width: 280px) {
+  .project-built-with li,
+  .list-competences li {
+    width: 90%;
+    text-align: center;
+  }
+}
+
 @media (min-width: 375px) {
   .display-desktop {
     display: none;
@@ -577,10 +602,6 @@ Contains email and socials
     background: red;
   }
   */
-
-  body {
-    width: 100%;
-  }
 
   .about-myself {
     width: 100%;
@@ -723,16 +744,17 @@ Contains email and socials
     display: flex;
     height: 30vh;
     background-color: white; /* FOR TESTING PURPOSE */
+    overflow: hidden;
   }
 
   .img1 {
     width: 30%;
-    height: 150%;
+    height: 75%;
     background: url(../images/desktop-bg/footer1.png) no-repeat;
     z-index: 1;
     background-color: transparent; /* FOR TESTING PURPOSE */
     position: absolute;
-    top: -75%;
+    bottom: 20%;
     left: 0;
     background-size: contain;
     display: flex;
@@ -745,7 +767,7 @@ Contains email and socials
     z-index: 1;
     background-color: transparent; /* FOR TESTING PURPOSE */
     position: absolute;
-    bottom: 5%;
+    top: 60%;
     right: 70%;
     background-size: contain;
     display: flex;
@@ -758,16 +780,18 @@ Contains email and socials
     z-index: 1;
     background-color: transparent; /* FOR TESTING PURPOSE */
     position: absolute;
-    top: -150%;
-    left: 60%;
+    bottom: 25%;
+    left: 80%;
     background-size: contain;
     display: flex;
   }
 
   .footer {
+    width: 100%;
     height: 1%;
     background-repeat: no-repeat;
     border-top: 1px solid var(--my-text-color);
+    margin-bottom: 1%;
   }
 
   footer::after {
@@ -781,12 +805,19 @@ Contains email and socials
   footer .social {
     margin-bottom: 1%;
   }
+
+  .headline .display-desktop,
+  .footer .display-desktop {
+    display: flex;
+    width: 10.63rem;
+    justify-content: center;
+    align-items: center; /* Try to find out how to properly center with flex box */
+    list-style-type: none;
+    margin: 1% auto;
+  }
 }
 
-@media (min-width: 768px) {
-  body {
-    width: 100%;
-  }
+@media (min-width: 912px) { /* THIS WAS 768 COME BACK TO THAT IN CASE OF ISSUE */
 
   .about-myself {
     width: 92%;
@@ -813,6 +844,108 @@ Contains email and socials
     margin: 1% auto;
   }
 
+  /* TRYING WITH THE DIV INSIDE A CONTAINER */
+
+  .form-bg-image {
+    position: relative;
+    display: flex;
+    height: 30vh;
+    background-color: white; /* FOR TESTING PURPOSE */
+  }
+
+  .img1,
+  .img3 {
+    display: none;
+  }
+
+  .img2 {
+    width: 10%;
+    height: 60%;
+    background: url(../images/desktop-bg/footer-middle.png) no-repeat;
+    z-index: 1;
+    background-color: transparent; /* FOR TESTING PURPOSE */
+    position: absolute;
+    bottom: 5%;
+    right: 70%;
+    background-size: contain;
+    display: flex;
+  }
+
+  /* TRYING PSEUDO SELECTORS */
+  .form-bg-image::before {
+    content: "";
+    width: 40%;
+    height: 40%;
+    background: url(../images/desktop-bg/footer1.png) no-repeat;
+    background-position: right;
+    filter: brightness(1);
+    position: absolute;
+    z-index: 1;
+    background-color: transparent; /* FOR TESTING PURPOSE */
+    bottom: 30%;
+    right: 90%;
+    background-size: contain;
+    display: flex;
+  }
+
+  .form-bg-image::after {
+    content: "";
+    background: url(../images/desktop-bg/footer3.png) no-repeat;
+    background-position: left;
+    filter: brightness(1);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: transparent; /* FOR TESTING PURPOSE */
+    bottom: 20%;
+    left: 80%;
+    background-size: contain;
+    display: flex;
+  }
+
+  .footer {
+    width: 100%;
+    height: 1%;
+    margin-bottom: 1%;
+  }
+
+  .headline .display-desktop,
+  .footer .display-desktop {
+    display: flex;
+    width: 10.63rem;
+    justify-content: center;
+    align-items: center; /* Try to find out how to properly center with flex box */
+    list-style-type: none;
+    margin: 1% auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    width: 100vw;
+  }
+
+  .form-bg-image::before {
+    content: "";
+    width: 50%;
+    height: 50%;
+    background-color: transparent; /* FOR TESTING PURPOSE */
+    bottom: 40%;
+    right: 88%;
+  }
+
+  .form-bg-image::after {
+    width: 50%;
+    height: 100%;
+    z-index: 1;
+    background-color: transparent; /* FOR TESTING PURPOSE */
+    bottom: 20%;
+    left: 80%;
+  }
+}
+
+@media (min-width: 1280) {
   /* TRYING WITH THE DIV INSIDE A CONTAINER */
 
   .form-bg-image {
@@ -866,27 +999,5 @@ Contains email and socials
     right: -50%;
     background-size: contain;
     display: flex;
-  }
-
-  .footer {
-    width: 100%;
-    height: 1%;
-    margin-bottom: 1%;
-  }
-
-  .headline .display-desktop,
-  .footer .display-desktop {
-    display: flex;
-    width: 10.63rem;
-    justify-content: center;
-    align-items: center; /* Try to find out how to properly center with flex box */
-    list-style-type: none;
-    margin: 1% auto;
-  }
-}
-
-@media (max-width: 768px) {
-  body {
-    width: 100vw;
   }
 }
