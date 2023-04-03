@@ -520,6 +520,66 @@ textarea::placeholder {
 }
 
 /*
+Form background
+Display none here
+*/
+
+.form-bg-image {
+  position: relative;
+  display: none;
+  height: 30vh;
+  width: 100%;
+  background-color: transparent; /* FOR TESTING PURPOSE */
+  overflow: hidden;
+  align-items: stretch;
+}
+
+.img1,
+.img2,
+.img3 {
+  flex: 1;
+}
+
+.img1 {
+  width: 30%;
+  height: 75%;
+  background: url(../images/desktop-bg/footer1.png) no-repeat;
+  z-index: 1;
+  background-color: red; /* FOR TESTING PURPOSE */
+  position: absolute;
+  bottom: 20%;
+  left: 0;
+  background-size: contain;
+  display: flex;
+}
+
+.img2 {
+  width: 10%;
+  height: 60%;
+  background: url(../images/desktop-bg/footer-middle.png) no-repeat;
+  z-index: 1;
+  background-color: transparent; /* FOR TESTING PURPOSE */
+  position: absolute;
+  top: 60%;
+  right: 70%;
+  background-size: contain;
+  display: flex;
+}
+
+.img3 {
+  width: 80%;
+  height: 100%;
+  background: url(../images/desktop-bg/footer3.png) no-repeat;
+  z-index: 1;
+  background-color: transparent; /* FOR TESTING PURPOSE */
+  position: absolute;
+  bottom: 25%;
+  left: 80%;
+  background-size: contain;
+  display: flex;
+}
+
+/*
 Footer
 Contains email and socials
 */
@@ -740,52 +800,9 @@ header .display-mobile img {
   }
 
   .form-bg-image {
-    position: relative;
-    display: flex;
-    height: 30vh;
-    background-color: white; /* FOR TESTING PURPOSE */
-    overflow: hidden;
-  }
-
-  .img1 {
-    width: 30%;
-    height: 75%;
-    background: url(../images/desktop-bg/footer1.png) no-repeat;
-    z-index: 1;
-    background-color: transparent; /* FOR TESTING PURPOSE */
-    position: absolute;
-    bottom: 20%;
-    left: 0;
-    background-size: contain;
     display: flex;
   }
-
-  .img2 {
-    width: 10%;
-    height: 60%;
-    background: url(../images/desktop-bg/footer-middle.png) no-repeat;
-    z-index: 1;
-    background-color: transparent; /* FOR TESTING PURPOSE */
-    position: absolute;
-    top: 60%;
-    right: 70%;
-    background-size: contain;
-    display: flex;
-  }
-
-  .img3 {
-    width: 80%;
-    height: 100%;
-    background: url(../images/desktop-bg/footer3.png) no-repeat;
-    z-index: 1;
-    background-color: transparent; /* FOR TESTING PURPOSE */
-    position: absolute;
-    bottom: 25%;
-    left: 80%;
-    background-size: contain;
-    display: flex;
-  }
-
+  
   .footer {
     width: 100%;
     height: 1%;
@@ -844,63 +861,7 @@ header .display-mobile img {
     margin: 1% auto;
   }
 
-  /* TRYING WITH THE DIV INSIDE A CONTAINER */
-
   .form-bg-image {
-    position: relative;
-    display: flex;
-    height: 30vh;
-    background-color: white; /* FOR TESTING PURPOSE */
-  }
-
-  .img1,
-  .img3 {
-    display: none;
-  }
-
-  .img2 {
-    width: 10%;
-    height: 60%;
-    background: url(../images/desktop-bg/footer-middle.png) no-repeat;
-    z-index: 1;
-    background-color: transparent; /* FOR TESTING PURPOSE */
-    position: absolute;
-    bottom: 5%;
-    right: 70%;
-    background-size: contain;
-    display: flex;
-  }
-
-  /* TRYING PSEUDO SELECTORS */
-  .form-bg-image::before {
-    content: "";
-    width: 40%;
-    height: 40%;
-    background: url(../images/desktop-bg/footer1.png) no-repeat;
-    background-position: right;
-    filter: brightness(1);
-    position: absolute;
-    z-index: 1;
-    background-color: transparent; /* FOR TESTING PURPOSE */
-    bottom: 30%;
-    right: 90%;
-    background-size: contain;
-    display: flex;
-  }
-
-  .form-bg-image::after {
-    content: "";
-    background: url(../images/desktop-bg/footer3.png) no-repeat;
-    background-position: left;
-    filter: brightness(1);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    background-color: transparent; /* FOR TESTING PURPOSE */
-    bottom: 20%;
-    left: 80%;
-    background-size: contain;
     display: flex;
   }
 
@@ -922,26 +883,16 @@ header .display-mobile img {
 }
 
 @media (min-width: 1024px) {
-  body {
-    width: 100vw;
+  
+  .form-bg-image {
+    display: flex;
   }
 
-  .form-bg-image::before {
-    content: "";
-    width: 50%;
-    height: 50%;
-    background-color: transparent; /* FOR TESTING PURPOSE */
-    bottom: 40%;
-    right: 88%;
-  }
-
-  .form-bg-image::after {
-    width: 50%;
-    height: 100%;
-    z-index: 1;
-    background-color: transparent; /* FOR TESTING PURPOSE */
-    bottom: 20%;
-    left: 80%;
+  .img1,
+  .img2,
+  .img3 {
+    align-self: stretch;
+    flex: 1;
   }
 }
 
@@ -949,55 +900,15 @@ header .display-mobile img {
   /* TRYING WITH THE DIV INSIDE A CONTAINER */
 
   .form-bg-image {
-    position: relative;
-    display: flex;
-    height: 30vh;
-    background-color: white; /* FOR TESTING PURPOSE */
-  }
-
-  .img2 {
-    width: 10%;
-    height: 60%;
-    background: url(../images/desktop-bg/footer-middle.png) no-repeat;
-    z-index: 1;
-    background-color: transparent; /* FOR TESTING PURPOSE */
-    position: absolute;
-    bottom: 5%;
-    right: 70%;
-    background-size: contain;
     display: flex;
   }
 
-  /* TRYING PSEUDO SELECTORS */
-  .contact-form::before {
-    content: "";
-    width: 30%;
-    height: 50%;
-    background: url(../images/desktop-bg/footer1.png) no-repeat;
-    background-position: right;
-    filter: brightness(1);
-    position: absolute;
-    z-index: 1;
-    background-color: transparent; /* FOR TESTING PURPOSE */
-    top: 202.79rem;
-    left: -20%;
-    background-size: contain;
-    display: flex;
+  .img1 {
+    align-self: stretch;
+    width: 150%;
+    height: 150%;
+    background-color: red;
+    flex: 1;
   }
 
-  .contact-form::after {
-    content: "";
-    background: url(../images/desktop-bg/footer3.png) no-repeat;
-    background-position: left;
-    filter: brightness(1);
-    position: absolute;
-    width: 70%;
-    height: 80%;
-    z-index: 1;
-    background-color: transparent; /* FOR TESTING PURPOSE */
-    top: 192.581rem;
-    right: -50%;
-    background-size: contain;
-    display: flex;
-  }
 }
