@@ -33,9 +33,7 @@ The following technologies has been used in developping this project.
 ### Tech Stack
 
 ```[Tech-stack]
-client: React.js
-Server: Express.js
-database: PostgreSQL
+client: HTML, CSS
 ```
 
 ### Key Features
@@ -58,7 +56,7 @@ database: PostgreSQL
 
 ## 🚀 Live Demo
 
-Live Demo Link
+[Live Demo](https://diarisdiakite.github.io/Portfolio/)
 
 ([`Back-to-top`](#my-portfolio))
 
@@ -66,7 +64,7 @@ Live Demo Link
 
 ## Setup
 Clone this repository to your desired folder:
-https://github.com/diarisdiakite/[........] 
+https://github.com/diarisdiakite/portfolio 
 
 ## Prerequisites
 In order to run the projects on this portfolio you need:
