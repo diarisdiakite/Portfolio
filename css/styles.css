@@ -80,7 +80,7 @@ So I grouped all my buttons here
 .see-resume-button,
 .form-button {
   background-color: var(--my-project-boutton-color);
-  width: fit-content;
+  width: max-content;
   border: none;
   justify-content: center;
   border-radius: 4px;
@@ -272,7 +272,7 @@ Contains The 5 microverse projects
 */
 .recent-work { /* See if relevant */
   width: 100%;
-  height: fit-content;
+  height: max-content;
 }
 
 .recent-work-text { /* See if relevant */
@@ -329,7 +329,7 @@ Contains The 5 microverse projects
 
 .project-wrapped-text {
   width: 100%;
-  min-height: auto;
+  min-height:max-content;
   position: absolute;
   background-color: white;
   margin-bottom: 0%;
