@@ -21,6 +21,7 @@ html {
 
 body {
   width: 100%;
+  min-height: 100%;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -903,10 +904,18 @@ header .display-mobile img {
   }
 
   .img1 {
-    align-self: stretch;
-    width: 150%;
-    height: 150%;
-    background-color: red;
+    width: 200%;
+    height: 200%;
+    background-color: transparent;
+    flex: 1;
+  }
+
+  .img3 {
+    width: 200%;
+    height: 200%;
+    background-color: yellow;
+    bottom: 0%;
+    left: 80%;
     flex: 1;
   }
 }
