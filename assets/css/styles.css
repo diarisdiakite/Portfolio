@@ -178,7 +178,7 @@ Headline Section
 }
 
 .header-bg {
-  background-image: url(../images/header-illsutration-mobile.png);
+  background-image: url(../../images/header-illsutration-mobile.png);
   background-repeat: no-repeat;
   background-size: 100vw;
   width: 100vw;
@@ -280,8 +280,7 @@ Contains The 5 microverse projects
   flex-direction: column;
 }
 
-.recent-work-text,
-.about-myself-text {
+.recent-work-text {
   width: 100%;
   margin: 0 auto 10% auto;
 }
@@ -324,7 +323,7 @@ Contains The 5 microverse projects
 
 .img-placeholder {
   width: 100%;
-  height: 100%;                                 /* HEIGHT ISSUE TO FIX */
+  height:max-content;                                 /* HEIGHT ISSUE TO FIX */
 }
 
 .project-wrapped-text {
@@ -399,10 +398,14 @@ languages, frameworks and skills
   justify-content: center;
   align-items: center;
   margin: 30% auto 0 auto;
+  background: 
+  url(../../images/mobile-bg/about-me-mobile1.svg) no-repeat left bottom 70%,
+  url(../../images/mobile-bg/about-me-mobile2.svg) no-repeat right top 0%;
+  background-size: 12%;
 }
 
 .about-myself-text {
-  width: 80vw;
+  width: 50vw;
   display: flex;
   flex-direction: column;
   margin: 10% auto 0 auto;
@@ -467,6 +470,8 @@ Contains a text in a header and the form
 .contact-form-container {
   width: 90%;
   margin: 10% auto;
+  background-color: transparent;
+  z-index: 0;
 }
 
 .contact-form {
@@ -503,7 +508,7 @@ textarea {
 }
 
 textarea::-webkit-resizer {
-  background: url(../images/Icons/Union.png) no-repeat center;
+  background: url(../../images/Icons/Union.png) no-repeat center;
 }
 
 input[type="text"]::placeholder,
@@ -528,57 +533,18 @@ Display none here
 .form-bg-image {
   position: relative;
   display: none;
-  height: 30vh;
+  z-index: 999;
+  height: 50vh;
   width: 100%;
   background-color: transparent; /* FOR TESTING PURPOSE */
   overflow: hidden;
   align-items: stretch;
+  background: 
+  url(../../images/desktop-bg/footer1.svg) no-repeat left bottom 10%,
+  url(../../images/desktop-bg/footer2.svg) no-repeat center left 20%,
+  url(../../images/desktop-bg/footer3.svg) no-repeat right bottom 0%;
 }
 
-.img1,
-.img2,
-.img3 {
-  flex: 1;
-}
-
-.img1 {
-  width: 30%;
-  height: 75%;
-  background: url(../images/desktop-bg/footer1.png) no-repeat;
-  z-index: 1;
-  background-color: red; /* FOR TESTING PURPOSE */
-  position: absolute;
-  bottom: 20%;
-  left: 0;
-  background-size: contain;
-  display: flex;
-}
-
-.img2 {
-  width: 10%;
-  height: 60%;
-  background: url(../images/desktop-bg/footer-middle.png) no-repeat;
-  z-index: 1;
-  background-color: transparent; /* FOR TESTING PURPOSE */
-  position: absolute;
-  top: 60%;
-  right: 70%;
-  background-size: contain;
-  display: flex;
-}
-
-.img3 {
-  width: 80%;
-  height: 100%;
-  background: url(../images/desktop-bg/footer3.png) no-repeat;
-  z-index: 1;
-  background-color: transparent; /* FOR TESTING PURPOSE */
-  position: absolute;
-  bottom: 25%;
-  left: 80%;
-  background-size: contain;
-  display: flex;
-}
 
 /*
 Footer
@@ -602,11 +568,6 @@ Contains email and socials
   height: 10%;
   text-align: center;
   font-size: 1.25rem;
-}
-
-.footer-background {
-  background-image: url(../images/mask-group-footer.png) no-repeat;
-  bottom: 0;
 }
 
 /* HEADER AND FOOTER DISPLAY OPTIONS */
@@ -689,7 +650,7 @@ header .display-mobile img {
   }
 
   .header-bg {
-    background-image: url(../images/desktop-bg/Header-llustration-desktop.png);
+    background-image: url(../../images/desktop-bg/Header-llustration-desktop.svg);
   }
 
   .spacing-default {
@@ -732,6 +693,13 @@ header .display-mobile img {
   .project {
     min-height: 29.625rem;
     margin: 0 0.1%;
+  }
+
+  .about-myself {
+    background: 
+    url(../../images/mobile-bg/about-me-mobile1.svg) no-repeat left top 25%,
+    url(../../images/mobile-bg/about-me-mobile2.svg) no-repeat right top 0%;
+    background-size: 15%;
   }
 
   .competences {
@@ -800,7 +768,7 @@ header .display-mobile img {
     padding: 2% 1.5%;
   }
 
-  .form-bg-image {
+  .form-bg-image .display-desktop {
     display: flex;
   }
 
@@ -810,14 +778,6 @@ header .display-mobile img {
     background-repeat: no-repeat;
     border-top: 1px solid var(--my-text-color);
     margin-bottom: 1%;
-  }
-
-  footer::after {
-    content: "";
-    width: 100%;
-    background-image: url(../images/contact\ form-illustratoin-3-desktop.png) no-repeat top right;
-    position: absolute;
-    display: flex;
   }
 
   footer .social {
@@ -887,13 +847,6 @@ header .display-mobile img {
   .form-bg-image {
     display: flex;
   }
-
-  .img1,
-  .img2,
-  .img3 {
-    align-self: stretch;
-    flex: 1;
-  }
 }
 
 @media (min-width: 1280) {
@@ -901,21 +854,5 @@ header .display-mobile img {
 
   .form-bg-image {
     display: flex;
-  }
-
-  .img1 {
-    width: 200%;
-    height: 200%;
-    background-color: transparent;
-    flex: 1;
-  }
-
-  .img3 {
-    width: 200%;
-    height: 200%;
-    background-color: yellow;
-    bottom: 0%;
-    left: 80%;
-    flex: 1;
   }
 }
