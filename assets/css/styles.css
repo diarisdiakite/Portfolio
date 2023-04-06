@@ -2,11 +2,13 @@
 
 :root {
   --my-text-color: #172b4d;
+  --my-accessibility-a-bg-color: white;
+  --my-accessibility-a-color: #035c37;
   --my-green-color: #36b37e;
   --my-gray-color: #505f79;
   --image-placeholder-color: #d0d9d4;
   --image-placeholder-color1: #ebf0ee;
-  --my-project-boutton-color: #36b37f;
+  --my-project-boutton-color: #036039;
   --my-competences-boxes-color: #c1c7d0;
 }
 
@@ -139,12 +141,28 @@ Nav Section
 Contains the union and the settings
 */
 
-header {
+.header {
   width: 100vw;
   height: 3vh;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+header .social {
+  margin-bottom: 1%;
+}
+
+header .navbar li,
+header .social li {
+  margin: 3%;
+  display: flex;
+}
+
+.navbar li a,
+header .social li a {
+  margin-bottom: 1%;
+  display: flex;
 }
 
 #union {
@@ -242,7 +260,7 @@ Headline Section
   text-align: center;
 }
 
-.social li a i {
+.social li a span {
   color: var(--my-gray-color);
   width: 5%;
   height: 5%;           /* HEIGHT ISSUE TO FIX */
@@ -369,7 +387,7 @@ Contains The 5 microverse projects
 }
 
 .list-competences li {
-  background-color: white;
+  background-color: var(--my-accessibility-a-bg-color);
   border-radius: 8px;
   margin: 1%;
   padding: 3%;
@@ -379,12 +397,16 @@ Contains The 5 microverse projects
 .list-competences li a {
   text-decoration: none;
   font-size: medium;
-  color: var(--my-text-color);
   border-radius: 8px;
+  font-weight: 400;
+}
+
+.project-built-with li a {
+  color: var(--my-text-color);
 }
 
 .list-competences li a {
-  color: var(--my-green-color);
+  color: var(--my-accessibility-a-color);
 }
 
 /*
@@ -572,18 +594,18 @@ Contains email and socials
 
 /* HEADER AND FOOTER DISPLAY OPTIONS */
 
-header .display-desktop {
+.header .display-desktop {
   display: none;
 }
 
-header .display-mobile {
+.header .display-mobile {
   width: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
 }
 
-header .display-mobile img {
+.header .display-mobile img {
   align-self: flex-end;
 }
 
@@ -605,7 +627,7 @@ header .display-mobile img {
     display: none;
   }
 
-  header .display-mobile {
+  .header .display-mobile {
     width: 100%;
     display: flex;
     justify-content: flex-end;
@@ -630,16 +652,16 @@ header .display-mobile img {
     margin: 0;
   }
 
-  header {
+  .header {
     height: 8vh;
   }
 
   .display-mobile,
-  header .display-mobile {
+  .header .display-mobile {
     display: none;
   }
 
-  header .display-desktop {
+  .header .display-desktop {
     width: 100%;
     display: flex;
     justify-content: center;

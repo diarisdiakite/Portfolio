@@ -1,25 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Portfolio">
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-  <meta name="theme-color" content="#36b37e"/>
   <title>Diarisdiakite portfolio homepage</title>
 </head>
 <body>
   <div class="header-bg">
-    <header>
-      <div class="display-desktop">
-        <nav class="navbar">
-          <a href="#recent_work">Portfolio</a>
-          <a href="#about_myself">About</a>
-          <a href="#footer">Contact</a>
-        </nav>
-      </div>
+    <header class="header">
+      <nav class="display-desktop">
+        <ul class="navbar">
+          <li><a href="#recent_work">Portfolio</a></li>
+          <li><a href="#about_myself">About</a></li>
+          <li><a href="#footer">Contact</a></li>
+        </ul>
+      </nav>
       <div class="display-mobile">
         <div id="union">
           <img src="images/Icons/Icon - Menu.png" alt="Clic here to see the menu">
@@ -44,37 +43,37 @@
 
         <ul class="social spacing-default display-mobile">
           <li><a href="https://twitter.com/diarisdiakite" aria-label="My Twitter account">
-            <i class="fab fa-twitter"></i></a>
+            <span class="fab fa-twitter"></span></a>
           </li>
           <li><a href="https://www.linkedin.com/diarisdiakite/" aria-label="My linkedin account">
-            <i class="fab fa-linkedin-in"></i></li>
+            <span class="fab fa-linkedin-in"></span></li>
           </a></li>
           <li><a href="https://www.medium.com/#" name="twitter" aria-label="My Meduim account">
-            <i class="fab fa-medium" alt="My Medium account"></i>
+            <span class="fab fa-medium" alt="My Medium account"></span>
           </a></li>
           <li><a href="https://www.github.com/diarisdiakite" aria-label="My Github account">
-            <i class="fab fa-github"></i>
+            <span class="fab fa-github"></span>
           </a></li>
           <li><a href="https://www.angellist.com/#" aria-label="My Angellist account">
-            <i class="fab fa-angellist"></i>
+            <span class="fab fa-angellist"></span>
           </a></li>
         </ul>
 
         <ul class="social spacing-default display-desktop">
           <li><a href="https://www.github.com/diarisdiakite" aria-label="My Github account">
-            <i class="fab fa-github"></i>
+            <span class="fab fa-github"></span>
           </a></li>
           <li><a href="https://www.linkedin.com/diarisdiakite/" aria-label="My linkedin account">
-            <i class="fab fa-linkedin-in"></i></li>
+            <span class="fab fa-linkedin-in"></span></li>
           </a></li>
           <li><a href="https://www.angellist.com/#" aria-label="My Angellist account">
-            <i class="fab fa-angellist"></i>
+            <span class="fab fa-angellist"></span>
           </a></li>
           <li><a href="https://twitter.com/diarisdiakite" aria-label="My twitter account">
-            <i class="fab fa-twitter"></i>
+            <span class="fab fa-twitter"></span>
           </a></li>
           <li><a href="https://www.medium.com/#" aria-label="My Meduim account">
-            <i class="fab fa-medium"></i>
+            <span class="fab fa-medium"></span>
           </a></li>
         </ul>
       </div>
@@ -345,15 +344,15 @@
     <form action="https://formspree.io/f/mqkoykyv" method="POST" class="contact-form-container">
 
       <label for="full-name">
-        <input type="text" name="full-name" maxlength="30" placeholder="Full Name" required>
+        <input type="text" id="full-name" name="full-name" maxlength="30" placeholder="Full Name" required>
       </label>
             
       <label for="email">
-        <input type="email" name="email" placeholder="Email address" required>
+        <input type="email" id="email" name="email" placeholder="Email address" required>
       </label>
       
       <label for="textarea">
-      <textarea name="text" rows="10" maxlength="500" placeholder="Hey, I would like to connect to..." required></textarea>
+      <textarea id="textarea" name="text" rows="10" maxlength="500" placeholder="Hey, I would like to connect to..." required></textarea>
       </label> 
       
       <button class="form-button" type="submit">Get in touch</button>
@@ -374,37 +373,37 @@
     </div>
     <ul class="social spacing-default display-mobile">
       <li><a href="https://twitter.com/diarisdiakite" aria-label="My Twitter account">
-        <i class="fab fa-twitter"></i></a>
+        <span class="fab fa-twitter"></span></a>
       </li>
       <li><a href="https://www.linkedin.com/diarisdiakite/" aria-label="My linkedin account">
-        <i class="fab fa-linkedin-in"></i></li>
+        <span class="fab fa-linkedin-in"></span></li>
       </a></li>
       <li><a href="https://www.medium.com/#" name="twitter" aria-label="My Meduim account">
-        <i class="fab fa-medium" alt="My Medium account"></i>
+        <span class="fab fa-medium" alt="My Medium account"></span>
       </a></li>
       <li><a href="https://www.github.com/diarisdiakite" aria-label="My Github account">
-        <i class="fab fa-github"></i>
+        <span class="fab fa-github"></span>
       </a></li>
       <li><a href="https://www.angellist.com/#" aria-label="My Angellist account">
-        <i class="fab fa-angellist"></i>
+        <span class="fab fa-angellist"></span>
       </a></li>
     </ul>
 
     <ul class="social spacing-default display-desktop">
       <li><a href="https://www.github.com/diarisdiakite" aria-label="My Github account">
-        <i class="fab fa-github"></i>
+        <span class="fab fa-github"></span>
       </a></li>
       <li><a href="https://www.linkedin.com/diarisdiakite/" aria-label="My linkedin account">
-        <i class="fab fa-linkedin-in"></i></li>
+        <span class="fab fa-linkedin-in"></span></li>
       </a></li>
       <li><a href="https://www.angellist.com/#" aria-label="My Angellist account">
-        <i class="fab fa-angellist"></i>
+        <span class="fab fa-angellist"></span>
       </a></li>
       <li><a href="https://twitter.com/diarisdiakite" aria-label="My twitter account">
-        <i class="fab fa-twitter"></i>
+        <span class="fab fa-twitter"></span>
       </a></li>
       <li><a href="https://www.medium.com/#" aria-label="My Meduim account">
-        <i class="fab fa-medium"></i>
+        <span class="fab fa-medium"></span>
       </a></li>
     </ul>
   </footer>
