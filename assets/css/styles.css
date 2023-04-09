@@ -142,7 +142,7 @@ Contains the union and the settings
 
 header {
   width: 100vw;
-  margin: 2% auto 5% auto;
+  margin: 0% auto 5% auto;
   background: 
     url(../../images/mobile-bg/header-illsutration-mobile.svg) no-repeat;
 }
@@ -477,7 +477,7 @@ Contains a text in a header and the form
 
 .contact-form-container {
   width: 100%;
-  height: 100%;                             /* HEIGHT ISSUE TO FIX */
+  height: 100vh;                             /* HEIGHT ISSUE TO FIX */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -487,7 +487,6 @@ Contains a text in a header and the form
 
 form {
   width: 90%;
-  display: flex;
   flex-direction: column;
   margin: 8% auto;
 }
@@ -528,27 +527,6 @@ textarea::placeholder {
   min-height: 7.125rem;
   padding-left: 5%;
 }
-
-/*
-Form background
-Display none here
-*/
-
-.form-bg-image {
-  position: relative;
-  display: none;
-  z-index: 999;
-  height: 30vh;
-  width: 100%;
-  background-color: transparent; /* FOR TESTING PURPOSE */
-  overflow: hidden;
-  align-items: stretch;
-  background: 
-  url(../../images/desktop-bg/footer1.svg) no-repeat left bottom 10%,
-  url(../../images/desktop-bg/footer2.svg) no-repeat center left 20%,
-  url(../../images/desktop-bg/footer3.svg) no-repeat right bottom 0%;
-}
-
 
 /*
 Footer
@@ -653,10 +631,10 @@ Contains email and socials
   }
 
   .headline {
-    width: 45%;
-    margin: 20% auto;
+    width: 50%;
+    margin: auto;
     background: none;
-
+    padding-top: 10%;
   }
 
   .spacing-default {
@@ -664,7 +642,7 @@ Contains email and socials
   }
 
   .arrow {  /* TO CENTER */
-    margin: 0% auto 2% auto;
+    margin: -5% auto 2% auto;
   }
 
   .recent-work {
@@ -746,57 +724,43 @@ Contains email and socials
   }
 
   /* ALL THIS PART TO COMPARE AND FIX THE CONTACT FORM ISSUE*/ /* ALL THIS PART TO COMPARE AND FIX THE CONTACT */
-  .contact-form-text {
-    width: 40%;
-    margin: 8% auto;
-    display: flex;
+  .contact-form-container {
+    background: 
+      url(../../images/desktop-bg/footer1.svg) no-repeat left bottom 10%,
+      url(../../images/desktop-bg/footer2.svg) no-repeat bottom 15% left 20%,
+      url(../../images/desktop-bg/footer3.svg) no-repeat right bottom 0%;
   }
   
-  .contact-heading {
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 130%;
-    text-align: center;
-    color: #172b4d;
-  }
+  .contact-form-text {
+    width: 50%;
+  } 
   
   .contact-form {
     width: 80%;
-    margin: 5% auto;
+    margin: 0% auto;
     background-color: transparent;
     z-index: 0;
     display: flex;
     flex-direction: row;
   }
-  
-  .contact-form-container {
-    width: 100%;
-    height: 100%;                             /* HEIGHT ISSUE TO FIX */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0% auto;
+
+  .contact-heading {
+    width: 95%;
   }
-  
+
+  .contact-heading h2 {
+    text-align: left;
+  }
+    
   form {
     width: 50%;
     display: flex;
     flex-direction: column;
   }
-/* ALL THIS PART TO COMPARE AND FIX THE CONTACT */ /* ALL THIS PART TO COMPARE AND FIX THE CONTACT */
-
-  .contact-form-container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 1%;
-    z-index: 1;
-  }
 
   .form-button {
     margin-left: 0;
-    width: 6.563; /* TO FIX */
+    width: max-content; 
     height: 1.5rem;
     height: 100%;
     padding: 3% 3%;
@@ -818,10 +782,6 @@ Contains email and socials
 
   textarea::placeholder {
     padding: 2% 1.5%;
-  }
-
-  .form-bg-image {
-    display: flex;
   }
 
   .footer {
@@ -847,7 +807,7 @@ Contains email and socials
   }
 }
 
-@media (min-width: 912px) { /* THIS WAS 768 COME BACK TO THAT IN CASE OF ISSUE */
+@media (min-width: 912px) { 
 
   .about-myself {
     width: 92%;
