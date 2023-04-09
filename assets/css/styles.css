@@ -394,7 +394,7 @@ languages, frameworks and skills
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 50% auto 0 auto;
+  margin: 50% auto 50% auto;
   background: 
   url(../../images/mobile-bg/about-me-mobile1.svg) no-repeat left bottom 70%,
   url(../../images/mobile-bg/about-me-mobile2.svg) no-repeat right top 0%;
@@ -422,19 +422,20 @@ languages, frameworks and skills
   flex-direction: column;
   width: 92%;
   margin: 1% 4%;
+  justify-content: stretch;
 }
 
 .competences-image {
   width: 100%;
   height: 30%;
-  margin: 15% auto 3% auto;
+  margin: 0% auto;
   border-radius: 8px;
 }
 
 .competences-image img {
+  align-self: flex-start;
   width: 100%;
-  height: 100%;
-  margin: auto;
+  margin: 0;
   border-radius: 8px;
 }
 
@@ -586,17 +587,30 @@ Contains email and socials
   .display-desktop {
     display: none;
   }
-
-  .header .display-mobile {
+  
+  .header-nav .display-mobile {
     width: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
   }
 
-  header .display-mobile img {
+  footer .social .display-mobile ,
+  header .social .display-mobile{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header-nav .display-mobile img {
     align-self: flex-end;
   }
+
+  .footer {
+    margin-top: 30%;
+  }
+
 }
 
 @media (min-width: 768px) {
