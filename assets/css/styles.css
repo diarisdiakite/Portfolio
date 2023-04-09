@@ -65,7 +65,6 @@ h3 {
 p {
   columns: var(--my-text-color);
   width: 100%;
-  height: 100%;
   font-style: normal;
   text-align: center;
   letter-spacing: 1px;
@@ -141,7 +140,14 @@ Nav Section
 Contains the union and the settings
 */
 
-.header {
+header {
+  width: 100vw;
+  margin: 2% auto 5% auto;
+  background: 
+    url(../../images/mobile-bg/header-illsutration-mobile.svg) no-repeat;
+}
+
+.header-nav {
   width: 100vw;
   height: 3vh;
   display: flex;
@@ -191,48 +197,14 @@ Headline Section
 
 .headline {
   display: flex;
-  margin-top: 10%;
+  margin-top: 30%;
   height: auto;
-}
-
-.header-bg {
-  background-image: url(../../images/header-illsutration-mobile.png);
-  background-repeat: no-repeat;
-  background-size: 100vw;
-  width: 100vw;
-  height: 100%;
-  z-index: -1;
-}
-
-.headline-text {
-  width: 60%;
-  height: 100%; /* HEIGHT ISSUE TO FIX */
-  display: flex;
-  flex-direction: column;
-  margin: -1% auto 0 auto; /* TRY TO FIX THAT AFTERWARDS */
-}
-
-.headline h1 {
-  color: var(--my-text-color);
-  font-style: normal;
-  font-weight: 800;
-  font-size: 2.5rem;
-  line-height: 3.25rem;
-  text-align: center;
-  letter-spacing: 1px;
-}
-
-.headline h2 {
-  font-style: normal;
-  font-weight: 600;
-  font-size: 2.5rem;
-  line-height: 3.25rem;
-  text-align: center;
-  letter-spacing: 1px;
+  width: 80%;   /* CHANGE THIS WIDTH TO 60%*/ /* CHANGE THIS WIDTH TO 60%*/ /* CHANGE THIS WIDTH TO 60%*/
+  margin: 20% auto;
 }
 
 .green {
-  color: var(--my-green-color);
+  color: var(--my-accessibility-a-color);
 }
 
 .headline p,
@@ -245,13 +217,12 @@ Headline Section
 .social {
   width: 10.63rem;
   height: 1.226rem;
-  top: 35.556rem;
-  left: 6.563rem;
   display: flex;
   justify-content: center;
   align-items: center; /* Try to find out how to properly center with flex box */
   list-style-type: none;
   margin: 10% auto;
+  width: 30%;
 }
 
 .social li {
@@ -260,7 +231,7 @@ Headline Section
   text-align: center;
 }
 
-.social li a span {
+.social li a {
   color: var(--my-gray-color);
   width: 5%;
   height: 5%;           /* HEIGHT ISSUE TO FIX */
@@ -268,8 +239,9 @@ Headline Section
 }
 
 /*
-Recent-work section
-Contains The 10 microverse projects
+.social img {
+  width: 100%;
+}
 */
 
 button .arrow {
@@ -281,13 +253,16 @@ button .arrow {
 }
 
 .arrow img {
-  margin: 0 49%;
+  width: 2%;
+  margin: 5% 48%;
 }
 
 /*
+/*
 Recent-work section
-Contains The 5 microverse projects
+Contains The 6 microverse projects
 */
+
 .recent-work { /* See if relevant */
   width: 100%;
   height: max-content;
@@ -419,7 +394,7 @@ languages, frameworks and skills
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 30% auto 0 auto;
+  margin: 50% auto 0 auto;
   background: 
   url(../../images/mobile-bg/about-me-mobile1.svg) no-repeat left bottom 70%,
   url(../../images/mobile-bg/about-me-mobile2.svg) no-repeat right top 0%;
@@ -427,7 +402,7 @@ languages, frameworks and skills
 }
 
 .about-myself-text {
-  width: 50vw;
+  width: 75%;
   display: flex;
   flex-direction: column;
   margin: 10% auto 0 auto;
@@ -451,13 +426,14 @@ languages, frameworks and skills
 
 .competences-image {
   width: 100%;
+  height: 30%;
   margin: 15% auto 3% auto;
-  height: 30%;                              /* HEIGHT ISSUE TO FIX */
   border-radius: 8px;
 }
 
 .competences-image img {
   width: 100%;
+  height: 100%;
   margin: auto;
   border-radius: 8px;
 }
@@ -477,8 +453,9 @@ Contains a text in a header and the form
 */
 
 .contact-form-text {
-  width: 90%;
-  margin: 0% auto;
+  width: 80%;
+  margin: 8% auto;
+  display: flex;
 }
 
 .contact-heading {
@@ -489,14 +466,16 @@ Contains a text in a header and the form
   color: #172b4d;
 }
 
-.contact-form-container {
+.contact-form {
   width: 90%;
-  margin: 10% auto;
+  margin: 5% auto;
   background-color: transparent;
   z-index: 0;
+  display: flex;
+  flex-direction: column;
 }
 
-.contact-form {
+.contact-form-container {
   width: 100%;
   height: 100%;                             /* HEIGHT ISSUE TO FIX */
   display: flex;
@@ -507,8 +486,10 @@ Contains a text in a header and the form
 }
 
 form {
+  width: 90%;
   display: flex;
   flex-direction: column;
+  margin: 8% auto;
 }
 
 input[type="text"],
@@ -539,12 +520,13 @@ input[type="email"]::placeholder {
   font-weight: 400;
   font-size: 0, 9375rem;
   line-height: 160%;
-  padding: 1rem;
+  padding: 5%;
 }
 
 textarea::placeholder {
   text-align: left;
   min-height: 7.125rem;
+  padding-left: 5%;
 }
 
 /*
@@ -556,7 +538,7 @@ Display none here
   position: relative;
   display: none;
   z-index: 999;
-  height: 50vh;
+  height: 30vh;
   width: 100%;
   background-color: transparent; /* FOR TESTING PURPOSE */
   overflow: hidden;
@@ -653,7 +635,10 @@ Contains email and socials
   }
 
   .header {
-    height: 8vh;
+    height: 100%;
+    background: 
+      url(../../images/desktop-bg/Header-llustration-desktop.svg) no-repeat top;
+    background-size: 100%;
   }
 
   .display-mobile,
@@ -668,19 +653,18 @@ Contains email and socials
   }
 
   .headline {
-    margin-top: 5%;
-  }
+    width: 45%;
+    margin: 20% auto;
+    background: none;
 
-  .header-bg {
-    background-image: url(../../images/desktop-bg/Header-llustration-desktop.svg);
   }
 
   .spacing-default {
-    margin: 2% auto;
+    margin: 3% auto;
   }
 
   .arrow {  /* TO CENTER */
-    margin: 0% auto 20% auto;
+    margin: 0% auto 2% auto;
   }
 
   .recent-work {
@@ -698,13 +682,13 @@ Contains email and socials
     margin: 1% auto 0% auto;
   }
 
-  .social li a i {
+  .social li a {
     color: var(--my-gray-color);
     width: 5%;
     height: 2%;                               /* HEIGHT ISSUE TO FIX */
     font-size: x-large;
   }
-
+  
   .projects {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(auto, 1fr);
@@ -726,6 +710,7 @@ Contains email and socials
 
   .competences {
     width: 92%;
+    height: max-content;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -740,11 +725,14 @@ Contains email and socials
     height: 19.75rem;
     border-radius: 0.5rem;
     margin: 1% 0.5%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
   }
 
   .competences-image {
-    width: 100%;
-    margin: 5% auto 3% auto;
+    width: 60%;
+    margin: 5% auto 1% auto;
   }
 
   .list-competences {
@@ -757,11 +745,53 @@ Contains email and socials
     margin: 2% auto 5% auto;
   }
 
+  /* ALL THIS PART TO COMPARE AND FIX THE CONTACT FORM ISSUE*/ /* ALL THIS PART TO COMPARE AND FIX THE CONTACT */
+  .contact-form-text {
+    width: 40%;
+    margin: 8% auto;
+    display: flex;
+  }
+  
+  .contact-heading {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 130%;
+    text-align: center;
+    color: #172b4d;
+  }
+  
   .contact-form {
-    width: 90%;
+    width: 80%;
+    margin: 5% auto;
+    background-color: transparent;
+    z-index: 0;
     display: flex;
     flex-direction: row;
+  }
+  
+  .contact-form-container {
+    width: 100%;
+    height: 100%;                             /* HEIGHT ISSUE TO FIX */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0% auto;
+  }
+  
+  form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+/* ALL THIS PART TO COMPARE AND FIX THE CONTACT */ /* ALL THIS PART TO COMPARE AND FIX THE CONTACT */
+
+  .contact-form-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     gap: 1%;
+    z-index: 1;
   }
 
   .form-button {
@@ -790,7 +820,7 @@ Contains email and socials
     padding: 2% 1.5%;
   }
 
-  .form-bg-image .display-desktop {
+  .form-bg-image {
     display: flex;
   }
 
