@@ -281,7 +281,19 @@ header .social li a {
   padding: 1% 5%;
 }
 
+.hamburger-navmenu li a:hover {
+  font-weight: bold;
+}
 
+/*ADDED CLASS .HAMBURGER-NAVMENU.ACTIVE */
+
+.hamburger-navmenu.active {
+  margin-right: 0;
+}
+
+.showHamburgerNavMenu {
+  transform: translate(0);
+}
 /*
 Headline Section
 */
