@@ -6,3 +6,9 @@ hamburgerMenu.addEventListener('click', () => {
   hamburgerNavMenu.classList.toggle('active');
   // hamburgerNavMenu.classList.toggle("showHamburgerNavMenu");
 });
+
+document.querySelectorAll('.nav-link').forEach((n) => n.addEventListener('click', () => {
+  hamburgerMenu.classList.remove('active');
+  hamburgerNavMenu.classList.remove('active');
+  // hamburgerNavMenu.classList.remove("showHamburgerNavMenu");
+}));
