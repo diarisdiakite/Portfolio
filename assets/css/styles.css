@@ -191,6 +191,45 @@ header .social li a {
   padding: 1% 5%;
 }
 
+.hamburger-menu {
+  background-color: transparent; /*FOR TESTING PURPOSE*/
+  width: 10%;
+  height: 5vh;
+  align-self: flex-end;
+  margin: 0% 0 60% 0;
+  z-index: 2;
+  gap: 15%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 3%;
+  cursor: pointer;
+}
+
+.header-nav .hamburger-bar {
+  width: 2rem;
+  height: 0.2rem;
+  background-color: black; /**/
+  transition: all 0.3s ease;
+  margin: 1% 0;
+  z-index: 999; 
+}
+
+/*
+  ANIMATION TO TURN THE BARS TO AN "X"
+  PSEUDO CLASS :ACTIVE TO BE ADDED DYNAMICLY WITH JAVASCRIPT 
+*/
+.hamburger-menu.active .hamburger-bar:nth-child(1) {
+  transform: translateY(0.7rem) rotate(45deg);
+}
+
+.hamburger-menu.active .hamburger-bar:nth-child(3) {
+  transform: translateY(-0.7rem) rotate(-45deg);
+}
+
+.hamburger-menu.active .hamburger-bar:nth-child(2) {
+  opacity: 0;
+}
+
 /*
 Headline Section
 */
