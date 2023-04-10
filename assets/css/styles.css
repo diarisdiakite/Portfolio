@@ -22,6 +22,7 @@ html {
 }
 
 body {
+  position: relative;
   width: 100%;
   min-height: 100%;
   box-sizing: border-box;
@@ -137,10 +138,11 @@ button {
 
 /*
 Nav Section
-Contains the union and the settings
+Contains the hamburger menue for mobile-version and the nav-links for desktop-version
 */
 
 header {
+  position: relative;
   width: 100vw;
   margin: 0% auto 5% auto;
   background: 
@@ -148,49 +150,36 @@ header {
 }
 
 .header-nav {
+  position: fixed;
   width: 100vw;
-  height: 3vh;
+  height: 5vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--image-placeholder-color); /* FOR TESTING */
+  top: 0%;
+  z-index: 1;
 }
 
 header .social {
   margin-bottom: 1%;
 }
 
-header .navbar li,
+header .nav-menu li,
 header .social li {
   margin: 3%;
   display: flex;
 }
 
-.navbar li a,
+.nav-menu li a,
 header .social li a {
   margin-bottom: 1%;
   display: flex;
 }
 
-#union {
-  width: 10%;
-  height: 10%;
-  align-self: flex-end;
-}
 
-.navbar {
-  list-style-type: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-self: center;
-}
 
-.navbar a {
-  text-decoration: none;
-  color: var(--my-text-color);
-  padding: 1% 5%;
-}
-
+/*ADDED HAMBURGER MENU*/ /*ADDED HAMBURGER MENU*/ /*ADDED HAMBURGER MENU*/ /*ADDED HAMBURGER MENU*/
 .hamburger-menu {
   background-color: transparent; /*FOR TESTING PURPOSE*/
   width: 10%;
@@ -231,6 +220,69 @@ header .social li a {
 }
 
 /*
+  NAV MENU WHEN WE CLIC ON THE HAMBURGER MENU
+*/
+
+.nav-menu {
+  display: none;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: var(--my-text-color);
+  padding: 1% 5%;
+}
+
+.display-mobile {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 0%;
+}
+
+.hamburger-navmenu {
+  /*POSITION FIXED DOESN'T WORK*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 100vh;            /*TRY MIN-HEIGHT*/
+  list-style-type: none;
+  margin: 4rem auto 0 -120%;
+  background-color: var(--my-accessibility-a-color);
+  text-align: center;
+  transform: translateX(-500);
+  transition: 5s;
+}
+
+.hamburger-navmenu li {
+  width: 10%;
+  margin: 1% auto;
+  padding: 0.5% 0;
+  text-align: center;
+  border-bottom: 1px solid var(--image-placeholder-color1);
+}
+
+.hamburger-navmenu li:last-child {
+  border-bottom: none;
+}
+
+.hamburger-navmenu li a {
+  text-decoration: none;
+  font-size: medium;
+  color: white;
+  padding: 1% 5%;
+}
+
+
+/*
 Headline Section
 */
 
@@ -254,18 +306,17 @@ Headline Section
 }
 
 .social {
-  width: 10.63rem;
+  width: 50%;
   height: 1.226rem;
   display: flex;
   justify-content: center;
   align-items: center; /* Try to find out how to properly center with flex box */
   list-style-type: none;
   margin: 10% auto;
-  width: 30%;
 }
 
 .social li {
-  width: 75%;
+  width: 5%;
   flex: 1;
   text-align: center;
 }
@@ -313,7 +364,7 @@ Contains The 6 microverse projects
 }
 
 .recent-work-text {
-  width: 100%;
+  width: 80%;
   margin: 0 auto 10% auto;
 }
 
@@ -620,6 +671,22 @@ Contains email and socials
     width: 90%;
     text-align: center;
   }
+
+  footer .social .display-mobile ,
+  header .social .display-mobile{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .display-desktop {
+    display: none;
+  }
+
+  .header .nav-menu {
+    display: none;
+  }
 }
 
 @media (min-width: 375px) {
@@ -634,9 +701,17 @@ Contains email and socials
     align-items: flex-end;
   }
 
+  .header-nav .nav-menu {
+    display: none;
+  }
+
+  .header-nav .hamburger-menu {
+    height: 5vh;
+  }
+
   footer .social .display-mobile ,
   header .social .display-mobile{
-    width: 50%;
+    width: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -645,6 +720,12 @@ Contains email and socials
   .header-nav .display-mobile img {
     align-self: flex-end;
   }
+
+  /*
+
+  THIS FOOTER IS TO BE FIWED FOR MIN-WIDTH: 375PX
+
+  */
 
   .footer {
     margin-top: 30%;
@@ -672,6 +753,15 @@ Contains email and socials
     background-size: 100%;
   }
 
+  .header-nav .nav-menu {
+    width: 100%;
+    min-height: 70%;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .display-mobile,
   .header .display-mobile {
     display: none;
@@ -680,6 +770,7 @@ Contains email and socials
   .header .display-desktop {
     width: 100%;
     display: flex;
+    flex-direction: row;
     justify-content: center;
   }
 
@@ -779,8 +870,8 @@ Contains email and socials
   /* ALL THIS PART TO COMPARE AND FIX THE CONTACT FORM ISSUE*/ /* ALL THIS PART TO COMPARE AND FIX THE CONTACT */
   .contact-form-container {
     background: 
-      url(../../images/desktop-bg/footer1.svg) no-repeat left bottom 10%,
-      url(../../images/desktop-bg/footer2.svg) no-repeat bottom 15% left 20%,
+      url(../../images/desktop-bg/footer1.svg) no-repeat left bottom 0%,
+      url(../../images/desktop-bg/footer2.svg) no-repeat bottom 0% left 20%,
       url(../../images/desktop-bg/footer3.svg) no-repeat right bottom 0%;
   }
   
