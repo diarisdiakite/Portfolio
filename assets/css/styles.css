@@ -160,6 +160,20 @@ header {
   z-index: 1;
 }
 
+.nav-menu {
+  list-style-type: none;
+  display: none, flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: var(--my-text-color);
+  padding: 1% 5%;
+}
+
 /* ADDED HAMBURGER MENU */
 .hamburger-menu {
   background-color: transparent; /* FOR TESTING PURPOSE */
