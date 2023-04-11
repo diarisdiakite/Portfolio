@@ -155,7 +155,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--image-placeholder-color); /* FOR TESTING */
+  background-color: transparent; /* FOR TESTING */
   margin-top: 0%;
   z-index: 1;
 }
@@ -176,26 +176,29 @@ header {
 
 /* ADDED HAMBURGER MENU */
 .hamburger-menu {
-  background-color: transparent; /* FOR TESTING PURPOSE */
+  background-color: var(--image-placeholder-color1); /* FOR TESTING PURPOSE */
   width: 10%;
   height: 5vh;
-  align-self: flex-end;
-  margin: 0% 0 60% 0;
+  margin-top: 0%;
+  margin-left: 80%;
   z-index: 2;
-  gap: 15%;
   display: flex;
   flex-direction: column;
-  padding-top: 3%;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.header-nav .hamburger-bar {
-  width: 2rem;
-  height: 0.2rem;
-  background-color: black;
+.hamburger-bar {
+  width: 3rem;
+  height: 0.3rem;
+  background-color: var(--my-text-color);
   transition: all 0.3s ease;
-  margin: 1% 0;
+  margin: 5% 0;
   z-index: 999;
+  align-self: center;
 }
 
 /*
@@ -231,7 +234,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 80%;
+  width: 100%;
   height: 100vh;            /* TRY MIN-HEIGHT */
   list-style-type: none;
   margin: 4rem auto 0 -120%;
@@ -752,6 +755,14 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
     align-self: flex-end;
   }
 
+  .header-nav {
+    margin-top: -20%;
+  }
+
+  .hamburger-navmenu {
+    margin-top: 50%;
+  }
+
   /*
 
   THIS FOOTER IS TO BE FIWED FOR MIN-WIDTH: 375PX
@@ -775,6 +786,10 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
     height: 100%;
     background: url(../../images/desktop-bg/Header-llustration-desktop.svg) no-repeat top;
     background-size: 100%;
+  }
+
+  .header-nav {
+    margin-top: 0%;
   }
 
   .header-nav .nav-menu {
