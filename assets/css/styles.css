@@ -145,43 +145,24 @@ header {
   position: relative;
   width: 100vw;
   margin: 0% auto 5% auto;
-  background: 
-    url(../../images/mobile-bg/header-illsutration-mobile.svg) no-repeat;
+  background: url(../../images/mobile-bg/header-illsutration-mobile.svg) no-repeat;
 }
 
 .header-nav {
-  position: fixed;
+  line-height: 3rem;
   width: 100vw;
   height: 5vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--image-placeholder-color); /* FOR TESTING */
-  top: 0%;
+  margin-top: 0%;
   z-index: 1;
 }
 
-header .social {
-  margin-bottom: 1%;
-}
-
-header .nav-menu li,
-header .social li {
-  margin: 3%;
-  display: flex;
-}
-
-.nav-menu li a,
-header .social li a {
-  margin-bottom: 1%;
-  display: flex;
-}
-
-
-
-/*ADDED HAMBURGER MENU*/ /*ADDED HAMBURGER MENU*/ /*ADDED HAMBURGER MENU*/ /*ADDED HAMBURGER MENU*/
+/* ADDED HAMBURGER MENU */
 .hamburger-menu {
-  background-color: transparent; /*FOR TESTING PURPOSE*/
+  background-color: transparent; /* FOR TESTING PURPOSE */
   width: 10%;
   height: 5vh;
   align-self: flex-end;
@@ -197,15 +178,15 @@ header .social li a {
 .header-nav .hamburger-bar {
   width: 2rem;
   height: 0.2rem;
-  background-color: black; /**/
+  background-color: black;
   transition: all 0.3s ease;
   margin: 1% 0;
-  z-index: 999; 
+  z-index: 999;
 }
 
 /*
   ANIMATION TO TURN THE BARS TO AN "X"
-  PSEUDO CLASS :ACTIVE TO BE ADDED DYNAMICLY WITH JAVASCRIPT 
+  PSEUDO CLASS :ACTIVE TO BE ADDED DYNAMICLY WITH JAVASCRIPT
 */
 .hamburger-menu.active .hamburger-bar:nth-child(1) {
   transform: translateY(0.7rem) rotate(45deg);
@@ -222,22 +203,6 @@ header .social li a {
 /*
   NAV MENU WHEN WE CLIC ON THE HAMBURGER MENU
 */
-
-.nav-menu {
-  display: none;
-  list-style-type: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-self: center;
-}
-
-.nav-menu a {
-  text-decoration: none;
-  color: var(--my-text-color);
-  padding: 1% 5%;
-}
-
 .display-mobile {
   position: relative;
   display: flex;
@@ -247,13 +212,13 @@ header .social li a {
 }
 
 .hamburger-navmenu {
-  /*POSITION FIXED DOESN'T WORK*/
+  /* POSITION FIXED DOESN'T WORK */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 80%;
-  height: 100vh;            /*TRY MIN-HEIGHT*/
+  height: 100vh;            /* TRY MIN-HEIGHT */
   list-style-type: none;
   margin: 4rem auto 0 -120%;
   background-color: var(--my-accessibility-a-color);
@@ -270,22 +235,15 @@ header .social li a {
   border-bottom: 1px solid var(--image-placeholder-color1);
 }
 
-.hamburger-navmenu li:last-child {
-  border-bottom: none;
-}
-
 .hamburger-navmenu li a {
+  line-height: 3rem;
   text-decoration: none;
   font-size: medium;
   color: white;
   padding: 1% 5%;
 }
 
-.hamburger-navmenu li a:hover {
-  font-weight: bold;
-}
-
-/*ADDED CLASS .HAMBURGER-NAVMENU.ACTIVE */
+/* ADDED CLASS .HAMBURGER-NAVMENU.ACTIVE */
 
 .hamburger-navmenu.active {
   margin-right: 0;
@@ -294,16 +252,16 @@ header .social li a {
 .showHamburgerNavMenu {
   transform: translate(0);
 }
+
 /*
 Headline Section
 */
 
 .headline {
   display: flex;
-  margin-top: 30%;
   height: auto;
-  width: 80%;   /* CHANGE THIS WIDTH TO 60%*/ /* CHANGE THIS WIDTH TO 60%*/ /* CHANGE THIS WIDTH TO 60%*/
-  margin: 20% auto;
+  width: 80%;   /* CHANGE THIS WIDTH TO 60% */ /* CHANGE THIS WIDTH TO 60% */ /* CHANGE THIS WIDTH TO 60% */
+  margin: 30% auto 20% auto;
 }
 
 .green {
@@ -328,7 +286,7 @@ Headline Section
 }
 
 .social li {
-  width: 5%;
+  width: 2%;
   flex: 1;
   text-align: center;
 }
@@ -338,6 +296,22 @@ Headline Section
   width: 5%;
   height: 5%;           /* HEIGHT ISSUE TO FIX */
   font-size: x-large;
+}
+
+header .social {
+  margin-bottom: 1%;
+}
+
+.nav-menu li,
+.headline .social li {
+  margin: 3%;
+  display: flex;
+}
+
+.nav-menu li a,
+.headline .social li a {
+  margin-bottom: 1%;
+  display: flex;
 }
 
 /*
@@ -360,7 +334,6 @@ button .arrow {
 }
 
 /*
-/*
 Recent-work section
 Contains The 6 microverse projects
 */
@@ -373,9 +346,6 @@ Contains The 6 microverse projects
 .recent-work-text { /* See if relevant */
   display: flex;
   flex-direction: column;
-}
-
-.recent-work-text {
   width: 80%;
   margin: 0 auto 10% auto;
 }
@@ -418,12 +388,12 @@ Contains The 6 microverse projects
 
 .img-placeholder {
   width: 100%;
-  height:max-content;                                 /* HEIGHT ISSUE TO FIX */
+  height: max-content;                                 /* HEIGHT ISSUE TO FIX */
 }
 
 .project-wrapped-text {
   width: 100%;
-  min-height:max-content;
+  min-height: max-content;
   position: absolute;
   background-color: white;
   margin-bottom: 0%;
@@ -440,8 +410,8 @@ Contains The 6 microverse projects
   margin-top: 3%;
 }
 
-.project-built-with,
-.list-competences {
+.project .project-built-with,
+.competences-card .list-competences {
   list-style-type: none;
   text-decoration: none;
   display: flex;
@@ -452,37 +422,37 @@ Contains The 6 microverse projects
   margin: 5% 0;
 }
 
-.project-built-with {
+.project .project-built-with {
   margin-bottom: 5%;
 }
 
-.project-built-with li {
+.project .project-built-with li {
   background-color: var(--image-placeholder-color1);
   border-radius: 8px;
   margin: 0.5%;
   padding: 3%;
 }
 
-.list-competences li {
+.competences-card .list-competences li {
   background-color: var(--my-accessibility-a-bg-color);
   border-radius: 8px;
   margin: 1%;
   padding: 3%;
 }
 
-.project-built-with li a,
-.list-competences li a {
+.project .project-built-with li a,
+.competences-card .list-competences li a {
   text-decoration: none;
   font-size: medium;
   border-radius: 8px;
   font-weight: 400;
 }
 
-.project-built-with li a {
+.project .project-built-with li a {
   color: var(--my-text-color);
 }
 
-.list-competences li a {
+.competences-card .list-competences li a {
   color: var(--my-accessibility-a-color);
 }
 
@@ -497,9 +467,9 @@ languages, frameworks and skills
   justify-content: center;
   align-items: center;
   margin: 50% auto 50% auto;
-  background: 
-  url(../../images/mobile-bg/about-me-mobile1.svg) no-repeat left bottom 70%,
-  url(../../images/mobile-bg/about-me-mobile2.svg) no-repeat right top 0%;
+  background:
+    url(../../images/mobile-bg/about-me-mobile1.svg) no-repeat left bottom 70%,
+    url(../../images/mobile-bg/about-me-mobile2.svg) no-repeat right top 0%;
   background-size: 12%;
 }
 
@@ -662,7 +632,6 @@ Contains email and socials
 }
 
 .header .display-mobile {
-  width: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -677,35 +646,20 @@ Contains email and socials
   display: none;
 }
 
-@media (max-width: 280px) {
-  .project-built-with li,
-  .list-competences li {
-    width: 90%;
-    text-align: center;
-  }
 
-  footer .social .display-mobile ,
-  header .social .display-mobile{
-    width: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+/*
+HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
+*/
 
-  .display-desktop {
-    display: none;
-  }
-
-  .header .nav-menu {
-    display: none;
-  }
+.hamburger-navmenu li:last-child {
+  border-bottom: none;
 }
 
-@media (min-width: 375px) {
-  .display-desktop {
-    display: none;
-  }
-  
+.hamburger-navmenu li a:hover {
+  font-weight: bold;
+}
+
+@media (max-width: 280px) {
   .header-nav .display-mobile {
     width: 100%;
     display: flex;
@@ -719,10 +673,62 @@ Contains email and socials
 
   .header-nav .hamburger-menu {
     height: 5vh;
+    margin-top: 0%;
   }
 
-  footer .social .display-mobile ,
-  header .social .display-mobile{
+  .project .project-built-with li,
+  .competences-card .list-competences li {
+    width: 90%;
+    text-align: center;
+  }
+
+  footer .social .display-mobile,
+  .header .social .display-mobile {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .display-desktop {
+    display: none;
+  }
+}
+
+@media (min-width: 375px) {
+  .display-desktop {
+    display: none;
+  }
+
+  .header-nav .display-mobile {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  .social .display-mobile {
+    width: 30%;
+  }
+
+  .header-nav .nav-menu {
+    display: none;
+  }
+
+  .header-nav .hamburger-menu {
+    height: 5vh;
+    margin-top: 0%;
+  }
+
+  .x-header-nav-fixed-top,
+  .x-header-nav-fixed-left,
+  .x-header-nav-fixed-right {
+    position: fixed;
+    overflow-y: scroll;
+  }
+
+  footer .social .display-mobile,
+  header .social .display-mobile {
     width: 30%;
     display: flex;
     justify-content: center;
@@ -742,7 +748,6 @@ Contains email and socials
   .footer {
     margin-top: 30%;
   }
-
 }
 
 @media (min-width: 768px) {
@@ -753,15 +758,9 @@ Contains email and socials
   }
   */
 
-  .about-myself {
-    width: 100%;
-    margin: 0;
-  }
-
   .header {
     height: 100%;
-    background: 
-      url(../../images/desktop-bg/Header-llustration-desktop.svg) no-repeat top;
+    background: url(../../images/desktop-bg/Header-llustration-desktop.svg) no-repeat top;
     background-size: 100%;
   }
 
@@ -822,7 +821,7 @@ Contains email and socials
     height: 2%;                               /* HEIGHT ISSUE TO FIX */
     font-size: x-large;
   }
-  
+
   .projects {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(auto, 1fr);
@@ -836,9 +835,11 @@ Contains email and socials
   }
 
   .about-myself {
-    background: 
-    url(../../images/mobile-bg/about-me-mobile1.svg) no-repeat left top 25%,
-    url(../../images/mobile-bg/about-me-mobile2.svg) no-repeat right top 0%;
+    width: 100%;
+    margin: 0;
+    background:
+      url(../../images/mobile-bg/about-me-mobile1.svg) no-repeat left top 25%,
+      url(../../images/mobile-bg/about-me-mobile2.svg) no-repeat right top 0%;
     background-size: 15%;
   }
 
@@ -869,7 +870,7 @@ Contains email and socials
     margin: 5% auto 1% auto;
   }
 
-  .list-competences {
+  .competences-card .list-competences {
     margin: 5% auto 5% auto;
   }
 
@@ -879,18 +880,20 @@ Contains email and socials
     margin: 2% auto 5% auto;
   }
 
-  /* ALL THIS PART TO COMPARE AND FIX THE CONTACT FORM ISSUE*/ /* ALL THIS PART TO COMPARE AND FIX THE CONTACT */
+  /* ALL THIS PART TO COMPARE AND FIX THE CONTACT FORM ISSUE */
+
+  /* ALL THIS PART TO COMPARE AND FIX THE CONTACT */
   .contact-form-container {
-    background: 
+    background:
       url(../../images/desktop-bg/footer1.svg) no-repeat left bottom 0%,
       url(../../images/desktop-bg/footer2.svg) no-repeat bottom 0% left 20%,
       url(../../images/desktop-bg/footer3.svg) no-repeat right bottom 0%;
   }
-  
+
   .contact-form-text {
     width: 50%;
-  } 
-  
+  }
+
   .contact-form {
     width: 80%;
     margin: 0% auto;
@@ -907,7 +910,7 @@ Contains email and socials
   .contact-heading h2 {
     text-align: left;
   }
-    
+
   form {
     width: 50%;
     display: flex;
@@ -916,7 +919,7 @@ Contains email and socials
 
   .form-button {
     margin-left: 0;
-    width: max-content; 
+    width: max-content;
     height: 1.5rem;
     height: 100%;
     padding: 3% 3%;
@@ -963,8 +966,7 @@ Contains email and socials
   }
 }
 
-@media (min-width: 912px) { 
-
+@media (min-width: 912px) {
   .about-myself {
     width: 92%;
   }
