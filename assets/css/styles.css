@@ -143,8 +143,7 @@ Contains the union and the settings
 header {
   width: 100vw;
   margin: 0% auto 5% auto;
-  background: 
-    url(../../images/mobile-bg/header-illsutration-mobile.svg) no-repeat;
+  background: url(../../images/mobile-bg/header-illsutration-mobile.svg) no-repeat;
 }
 
 .header-nav {
@@ -199,7 +198,7 @@ Headline Section
   display: flex;
   margin-top: 30%;
   height: auto;
-  width: 80%;   /* CHANGE THIS WIDTH TO 60%*/ /* CHANGE THIS WIDTH TO 60%*/ /* CHANGE THIS WIDTH TO 60%*/
+  width: 80%;   /* CHANGE THIS WIDTH TO 60% */ /* CHANGE THIS WIDTH TO 60% */ /* CHANGE THIS WIDTH TO 60% */
   margin: 20% auto;
 }
 
@@ -316,12 +315,12 @@ Contains The 6 microverse projects
 
 .img-placeholder {
   width: 100%;
-  height:max-content;                                 /* HEIGHT ISSUE TO FIX */
+  height: max-content;                                 /* HEIGHT ISSUE TO FIX */
 }
 
 .project-wrapped-text {
   width: 100%;
-  min-height:max-content;
+  min-height: max-content;
   position: absolute;
   background-color: white;
   margin-bottom: 0%;
@@ -395,9 +394,9 @@ languages, frameworks and skills
   justify-content: center;
   align-items: center;
   margin: 50% auto 50% auto;
-  background: 
-  url(../../images/mobile-bg/about-me-mobile1.svg) no-repeat left bottom 70%,
-  url(../../images/mobile-bg/about-me-mobile2.svg) no-repeat right top 0%;
+  background:
+    url(../../images/mobile-bg/about-me-mobile1.svg) no-repeat left bottom 70%,
+    url(../../images/mobile-bg/about-me-mobile2.svg) no-repeat right top 0%;
   background-size: 12%;
 }
 
@@ -587,7 +586,7 @@ Contains email and socials
   .display-desktop {
     display: none;
   }
-  
+
   .header-nav .display-mobile {
     width: 100%;
     display: flex;
@@ -595,8 +594,8 @@ Contains email and socials
     align-items: flex-end;
   }
 
-  footer .social .display-mobile ,
-  header .social .display-mobile{
+  footer .social .display-mobile,
+  header .social .display-mobile {
     width: 50%;
     display: flex;
     justify-content: center;
@@ -610,7 +609,6 @@ Contains email and socials
   .footer {
     margin-top: 30%;
   }
-
 }
 
 @media (min-width: 768px) {
@@ -628,8 +626,7 @@ Contains email and socials
 
   .header {
     height: 100%;
-    background: 
-      url(../../images/desktop-bg/Header-llustration-desktop.svg) no-repeat top;
+    background: url(../../images/desktop-bg/Header-llustration-desktop.svg) no-repeat top;
     background-size: 100%;
   }
 
@@ -680,7 +677,7 @@ Contains email and socials
     height: 2%;                               /* HEIGHT ISSUE TO FIX */
     font-size: x-large;
   }
-  
+
   .projects {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(auto, 1fr);
@@ -694,9 +691,9 @@ Contains email and socials
   }
 
   .about-myself {
-    background: 
-    url(../../images/mobile-bg/about-me-mobile1.svg) no-repeat left top 25%,
-    url(../../images/mobile-bg/about-me-mobile2.svg) no-repeat right top 0%;
+    background:
+      url(../../images/mobile-bg/about-me-mobile1.svg) no-repeat left top 25%,
+      url(../../images/mobile-bg/about-me-mobile2.svg) no-repeat right top 0%;
     background-size: 15%;
   }
 
@@ -737,18 +734,20 @@ Contains email and socials
     margin: 2% auto 5% auto;
   }
 
-  /* ALL THIS PART TO COMPARE AND FIX THE CONTACT FORM ISSUE*/ /* ALL THIS PART TO COMPARE AND FIX THE CONTACT */
+  /* ALL THIS PART TO COMPARE AND FIX THE CONTACT FORM ISSUE */
+
+  /* ALL THIS PART TO COMPARE AND FIX THE CONTACT */
   .contact-form-container {
-    background: 
+    background:
       url(../../images/desktop-bg/footer1.svg) no-repeat left bottom 10%,
       url(../../images/desktop-bg/footer2.svg) no-repeat bottom 15% left 20%,
       url(../../images/desktop-bg/footer3.svg) no-repeat right bottom 0%;
   }
-  
+
   .contact-form-text {
     width: 50%;
-  } 
-  
+  }
+
   .contact-form {
     width: 80%;
     margin: 0% auto;
@@ -765,7 +764,7 @@ Contains email and socials
   .contact-heading h2 {
     text-align: left;
   }
-    
+
   form {
     width: 50%;
     display: flex;
@@ -774,7 +773,7 @@ Contains email and socials
 
   .form-button {
     margin-left: 0;
-    width: max-content; 
+    width: max-content;
     height: 1.5rem;
     height: 100%;
     padding: 3% 3%;
@@ -821,8 +820,7 @@ Contains email and socials
   }
 }
 
-@media (min-width: 912px) { 
-
+@media (min-width: 912px) {
   .about-myself {
     width: 92%;
   }
