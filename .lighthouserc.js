@@ -11,7 +11,7 @@ module.exports = {
       upload: {
         target: 'temporary-public-storage',
         github: {
-          token: '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',
+          token: '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',
         },
       },
     },
