@@ -160,11 +160,10 @@ header {
 
 .nav-menu {
   list-style-type: none;
-  display: flex;
+  display: none, flex;
   justify-content: center;
   align-items: center;
   align-self: center;
-  visibility: hidden;
 }
 
 .nav-menu a {
@@ -235,7 +234,8 @@ header {
   list-style-type: none;
   margin: 4rem auto 0 -120%;
   background-color: var(--my-accessibility-a-color);
-  transform: translateX(-100%);
+  text-align: center;
+  transform: translateX(-500);
   transition: 5s;
 }
 
@@ -417,7 +417,7 @@ Contains The 6 microverse projects
   max-height: 10%;                            /* HEIGHT ISSUE TO FIX */
   width: 100%;
   text-align: center;
-  padding: 1%;
+  padding: auto;
   margin-bottom: 0%;
   margin-top: 3%;
 }
@@ -602,7 +602,7 @@ input[type="text"]::placeholder,
 input[type="email"]::placeholder {
   font-style: italic;
   font-weight: 400;
-  font-size: 0.9375rem;
+  font-size: 0, 9375rem;
   line-height: 160%;
   padding: 5%;
 }
@@ -847,9 +847,8 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
 
   .projects {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    column-gap: 1%;
-    row-gap: 1%;
+    grid-template-rows: repeat(auto, 1fr);
+    gap: 1% 0%;
     margin-left: 0;
   }
 
@@ -953,7 +952,7 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   input[type="text"],
   input[type="email"] {
     margin: 1% auto;
-    padding: 0.5%;
+    padding: 0.5% auto;
   }
 
   textarea {
