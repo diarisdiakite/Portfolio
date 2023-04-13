@@ -10,6 +10,9 @@ module.exports = {
       },
       upload: {
         target: 'temporary-public-storage',
+        github: {
+          token: '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',
+        },
       },
     },
   };
