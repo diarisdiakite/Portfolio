@@ -257,11 +257,6 @@ header {
   padding: 0.1% 5%;
 }
 
-.hamburger-navmenu li a p {
-  font-size: 2rem;
-  font-weight: 500;
-}
-
 /* ADDED CLASS .HAMBURGER-NAVMENU.ACTIVE */
 
 .hamburger-navmenu.active {
@@ -679,6 +674,11 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
 
 .hamburger-navmenu li a:hover {
   font-weight: bold;
+}
+
+.hamburger-navmenu li a p {
+  font-size: 2rem;
+  font-weight: 500;
 }
 
 @media (max-width: 280px) {
