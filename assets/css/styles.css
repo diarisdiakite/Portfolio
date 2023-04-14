@@ -233,9 +233,6 @@ body .hamburger-menu.active {
 */
 .display-mobile {
   position: relative;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
   margin-bottom: 0%;
 }
 
@@ -732,10 +729,6 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
 
   .header-nav .display-mobile {
     width: 100%;
-    height: 90vh;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
   }
 
   .social .display-mobile {
@@ -796,7 +789,7 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   }
 
   .hamburger-navmenu li:first-child {
-    margin-top: 90%;
+    margin-top: 20%;
   }
 
   .hamburger-navmenu li:last-child {
