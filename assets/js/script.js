@@ -96,14 +96,10 @@ let projects = [
 //const container = document.getElementById('recent_work');
 
   projects.forEach(project => {
-  // Create card element
+  // Create projectCardJs element
   const projectCardJs = document.createElement('div');
   projectCardJs.classList = 'open-project-popup';
  
-        
-  //Project technology list
-  //let Navmenu = document.createElement('ul');
-    
   //appending image
   let image = document.createElement('img');
   image.src = '../../images/popup/SnapshootPortfolio.svg';
@@ -125,14 +121,7 @@ let projects = [
   sourceLink.text = `${project.sourceLink}`;
   projectCardJs.appendChild(sourceLink);
 
-  let listCompetences = document.createDocumentFragment();
-  technologies.forEach(technology => {
-    let li = document.createElement('li');
-    li.textContent = `${project.technologies[technology]}`;
-    li.classList = 'project-built-with > li';
-    listCompetences.appendChild(li);
-  })
-  projectCardJs.appendChild(listCompetences);
+  
 
   //Project description
   let p = document.createElement('p');

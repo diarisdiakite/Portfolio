@@ -699,16 +699,15 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   transform: translate(-250% -250%) scale(0.1);
   text-align: center;
   padding: 0;
-  visibility: hidden;
-  transition: transform 0.4s, visibility O.4s, top 0.4s; 
+  transition: transform 0.4s, visibility O.4s, top 0.4s;
+  visibility: hidden; 
 }
 
 .project-popup-img {
-  width: 80%;
+  width: 100%;
   height: 50%;
   margin-top: 1%;
   border-radius: 5%;
-  box-shadow: 0 2px 2px var(--my-accessibility-a-color);
 }
 
 .open-project-popup {
