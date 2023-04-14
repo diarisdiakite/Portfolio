@@ -64,7 +64,7 @@ h3 {
 }
 
 p {
-  columns: var(--my-text-color);
+  color: var(--my-text-color);
   width: 100%;
   font-style: normal;
   text-align: center;
@@ -175,6 +175,12 @@ header {
 }
 
 /* ADDED HAMBURGER MENU */
+.hamburger-container {
+  background-color: white;
+  min-height: 100%;
+  position: sticky;
+}
+
 .hamburger-menu {
   width: 10%;
   height: 100%;
@@ -188,11 +194,11 @@ header {
 }
 
 .hamburger-bar {
-  width: 3rem;
-  height: 0.3rem;
+  width: 2rem;
+  height: 0.15rem;
   background-color: var(--my-text-color);
   transition: all 0.3s ease;
-  margin: 5% 0;
+  margin: 4% 0;
   z-index: 999;
   align-self: center;
 }
@@ -201,16 +207,25 @@ header {
   ANIMATION TO TURN THE BARS TO AN "X"
   PSEUDO CLASS :ACTIVE TO BE ADDED DYNAMICLY WITH JAVASCRIPT
 */
+.hamburger-menu-image.active {
+  transform: scale(2);
+}
+
 .hamburger-menu.active .hamburger-bar:nth-child(1) {
-  transform: translateY(0.7rem) rotate(45deg);
+  transform: translateY(0.5rem) rotate(45deg);
 }
 
 .hamburger-menu.active .hamburger-bar:nth-child(3) {
-  transform: translateY(-0.7rem) rotate(-45deg);
+  transform: translateY(-0.5rem) rotate(-45deg);
 }
 
 .hamburger-menu.active .hamburger-bar:nth-child(2) {
   opacity: 0;
+}
+
+body .hamburger-menu.active {
+  max-height: 100vh;
+  overflow: hidden;
 }
 
 /*
@@ -226,35 +241,16 @@ header {
 
 .hamburger-navmenu {
   /* POSITION FIXED DOESN'T WORK */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: left;
+  top: 50%;
   width: 100%;
   height: 100%;            /* TRY MIN-HEIGHT */
   list-style-type: none;
-  margin: 0 auto 0 -120%;
+  margin: 20% auto 0 -120%;
   background-color: white;
   text-align: center;
   transform: translateX(-500);
   transition: 5s;
   z-index: 1;
-}
-
-.hamburger-navmenu li {
-  width: 10%;
-  margin-bottom: -10%;
-  padding-top: 0.1%;
-  padding-left: 2%;
-  text-align: center;
-}
-
-.hamburger-navmenu li a {
-  line-height: 3rem;
-  text-decoration: none;
-  font-size: medium;
-  color: var(--my-gray-color);
-  padding: 0.1% 5%;
 }
 
 /* ADDED CLASS .HAMBURGER-NAVMENU.ACTIVE */
@@ -264,7 +260,7 @@ header {
 }
 
 .showHamburgerNavMenu {
-  transform: translate(0);
+  transform: translate(0%);
 }
 
 /*
@@ -604,7 +600,7 @@ input[type="text"]::placeholder,
 input[type="email"]::placeholder {
   font-style: italic;
   font-weight: 400;
-  font-size: 0, 9375rem;
+  font-size: 0.9375rem;
   line-height: 160%;
   padding: 5%;
 }
@@ -653,6 +649,7 @@ Contains email and socials
 
 .header .display-mobile img {
   align-self: flex-end;
+  margin-right: 1rem;
 }
 
 .headline .display-desktop,
@@ -663,30 +660,15 @@ Contains email and socials
 /*
 HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
 */
-.hamburger-navmenu li:first-child {
-  margin-top: 90%;
-}
-
-.hamburger-navmenu li:last-child {
-  border-bottom: none;
-  margin-bottom: 50%;
-}
-
-.hamburger-navmenu li a:hover {
-  font-weight: bold;
-}
-
-.hamburger-navmenu li a p {
-  font-size: 2rem;
-  font-weight: 500;
-}
 
 @media (max-width: 280px) {
   .header-nav .display-mobile {
     width: 100%;
+    height: 90vh;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+    visibility: hidden;
   }
 
   .header-nav .nav-menu {
@@ -694,8 +676,15 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   }
 
   .header-nav .hamburger-menu {
+    position: fixed;
     height: 5vh;
     margin-top: 0%;
+  }
+
+  .header-nav .hamburger-navmenu {
+    position: fixed;
+    height: 90vh;
+    margin-top: 10%;
   }
 
   .project .project-built-with li,
@@ -722,8 +711,28 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
     display: none;
   }
 
+  .header-nav {
+    height: 90vh;
+    position: fixed;
+  }
+
+  .menu-fixed {
+    position: fixed;
+    z-index: 2;
+  }
+
+  .navbar {
+    padding-top: 30%;
+    overflow: hidden;
+  }
+
+  .hamburger-menu {
+    visibility: visible;
+  }
+
   .header-nav .display-mobile {
     width: 100%;
+    height: 90vh;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
@@ -737,16 +746,9 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
     display: none;
   }
 
-  .header-nav .hamburger-menu {
-    height: 5vh;
-    margin-top: 0%;
-  }
-
-  .x-header-nav-fixed-top,
-  .x-header-nav-fixed-left,
-  .x-header-nav-fixed-right {
-    position: fixed;
-    overflow-y: scroll;
+  .header-nav .hamburger-navmenu {
+    height: 90rem;
+    margin-top: 50%;
   }
 
   footer .social .display-mobile,
@@ -761,14 +763,6 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
     align-self: flex-end;
   }
 
-  .header-nav {
-    margin-top: -20%;
-  }
-
-  .hamburger-navmenu {
-    margin-top: 50%;
-  }
-
   /*
 
   THIS FOOTER IS TO BE FIWED FOR MIN-WIDTH: 375PX
@@ -777,6 +771,46 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
 
   .footer {
     margin-top: 30%;
+  }
+
+  /*
+
+  HAMBURGER NAVMENU
+
+  */
+
+  .hamburger-navmenu li {
+    height: 4%;
+    width: 10%;
+    padding-top: 0.1%;
+    padding-left: 5%;
+    text-align: center;
+  }
+
+  .hamburger-navmenu li a {
+    line-height: 3rem;
+    text-decoration: none;
+    font-size: medium;
+    color: var(--my-gray-color);
+    padding: 0.1% 5%;
+  }
+
+  .hamburger-navmenu li:first-child {
+    margin-top: 90%;
+  }
+
+  .hamburger-navmenu li:last-child {
+    border-bottom: none;
+    margin-bottom: 0%;
+  }
+
+  .hamburger-navmenu li a:hover {
+    font-weight: bold;
+  }
+
+  .hamburger-navmenu li a p {
+    font-size: 2rem;
+    font-weight: 500;
   }
 }
 
@@ -795,16 +829,25 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   }
 
   .header-nav {
-    margin-top: 0%;
+    height: 5vh;
+    position: fixed;
+    padding-top: 0%;
+    z-index: 1;
+    background: white;
+  }
+
+  .navbar {
+    padding-top: 0;
+    overflow: unset;
   }
 
   .header-nav .nav-menu {
     width: 100%;
-    min-height: 70%;
     list-style-type: none;
     display: flex;
     justify-content: center;
     align-items: center;
+    
   }
 
   .display-mobile,

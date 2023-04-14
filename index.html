@@ -118,9 +118,9 @@
               <li><a href="https://html.com/" rel="noopener" target="_blank">HTML</a></li>
             </ul>
 
-            <div class="project-buttons">
-              <a href="projects/project.html">See project</a>
-            </div>
+            <!-- IMPORTANT!!! Add an 'onclick' Event -->
+            <button class="project-buttons" id="projectPopup" onclick="openProjectPopup()">See project</button>
+            
           </div>
 
         </div>
@@ -144,9 +144,8 @@
               <li><a href="https://html.com/" rel="noopener" target="_blank">HTML</a></li>
             </ul>
 
-            <div class="project-buttons">
-              <a href="projects/project.html">See project</a>
-            </div>
+            <button class="project-buttons" id="projectPopup" onclick="openProjectPopup()">See project</button>
+            
           </div>
         </div>
 
@@ -169,9 +168,8 @@
               <li><a href="https://html.com/" rel="noopener" target="_blank">HTML</a></li>
             </ul>
 
-            <div class="project-buttons">
-              <a href="projects/project.html">See project</a>
-            </div>
+            <button class="project-buttons" id="projectPopup" onclick="openProjectPopup()">See project</button>
+            
           </div>
         </div>
 
@@ -194,9 +192,8 @@
               <li><a href="https://html.com/" rel="noopener" target="_blank">HTML</a></li>
             </ul>
 
-            <div class="project-buttons">
-              <a href="projects/project.html">See project</a>
-            </div>
+            <button class="project-buttons" id="projectPopup" onclick="openProjectPopup()">See project</button>
+            
           </div>
         </div>
 
@@ -219,9 +216,8 @@
               <li><a href="https://html.com/" rel="noopener" target="_blank">HTML</a></li>
             </ul>
 
-            <div class="project-buttons">
-              <a href="projects/project.html">See project</a>
-            </div>
+            <button class="project-buttons" id="projectPopup" onclick="openProjectPopup()">See project</button>
+                        
           </div>
         </div>
 
@@ -244,13 +240,30 @@
               <li><a href="https://html.com/" rel="noopener" target="_blank">HTML</a></li>
             </ul>
 
-            <div class="project-buttons">
-              <a href="projects/project.html">See project</a>
-            </div>
+            <!-- IMPORTANT!!! Add an 'onclick' Event -->
+            <button class="project-buttons" id="projectPopup" onclick="openProjectPopup()">See project</button>
+            
           </div>
         </div>
 
       </div>
+
+      <!-- 
+        PROJECT POPUP 
+        - Adding the html
+        - IMPORTANT: Content should be stored in an array and accessed through
+      -->
+      <div class="project-popup" id="projectPopup">  
+        <div class="projectCardJs" id="projectCardJs">
+            
+          
+        </div>
+        
+      </div>
+
+      
+      
+      
     </section>
 
     <section class="about-myself spacing-default" id="about_myself">
