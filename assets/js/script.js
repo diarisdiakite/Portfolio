@@ -4,17 +4,13 @@ hamburgerMenu.setAttribute('class', 'hamburger-menu');
 const hamburgerNavMenu = document.querySelector('.hamburger-navmenu');
 const navbar = document.querySelector('.not-navbar');
 
-//Menu when not active
-let hamburgerBars = document.querySelectorAll('.hamburger-bar');
-console.log(hamburgerBars);
-
-//Menu when active
-let hamburgerToggle = document.createElement('div');
+// Menu when active
+const hamburgerToggle = document.createElement('div');
 hamburgerToggle.classList.add('hamburger-menu.active');
 
 hamburgerMenu.addEventListener('click', () => {
   if (navbar.classList.contains('hidden')) {
-    navbar.classList.remove('hidden');   
+    navbar.classList.remove('hidden');
   } else {
     navbar.classList.add('hidden');
     hamburgerMenu.setAttribute('visibility', 'visible');
@@ -22,12 +18,10 @@ hamburgerMenu.addEventListener('click', () => {
 
   if (hamburgerNavMenu.classList.contains('hidden')) {
     hamburgerNavMenu.classList.remove('hidden');
-
   } else {
     hamburgerNavMenu.classList.add('hidden');
-    
   }
   hamburgerMenu.classList.toggle('active');
   hamburgerNavMenu.classList.toggle('active');
-  hamburgerNavMenu.classList.toggle("showHamburgerNavMenu");
+  hamburgerNavMenu.classList.toggle('showHamburgerNavMenu');
 });
