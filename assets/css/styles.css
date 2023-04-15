@@ -708,6 +708,7 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   }
 
   .header-nav {
+    top: 0;
     height: 90vh;
     position: fixed;
   }
@@ -718,7 +719,7 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   }
 
   .navbar {
-    padding-top: 30%;
+    padding-top: 0; /* //THAT WAS 30% // */
     overflow: hidden;
   }
 
