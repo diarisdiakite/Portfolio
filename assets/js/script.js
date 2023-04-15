@@ -94,42 +94,72 @@ let projects = [
 ];
 
 //const container = document.getElementById('recent_work');
+  
+
 
   projects.forEach(project => {
   // Create projectCardJs element
   const projectCardJs = document.createElement('div');
-  projectCardJs.classList = 'open-project-popup';
+  projectCardJs.classList = 'project-card-js';
+  projectCardJs.setAttribute('width', '50')
  
   //appending image
+  let popupImage = document.createElement('div');
+  popupImage.classList.add('project-popup-img');
+
   let image = document.createElement('img');
   image.src = '../../images/popup/SnapshootPortfolio.svg';
-  image.classList = 'project-popup-img';
-  projectCardJs.appendChild(image);
+  popupImage.appendChild(image)
+  projectCardJs.appendChild(popupImage);
+  
 
+
+  //create diw with Ttilt and 2 links in display flex
+
+  let titleLinksDiv = document.createElement('div');
+  titleLinksDiv.classList.add('js-title-div');
+      
   //Project Title
   let title = document.createElement('h3');
   title.textContent = `${project.title}`;
-  title.classList = "section-title"
-  projectCardJs.appendChild(title);
-    
+  title.classList = "section-title";
+  titleLinksDiv.appendChild(title);
+
+  let linksContainer = document.createElement('div');
+  linksContainer.classList.add('js-link-list');
+
   //Project links
-  let liveLink = document.createElement('a');
-  liveLink.text = `${project.liveVersionLink}`;
-  projectCardJs.appendChild(liveLink)
+  let liveLink = document.createElement('button');
+  liveLink.textContent = `${project.liveVersionLink}`;
+  liveLink.setAttribute('class', 'project-button');
+  linksContainer.appendChild(liveLink);
 
-  let sourceLink = document.createElement('a');
-  sourceLink.text = `${project.sourceLink}`;
-  projectCardJs.appendChild(sourceLink);
+  let sourceLink = document.createElement('button');
+  sourceLink.setAttribute('class', 'project-buttons');
+  sourceLink.setAttribute('alt', 'project-buttons');
+  sourceLink.textContent = `${project.sourceLink}`;
+  linksContainer.appendChild(sourceLink);
 
-  
+  //Append the 3 elements to project card
+  titleLinksDiv.appendChild(linksContainer);
+  projectCardJs.appendChild(titleLinksDiv);
 
   //Project description
-  let p = document.createElement('p');
-  p.textContent = `${project.description}`
-  projectCardJs.appendChild(p);
+  let description = document.createElement('p');
+  description.textContent = `${project.description}`;
+  //description.setAttribute('class', 'p');
+  //description.setAttribute('');
+  projectCardJs.appendChild(description);
 
+  
   let projectPopup = document.querySelector("#projectPopup");
   projectPopup.appendChild(projectCardJs);
+  let modal = document.createElement('div');
+  modal.classList.add('popup-modal');
+  modal.appendChild(projectPopup);
+
+  let body = document.querySelector('body');
+  body.appendChild(modal);
 })
 
 
