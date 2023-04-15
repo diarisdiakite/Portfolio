@@ -1,413 +1,434 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/styles.css">
+  <meta name="description" content="Portfolio">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
-  <title>My Portfolio</title>
+  <title>Diarisdiakite portfolio homepage</title>
 </head>
 <body>
-  <div class="header-bg">
-    <header>
-      <div class="display-desktop">
-        <nav class="navbar">
-          <a href="#recent_work">Portfolio</a>
-          <a href="#about_myself">About</a>
-          <a href="#footer">Contact</a>
-        </nav>
+  <header class="header spacing-default">
+    <div class="hamburger-menu">
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+    </div>
+    <div class="header-nav">
+      <nav class="navbar">
+        <ul class="nav-menu">
+          <li class="nav-item"><a class="nav-link" href="#recent_work">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about_myself">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact_form_container">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="not-navbar hidden">
+        <ul id="hamMenu" class="hamburger-navmenu hidden">
+          <li class="nav-item"><a class="nav-link" href="#recent_work"><p>Portfolio</p></a></li>
+          <li class="nav-item"><a class="nav-link" href="#about_myself"><p>About</p></a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact_form_container"><p>Contact</p></a></li>
+        </ul>
       </div>
-      <div class="display-mobile">
-        <div id="union">
-          <img src="images/Icons/Icon - Menu.png" alt="union">
-        </div>
-      </div>
-    </header>
+    </div>
 
-    <section class="headline">
-
+    <section class="headline spacing-default">
       <div class="headline-text">
-        <h1>
-          Hey there.
-          I’m Didy.
-          <br>
-          <hx class="green">I’m a Full Stack developer from Microverse</hx>
-        </h1>
-
+          <h1>
+            Hey there.
+            I’m Didy.
+            <br>
+            <strong class="green">I’m a Full Stack developer from Microverse</strong>
+          </h1>
         <p class="spacing-default">
-          I can help you build a product, feature or website Look through some of my work and experience! If you like what you see and have a project you need coded,
-          don’t hesitate to contact me.
-        </p>
-
+            I can help you build a product, feature or website Look through some of my work and experience! If you like what you see and have a project you need coded,
+            don’t hesitate to contact me.
+          </p>
         <ul class="social spacing-default display-mobile">
-          <li><a href="https://twitter.com/diarisdiakite">
-            <i class="fab fa-twitter"></i>
-          </a></li>
-          <li><a href="https://www.linkedin.com/diarisdiakite/">
-            <i class="fab fa-linkedin-in"></i></li>
-          </a></li>
-          <li><a href="https://www.medium.com/#">
-            <i class="fab fa-medium"></i>
-          </a></li>
-          <li><a href="https://www.github.com/diarisdiakite">
-            <i class="fab fa-github"></i>
-          </a></li>
-          <li><a href="https://www.angellist.com/#">
-            <i class="fab fa-angellist"></i>
-          </a></li>
-        </ul>
-
+            <li><a href="https://twitter.com/diarisdiakite" aria-label="My Twitter account">
+              <img src="images/Icons/socials/twitter.svg" alt="Twitter-logo">
+            </a></li>
+            <li><a href="https://www.linkedin.com/diarisdiakite/" aria-label="My linkedin account">
+              <img src="images/Icons/socials/Linkedin icon.svg" alt="Linkedin-logo">
+            </a></li>
+            <li><a href="https://www.medium.com/#" name="twitter" aria-label="My Meduim account">
+              <img src="images/Icons/socials/medium.svg" alt="Medium-logo">
+            </a></li>
+            <li><a href="https://www.github.com/diarisdiakite" aria-label="My Github account">
+              <img src="images/Icons/socials/github.svg" alt="Github-logo">
+            </a></li>
+            <li><a href="https://www.angellist.com/#" aria-label="My Angellist account">
+              <img src="images/Icons/socials/angellist.svg" alt="Angellist-logo">
+            </a></li>
+          </ul>
         <ul class="social spacing-default display-desktop">
-          <li><a href="https://www.github.com/diarisdiakite">
-            <i class="fab fa-github"></i>
-          </a></li>
-          <li><a href="https://www.linkedin.com/diarisdiakite/">
-            <i class="fab fa-linkedin-in"></i></li>
-          </a></li>
-          <li><a href="https://www.angellist.com/#">
-            <i class="fab fa-angellist"></i>
-          </a></li>
-          <li><a href="https://twitter.com/diarisdiakite">
-            <i class="fab fa-twitter"></i>
-          </a></li>
-          <li><a href="https://www.medium.com/#">
-            <i class="fab fa-medium"></i>
-          </a></li>
-        </ul>
+            <li><a href="https://www.github.com/diarisdiakite" aria-label="My Github account">
+              <img src="images/Icons/socials/github.svg" alt="Github-logo">
+            </a></li>
+            <li><a href="https://www.linkedin.com/diarisdiakite/" aria-label="My linkedin account">
+              <img src="images/Icons/socials/Linkedin icon.svg" alt="Linkedin-logo">
+            </a></li>
+            <li><a href="https://www.angellist.com/#" aria-label="My Angellist account">
+              <img src="images/Icons/socials/angellist.svg" alt="Angellist-logo">
+            </a></li>
+            <li><a href="https://twitter.com/diarisdiakite" aria-label="My twitter account">
+              <img src="images/Icons/socials/twitter.svg" alt="Twitter-logo">
+            </a></li>
+            <li><a href="https://www.medium.com/#" aria-label="My Meduim account">
+              <img src="images/Icons/socials/medium.svg" alt="Medium-logo">
+            </a></li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="arrow spacing-default">
+        <img src="images/buttons/Disabled.svg" alt="arrow image to next section">
       </div>
+
+  </header>
+
+  <main>
+    <section class="recent-work spacing-default" id="recent_work">
+      <div class="recent-work-text">
+        <h2 class="green spacing-default">
+          My Recent Works
+        </h2>
+        <img class="display-mobile" src="images/Indicator.svg" alt="Text separating line">
+      </div>
+
+      <div class="projects">
+
+        <!-- Project 1 -->
+
+        <div class="project">
+          <div class="project-image">
+            <img class="img-placeholder" src="images/Img-Placeholder.svg" alt="project-image" placeholder="image for project 1">
+          </div>
+          <div class="project-wrapped-text">
+            <div class="sections-title">
+              <h3>
+                Mobile version skeleton
+              </h3>
+            </div>
+            <ul class="project-built-with">
+              <li><a href="https://rubyonrails.org/" rel="noopener" target="_blank">Ruby on Rails</a></li>
+              <li><a href="https://www.w3.org/Style/CSS/Overview.en.html" rel="noopener" target="_blank">CSS</a></li>
+              <li><a href="https://www.javascript.com/" rel="noopener" target="_blank">Javascript</a></li>
+              <li><a href="https://html.com/" rel="noopener" target="_blank">HTML</a></li>
+            </ul>
+
+            <!-- IMPORTANT!!! Add an 'onclick' Event -->
+            <button class="project-buttons" id="projectPopup" onclick="openProjectPopup()">See project</button>
+
+          </div>
+
+        </div>
+
+        <!-- Project 2 -->
+
+        <div class="project">
+          <div class="project-image">
+            <img class="img-placeholder" src="images/Img-Placeholder.svg" alt="project-image" placeholder="">
+          </div>
+          <div class="project-wrapped-text">
+            <div class="sections-title">
+              <h3>
+                Mobile version
+              </h3>
+            </div>
+            <ul class="project-built-with">
+              <li><a href="https://rubyonrails.org/" rel="noopener" target="_blank">Ruby on Rails</a></li>
+              <li><a href="https://www.w3.org/Style/CSS/Overview.en.html" rel="noopener" target="_blank">CSS</a></li>
+              <li><a href="https://www.javascript.com/" rel="noopener" target="_blank">Javascript</a></li>
+              <li><a href="https://html.com/" rel="noopener" target="_blank">HTML</a></li>
+            </ul>
+
+            <button class="project-buttons" id="projectPopup" onclick="openProjectPopup()">See project</button>
+
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+
+        <div class="project">
+          <div class="project-image">
+            <img class="img-placeholder" src="images/Img-Placeholder.svg" alt="project-image" placeholder="">
+          </div>
+          <div class="project-wrapped-text">
+            <div class="sections-title">
+              <h3>
+                Contact form
+              </h3>
+            </div>
+            <ul class="project-built-with">
+              <li><a href="https://rubyonrails.org/" rel="noopener" target="_blank">Ruby on Rails</a></li>
+              <li><a href="https://www.w3.org/Style/CSS/Overview.en.html" rel="noopener" target="_blank">CSS</a></li>
+              <li><a href="https://www.javascript.com/" rel="noopener" target="_blank">Javascript</a></li>
+              <li><a href="https://html.com/" rel="noopener" target="_blank">HTML</a></li>
+            </ul>
+
+            <button class="project-buttons" id="projectPopup" onclick="openProjectPopup()">See project</button>
+
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+
+        <div class="project">
+          <div class="project-image">
+            <img class="img-placeholder" src="images/Img-Placeholder.svg" alt="project-image" placeholder="">
+          </div>
+          <div class="project-wrapped-text">
+            <div class="sections-title">
+              <h3>
+                Desktop version
+              </h3>
+            </div>
+            <ul class="project-built-with">
+              <li><a href="https://rubyonrails.org/" rel="noopener" target="_blank">Ruby on Rails</a></li>
+              <li><a href="https://www.w3.org/Style/CSS/Overview.en.html" rel="noopener" target="_blank">CSS</a></li>
+              <li><a href="https://www.javascript.com/" rel="noopener" target="_blank">Javascript</a></li>
+              <li><a href="https://html.com/" rel="noopener" target="_blank">HTML</a></li>
+            </ul>
+
+            <button class="project-buttons" id="projectPopup" onclick="openProjectPopup()">See project</button>
+
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+
+        <div class="project">
+          <div class="project-image">
+            <img class="img-placeholder" src="images/Img-Placeholder.svg" alt="project-image" placeholder="">
+          </div>
+          <div class="project-wrapped-text">
+            <div class="sections-title">
+              <h3>
+                Application deploy
+              </h3>
+            </div>
+            <ul class="project-built-with">
+              <li><a href="https://rubyonrails.org/" rel="noopener" target="_blank">Ruby on Rails</a></li>
+              <li><a href="https://www.w3.org/Style/CSS/Overview.en.html" rel="noopener" target="_blank">CSS</a></li>
+              <li><a href="https://www.javascript.com/" rel="noopener" target="_blank">Javascript</a></li>
+              <li><a href="https://html.com/" rel="noopener" target="_blank">HTML</a></li>
+            </ul>
+
+            <button class="project-buttons" id="projectPopup" onclick="openProjectPopup()">See project</button>
+
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+
+        <div class="project desktop-card">
+          <div class="project-image">
+            <img class="img-placeholder" src="images/Img-Placeholder.svg" alt="project-image" placeholder="">
+          </div>
+          <div class="project-wrapped-text">
+            <div class="sections-title">
+              <h3>
+                Evaluate accessibility
+              </h3>
+            </div>
+            <ul class="project-built-with">
+              <li><a href="https://rubyonrails.org/" rel="noopener" target="_blank">Ruby on Rails</a></li>
+              <li><a href="https://www.w3.org/Style/CSS/Overview.en.html" rel="noopener" target="_blank">CSS</a></li>
+              <li><a href="https://www.javascript.com/" rel="noopener" target="_blank">Javascript</a></li>
+              <li><a href="https://html.com/" rel="noopener" target="_blank">HTML</a></li>
+            </ul>
+
+            <!-- IMPORTANT!!! Add an 'onclick' Event -->
+            <button class="project-buttons" id="projectPopup" onclick="openProjectPopup()">See project</button>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!--
+        PROJECT POPUP
+        - Adding the html
+        - IMPORTANT: Content should be stored in an array and accessed through
+      -->
+      <div class="project-popup" id="projectPopup">
+        <div class="projectCardJs" id="projectCardJs">
+
+
+        </div>
+
+      </div>
+
+
+
 
     </section>
 
-  
+    <section class="about-myself spacing-default" id="about_myself">
 
+      <div class="about-myself-text spacing-default">
+        <h2 class="green spacing-default">
+            About me
+        </h2>
 
-    <div class="arrow spacing-default">
-      <img src="images/buttons/Disabled.png" alt="arrow image to next section">
-    </div>
+        <p>
+            I can help you build a product, feature or website Look through some of my work and experience! If you like what you see and have a project you need coded,
+            don’t hesitate to contact me.
+        </p>
+      </div>
 
-  </div>
+      <div class="see-resume-button spacing-default">
+        <a href="assets/documents/my-resume">Get my resume</a>
+      </div>
 
-  <section class="recent-work spacing-default" id="recent_work">
-    <div class="recent-work-text">
-      <h2 class="green spacing-default">
-        My Recent Works
-      </h2>
-      <img src="images/texts/Indicator.png" alt="Text separating line">
-    </div>
+      <div class="competences">
 
-    <div class="projects">
-
-      <!-- Project 1 -->
-
-      <div class="project">
-        <div class="project-image">
-          <img class="img-placeholder" src="images/Img Plaholder.png" alt="project-image" placeholder="image for project 1">
-        </div>
-        <div class="project-wrapped-text">
+        <div class="competences-card languages">
+          <div class="competences-image">
+            <img width="auto" height="auto" src="images/Icons/languages.svg" alt="list of languages I can use" placeholder="">
+          </div>
           <div class="sections-title">
             <h3>
-              Mobile version skeleton
+              Languages
             </h3>
           </div>
-          <ul class="project-built-with">
-            <li><a href="https://rubyonrails.org/" rel="noopener" target="_blank">Ruby on Rails</a></li>
-            <li><a href="https://www.w3.org/Style/CSS/Overview.en.html" rel="noopener" target="_blank">CSS</a></li>
-            <li><a href="https://www.javascript.com/" rel="noopener" target="_blank">Javascript</a></li>
-            <li><a href="https://html.com/" rel="noopener" target="_blank">HTML</a></li>
+          <ul class="list-competences">
+            <li class="competences-item"><a href="https://www.javascript.com/" rel="noopener" target="_blank">Javascript</a></li>
+            <li class="competences-item"><a href="https://www.ruby-lang.org/en/" rel="noopener" target="_blank">Ruby</a></li>
+            <li class="competences-item"><a href="https://html.com/" rel="noopener" target="_blank">HTML</a></li>
+            <li class="competences-item"><a href="https://www.w3.org/Style/CSS/Overview.en.html" rel="noopener" target="_blank">CSS</a></li>
           </ul>
 
-          <div class="project-buttons">
-            <a href="">See project</a>
+        </div>
+
+        <div class="competences-card frameworks">
+          <div class="competences-image">
+            <img width="autou" height="auto" src="images/Icons/frameworks.svg" alt="List of frameworks I can work with" placeholder="">
           </div>
-        </div>
-
-      </div>
-
-      <!-- Project 2 -->
-
-      <div class="project">
-        <div class="project-image">
-          <img class="img-placeholder" src="images/Img Plaholder.png" alt="project-image" placeholder="">
-        </div>
-        <div class="project-wrapped-text">
           <div class="sections-title">
             <h3>
-              Mobile version
+              Frameworks
             </h3>
           </div>
-          <ul class="project-built-with">
-            <li><a href="https://rubyonrails.org/" rel="noopener" target="_blank">Ruby on Rails</a></li>
-            <li><a href="https://www.w3.org/Style/CSS/Overview.en.html" rel="noopener" target="_blank">CSS</a></li>
-            <li><a href="https://www.javascript.com/" rel="noopener" target="_blank">Javascript</a></li>
-            <li><a href="https://html.com/" rel="noopener" target="_blank">HTML</a></li>
+          <ul class="list-competences">
+            <li class="competences-item"><a href="https://react.dev/" rel="noopener" target="_blank">React.js</a></li>
+            <li class="competences-item"><a href="https://rubyonrails.org" rel="noopener" target="_blank">Ruby on Rails</a></li>
+            <li class="competences-item"><a href="https://rspec.info/" rel="noopener" target="_blank">RSpec</a></li>
+            <li class="competences-item"><a href="https://rubygems.org/gems/capybara/" rel="noopener" target="_blank">Capybara</a></li>
+            <li class="competences-item"><a href="https://www.selenium.dev/" rel="noopener" target="_blank">Selenuim</a></li>
           </ul>
 
-          <div class="project-buttons">
-            <a href="">See project</a>
+        </div>
+
+        <div class="competences-card skills">
+          <div class="competences-image">
+            <img width="auto" height="auto" src="images/Icons/skills.svg" alt="list of skills I have" placeholder="">
           </div>
-        </div>
-      </div>
-
-      <!-- Project 3 -->
-
-      <div class="project">
-        <div class="project-image">
-          <img class="img-placeholder" src="images/Img Plaholder.png" alt="project-image" placeholder="">
-        </div>
-        <div class="project-wrapped-text">
           <div class="sections-title">
             <h3>
-              Contact form
+              Skills
             </h3>
           </div>
-          <ul class="project-built-with">
-            <li><a href="https://rubyonrails.org/" rel="noopener" target="_blank">Ruby on Rails</a></li>
-            <li><a href="https://www.w3.org/Style/CSS/Overview.en.html" rel="noopener" target="_blank">CSS</a></li>
-            <li><a href="https://www.javascript.com/" rel="noopener" target="_blank">Javascript</a></li>
-            <li><a href="https://html.com/" rel="noopener" target="_blank">HTML</a></li>
+          <ul class="list-competences">
+            <li class="competences-item"><a href="https://www.w3schools.in/dbms" rel="noopener" target="_blank">Database management</a></li>
+            <li class="competences-item"><a href="https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control" rel="noopener" target="_blank">version control</a></li>
+            <li class="competences-item"><a href="https://www.w3schools.com/whatis/whatis_cli.asp" rel="noopener" target="_blank">CLI</a></li>
+            <li class="competences-item"><a href="https://www.w3schools.com/whatis/" rel="noopener" target="_blank">Web development</a></li>
+            <li class="competences-item"><a href="https://www.w3.org/TR/api-design/" rel="noopener" target="_blank">API design</a></li>
           </ul>
 
-          <div class="project-buttons">
-            <a href="">See project</a>
-          </div>
         </div>
+
       </div>
 
-      <!-- Project 4 -->
 
-      <div class="project">
-        <div class="project-image">
-          <img class="img-placeholder" src="images/Img Plaholder.png" alt="project-image" placeholder="">
-        </div>
-        <div class="project-wrapped-text">
-          <div class="sections-title">
-            <h3>
-              Desktop version
-            </h3>
-          </div>
-          <ul class="project-built-with">
-            <li><a href="https://rubyonrails.org/" rel="noopener" target="_blank">Ruby on Rails</a></li>
-            <li><a href="https://www.w3.org/Style/CSS/Overview.en.html" rel="noopener" target="_blank">CSS</a></li>
-            <li><a href="https://www.javascript.com/" rel="noopener" target="_blank">Javascript</a></li>
-            <li><a href="https://html.com/" rel="noopener" target="_blank">HTML</a></li>
-          </ul>
+    </section>
 
-          <div class="project-buttons">
-            <a href="">See project</a>
-          </div>
+    <section class="contact-form-container spacing-default" id="contact_form_container">
+      <div class="contact-form">
+        <div class="contact-form-text">
+          <h2 class="contact-heading">
+            I'm always interested in hearing about new projects,
+            so if you'd like to chat please get in touch.
+          </h2>
         </div>
+
+        <form action="https://formspree.io/f/mqkoykyv" method="POST" class="form">
+
+          <label for="full-name">
+            <input type="text" id="full-name" name="full-name" maxlength="30" placeholder="Full Name" required>
+          </label>
+
+          <label for="email">
+            <input type="email" id="email" name="email" placeholder="Email address" required>
+          </label>
+
+          <label for="textarea">
+          <textarea id="textarea" name="text" rows="10" maxlength="500" placeholder="Hey, I would like to connect to..." required></textarea>
+          </label>
+
+          <button class="form-button" type="submit">Get in touch</button>
+
+        </form>
       </div>
 
-      <!-- Project 5 -->
 
-      <div class="project">
-        <div class="project-image">
-          <img class="img-placeholder" src="images/Img Plaholder.png" alt="project-image" placeholder="">
-        </div>
-        <div class="project-wrapped-text">
-          <div class="sections-title">
-            <h3>
-              Application deploy
-            </h3>
-          </div>
-          <ul class="project-built-with">
-            <li><a href="https://rubyonrails.org/" rel="noopener" target="_blank">Ruby on Rails</a></li>
-            <li><a href="https://www.w3.org/Style/CSS/Overview.en.html" rel="noopener" target="_blank">CSS</a></li>
-            <li><a href="https://www.javascript.com/" rel="noopener" target="_blank">Javascript</a></li>
-            <li><a href="https://html.com/" rel="noopener" target="_blank">HTML</a></li>
-          </ul>
 
-          <div class="project-buttons">
-            <a href="">See project</a>
-          </div>
-        </div>
-      </div>
+    </section>
 
-      <!-- Project 6 -->
-
-      <div class="project desktop-card">
-        <div class="project-image">
-          <img class="img-placeholder" src="images/Img Plaholder.png" alt="project-image" placeholder="">
-        </div>
-        <div class="project-wrapped-text">
-          <div class="sections-title">
-            <h3>
-              Evaluate accessibility
-            </h3>
-          </div>
-          <ul class="project-built-with">
-            <li><a href="https://rubyonrails.org/" rel="noopener" target="_blank">Ruby on Rails</a></li>
-            <li><a href="https://www.w3.org/Style/CSS/Overview.en.html" rel="noopener" target="_blank">CSS</a></li>
-            <li><a href="https://www.javascript.com/" rel="noopener" target="_blank">Javascript</a></li>
-            <li><a href="https://html.com/" rel="noopener" target="_blank">HTML</a></li>
-          </ul>
-
-          <div class="project-buttons">
-            <a href="">See project</a>
-          </div>
-        </div>
-      </div>
 
     </div>
-  </section>
+  </main>
 
-  <section class="about-myself spacing-default" id="about_myself">
-
-    <div class="about-myself-text spacing-default">
-      <h2 class="green spacing-default">
-          About me
-      </h2>
-      
-      <p>
-          I can help you build a product, feature or website Look through some of my work and experience! If you like what you see and have a project you need coded,
-          don’t hesitate to contact me.
-      </p>
-    </div>
-
-    <div class="see-resume-button spacing-default">
-      <a href="">Get my resume</a>
-    </div>
-
-    <div class="competences">
-
-      <div class="competences-card languages">
-        <div class="competences-image">
-          <img src="images/Icons/languages.png" alt="languages" placeholder="">
-        </div>
-        <div class="sections-title">
-          <h3>
-            Languages
-          </h3>
-        </div>
-        <ul class="list-competences">
-          <li class="competences-item"><a href="https://www.javascript.com/" rel="noopener" target="_blank">Javascript</a></li>
-          <li class="competences-item"><a href="https://www.ruby-lang.org/en/" rel="noopener" target="_blank">Ruby</a></li>
-          <li class="competences-item"><a href="https://html.com/" rel="noopener" target="_blank">HTML</a></li>
-          <li class="competences-item"><a href="https://www.w3.org/Style/CSS/Overview.en.html" rel="noopener" target="_blank">CSS</a></li>
-        </ul>
-
-      </div>
-
-      <div class="competences-card frameworks">
-        <div class="competences-image">
-          <img src="images/Icons/frameworks.png" alt="languages" placeholder="">
-        </div>
-        <div class="sections-title">
-          <h3>
-            Frameworks
-          </h3>
-        </div>
-        <ul class="list-competences">
-          <li class="competences-item"><a href="https://react.dev/" rel="noopener" target="_blank">React.js</a></li>
-          <li class="competences-item"><a href="https://rubyonrails.org" rel="noopener" target="_blank">Ruby on Rails</a></li>
-          <li class="competences-item"><a href="https://rspec.info/" rel="noopener" target="_blank">RSpec</a></li>
-          <li class="competences-item"><a href="https://rubygems.org/gems/capybara/" rel="noopener" target="_blank">Capybara</a></li>
-          <li class="competences-item"><a href="https://www.selenium.dev/" rel="noopener" target="_blank">Selenuim</a></li>
-         </ul>
-
-      </div>
-
-      <div class="competences-card skills">
-        <div class="competences-image">
-          <img src="images/Icons/skills.png" alt="languages" placeholder="">
-        </div>
-        <div class="sections-title">
-          <h3>
-            Skills
-          </h3>
-        </div>
-        <ul class="list-competences">
-          <li class="competences-item"><a href="https://www.w3schools.in/dbms" rel="noopener" target="_blank">Database management</a></li>
-          <li class="competences-item"><a href="https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control" rel="noopener" target="_blank">version control</a></li>
-          <li class="competences-item"><a href="https://www.w3schools.com/whatis/whatis_cli.asp" rel="noopener" target="_blank">CLI</a></li>
-          <li class="competences-item"><a href="https://www.w3schools.com/whatis/" rel="noopener" target="_blank">Web development</a></li>
-          <li class="competences-item"><a href="https://www.w3.org/TR/api-design/" rel="noopener" target="_blank">API design</a></li>
-        </ul>
-
-      </div>
-
-    </div>
-
-
-  </section>
-
-  <section class="contact-form">
-    <div class="contact-form-text">
-      <h2 class="contact-heading">
-        I'm always interested in hearing about new projects,
-        so if you'd like to chat please get in touch.
-      </h2>
-    </div>
-
-    <form action="https://formspree.io/f/mqkoykyv" method="POST" class="contact-form-container">
-
-      <label for="full-name">
-        <input type="text" name="full-name" maxlength="30" placeholder="Full Name" required>
-      </label>
-            
-      <label for="email">
-        <input type="email" name="email" placeholder="Email address" required>
-      </label>
-        
-      <textarea name="text" rows="10" maxlength="500" placeholder="Hey, I would like to connect to..." required></textarea>
-        
-      <button class="form-button" type="submit">Get in touch</button>
-
-    </form>
-
-  </section>
-
-  <div class="form-bg-image display-desktop">
-    <div class="img1"></div>
-    <div class="img2"></div>
-    <div class="img3"></div>
-  </div>
-
-  <footer class="footer" id="footer">
+  <footer class="footer spacing-default" id="footer">
     <div class="footer-text">
       <div class="display-mobile"><p>diarisdiakite@gmail.com</p></div>
     </div>
     <div class="hr">
       <span class="display-mobile"></span>
     </div>
-    <ul class="social spacing-default display-mobile">
-      <li><a href="https://twitter.com/diarisdiakite">
-        <i class="fab fa-twitter"></i>
-      </a></li>
-      <li><a href="https://www.linkedin.com/diarisdiakite/">
-        <i class="fab fa-linkedin-in"></i></li>
-      </a></li>
-      <li><a href="https://www.medium.com/#">
-        <i class="fab fa-medium"></i>
-      </a></li>
-      <li><a href="https://www.github.com/diarisdiakite">
-        <i class="fab fa-github"></i>
-      </a></li>
-      <li><a href="https://www.angellist.com/#">
-        <i class="fab fa-angellist"></i>
-      </a></li>
-    </ul>
 
-    <ul class="social spacing-default display-desktop">
-      <li><a href="https://www.github.com/diarisdiakite">
-        <i class="fab fa-github"></i>
-      </a></li>
-      <li><a href="https://www.linkedin.com/diarisdiakite/">
-        <i class="fab fa-linkedin-in"></i></li>
-      </a></li>
-      <li><a href="https://www.angellist.com/#">
-        <i class="fab fa-angellist"></i>
-      </a></li>
-      <li><a href="https://twitter.com/diarisdiakite">
-        <i class="fab fa-twitter"></i>
-      </a></li>
-      <li><a href="https://www.medium.com/#">
-        <i class="fab fa-medium"></i>
-      </a></li>
-    </ul>
+        <ul class="social spacing-default display-mobile">
+          <li><a href="https://twitter.com/diarisdiakite" aria-label="My Twitter account">
+            <img src="images/Icons/socials/twitter.svg" alt="Twitter-logo">
+          </a></li>
+          <li><a href="https://www.linkedin.com/diarisdiakite/" aria-label="My linkedin account">
+            <img src="images/Icons/socials/Linkedin icon.svg" alt="Linkedin-logo">
+          </a></li>
+          <li><a href="https://www.medium.com/#" name="twitter" aria-label="My Meduim account">
+            <img src="images/Icons/socials/medium.svg" alt="Medium-logo">
+          </a></li>
+          <li><a href="https://www.github.com/diarisdiakite" aria-label="My Github account">
+            <img src="images/Icons/socials/github.svg" alt="Github-logo">
+          </a></li>
+          <li><a href="https://www.angellist.com/#" aria-label="My Angellist account">
+            <img src="images/Icons/socials/angellist.svg" alt="Angellist-logo">
+          </a></li>
+        </ul>
+
+        <ul class="social spacing-default display-desktop">
+          <li><a href="https://www.github.com/diarisdiakite" aria-label="My Github account">
+            <img src="images/Icons/socials/github.svg" alt="Github-logo">
+          </a></li>
+          <li><a href="https://www.linkedin.com/diarisdiakite/" aria-label="My linkedin account">
+            <img src="images/Icons/socials/Linkedin icon.svg" alt="Linkedin-logo">
+          </a></li>
+          <li><a href="https://www.angellist.com/#" aria-label="My Angellist account">
+            <img src="images/Icons/socials/angellist.svg" alt="Angellist-logo">
+          </a></li>
+          <li><a href="https://twitter.com/diarisdiakite" aria-label="My twitter account">
+            <img src="images/Icons/socials/twitter.svg" alt="Twitter-logo">
+          </a></li>
+          <li><a href="https://www.medium.com/#" aria-label="My Meduim account">
+            <img src="images/Icons/socials/medium.svg" alt="Medium-logo">
+          </a></li>
+        </ul>
+      </div>
   </footer>
+
+  <script src="assets/js/script.js"></script>
 
 </body>
 </html>

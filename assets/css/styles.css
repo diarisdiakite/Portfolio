@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Inter');
-
 :root {
   --my-text-color: #172b4d;
+  --my-accessibility-a-bg-color: white;
+  --my-accessibility-a-color: #035c37;
   --my-green-color: #36b37e;
   --my-gray-color: #505f79;
   --image-placeholder-color: #d0d9d4;
   --image-placeholder-color1: #ebf0ee;
-  --my-project-boutton-color: #36b37f;
+  --my-project-boutton-color: #036039;
   --my-competences-boxes-color: #c1c7d0;
 }
 
@@ -20,7 +20,9 @@ html {
 }
 
 body {
+  position: relative;
   width: 100%;
+  min-height: 100%;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -60,9 +62,8 @@ h3 {
 }
 
 p {
-  columns: var(--my-text-color);
+  color: var(--my-text-color);
   width: 100%;
-  height: 100%;
   font-style: normal;
   text-align: center;
   letter-spacing: 1px;
@@ -79,7 +80,7 @@ So I grouped all my buttons here
 .see-resume-button,
 .form-button {
   background-color: var(--my-project-boutton-color);
-  width: fit-content;
+  width: max-content;
   border: none;
   justify-content: center;
   border-radius: 4px;
@@ -135,35 +136,145 @@ button {
 
 /*
 Nav Section
-Contains the union and the settings
+Contains the hamburger menue for mobile-version and the nav-links for desktop-version
 */
 
 header {
+  position: relative;
   width: 100vw;
-  height: 3vh;
+  margin: 0% auto 5% auto;
+  background: url(../../images/mobile-bg/header-illsutration-mobile.svg) no-repeat;
+}
+
+.header-nav {
+  line-height: 3rem;
+  width: 100vw;
+  height: 5vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: transparent; /* FOR TESTING */
+  margin-top: 0%;
+  z-index: 1;
 }
 
-#union {
-  width: 10%;
-  height: 10%;
-  align-self: flex-end;
-}
-
-.navbar {
+.nav-menu {
   list-style-type: none;
-  display: flex;
+  display: none, flex;
   justify-content: center;
   align-items: center;
   align-self: center;
 }
 
-.navbar a {
+.nav-menu a {
   text-decoration: none;
   color: var(--my-text-color);
   padding: 1% 5%;
+}
+
+/* ADDED HAMBURGER MENU */
+.hamburger-container {
+  background-color: white;
+  height: 100%;
+  position: sticky;
+}
+
+.hamburger-menu {
+  height: 40px;
+  width: 80px;
+  z-index: 300;
+  position: fixed; /* ADDED */
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  align-items: center;
+  right: 3rem;
+  top: 3rem;
+}
+
+.hamburger-bar {
+  width: 2rem;
+  height: 0.17rem;
+  background-color: var(--my-text-color);
+  transition: all 0.3s ease;
+  margin: 4% 0;
+  z-index: 999;
+  align-self: center;
+}
+
+/*
+  ANIMATION TO TURN THE BARS TO AN "X"
+  PSEUDO CLASS :ACTIVE TO BE ADDED DYNAMICLY WITH JAVASCRIPT
+*/
+.hamburger-menu-image.active {
+  transform: scale(2);
+  z-index: 100;
+}
+
+.hamburger-menu.active .hamburger-bar:nth-child(1) {
+  transform: translateY(0.5rem) rotate(45deg);
+  z-index: 100;
+}
+
+.hamburger-menu.active .hamburger-bar:nth-child(3) {
+  transform: translateY(-0.5rem) rotate(-45deg);
+}
+
+.hamburger-menu.active .hamburger-bar:nth-child(2) {
+  opacity: 0;
+  z-index: 100;
+}
+
+body .hamburger-menu.active {
+  height: 100vh;
+  overflow: hidden;
+}
+
+/*
+  NAV MENU WHEN WE CLIC ON THE HAMBURGER MENU
+*/
+.display-mobile {
+  position: relative;
+  margin-bottom: 0%;
+}
+
+.hidden {
+  display: none;
+}
+
+.not-navbar {
+  width: 100%;
+}
+
+.hamburger-navmenu {
+  /* POSITION FIXED DOESN'T WORK */
+  top: o;
+  width: 100%;
+  height: 90vh;
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+
+  /* margin: 0 auto 0 -120%; */
+  background-color: white;
+  text-align: center;
+  transform: translateX(-500);
+  transition: 5s;
+  z-index: 20;
+  border-bottom: 1px solid gray;
+  border-bottom-left-radius: 5%;
+  border-bottom-right-radius: 5%;
+}
+
+/* ADDED CLASS .HAMBURGER-NAVMENU.ACTIVE */
+
+.hamburger-navmenu.active {
+  margin-right: 0;
+}
+
+.showHamburgerNavMenu {
+  transform: translate(0%);
 }
 
 /*
@@ -172,48 +283,13 @@ Headline Section
 
 .headline {
   display: flex;
-  margin-top: 10%;
   height: auto;
-}
-
-.header-bg {
-  background-image: url(../images/header-illsutration-mobile.png);
-  background-repeat: no-repeat;
-  background-size: 100vw;
-  width: 100vw;
-  height: 100%;
-  z-index: -1;
-}
-
-.headline-text {
-  width: 60%;
-  height: 100%; /* HEIGHT ISSUE TO FIX */
-  display: flex;
-  flex-direction: column;
-  margin: -1% auto 0 auto; /* TRY TO FIX THAT AFTERWARDS */
-}
-
-.headline h1 {
-  color: var(--my-text-color);
-  font-style: normal;
-  font-weight: 800;
-  font-size: 2.5rem;
-  line-height: 3.25rem;
-  text-align: center;
-  letter-spacing: 1px;
-}
-
-.headline h2 {
-  font-style: normal;
-  font-weight: 600;
-  font-size: 2.5rem;
-  line-height: 3.25rem;
-  text-align: center;
-  letter-spacing: 1px;
+  width: 80%;   /* CHANGE THIS WIDTH TO 60% */ /* CHANGE THIS WIDTH TO 60% */ /* CHANGE THIS WIDTH TO 60% */
+  margin: 30% auto 20% auto;
 }
 
 .green {
-  color: var(--my-green-color);
+  color: var(--my-accessibility-a-color);
 }
 
 .headline p,
@@ -224,10 +300,8 @@ Headline Section
 }
 
 .social {
-  width: 10.63rem;
+  width: 50%;
   height: 1.226rem;
-  top: 35.556rem;
-  left: 6.563rem;
   display: flex;
   justify-content: center;
   align-items: center; /* Try to find out how to properly center with flex box */
@@ -236,21 +310,38 @@ Headline Section
 }
 
 .social li {
-  width: 75%;
+  width: 2%;
   flex: 1;
   text-align: center;
 }
 
-.social li a i {
+.social li a {
   color: var(--my-gray-color);
   width: 5%;
   height: 5%;           /* HEIGHT ISSUE TO FIX */
   font-size: x-large;
 }
 
+header .social {
+  margin-bottom: 1%;
+}
+
+.nav-menu li,
+.headline .social li {
+  margin: 3%;
+  display: flex;
+}
+
+.nav-menu li a,
+.headline .social li a {
+  margin-bottom: 1%;
+  display: flex;
+}
+
 /*
-Recent-work section
-Contains The 10 microverse projects
+.social img {
+  width: 100%;
+}
 */
 
 button .arrow {
@@ -262,26 +353,24 @@ button .arrow {
 }
 
 .arrow img {
-  margin: 0 49%;
+  width: 2%;
+  margin: 5% 48%;
 }
 
 /*
 Recent-work section
-Contains The 5 microverse projects
+Contains The 6 microverse projects
 */
+
 .recent-work { /* See if relevant */
   width: 100%;
-  height: fit-content;
+  height: max-content;
 }
 
 .recent-work-text { /* See if relevant */
   display: flex;
   flex-direction: column;
-}
-
-.recent-work-text,
-.about-myself-text {
-  width: 100%;
+  width: 80%;
   margin: 0 auto 10% auto;
 }
 
@@ -323,12 +412,12 @@ Contains The 5 microverse projects
 
 .img-placeholder {
   width: 100%;
-  height: 100%;                                 /* HEIGHT ISSUE TO FIX */
+  height: max-content;                                 /* HEIGHT ISSUE TO FIX */
 }
 
 .project-wrapped-text {
   width: 100%;
-  min-height: auto;
+  min-height: max-content;
   position: absolute;
   background-color: white;
   margin-bottom: 0%;
@@ -345,8 +434,8 @@ Contains The 5 microverse projects
   margin-top: 3%;
 }
 
-.project-built-with,
-.list-competences {
+.project .project-built-with,
+.competences-card .list-competences {
   list-style-type: none;
   text-decoration: none;
   display: flex;
@@ -357,34 +446,38 @@ Contains The 5 microverse projects
   margin: 5% 0;
 }
 
-.project-built-with {
+.project .project-built-with {
   margin-bottom: 5%;
 }
 
-.project-built-with li {
+.project .project-built-with li {
   background-color: var(--image-placeholder-color1);
   border-radius: 8px;
   margin: 0.5%;
   padding: 3%;
 }
 
-.list-competences li {
-  background-color: white;
+.competences-card .list-competences li {
+  background-color: var(--my-accessibility-a-bg-color);
   border-radius: 8px;
   margin: 1%;
   padding: 3%;
 }
 
-.project-built-with li a,
-.list-competences li a {
+.project .project-built-with li a,
+.competences-card .list-competences li a {
   text-decoration: none;
   font-size: medium;
-  color: var(--my-text-color);
   border-radius: 8px;
+  font-weight: 400;
 }
 
-.list-competences li a {
-  color: var(--my-green-color);
+.project .project-built-with li a {
+  color: var(--my-text-color);
+}
+
+.competences-card .list-competences li a {
+  color: var(--my-accessibility-a-color);
 }
 
 /*
@@ -397,11 +490,15 @@ languages, frameworks and skills
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 30% auto 0 auto;
+  margin: 50% auto 50% auto;
+  background:
+    url(../../images/mobile-bg/about-me-mobile1.svg) no-repeat left bottom 70%,
+    url(../../images/mobile-bg/about-me-mobile2.svg) no-repeat right top 0%;
+  background-size: 12%;
 }
 
 .about-myself-text {
-  width: 80vw;
+  width: 75%;
   display: flex;
   flex-direction: column;
   margin: 10% auto 0 auto;
@@ -421,18 +518,20 @@ languages, frameworks and skills
   flex-direction: column;
   width: 92%;
   margin: 1% 4%;
+  justify-content: stretch;
 }
 
 .competences-image {
   width: 100%;
-  margin: 15% auto 3% auto;
-  height: 30%;                              /* HEIGHT ISSUE TO FIX */
+  height: 30%;
+  margin: 0% auto;
   border-radius: 8px;
 }
 
 .competences-image img {
+  align-self: flex-start;
   width: 100%;
-  margin: auto;
+  margin: 0;
   border-radius: 8px;
 }
 
@@ -451,8 +550,9 @@ Contains a text in a header and the form
 */
 
 .contact-form-text {
-  width: 90%;
-  margin: 0% auto;
+  width: 80%;
+  margin: 8% auto;
+  display: flex;
 }
 
 .contact-heading {
@@ -463,14 +563,18 @@ Contains a text in a header and the form
   color: #172b4d;
 }
 
-.contact-form-container {
+.contact-form {
   width: 90%;
-  margin: 10% auto;
+  margin: 5% auto;
+  background-color: transparent;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
 }
 
-.contact-form {
+.contact-form-container {
   width: 100%;
-  height: 100%;                             /* HEIGHT ISSUE TO FIX */
+  height: 100vh;                             /* HEIGHT ISSUE TO FIX */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -479,8 +583,9 @@ Contains a text in a header and the form
 }
 
 form {
-  display: flex;
+  width: 90%;
   flex-direction: column;
+  margin: 8% auto;
 }
 
 input[type="text"],
@@ -502,81 +607,22 @@ textarea {
 }
 
 textarea::-webkit-resizer {
-  background: url(../images/Icons/Union.png) no-repeat center;
+  background: url(../../images/Icons/Union.png) no-repeat center;
 }
 
 input[type="text"]::placeholder,
 input[type="email"]::placeholder {
   font-style: italic;
   font-weight: 400;
-  font-size: 0, 9375rem;
+  font-size: 0.9375rem;
   line-height: 160%;
-  padding: 1rem;
+  padding: 5%;
 }
 
 textarea::placeholder {
   text-align: left;
   min-height: 7.125rem;
-}
-
-/*
-Form background
-Display none here
-*/
-
-.form-bg-image {
-  position: relative;
-  display: none;
-  height: 30vh;
-  width: 100%;
-  background-color: transparent; /* FOR TESTING PURPOSE */
-  overflow: hidden;
-  align-items: stretch;
-}
-
-.img1,
-.img2,
-.img3 {
-  flex: 1;
-}
-
-.img1 {
-  width: 30%;
-  height: 75%;
-  background: url(../images/desktop-bg/footer1.png) no-repeat;
-  z-index: 1;
-  background-color: red; /* FOR TESTING PURPOSE */
-  position: absolute;
-  bottom: 20%;
-  left: 0;
-  background-size: contain;
-  display: flex;
-}
-
-.img2 {
-  width: 10%;
-  height: 60%;
-  background: url(../images/desktop-bg/footer-middle.png) no-repeat;
-  z-index: 1;
-  background-color: transparent; /* FOR TESTING PURPOSE */
-  position: absolute;
-  top: 60%;
-  right: 70%;
-  background-size: contain;
-  display: flex;
-}
-
-.img3 {
-  width: 80%;
-  height: 100%;
-  background: url(../images/desktop-bg/footer3.png) no-repeat;
-  z-index: 1;
-  background-color: transparent; /* FOR TESTING PURPOSE */
-  position: absolute;
-  bottom: 25%;
-  left: 80%;
-  background-size: contain;
-  display: flex;
+  padding-left: 5%;
 }
 
 /*
@@ -603,26 +649,21 @@ Contains email and socials
   font-size: 1.25rem;
 }
 
-.footer-background {
-  background-image: url(../images/mask-group-footer.png) no-repeat;
-  bottom: 0;
-}
-
 /* HEADER AND FOOTER DISPLAY OPTIONS */
 
-header .display-desktop {
+.header .display-desktop {
   display: none;
 }
 
-header .display-mobile {
-  width: 100%;
+.header .display-mobile {
   display: flex;
-  justify-content: flex-end;
+  top: 0;
   align-items: flex-end;
 }
 
-header .display-mobile img {
+.header .display-mobile img {
   align-self: flex-end;
+  margin-right: 1rem;
 }
 
 .headline .display-desktop,
@@ -630,11 +671,52 @@ header .display-mobile img {
   display: none;
 }
 
+/*
+HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
+*/
+
 @media (max-width: 280px) {
-  .project-built-with li,
-  .list-competences li {
+  .header-nav .display-mobile {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    visibility: hidden;
+  }
+
+  .header-nav .nav-menu {
+    display: none;
+  }
+
+  .header-nav .hamburger-menu {
+    position: fixed;
+    height: 5vh;
+    margin-top: 0%;
+  }
+
+  .header-nav .hamburger-navmenu {
+    position: fixed;
+    height: 90vh;
+    margin-top: 10%;
+  }
+
+  .project .project-built-with li,
+  .competences-card .list-competences li {
     width: 90%;
     text-align: center;
+  }
+
+  footer .social .display-mobile,
+  .header .social .display-mobile {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .display-desktop {
+    display: none;
   }
 }
 
@@ -643,15 +725,102 @@ header .display-mobile img {
     display: none;
   }
 
-  header .display-mobile {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+  .header-nav {
+    top: 0;
+    height: 90vh;
+    position: fixed;
   }
 
-  header .display-mobile img {
+  .menu-fixed {
+    position: fixed;
+    z-index: 2;
+  }
+
+  .navbar {
+    padding-top: 0; /* //THAT WAS 30% // */
+    overflow: hidden;
+  }
+
+  .hamburger-menu {
+    visibility: visible;
+  }
+
+  .header-nav .display-mobile {
+    width: 100%;
+  }
+
+  .social .display-mobile {
+    width: 30%;
+  }
+
+  .header-nav .nav-menu {
+    display: none;
+  }
+
+  .header-nav .hamburger-navmenu {
+    height: 90vh;
+  }
+
+  footer .social .display-mobile,
+  header .social .display-mobile {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header-nav .display-mobile img {
     align-self: flex-end;
+  }
+
+  /*
+
+  THIS FOOTER IS TO BE FIWED FOR MIN-WIDTH: 375PX
+
+  */
+
+  .footer {
+    margin-top: 30%;
+  }
+
+  /*
+
+  HAMBURGER NAVMENU
+
+  */
+
+  .hamburger-navmenu li {
+    height: 4%;
+    width: 10%;
+    padding-top: 0.1%;
+    padding-left: 5%;
+    text-align: center;
+  }
+
+  .hamburger-navmenu li a {
+    line-height: 3rem;
+    text-decoration: none;
+    font-size: medium;
+    color: var(--my-gray-color);
+    padding: 0.1% 5%;
+  }
+
+  .hamburger-navmenu li:first-child {
+    margin-top: 10%;
+  }
+
+  .hamburger-navmenu li:last-child {
+    border-bottom: none;
+    margin-bottom: 0%;
+  }
+
+  .hamburger-navmenu li a:hover {
+    font-weight: bold;
+  }
+
+  .hamburger-navmenu li a p {
+    font-size: 2rem;
+    font-weight: 500;
   }
 }
 
@@ -662,41 +831,62 @@ header .display-mobile img {
     background: red;
   }
   */
-
-  .about-myself {
-    width: 100%;
-    margin: 0;
+  .hamburger-menu {
+    visibility: hidden;
   }
 
-  header {
-    height: 8vh;
+  .header {
+    height: 100%;
+    background: url(../../images/desktop-bg/Header-llustration-desktop.svg) no-repeat top;
+    background-size: 100%;
+  }
+
+  .header-nav {
+    height: 5vh;
+    position: fixed;
+    padding-top: 3%;
+    z-index: 1;
+    background: white;
+  }
+
+  .navbar {
+    padding-top: 0;
+    overflow: unset;
+  }
+
+  .header-nav .nav-menu {
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .display-mobile,
-  header .display-mobile {
+  .header .display-mobile {
     display: none;
   }
 
-  header .display-desktop {
+  .header .display-desktop {
     width: 100%;
     display: flex;
+    flex-direction: row;
     justify-content: center;
   }
 
   .headline {
-    margin-top: 5%;
-  }
-
-  .header-bg {
-    background-image: url(../images/desktop-bg/Header-llustration-desktop.png);
+    width: 50%;
+    margin: auto;
+    background: none;
+    padding-top: 10%;
   }
 
   .spacing-default {
-    margin: 2% auto;
+    margin: 3% auto;
   }
 
   .arrow {  /* TO CENTER */
-    margin: 0% auto 20% auto;
+    margin: -5% auto 2% auto;
   }
 
   .recent-work {
@@ -714,7 +904,7 @@ header .display-mobile img {
     margin: 1% auto 0% auto;
   }
 
-  .social li a i {
+  .social li a {
     color: var(--my-gray-color);
     width: 5%;
     height: 2%;                               /* HEIGHT ISSUE TO FIX */
@@ -733,8 +923,18 @@ header .display-mobile img {
     margin: 0 0.1%;
   }
 
+  .about-myself {
+    width: 100%;
+    margin: 0;
+    background:
+      url(../../images/mobile-bg/about-me-mobile1.svg) no-repeat left top 25%,
+      url(../../images/mobile-bg/about-me-mobile2.svg) no-repeat right top 0%;
+    background-size: 15%;
+  }
+
   .competences {
     width: 92%;
+    height: max-content;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -749,14 +949,17 @@ header .display-mobile img {
     height: 19.75rem;
     border-radius: 0.5rem;
     margin: 1% 0.5%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
   }
 
   .competences-image {
-    width: 100%;
-    margin: 5% auto 3% auto;
+    width: 60%;
+    margin: 5% auto 1% auto;
   }
 
-  .list-competences {
+  .competences-card .list-competences {
     margin: 5% auto 5% auto;
   }
 
@@ -766,16 +969,46 @@ header .display-mobile img {
     margin: 2% auto 5% auto;
   }
 
+  /* ALL THIS PART TO COMPARE AND FIX THE CONTACT FORM ISSUE */
+
+  /* ALL THIS PART TO COMPARE AND FIX THE CONTACT */
+  .contact-form-container {
+    background:
+      url(../../images/desktop-bg/footer1.svg) no-repeat left bottom 0%,
+      url(../../images/desktop-bg/footer2.svg) no-repeat bottom 0% left 20%,
+      url(../../images/desktop-bg/footer3.svg) no-repeat right bottom 0%;
+  }
+
+  .contact-form-text {
+    width: 50%;
+  }
+
   .contact-form {
-    width: 90%;
+    width: 80%;
+    margin: 0% auto;
+    background-color: transparent;
+    z-index: 0;
     display: flex;
     flex-direction: row;
-    gap: 1%;
+  }
+
+  .contact-heading {
+    width: 95%;
+  }
+
+  .contact-heading h2 {
+    text-align: left;
+  }
+
+  form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
   }
 
   .form-button {
     margin-left: 0;
-    width: 6.563; /* TO FIX */
+    width: max-content;
     height: 1.5rem;
     height: 100%;
     padding: 3% 3%;
@@ -799,24 +1032,12 @@ header .display-mobile img {
     padding: 2% 1.5%;
   }
 
-  .form-bg-image {
-    display: flex;
-  }
-
   .footer {
     width: 100%;
     height: 1%;
     background-repeat: no-repeat;
     border-top: 1px solid var(--my-text-color);
     margin-bottom: 1%;
-  }
-
-  footer::after {
-    content: "";
-    width: 100%;
-    background-image: url(../images/contact\ form-illustratoin-3-desktop.png) no-repeat top right;
-    position: absolute;
-    display: flex;
   }
 
   footer .social {
@@ -834,8 +1055,7 @@ header .display-mobile img {
   }
 }
 
-@media (min-width: 912px) { /* THIS WAS 768 COME BACK TO THAT IN CASE OF ISSUE */
-
+@media (min-width: 912px) {
   .about-myself {
     width: 92%;
   }
@@ -886,13 +1106,6 @@ header .display-mobile img {
   .form-bg-image {
     display: flex;
   }
-
-  .img1,
-  .img2,
-  .img3 {
-    align-self: stretch;
-    flex: 1;
-  }
 }
 
 @media (min-width: 1280) {
@@ -900,13 +1113,5 @@ header .display-mobile img {
 
   .form-bg-image {
     display: flex;
-  }
-
-  .img1 {
-    align-self: stretch;
-    width: 150%;
-    height: 150%;
-    background-color: red;
-    flex: 1;
   }
 }
