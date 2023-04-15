@@ -235,6 +235,14 @@ body .hamburger-menu.active {
   margin-bottom: 0%;
 }
 
+.hidden {
+  display: none;
+}
+
+.not-navbar {
+  width: 100%;
+}
+
 .hamburger-navmenu {
   /* POSITION FIXED DOESN'T WORK */
   top: O;
