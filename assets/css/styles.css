@@ -180,21 +180,21 @@ header {
 }
 
 .hamburger-menu {
-  width: 10%;
-  height: 100%;
-  margin-top: 0%;
-  margin-left: 80%;
-  z-index: 2;
+  height: 40px;
+  width: 80px;
+  z-index: 300;
   position: fixed; /*ADDED*/
   display: flex;
   flex-direction: column;
   cursor: pointer;
   align-items: center;
+  right: 3rem;
+  top: 3rem;
 }
 
 .hamburger-bar {
   width: 2rem;
-  height: 0.15rem;
+  height: 0.17rem;
   background-color: var(--my-text-color);
   transition: all 0.3s ease;
   margin: 4% 0;
@@ -208,18 +208,24 @@ header {
 */
 .hamburger-menu-image.active {
   transform: scale(2);
+  z-index: 100;
 }
 
-.hamburger-menu.active .hamburger-bar:nth-child(1) {
+.hamburger-menu.active
+.hamburger-bar:nth-child(1) {
   transform: translateY(0.5rem) rotate(45deg);
+  z-index: 100;
 }
 
-.hamburger-menu.active .hamburger-bar:nth-child(3) {
+.hamburger-menu.active
+.hamburger-bar:nth-child(3) {
   transform: translateY(-0.5rem) rotate(-45deg);
 }
 
-.hamburger-menu.active .hamburger-bar:nth-child(2) {
+.hamburger-menu.active
+.hamburger-bar:nth-child(2) {
   opacity: 0;
+  z-index: 100;
 }
 
 body .hamburger-menu.active {
@@ -235,18 +241,32 @@ body .hamburger-menu.active {
   margin-bottom: 0%;
 }
 
+.hidden {
+  display: none;
+}
+
+.not-navbar {
+  width: 100%;
+}
+
 .hamburger-navmenu {
   /* POSITION FIXED DOESN'T WORK */
   top: O;
   width: 100%;
-  height: auto;            
+  height: 90vh;
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
   list-style-type: none;
   /*margin: 0 auto 0 -120%;*/
   background-color: white;
   text-align: center;
   transform: translateX(-500);
   transition: 5s;
-  z-index: 1;
+  z-index: 20;
+  border-bottom: 1px solid gray;
+  border-bottom-left-radius: 5%;
+  border-bottom-right-radius: 5%;
 }
 
 /* ADDED CLASS .HAMBURGER-NAVMENU.ACTIVE */
@@ -639,7 +659,7 @@ Contains email and socials
 
 .header .display-mobile {
   display: flex;
-  justify-content: flex-end;
+  top: 0;
   align-items: flex-end;
 }
 
@@ -740,7 +760,7 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   }
 
   .header-nav .hamburger-navmenu {
-    height: auto;
+    height: 90vh;
   }
 
   footer .social .display-mobile,
@@ -813,6 +833,9 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
     background: red;
   }
   */
+  .hamburger-menu {
+    visibility: hidden;
+  }
 
   .header {
     height: 100%;
@@ -823,7 +846,7 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   .header-nav {
     height: 5vh;
     position: fixed;
-    padding-top: 0%;
+    padding-top: 3%;
     z-index: 1;
     background: white;
   }
