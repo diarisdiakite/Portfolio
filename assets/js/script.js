@@ -101,21 +101,38 @@ let projects = [
   // Create projectCardJs element
   const projectCardJs = document.createElement('div');
   projectCardJs.classList = 'project-card-js';
-  projectCardJs.setAttribute('width', '50')
+  
  
+  //Append close button 
+  let popupCloseButton = document.createElement('button');
+  popupCloseButton.setAttribute('name', 'close');
+  popupCloseButton.setAttribute('id', 'js-button-close');
+  popupCloseButton.setAttribute('class', 'js-button-close');
+  popupCloseButton.textContent = 'X';
+  projectCardJs.appendChild(popupCloseButton);
+  
+  //Create a type with all the tect element and the image
+  let textDiv = document.createElement('div');
+  textDiv.classList.add('js-text-container');
+
   //appending image
   let popupImage = document.createElement('div');
-  popupImage.classList.add('project-popup-img');
-
+  //if min-width: 375;
+  if(window.innerWidth < 768) {  //--------------------TO FIX--------------------------------
+    popupImage.classList.add('project-popup-mobile-img');
+  } else if (window.innerWidth >= 768){ 
+    popupImage.classList.add('project-popup-desktop-img');
+  }   
+    
   let image = document.createElement('img');
+  /*
   image.src = '../../images/popup/SnapshootPortfolio.svg';
-  popupImage.appendChild(image)
-  projectCardJs.appendChild(popupImage);
+  image.classList.add('.project-popup-desktop-img');
+  */
+  popupImage.appendChild(image);
+  textDiv.appendChild(popupImage);
   
-
-
-  //create diw with Ttilt and 2 links in display flex
-
+  //create diw with Title and 2 links in display flex
   let titleLinksDiv = document.createElement('div');
   titleLinksDiv.classList.add('js-title-div');
       
@@ -135,23 +152,44 @@ let projects = [
   linksContainer.appendChild(liveLink);
 
   let sourceLink = document.createElement('button');
-  sourceLink.setAttribute('class', 'project-buttons');
+  sourceLink.setAttribute('class', 'project-button');
   sourceLink.setAttribute('alt', 'project-buttons');
   sourceLink.textContent = `${project.sourceLink}`;
   linksContainer.appendChild(sourceLink);
 
   //Append the 3 elements to project card
   titleLinksDiv.appendChild(linksContainer);
-  projectCardJs.appendChild(titleLinksDiv);
+  textDiv.appendChild(titleLinksDiv);
+  
 
+  // I - CREATE THE TECHNOLOGIES LINKS ----- TO FIX -----------------------------
+  
+  let techDiv = document.querySelectorAll('.project-built-with > li');
+  let techList = document.createElement('div');
+  techList.classList.add('js-project-built-with');
+  let technology0 = techDiv[0];
+  let technology1 = techDiv[1];
+  let technology2 = techDiv[2];
+  let technology3 = techDiv[3];
+  techList.appendChild(technology0);
+  techList.appendChild(technology1);
+  techList.appendChild(technology2);
+  techList.appendChild(technology3);
+  textDiv.appendChild(techList);
+  /*
+  let techList = project.technologies.forEach((technology) => technology);
+  techDiv.appendChild(techList);
+  projectCardJs.appendChild(techDiv);
+  */
+  
   //Project description
   let description = document.createElement('p');
   description.textContent = `${project.description}`;
-  //description.setAttribute('class', 'p');
-  //description.setAttribute('');
-  projectCardJs.appendChild(description);
-
-  
+  description.setAttribute('class', 'js-p-style');
+  description.setAttribute('text-align', 'left');
+  textDiv.appendChild(description);
+  projectCardJs.appendChild(textDiv);
+    
   let projectPopup = document.querySelector("#projectPopup");
   projectPopup.appendChild(projectCardJs);
   let modal = document.createElement('div');
@@ -160,13 +198,31 @@ let projects = [
 
   let body = document.querySelector('body');
   body.appendChild(modal);
+
+  // V - CREATE BUTTONS LIST
+  // VI - CREATE POPUP BUTTON CLOSE
+  // VI - ADD EVENT LISTERNER OPEN AND CLOSE
+
+  let projectButtons = document.querySelectorAll('.project-buttons');
+  projectButtons.forEach(projectButton => {
+    projectButton.addEventListener('click', () => {
+
+    })
+  })
+
+
+
+/*
+    document.querySelectorAll('.project-button').forEach((n) => n.addEventListener('click', () => {
+    //add and if and else condition
+    const openProjectPopup = () => { //Testing the other function
+      projectPopup.classList.add('open-project-popup');
+    }
+    
+    const closeProjectPopup = () => {
+      projectPopup.classList.remove('open-project-popup');
+    }
+  }));
+  */
+
 })
-
-
-const openProjectPopup = () => { //Testing the other function
-  projectPopup.classList.add('open-project-popup')
-}
-
-const closeProjectPopup = () => {
-  projectPopup.classList.remove('open-project-popup');
-}
