@@ -1,20 +1,6 @@
-const hamburgerMenu = document.querySelector('.hamburger-menu');
-const hamburgerNavMenu = document.querySelector('.hamburger-navmenu');
-
-hamburgerMenu.addEventListener('click', () => {
-  hamburgerMenu.classList.toggle('active');
-  hamburgerNavMenu.classList.toggle('active');
-  // hamburgerNavMenu.classList.toggle("showHamburgerNavMenu");
-});
-
-document.querySelectorAll('.nav-link').forEach((n) => n.addEventListener('click', () => {
-  hamburgerMenu.classList.remove('active');
-  hamburgerNavMenu.classList.remove('active');
-  // hamburgerNavMenu.classList.remove("showHamburgerNavMenu");
-}));
-
-
 // POPUP WINDOW
+
+//const { url } = require("inspector");
 
 
 //let projectPopup = document.getElementById('projectPopup');
@@ -93,11 +79,7 @@ let projects = [
   }
 ];
 
-//const container = document.getElementById('recent_work');
-  
-
-
-  projects.forEach(project => {
+projects.forEach(project => {
   // Create projectCardJs element
   const projectCardJs = document.createElement('div');
   projectCardJs.classList = 'project-card-js';
@@ -108,7 +90,6 @@ let projects = [
   popupCloseButton.setAttribute('name', 'close');
   popupCloseButton.setAttribute('id', 'js-button-close');
   popupCloseButton.setAttribute('class', 'js-button-close');
-  popupCloseButton.textContent = 'X';
   projectCardJs.appendChild(popupCloseButton);
   
   //Create a type with all the tect element and the image
@@ -118,17 +99,16 @@ let projects = [
   //appending image
   let popupImage = document.createElement('div');
   //if min-width: 375;
-  if(window.innerWidth < 768) {  //--------------------TO FIX--------------------------------
-    popupImage.classList.add('project-popup-mobile-img');
-  } else if (window.innerWidth >= 768){ 
-    popupImage.classList.add('project-popup-desktop-img');
-  }   
-    
   let image = document.createElement('img');
-  /*
-  image.src = '../../images/popup/SnapshootPortfolio.svg';
-  image.classList.add('.project-popup-desktop-img');
-  */
+  if(window.innerWidth < 768) {  //--------------------TO FIX--------------------------------
+    image.src = '../../images/popup/SnapshootPortfolioMobile.svg';
+    image.classList.add('.project-popup-desktop-img');
+    popupImage.classList.add('project-popup-desktop-img');
+  } else if (window.innerWidth >= 768){
+    image.src = '../../images/popup/SnapshootPortfolio.svg';
+    image.classList.add('.project-popup-desktop-img'); 
+    popupImage.classList.add('project-popup-mobile-img');
+  }   
   popupImage.appendChild(image);
   textDiv.appendChild(popupImage);
   
@@ -197,32 +177,26 @@ let projects = [
   modal.appendChild(projectPopup);
 
   let body = document.querySelector('body');
-  body.appendChild(modal);
+  
 
   // V - CREATE BUTTONS LIST
   // VI - CREATE POPUP BUTTON CLOSE
   // VI - ADD EVENT LISTERNER OPEN AND CLOSE
 
   let projectButtons = document.querySelectorAll('.project-buttons');
+  console.log(projectButtons);
+  
+  // FIXING PROJECT BUTTON LINKING TO SPECIFIC PROJECT ISSUE
   projectButtons.forEach(projectButton => {
     projectButton.addEventListener('click', () => {
-
+        projectPopup.classList.add('open-project-popup');
+        body.appendChild(modal);
     })
   })
 
-
-
-/*
-    document.querySelectorAll('.project-button').forEach((n) => n.addEventListener('click', () => {
-    //add and if and else condition
-    const openProjectPopup = () => { //Testing the other function
-      projectPopup.classList.add('open-project-popup');
-    }
-    
-    const closeProjectPopup = () => {
-      projectPopup.classList.remove('open-project-popup');
-    }
-  }));
-  */
+  
+  popupCloseButton.addEventListener('click', () => {
+    body.removeChild(modal);
+  })
 
 })

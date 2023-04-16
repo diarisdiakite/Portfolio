@@ -699,6 +699,7 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   width: 100%;
   height: 100%;
   background: var(--image-placeholder-color);
+  z-index: 8;
 }
 
 .project-popup {
@@ -712,7 +713,7 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   text-align: center;
   padding: 0;
   transition: transform 0.4s, visibility O.4s, top 0.4s;
-  visibility: hidden; 
+  visibility: visible; 
 }
 
 .project-popup-desktop-img {
@@ -721,21 +722,22 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   margin-top: 3%;
   border-radius: 1%;
   border: 1px solid white;
-  background: url(../../images/popup/SnapshootPortfolio.svg) no-repeat;
-  background-size: 60%;
+  background: url(../../images/popup/SnapshootPortfolio.svg) no-repeat; /* TO REMOVE AFTER FIXING */
+  background-size: 100%; /* TO REMOVE AFTER FIXING */
 }
 
 .project-popup-mobile-img {
   width: 100%;
-  height: 60%;
+  height: 40%;
   margin-top: 3%;
   border-radius: 1%;
   border: 1px solid white;
-  background: url(../../images/popup/SnapshootPortfolioMobile.svg) no-repeat;
-  background-size: 100%;
+  background: url(../../images/popup/SnapshootPortfolioMobile.svg) no-repeat; /* TO REMOVE AFTER FIXING */
+  background-size: 100%; /* TO REMOVE AFTER FIXING */
 }
 
-.project-popup-img img {
+.project-popup-desktop-img img,
+.project-popup-mobile-img img {
   width: 100%;
   height: 100%;
 }
@@ -767,13 +769,16 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
 */
 
 .js-button-close {
-  background-color: #d0d9d4;
   position: absolute;
   width: 5%;
   height: 5%;
   top: 0%; 
-  right: 0;
+  right: 5%;
   margin: 0;
+  border: 1px solid var(--image-placeholder-color);
+  border-radius: 5px;
+  background: url(../../images/popup/Disabled.svg);
+  align-self: center;
 }
 
 .js-text-container {
@@ -1204,6 +1209,57 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
     list-style-type: none;
     margin: 1% auto;
   }
+
+
+
+
+
+    /* 
+    ADD PROJECT POPUP CSS
+    - Add the Popup class (same as the html file and style it)
+    --  Add .popup button and .popup h1, h2, h3 and p to respective 
+        class declarations in the different sections 
+    - Add the class open-popup (to be added in the javascript open function)
+  */
+
+  .project-popup {
+    width: 100%;
+    position: absolute;
+    background: var(--image-placeholder-color1);
+    border-radius: 1%;
+    top: 0;
+    left: 0;
+    transform: translate(-250% -250%) scale(0.1);
+    text-align: center;
+    padding: 0;
+    transition: transform 0.4s, visibility O.4s, top 0.4s;
+    visibility: visible; 
+  }
+
+  .project-card-js {
+    position: fixed;
+    width: 50%;
+    height: 90vh;
+    top: 5%;
+    left: 25%;
+  }
+
+  /*
+    STYLING THE JS CONTAINER
+  */
+
+  .js-text-container {
+    width: 90%;
+    height: 100%;
+    padding: 0.1% 5%;
+    margin-top: 5%;
+  }
+
+  .js-title-div {
+    width: 100%;
+    height: 8%;
+  }
+
 }
 
 @media (min-width: 1024px) {
