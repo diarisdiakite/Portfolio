@@ -160,10 +160,11 @@ header {
 
 .nav-menu {
   list-style-type: none;
-  display: none, flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   align-self: center;
+  visibility: hidden;
 }
 
 .nav-menu a {
@@ -183,7 +184,7 @@ header {
   height: 40px;
   width: 80px;
   z-index: 300;
-  position: fixed; /* ADDED */
+  position: absolute; /* ADDED */
   display: flex;
   flex-direction: column;
   cursor: pointer;
@@ -248,7 +249,7 @@ body .hamburger-menu.active {
 
 .hamburger-navmenu {
   /* POSITION FIXED DOESN'T WORK */
-  top: o;
+  top: 0;
   width: 100%;
   height: 90vh;
   gap: 2rem;
@@ -259,7 +260,7 @@ body .hamburger-menu.active {
   /* margin: 0 auto 0 -120%; */
   background-color: white;
   text-align: center;
-  transform: translateX(-500);
+  transform: translateX(-500%);
   transition: 5s;
   z-index: 20;
   border-bottom: 1px solid gray;
@@ -429,7 +430,7 @@ Contains The 6 microverse projects
   max-height: 10%;                            /* HEIGHT ISSUE TO FIX */
   width: 100%;
   text-align: center;
-  padding: auto;
+  padding: 0;
   margin-bottom: 0%;
   margin-top: 3%;
 }
@@ -913,7 +914,7 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
 
   .projects {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(auto, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     gap: 1% 0%;
     margin-left: 0;
   }
@@ -1018,7 +1019,7 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   input[type="text"],
   input[type="email"] {
     margin: 1% auto;
-    padding: 0.5% auto;
+    padding: 0.5% 10%;
   }
 
   textarea {

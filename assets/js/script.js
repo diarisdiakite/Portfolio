@@ -13,7 +13,7 @@ hamburgerMenu.addEventListener('click', () => {
     navbar.classList.remove('hidden');
   } else {
     navbar.classList.add('hidden');
-    hamburgerMenu.setAttribute('visibility', 'visible');
+    // hamburgerMenu.setAttribute('visibility', 'visible');
   }
 
   if (hamburgerNavMenu.classList.contains('hidden')) {
@@ -28,4 +28,6 @@ hamburgerMenu.addEventListener('click', () => {
 
 document.querySelectorAll('.nav-link').forEach((n) => n.addEventListener('click', () => {
   hamburgerNavMenu.setAttribute('visibility', 'hidden');
+  navbar.classList.add('hidden');
+  hamburgerMenu.setAttribute('class', 'hamburger-menu');
 }));
