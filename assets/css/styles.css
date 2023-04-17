@@ -62,7 +62,7 @@ h3 {
 }
 
 p {
-  columns: var(--my-text-color);
+  color: var(--my-text-color);
   width: 100%;
   font-style: normal;
   text-align: center;
@@ -160,11 +160,10 @@ header {
 
 .nav-menu {
   list-style-type: none;
-  display: flex;
+  display: none, flex;
   justify-content: center;
   align-items: center;
   align-self: center;
-  visibility: hidden;
 }
 
 .nav-menu a {
@@ -174,25 +173,31 @@ header {
 }
 
 /* ADDED HAMBURGER MENU */
+.hamburger-container {
+  background-color: white;
+  height: 100%;
+  position: sticky;
+}
+
 .hamburger-menu {
-  background-color: var(--image-placeholder-color1); /* FOR TESTING PURPOSE */
-  width: 10%;
-  height: 5vh;
-  margin-top: 0%;
-  margin-left: 80%;
-  z-index: 2;
+  height: 40px;
+  width: 80px;
+  z-index: 300;
+  position: fixed; /* ADDED */
   display: flex;
   flex-direction: column;
   cursor: pointer;
   align-items: center;
+  right: 3rem;
+  top: 3rem;
 }
 
 .hamburger-bar {
-  width: 3rem;
-  height: 0.3rem;
+  width: 2rem;
+  height: 0.17rem;
   background-color: var(--my-text-color);
   transition: all 0.3s ease;
-  margin: 5% 0;
+  margin: 4% 0;
   z-index: 999;
   align-self: center;
 }
@@ -201,16 +206,28 @@ header {
   ANIMATION TO TURN THE BARS TO AN "X"
   PSEUDO CLASS :ACTIVE TO BE ADDED DYNAMICLY WITH JAVASCRIPT
 */
+.hamburger-menu-image.active {
+  transform: scale(2);
+  z-index: 100;
+}
+
 .hamburger-menu.active .hamburger-bar:nth-child(1) {
-  transform: translateY(0.7rem) rotate(45deg);
+  transform: translateY(0.5rem) rotate(45deg);
+  z-index: 100;
 }
 
 .hamburger-menu.active .hamburger-bar:nth-child(3) {
-  transform: translateY(-0.7rem) rotate(-45deg);
+  transform: translateY(-0.5rem) rotate(-45deg);
 }
 
 .hamburger-menu.active .hamburger-bar:nth-child(2) {
   opacity: 0;
+  z-index: 100;
+}
+
+body .hamburger-menu.active {
+  height: 100vh;
+  overflow: hidden;
 }
 
 /*
@@ -218,42 +235,36 @@ header {
 */
 .display-mobile {
   position: relative;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
   margin-bottom: 0%;
+}
+
+.hidden {
+  display: none;
+}
+
+.not-navbar {
+  width: 100%;
 }
 
 .hamburger-navmenu {
   /* POSITION FIXED DOESN'T WORK */
+  top: o;
+  width: 100%;
+  height: 90vh;
+  gap: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh;            /* TRY MIN-HEIGHT */
   list-style-type: none;
-  margin: 4rem auto 0 -120%;
-  background-color: var(--my-accessibility-a-color);
+
+  /* margin: 0 auto 0 -120%; */
+  background-color: white;
   text-align: center;
-  transform: translateX(-500%);
+  transform: translateX(-500);
   transition: 5s;
-}
-
-.hamburger-navmenu li {
-  width: 10%;
-  margin: 1% auto;
-  padding: 0.5% 0;
-  text-align: center;
-  border-bottom: 1px solid var(--image-placeholder-color1);
-}
-
-.hamburger-navmenu li a {
-  line-height: 3rem;
-  text-decoration: none;
-  font-size: medium;
-  color: white;
-  padding: 1% 5%;
+  z-index: 20;
+  border-bottom: 1px solid gray;
+  border-bottom-left-radius: 5%;
+  border-bottom-right-radius: 5%;
 }
 
 /* ADDED CLASS .HAMBURGER-NAVMENU.ACTIVE */
@@ -263,7 +274,7 @@ header {
 }
 
 .showHamburgerNavMenu {
-  transform: translate(0);
+  transform: translate(0%);
 }
 
 /*
@@ -418,7 +429,7 @@ Contains The 6 microverse projects
   max-height: 10%;                            /* HEIGHT ISSUE TO FIX */
   width: 100%;
   text-align: center;
-  padding: 1%;
+  padding: auto;
   margin-bottom: 0%;
   margin-top: 3%;
 }
@@ -646,12 +657,13 @@ Contains email and socials
 
 .header .display-mobile {
   display: flex;
-  justify-content: flex-end;
+  top: 0;
   align-items: flex-end;
 }
 
 .header .display-mobile img {
   align-self: flex-end;
+  margin-right: 1rem;
 }
 
 .headline .display-desktop,
@@ -663,20 +675,14 @@ Contains email and socials
 HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
 */
 
-.hamburger-navmenu li:last-child {
-  border-bottom: none;
-}
-
-.hamburger-navmenu li a:hover {
-  font-weight: bold;
-}
-
 @media (max-width: 280px) {
   .header-nav .display-mobile {
     width: 100%;
+    height: 90vh;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+    visibility: hidden;
   }
 
   .header-nav .nav-menu {
@@ -684,8 +690,15 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   }
 
   .header-nav .hamburger-menu {
+    position: fixed;
     height: 5vh;
     margin-top: 0%;
+  }
+
+  .header-nav .hamburger-navmenu {
+    position: fixed;
+    height: 90vh;
+    margin-top: 10%;
   }
 
   .project .project-built-with li,
@@ -712,11 +725,28 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
     display: none;
   }
 
+  .header-nav {
+    top: 0;
+    height: 90vh;
+    position: fixed;
+  }
+
+  .menu-fixed {
+    position: fixed;
+    z-index: 2;
+  }
+
+  .navbar {
+    padding-top: 0; /* //THAT WAS 30% // */
+    overflow: hidden;
+  }
+
+  .hamburger-menu {
+    visibility: visible;
+  }
+
   .header-nav .display-mobile {
     width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
   }
 
   .social .display-mobile {
@@ -727,16 +757,8 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
     display: none;
   }
 
-  .header-nav .hamburger-menu {
-    height: 5vh;
-    margin-top: 0%;
-  }
-
-  .x-header-nav-fixed-top,
-  .x-header-nav-fixed-left,
-  .x-header-nav-fixed-right {
-    position: fixed;
-    overflow-y: scroll;
+  .header-nav .hamburger-navmenu {
+    height: 90vh;
   }
 
   footer .social .display-mobile,
@@ -751,14 +773,6 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
     align-self: flex-end;
   }
 
-  .header-nav {
-    margin-top: -20%;
-  }
-
-  .hamburger-navmenu {
-    margin-top: 50%;
-  }
-
   /*
 
   THIS FOOTER IS TO BE FIWED FOR MIN-WIDTH: 375PX
@@ -767,6 +781,46 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
 
   .footer {
     margin-top: 30%;
+  }
+
+  /*
+
+  HAMBURGER NAVMENU
+
+  */
+
+  .hamburger-navmenu li {
+    height: 4%;
+    width: 10%;
+    padding-top: 0.1%;
+    padding-left: 5%;
+    text-align: center;
+  }
+
+  .hamburger-navmenu li a {
+    line-height: 3rem;
+    text-decoration: none;
+    font-size: medium;
+    color: var(--my-gray-color);
+    padding: 0.1% 5%;
+  }
+
+  .hamburger-navmenu li:first-child {
+    margin-top: 10%;
+  }
+
+  .hamburger-navmenu li:last-child {
+    border-bottom: none;
+    margin-bottom: 0%;
+  }
+
+  .hamburger-navmenu li a:hover {
+    font-weight: bold;
+  }
+
+  .hamburger-navmenu li a p {
+    font-size: 2rem;
+    font-weight: 500;
   }
 }
 
@@ -777,6 +831,9 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
     background: red;
   }
   */
+  .hamburger-menu {
+    visibility: hidden;
+  }
 
   .header {
     height: 100%;
@@ -785,12 +842,20 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   }
 
   .header-nav {
-    margin-top: 0%;
+    height: 5vh;
+    position: fixed;
+    padding-top: 3%;
+    z-index: 1;
+    background: white;
+  }
+
+  .navbar {
+    padding-top: 0;
+    overflow: unset;
   }
 
   .header-nav .nav-menu {
     width: 100%;
-    min-height: 70%;
     list-style-type: none;
     display: flex;
     justify-content: center;
@@ -848,7 +913,7 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
 
   .projects {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(auto, 1fr);
     gap: 1% 0%;
     margin-left: 0;
   }
@@ -953,7 +1018,7 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   input[type="text"],
   input[type="email"] {
     margin: 1% auto;
-    padding: 0.5%;
+    padding: 0.5% auto;
   }
 
   textarea {
