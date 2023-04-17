@@ -27,5 +27,5 @@ hamburgerMenu.addEventListener('click', () => {
 });
 
 document.querySelectorAll('.nav-link').forEach((n) => n.addEventListener('click', () => {
-  hamburgerMenu.setAttribute('visibility', 'hidden');
+  hamburgerNavMenu.setAttribute('visibility', 'hidden');
 }));
