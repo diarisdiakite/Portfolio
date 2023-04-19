@@ -27,7 +27,15 @@ hamburgerMenu.addEventListener('click', () => {
 });
 
 document.querySelectorAll('.nav-link').forEach((n) => n.addEventListener('click', () => {
-  hamburgerNavMenu.setAttribute('visibility', 'hidden');
+  //hamburgerNavMenu.setAttribute('visibility', 'hidden');
   navbar.classList.add('hidden');
   hamburgerMenu.setAttribute('class', 'hamburger-menu');
+
+  //Add instruction for hamburger menu ---TO FIX -----------------------------
+  hamburgerMenu.addEventListener('click', () => {
+    if (navbar.classList.contains('hidden')) {
+      navbar.classList.remove('hidden');
+    } 
+  });
+  //Add instruction for hamburger menu ---TO FIX -----------------------------
 }));
