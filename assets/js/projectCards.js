@@ -54,24 +54,20 @@ let project;
   //Create the buttons interaction
     let projectButtons = document.querySelector('.project-buttons');
     
-    export function openPopup(){
-      let projectButton;
-      for(let i=0; i<projectButtons.length; i+=1){
-        projectButton = projectButtons[i];
-        project = projects[i];
-        projectButton.classList.add(`${i}`);
-        project.classList.add(`${i}`);
-      }
-
-      let body = document.querySelector('body');
+    forEach(projectButtons => {
+      projectButtons.addEventListener('click', () => {
+  
+        myModal.classList.remove('hidden');
+      
+    });
+  });
+    let body = document.querySelector('body');
       projectButton.addEventListener('click', () => {
           projectPopup.classList.add('open-project-popup');
           body.appendChild(myModal);
         
         })
-        
-        console.log(projectButton);
-      }
-    
-
+     
+        console.log(projectButton);    
+      
 //projectButtons.forEach.addEventLister('click', openPopup());
