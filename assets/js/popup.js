@@ -1,6 +1,4 @@
-export { myModal }; 
-
-
+//import { openPopup } from '/projectCards'
 // POPUP WINDOW
 export let projects = [
     {
@@ -90,24 +88,23 @@ export let projects = [
 ];
 
 /*FOR TESTING PURPOSE*/
-const listProjects = () => {
+export const getProjectId = () => {
   let project;
-  let list = [];
+  let projectId;
   for(let i=0; i<projects.length; i+=1){
     project = projects[i];
     console.log(project);
-    list.push(project);
-  }
-  return list;
+    projectId=i;
+ }
+  return projectId;
 }
 
 //Create the Modal
-let myModal = projects.forEach(project => {
+export let myModal = projects.forEach(project => {
   // Create projectCardJs element
   const projectCardJs = document.createElement('div');
   projectCardJs.classList = ('project-card-js');
   
-  // VI - CREATE POPUP BUTTON CLOSE ----------------------FIXED------------------------
   //Append close button 
   let popupCloseButton = document.createElement('button');
   popupCloseButton.setAttribute('name', 'close');
@@ -119,13 +116,12 @@ let myModal = projects.forEach(project => {
   let textDiv = document.createElement('div');
   textDiv.classList.add('js-text-container');
 
-  // I - FIX IMAGE SIZING ----- TO FIX -----------------------------
   //appending image
   let popupImage = document.createElement('div');
   
   let image = document.createElement('img');
   
-  if(window.innerWidth < 768) {  //--------------------TO FIX--------------------------------
+  if(window.innerWidth < 768) {
     image.src = `${project.mobileImageUrl}`;
     image.classList.add('.project-popup-mobile-img');
     popupImage.classList.add('project-popup-mobile-img');
@@ -152,6 +148,7 @@ let myModal = projects.forEach(project => {
   linksContainer.classList.add('js-link-list');
 
   //Project links
+  //live link
   let liveLink = document.createElement('button');
   liveLink.textContent = `${project.liveVersionLink}`;
   liveLink.classList.add('js-liveLink-button');
@@ -162,7 +159,7 @@ let myModal = projects.forEach(project => {
   liveLinkImg.classList.add('js-liveLink-img');
   liveLink.appendChild(liveLinkImg);
   linksContainer.appendChild(liveLink);
-
+  //Source link
   let sourceLink = document.createElement('button');
   sourceLink.textContent = `${project.sourceLink}`;
   sourceLink.classList.add('js-sourceLink-button');
@@ -217,27 +214,15 @@ let myModal = projects.forEach(project => {
   
   // VI - ADD EVENT LISTERNER OPEN THE MODAL
   let body = document.querySelector('body');
-  //body.appendChild(modal); //FOR TESTING PURPOSE ---------- TO REMOVE ---------------------
-
-  //IMPOSSIBLE TO EXPORT THE FUNCTION TO MY PROJECT CARDS
-  let projectButtons = document.querySelectorAll('.project-buttons')
-  let projectButton;
-  const openPopup = () => {
-    for(let i=0, j=0; i<projectButtons.length, j<projects.length; i+=1, j+=1) {
-      if(i===j) {
-        projectButton.addEventListener('click', () => {
-          projectPopup.classList.add('open-project-popup');
-          body.appendChild(modal);
-        })
-      }
-    }
-    
-  }
-  
+  //body.append(modal); //FOR TESTING PURPOSE ---------- TO REMOVE ---------------------
+  /*
+  let projectButtons = document.getElementsByClassName('project-buttons');
+  projectButtons.addEventLister('click', openPopup());
+  */
 
   // VI - ADD EVENT LISTERNER OPEN AND CLOSE
   popupCloseButton.addEventListener('click', () => {
-    body.removeChild(modal);
+    body.remove(modal);
   });
 
 })

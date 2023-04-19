@@ -1,4 +1,4 @@
-import { projects, myModal } from './popup.js';
+import { projects, myModal, getProjectId } from './popup.js';
 console.log(projects);
 
 
@@ -42,40 +42,36 @@ let project;
         projectImage.classList.add('img-placeholder');
         projectCardHtml.appendChild(projectImage);
         projectCardHtml.classList.add('js-mobile-projectCards');
-        //projectImageContainer.textContent = projectImage;
       } else {
-        //projectImageContainer.style.backgroundImage = `${project.desktopImageUrl}`;
-        //projectImage.src = `${project.desktopImageUrl}`;
         projectImage.classList.add('img-placeholder'); 
         projectCardHtml.classList.add('js-desktop-projectCards');
-        //projectImageContainer.innerHTML = projectImage;
       }
-      //projectImageContainer.innerHTML = projectImage;
-      
-      //projectCardHtml.appendChild(projectImageContainer);
       projectsDivHTML.appendChild(projectCardHtml);
-      //body.appendChild(projectsDivHTML)
       +fetch;
   };
 
   
-  /*export function openPopup(){ */
+  //Create the buttons interaction
     let projectButtons = document.querySelector('.project-buttons');
-    let projectButton;
-    console.log(projectButtons);
-      for(let i=0, j=0; i<projectButtons.length; i+=1, j+=1){
+    
+    export function openPopup(){
+      let projectButton;
+      for(let i=0; i<projectButtons.length; i+=1){
         projectButton = projectButtons[i];
-        project = projects[j];
+        project = projects[i];
+        projectButton.classList.add(`${i}`);
+        project.classList.add(`${i}`);
+      }
 
-        if(i===j) {
-          projectButtons[i].addEventListener('click', () => {
-            //projectPopup.classList.add('open-project-popup');
-            body.appendChild(myModal);
-          });
-        }
+      let body = document.querySelector('body');
+      projectButton.addEventListener('click', () => {
+          projectPopup.classList.add('open-project-popup');
+          body.appendChild(myModal);
         
+        })
+        
+        console.log(projectButton);
       }
     
-/* })(); */
 
-projectButton.addEventLister('click', openPopup);
+//projectButtons.forEach.addEventLister('click', openPopup());
