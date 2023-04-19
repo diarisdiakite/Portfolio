@@ -404,16 +404,22 @@ Contains The 6 microverse projects
   margin: 0 4%;
   position: relative;
 }
-
+#project-image,
 .project-image {
   background-color: var(--image-placeholder-color1);
   width: 100%;
   height: 100%;
 }
 
-.img-placeholder {
+.img-placeholder_old {
   width: 100%;
   height: max-content;                                 /* HEIGHT ISSUE TO FIX */
+}
+
+.img-placeholder {
+  width: 100%;
+  height: 10%;
+  visibility: hidden;                                 /* HEIGHT ISSUE TO FIX */
 }
 
 .project-wrapped-text {
@@ -720,6 +726,225 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
     display: none;
   }
 }
+
+
+/* 
+  ADD PROJECT POPUP CSS
+  - Add the Popup class (same as the html file and style it)
+  --  Add .popup button and .popup h1, h2, h3 and p to respective 
+      class declarations in the different sections 
+  - Add the class open-popup (to be added in the javascript open function)
+*/
+
+.popup-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--image-placeholder-color);
+  z-index: 8;
+}
+
+.project-popup {
+  width: 100%;
+  position: absolute;
+  background: var(--image-placeholder-color1);
+  border-radius: 1%;
+  top: 0;
+  left: 0;
+  transform: translate(-250% -250%) scale(0.1);
+  text-align: center;
+  padding: 0;
+  transition: transform 0.4s, visibility O.4s, top 0.4s;
+  visibility: visible; 
+}
+
+.project-popup-desktop-img {
+  width: 100%;
+  height: 60%;
+  margin-top: 3%;
+  border-radius: 1%;
+  border: 1px solid white;
+  /*background: url(../../images/popup/SnapshootPortfolioDesktop.svg) no-repeat; /* TO REMOVE AFTER FIXING */
+  background-size: 100%; /* TO REMOVE AFTER FIXING */
+}
+
+.project-popup-mobile-img {
+  width: 100% !important;
+  height: 40%;
+  margin-top: 3%;
+  border-radius: 1%;
+  border: 1px solid white;
+  /*background: url(../../images/popup/SnapshootPortfolioMobile.svg) no-repeat; /* TO REMOVE AFTER FIXING */
+  background-size: 100%; /* TO REMOVE AFTER FIXING */
+}
+
+.project-popup-desktop-img img,
+.project-popup-mobile-img img {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.open-project-popup {
+  width: 100%;
+  height: 97vh;
+  top: 3vh;
+  left: 0%;
+  transform: translate(-250% -250%) scale(0.1);
+  position: fixed;
+  visibility: hidden;
+  z-index: 1000;
+  background-color: var(--image-placeholder-color);
+}
+
+.project-card-js {
+  position: fixed;
+  width: 80%;
+  height: 80vh;
+  top: 10%;
+  left: 10%;
+  background-color: white;
+  z-index: 900;
+}
+
+/*
+  STYLING THE JS CONTAINER
+*/
+
+.js-button-close {
+  position: absolute;
+  width: 5%;
+  height: 5%;
+  top: 0%; 
+  right: 5%;
+  margin: 0;
+  border: 1px solid var(--image-placeholder-color);
+  border-radius: 5px;
+  background: url(../../images/popup/close.svg) no-repeat center;
+  align-self: center;
+}
+
+
+
+.js-text-container {
+  width: 90%;
+  height: 100%;
+  padding: 0.1% 5%;
+  margin-top: 5%;
+}
+
+.js-title-div {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.js-mobile-link-list {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.js-liveLink-img {
+  width: 20%;
+  height: 20%;
+  background: url(../../images/popup/icon-export.svg) no-repeat center;
+}
+
+.js-sourceLink-img {
+  width: 100%;
+  height: 100%;
+  background: url(../../images/popup/icon-gitHub.svg) no-repeat center;
+}
+
+/* TO BE DELETED */
+
+.js-text-container button {
+  width: 40%; /* TO CHANGE */
+  height: 40%;
+  font-size: small;
+  border-radius: 6%;
+  background-color: var(--my-green-color);
+  border: 1px solid white;
+  padding: 3%;
+}
+
+.js-desktop-link-list {
+  width: 100%; /* TO CHANGE */
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-self: stretch;
+}
+
+
+/* P section */
+.js-p-style {
+  font-size: small;
+  text-align: justify;
+}
+
+.js-project-built-with {
+  list-style-type: none;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 0;
+  justify-content: left;
+  align-items: left;
+}
+
+.js-project-built-with li {
+  padding: 0 1%;
+  align-self: left;
+}
+
+.js-project-built-with li a {
+  width: max-content;
+  margin: 0 0.1%;
+  padding: 1% 1%;
+  color: var(--my-text-color);
+  background-color: var(--image-placeholder-color);
+  font-size: small;
+}
+
+.projectImageContainer {
+  width: 100%;
+  height: 60%;
+}
+
+.js-projectCards {
+  background: none;
+  /* url(../../images/popup/SnapshootPortfolioDesktop.svg); */
+}
+
+.js-desktop-projectCards {
+  background: url(../../images/popup/SnapshootPortfolioDesktop.svg) no-repeat;
+  background-size: 92%;
+}
+
+.js-mobile-projectCards {
+  background: url(../../images/popup/SnapshootPortfolioMobile.svg) no-repeat center;
+  background-size: 92%;
+}
+
+/* 
+  MEDIA QUERIES
+  - Add the media query for min-width: 280px
+  - Add the media query for min-width: 375px
+  - Add the media query for min-width: 768px
+  - Add the media query for min-width: 912px
+  - Add the media query for min-width: 1024px
+  - Add the media query for min-width: 1280px
+*/
+
 
 @media (min-width: 375px) {
   .display-desktop {
@@ -1055,6 +1280,68 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
     list-style-type: none;
     margin: 1% auto;
   }
+
+
+  /* 
+    ADD PROJECT POPUP CSS
+    - Add the Popup class (same as the html file and style it)
+    --  Add .popup button and .popup h1, h2, h3 and p to respective 
+        class declarations in the different sections 
+    - Add the class open-popup (to be added in the javascript open function)
+  */
+
+  .project-popup {
+    width: 100%;
+    position: absolute;
+    background: var(--image-placeholder-color1);
+    border-radius: 1%;
+    top: 0;
+    left: 0;
+    transform: translate(-250% -250%) scale(0.1);
+    text-align: center;
+    padding: 0;
+    transition: transform 0.4s, visibility O.4s, top 0.4s;
+    visibility: visible; 
+  }
+
+  .project-card-js {
+    position: fixed;
+    width: 60%;
+    height: 90vh;
+    top: 5%;
+    left: 20%;
+  }
+
+  /*
+    STYLING THE JS CONTAINER
+  */
+
+  .js-text-container {
+    width: 90%;
+    height: 100%;
+    padding: 0.1% 5%;
+    margin-top: 5%;
+  }
+
+  .js-title-div {
+    width: 100%;
+    height: 8%;
+  }
+
+  .js-text-container button {
+    width: 50%; /* TO CHANGE */
+    height: 50%;
+    font-size: small;
+    border-radius: 6%;
+    background-color: var(--my-green-color);
+    border: 1px solid white;
+    padding: 1%;
+  }
+
+  .js-link-list {
+    width: 40%;
+  }
+
 }
 
 @media (min-width: 912px) {
