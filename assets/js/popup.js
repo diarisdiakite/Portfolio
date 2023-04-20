@@ -141,15 +141,21 @@ let project;
         projectCardHtml.classList.add('js-mobile-projectCards');
       } else {
         projectImage.classList.add('img-placeholder'); 
+        projectCardHtml.appendChild(projectImage);
         projectCardHtml.classList.add('js-desktop-projectCards');
       }
       projectsDivHTML.appendChild(projectCardHtml);
       +fetch;
   };
-  
-    document.querySelectorAll('.project-buttons').forEach((n) => 
-        n.addEventListener('click', () => {
-            
+  //console.log(project);
+    let projectButtons = document.querySelectorAll('.project-buttons');
+    //projectButtons.classList.add('active'); 
+    for(let i=0; i<projectButtons.length; i+=1) {
+      let projectButton = projectButtons[i];
+      let project = projects[i];
+    
+      projectButton.addEventListener('click', () => {
+       //let fetch = document.querySelector('.project-buttons').innerHTML;    
         // Create projectCardJs element
         const projectCardJs = document.createElement('div');
         projectCardJs.classList = ('project-card-js');
@@ -166,17 +172,17 @@ let project;
         textDiv.classList.add('js-text-container');
 
         //appending image
-        let popupImage = document.createElement('div');
+        let popupImage = document.createElement('div');//ADD A CLASSNAME HERE
         
         let image = document.createElement('img');
         
         if(window.innerWidth < 768) {
             image.src = `${project.mobileImageUrl}`;
-            image.classList.add('.project-popup-mobile-img');
+            image.classList.add('project-popup-mobile-img');
             popupImage.classList.add('project-popup-mobile-img');
         } else {
             image.src = `${project.desktopImageUrl}`;
-            image.classList.add('.project-popup-desktop-img'); 
+            image.classList.add('project-popup-desktop-img'); 
             popupImage.classList.add('project-popup-desktop-img');
         }
         
@@ -226,13 +232,15 @@ let project;
         // I - CREATE THE TECHNOLOGIES LINKS ----- TO FIX -----------------------------
         let technologyList = project.technologies;
         let technologyFragment = document.createDocumentFragment();
-
+        technologyFragment.className = ('project-built-with.li'); // FIXXXXXXXXXXX
         const renderTechnologyList = (value, index) => {
           const technology = document.createElement('li');
+          technology.className = ('project-built-with.li');
           technology.textContent = value;
           technologyFragment.append(technology);
         }
         technologyList.forEach(renderTechnologyList);
+        technologyList.className = ('project-built-with.li')
         textDiv.append(technologyList);
 
         //Project description
@@ -264,12 +272,12 @@ let project;
         // VI - ADD EVENT LISTERNER OPEN THE MODAL
         let body = document.querySelector('body');
         body.appendChild(modal); //FOR TESTING PURPOSE ---------- TO REMOVE ---------------------
-
+        +fetch;
 
         popupCloseButton.addEventListener('click', () => {
           body.removeChild(modal);
-          projectPopup.style.display = 'none';
           projectsDivHTML.className='projects';
         });
 
-      }));
+      });
+    }

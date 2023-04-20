@@ -418,7 +418,7 @@ Contains The 6 microverse projects
 
 .img-placeholder {
   width: 100%;
-  height: 10%;
+  height: 100%;
   visibility: hidden;                                 /* HEIGHT ISSUE TO FIX */
 }
 
@@ -738,7 +738,7 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
 
 .popup-modal {
   position: absolute;
-  top: 50%;
+  top: 0%;
   left: 0;
   width: 100%;
   height: 100%;
@@ -930,14 +930,45 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
 }
 
 .js-desktop-projectCards {
+  width: 100%;
+  height: 100%;
   background: url(../../images/popup/SnapshootPortfolioDesktop.svg) no-repeat;
   background-size: 92%;
 }
 
 .js-mobile-projectCards {
+  width: 100%;
+  height: 100%;
   background: url(../../images/popup/SnapshootPortfolioMobile.svg) no-repeat center;
   background-size: 92%;
 }
+
+.project-card-desktop-img {
+  width: 100%;
+  height: 100%;
+  margin-top: 3%;
+  border-radius: 1%;
+  border: 1px solid white;
+  /*background: url(../../images/popup/SnapshootPortfolioDesktop.svg) no-repeat; /* TO REMOVE AFTER FIXING */
+  background-size: 100%; /* TO REMOVE AFTER FIXING */
+}
+
+.project-card-mobile-img {
+  width: 100% !important;
+  height: 100%;
+  margin-top: 3%;
+  border-radius: 1%;
+  border: 1px solid white;
+  /* background: url(../../images/popup/SnapshootPortfolioMobile.svg) no-repeat; /*TO REMOVE AFTER FIXING */
+  background-size: 100%; /* TO REMOVE AFTER FIXING */
+}
+
+.project-card-desktop-img img,
+.project-card-mobile-img img {
+  width: 100% !important;
+  height: 100% !important;
+}
+
 
 /* 
   MEDIA QUERIES
