@@ -411,7 +411,6 @@ Contains The 6 microverse projects
   height: 100%;
 }
 
-
 /**** TO DELETE *****/
 .js-projectCard-image-desktop {
   background: url(../../images/popup/SnapshootPortfolioDesktop.svg);
@@ -743,7 +742,6 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   }
 }
 
-
 /*
   ADD PROJECT POPUP CSS
   - Add the Popup class (same as the html file and style it)
@@ -782,10 +780,6 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   margin-top: 3%;
   border-radius: 1%;
   border: 1px solid white;
-
-  /* background: url(../../images/popup/SnapshootPortfolioDesktop.svg) no-repeat; /* TO REMOVE AFTER FIXING */
-
-  /* background-size: 100%; /* TO REMOVE AFTER FIXING */
 }
 
 .project-popup-mobile-img {
@@ -794,9 +788,6 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   margin-top: 3%;
   border-radius: 1%;
   border: 1px solid white;
-
-  /* background: url(../../images/popup/SnapshootPortfolioMobile.svg) no-repeat; /*TO REMOVE AFTER FIXING */
-  background-size: 100%; /* TO REMOVE AFTER FIXING */
 }
 
 /*
@@ -902,10 +893,7 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   background-size: 100%;
 }
 
-
-
 /* TO BE DELETED */
-
 .js-text-container button {
   width: 40%; /* TO CHANGE */
   height: 40%;
@@ -923,7 +911,6 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   justify-content: space-evenly;
   align-self: stretch;
 }
-
 
 /* P section */
 .js-p-style {
@@ -964,8 +951,6 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
 
 .js-projectCards {
   background: none;
-
-  /* url(../../images/popup/SnapshootPortfolioDesktop.svg); */
 }
 
 .js-desktop-projectCards {
@@ -989,9 +974,6 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   margin-top: 3%;
   border-radius: 1%;
   border: 1px solid white;
-
-  /* background: url(../../images/popup/SnapshootPortfolioDesktop.svg) no-repeat; /* TO REMOVE AFTER FIXING */
-  background-size: 100%; /* TO REMOVE AFTER FIXING */
 }
 
 .js-projectCard-mobile-img {
@@ -1009,7 +991,6 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   width: 100% !important;
   height: 100%;
 }
-
 
 /*
   MEDIA QUERIES
@@ -1076,9 +1057,7 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   }
 
   /*
-
   THIS FOOTER IS TO BE FIWED FOR MIN-WIDTH: 375PX
-
   */
 
   .footer {
@@ -1086,9 +1065,7 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   }
 
   /*
-
   HAMBURGER NAVMENU
-
   */
 
   .hamburger-navmenu li {
@@ -1364,7 +1341,6 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
     margin: 1% auto;
   }
 
-
   /*
     ADD PROJECT POPUP CSS
     - Add the Popup class (same as the html file and style it)
@@ -1474,7 +1450,6 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
     margin: 1% auto;
   }
 
-
   /*
     ADD PROJECT POPUP CSS
     - Add the Popup class (same as the html file and style it)
@@ -1541,8 +1516,6 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   .form-bg-image {
     display: flex;
   }
-
-
 
   /*
     ADD PROJECT POPUP CSS
@@ -1614,7 +1587,6 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
     display: flex;
   }
 
-
   /*
     ADD PROJECT POPUP CSS
     - Add the Popup class (same as the html file and style it)
@@ -1630,8 +1602,6 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
     border-radius: 1%;
     top: 0;
     left: 0;
-
-    /* transform: translateX(-250%, -250%) scale(0.1); */
     text-align: center;
     padding: 0;
     transition: transform 0.4s, visibility 0.4s, top 0.4s;
