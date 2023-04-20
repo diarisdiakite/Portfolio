@@ -251,7 +251,7 @@ body .hamburger-menu.active {
   /* POSITION FIXED DOESN'T WORK */
   top: 10%;
   width: 100%;
-  height: 110%; /*COME BACK LATER----------------------*/
+  height: 110%; /* COME BACK LATER---------------------- */
   gap: 2rem;
   display: flex;
   flex-direction: column;
@@ -405,7 +405,6 @@ Contains The 6 microverse projects
   position: relative;
 }
 
-
 #project-image {
   background-color: transparent;
   width: 100%;
@@ -415,13 +414,13 @@ Contains The 6 microverse projects
 
 /**** TO DELETE *****/
 .js-projectCard-image-desktop {
-  background: url(../../images/popup/SnapshootPortfolioDesktop.svg) ;
+  background: url(../../images/popup/SnapshootPortfolioDesktop.svg);
   width: 100%;
   height: 100%;
 }
 
 .js-projectCard-image-mobile {
-  background: url(../../images/popup/SnapshootPortfolioMobile.svg) ;
+  background: url(../../images/popup/SnapshootPortfolioMobile.svg);
   width: 100%;
   height: 100%;
 }
@@ -745,11 +744,11 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
 }
 
 
-/* 
+/*
   ADD PROJECT POPUP CSS
   - Add the Popup class (same as the html file and style it)
-  --  Add .popup button and .popup h1, h2, h3 and p to respective 
-      class declarations in the different sections 
+  --  Add .popup button and .popup h1, h2, h3 and p to respective
+      class declarations in the different sections
   - Add the class open-popup (to be added in the javascript open function)
 */
 
@@ -770,11 +769,11 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   border-radius: 1%;
   top: 0;
   left: 0;
-  transform: translate(-250% -250%) scale(0.1);
+  transform: translate(-250%, -250%) scale(0.1);
   text-align: center;
   padding: 0;
-  transition: transform 0.4s, visibility O.4s, top 0.4s;
-  visibility: visible; 
+  transition: transform 0.4s, visibility 0.4s, top 0.4s;
+  visibility: visible;
 }
 
 .project-popup-desktop-img {
@@ -783,8 +782,10 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   margin-top: 3%;
   border-radius: 1%;
   border: 1px solid white;
-  /*background: url(../../images/popup/SnapshootPortfolioDesktop.svg) no-repeat; /* TO REMOVE AFTER FIXING */
-  background-size: 100%; /* TO REMOVE AFTER FIXING */
+
+  /* background: url(../../images/popup/SnapshootPortfolioDesktop.svg) no-repeat; /* TO REMOVE AFTER FIXING */
+
+  /* background-size: 100%; /* TO REMOVE AFTER FIXING */
 }
 
 .project-popup-mobile-img {
@@ -793,22 +794,25 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   margin-top: 3%;
   border-radius: 1%;
   border: 1px solid white;
+
   /* background: url(../../images/popup/SnapshootPortfolioMobile.svg) no-repeat; /*TO REMOVE AFTER FIXING */
   background-size: 100%; /* TO REMOVE AFTER FIXING */
 }
 
+/*
 .project-popup-desktop-img img,
 .project-popup-mobile-img img {
   width: 100% !important;
   height: 100% !important;
 }
+*/
 
 .open-project-popup {
   width: 100%;
   height: 97vh;
   top: 3vh;
   left: 0%;
-  transform: translate(-250% -250%) scale(0.1);
+  transform: translate(-250%, -250%) scale(0.1);
   position: fixed;
   visibility: hidden;
   z-index: 1000;
@@ -837,7 +841,7 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   position: absolute;
   width: 5%;
   height: 5%;
-  top: 0%; 
+  top: 0%;
   right: 5%;
   margin: 0;
   border: 1px solid var(--image-placeholder-color);
@@ -932,23 +936,19 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   list-style-type: none;
   text-decoration: none;
   display: flex;
-  justify-content: center;
-  align-content: center;
   flex-wrap: wrap;
   width: 100%;
   margin: 0 0;
   justify-content: left;
-  align-items: left;
+  align-items: start;
 }
 
-.technologyFragment.li,
-.js-project-built-with li {
+.technologyFragment.li {
   padding: 0 1%;
-  align-self: left;
+  align-self: flex-start;
 }
 
-.technologyFragment.li.a,
-.js-project-built-with li a {
+.technologyFragment.li.a {
   width: max-content;
   margin: 0 0.1%;
   padding: 1% 1%;
@@ -964,6 +964,7 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
 
 .js-projectCards {
   background: none;
+
   /* url(../../images/popup/SnapshootPortfolioDesktop.svg); */
 }
 
@@ -988,7 +989,8 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   margin-top: 3%;
   border-radius: 1%;
   border: 1px solid white;
-  /*background: url(../../images/popup/SnapshootPortfolioDesktop.svg) no-repeat; /* TO REMOVE AFTER FIXING */
+
+  /* background: url(../../images/popup/SnapshootPortfolioDesktop.svg) no-repeat; /* TO REMOVE AFTER FIXING */
   background-size: 100%; /* TO REMOVE AFTER FIXING */
 }
 
@@ -998,18 +1000,18 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   align-self: start;
   border-radius: 1%;
   border: 1px solid white;
-  background: url(../../images/popup/SnapshootPortfolioMobile.svg) no-repeat; /*TO REMOVE AFTER FIXING */
+  background: url(../../images/popup/SnapshootPortfolioMobile.svg) no-repeat; /* TO REMOVE AFTER FIXING */
   background-size: 100%; /* TO REMOVE AFTER FIXING */
 }
 
-.project-card-desktop-img img,
-.project-card-mobile-img img {
+.project-img .project-card-desktop-img img,
+.project-img .project-card-mobile-img img {
   width: 100% !important;
-  height: 100% !important;
+  height: 100%;
 }
 
 
-/* 
+/*
   MEDIA QUERIES
   - Add the media query for min-width: 280px
   - Add the media query for min-width: 375px
@@ -1019,7 +1021,6 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   - Add the media query for min-width: 1280px
 */
 
-
 @media (min-width: 375px) {
   .display-desktop {
     display: none;
@@ -1027,7 +1028,8 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
 
   .header-nav {
     top: 0;
-    /*height: 90vh;*/
+
+    /* height: 90vh; */
     position: fixed;
   }
 
@@ -1122,6 +1124,15 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
     font-size: 2rem;
     font-weight: 500;
   }
+
+  .js-link-list {
+    width: 80%;
+    height: 15%;
+    gap: 0;
+    margin-left: 10%;
+    display: inline-flex;
+    align-content: center;
+  }
 }
 
 @media (min-width: 768px) {
@@ -1215,14 +1226,14 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   .projects {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 0.1% 0%;
+    gap: 1% 0%;
     margin-left: 0;
   }
 
   .project {
     height: 29.625rem;
     margin: 0 0.1%;
-    gap: 0%;
+    gap: 0.1%;
   }
 
   .about-myself {
@@ -1271,9 +1282,6 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
     margin: 2% auto 5% auto;
   }
 
-  /* ALL THIS PART TO COMPARE AND FIX THE CONTACT FORM ISSUE */
-
-  /* ALL THIS PART TO COMPARE AND FIX THE CONTACT */
   .contact-form-container {
     background:
       url(../../images/desktop-bg/footer1.svg) no-repeat left bottom 0%,
@@ -1357,11 +1365,11 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   }
 
 
-  /* 
+  /*
     ADD PROJECT POPUP CSS
     - Add the Popup class (same as the html file and style it)
-    --  Add .popup button and .popup h1, h2, h3 and p to respective 
-        class declarations in the different sections 
+    --  Add .popup button and .popup h1, h2, h3 and p to respective
+        class declarations in the different sections
     - Add the class open-popup (to be added in the javascript open function)
   */
 
@@ -1372,11 +1380,12 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
     border-radius: 1%;
     top: 0;
     left: 0;
-    transform: translate(-250% -250%) scale(0.1);
+
+    /* transform: translateX(-250%, -250%) scale(0.1); */
     text-align: center;
     padding: 0;
-    transition: transform 0.4s, visibility O.4s, top 0.4s;
-    visibility: visible; 
+    transition: transform 0.4s, visibility 0.4s, top 0.4s;
+    visibility: visible;
   }
 
   .project-card-js {
@@ -1417,7 +1426,6 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
     width: 40%;
     display: inline-flex;
   }
-
 }
 
 @media (min-width: 912px) {
@@ -1465,11 +1473,137 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
     list-style-type: none;
     margin: 1% auto;
   }
+
+
+  /*
+    ADD PROJECT POPUP CSS
+    - Add the Popup class (same as the html file and style it)
+    --  Add .popup button and .popup h1, h2, h3 and p to respective
+        class declarations in the different sections
+    - Add the class open-popup (to be added in the javascript open function)
+  */
+
+  .project-popup {
+    width: 100%;
+    position: absolute;
+    background: var(--image-placeholder-color1);
+    border-radius: 1%;
+    top: 0;
+    left: 0;
+    transform: translate(-250%, -250%) scale(0.1);
+    text-align: center;
+    padding: 0;
+    transition: transform 0.4s, visibility 0.4s, top 0.4s;
+    visibility: visible;
+  }
+
+  .project-card-js {
+    position: fixed;
+    width: 60%;
+    height: 90vh;
+    top: 5%;
+    left: 20%;
+  }
+
+  /*
+    STYLING THE JS CONTAINER
+  */
+
+  .js-text-container {
+    width: 90%;
+    height: 100%;
+    padding: 0.1% 5%;
+    margin-top: 5%;
+  }
+
+  .js-title-div {
+    width: 100%;
+    height: 8%;
+  }
+
+  .js-text-container button {
+    width: 50%; /* TO CHANGE */
+    height: 50%;
+    font-size: small;
+    border-radius: 6%;
+    background-color: var(--my-green-color);
+    border: 1px solid white;
+    padding: 1%;
+  }
+
+  .js-link-list {
+    width: 40%;
+    display: inline-flex;
+  }
 }
 
 @media (min-width: 1024px) {
   .form-bg-image {
     display: flex;
+  }
+
+
+
+  /*
+    ADD PROJECT POPUP CSS
+    - Add the Popup class (same as the html file and style it)
+    --  Add .popup button and .popup h1, h2, h3 and p to respective
+        class declarations in the different sections
+    - Add the class open-popup (to be added in the javascript open function)
+  */
+
+  .project-popup {
+    width: 100%;
+    position: absolute;
+    background: var(--image-placeholder-color1);
+    border-radius: 1%;
+    top: 0;
+    left: 0;
+
+    /* transform: translateX(-250%, -250%) scale(0.1); */
+    text-align: center;
+    padding: 0;
+    transition: transform 0.4s, visibility 0.4s, top 0.4s;
+    visibility: visible;
+  }
+
+  .project-card-js {
+    position: fixed;
+    width: 60%;
+    height: 90vh;
+    top: 5%;
+    left: 20%;
+  }
+
+  /*
+    STYLING THE JS CONTAINER
+  */
+
+  .js-text-container {
+    width: 90%;
+    height: 100%;
+    padding: 0.1% 5%;
+    margin-top: 5%;
+  }
+
+  .js-title-div {
+    width: 100%;
+    height: 8%;
+  }
+
+  .js-text-container button {
+    width: 50%; /* TO CHANGE */
+    height: 50%;
+    font-size: small;
+    border-radius: 6%;
+    background-color: var(--my-green-color);
+    border: 1px solid white;
+    padding: 1%;
+  }
+
+  .js-link-list {
+    width: 40%;
+    display: inline-flex;
   }
 }
 
@@ -1478,5 +1612,68 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
 
   .form-bg-image {
     display: flex;
+  }
+
+
+  /*
+    ADD PROJECT POPUP CSS
+    - Add the Popup class (same as the html file and style it)
+    --  Add .popup button and .popup h1, h2, h3 and p to respective
+        class declarations in the different sections
+    - Add the class open-popup (to be added in the javascript open function)
+  */
+
+  .project-popup {
+    width: 100%;
+    position: absolute;
+    background: var(--image-placeholder-color1);
+    border-radius: 1%;
+    top: 0;
+    left: 0;
+
+    /* transform: translateX(-250%, -250%) scale(0.1); */
+    text-align: center;
+    padding: 0;
+    transition: transform 0.4s, visibility 0.4s, top 0.4s;
+    visibility: visible;
+  }
+
+  .project-card-js {
+    position: fixed;
+    width: 60%;
+    height: 90vh;
+    top: 5%;
+    left: 20%;
+  }
+
+  /*
+    STYLING THE JS CONTAINER
+  */
+
+  .js-text-container {
+    width: 90%;
+    height: 100%;
+    padding: 0.1% 5%;
+    margin-top: 5%;
+  }
+
+  .js-title-div {
+    width: 100%;
+    height: 8%;
+  }
+
+  .js-text-container button {
+    width: 50%; /* TO CHANGE */
+    height: 50%;
+    font-size: small;
+    border-radius: 6%;
+    background-color: var(--my-green-color);
+    border: 1px solid white;
+    padding: 1%;
+  }
+
+  .js-link-list {
+    width: 40%;
+    display: inline-flex;
   }
 }

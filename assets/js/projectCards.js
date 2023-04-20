@@ -1,5 +1,5 @@
-export let projects = [
-    {
+export const projects = [
+  {
     mobileImageUrl: '../../images/popup/SnapshootPortfolioMobile.svg',
     desktopImageUrl: '../../images/popup/SnapshootPortfolioDesktop.svg',
     title: 'Mobile version skeleton',
@@ -7,11 +7,11 @@ export let projects = [
       'html',
       'javascript',
       'css',
-      'React Js'
+      'React Js',
     ],
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     liveVersionLink: 'See live',
-    sourceLink: 'See source'
+    sourceLink: 'See source',
   },
   {
     mobileImageUrl: '../../images/popup/SnapshootPortfolioMobile.svg',
@@ -21,11 +21,11 @@ export let projects = [
       'Ruby on Rails',
       'CSS',
       'Javascript',
-      'HTML'
+      'HTML',
     ],
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     liveVersionLink: 'See live',
-    sourceLink: 'See source'
+    sourceLink: 'See source',
   },
   {
     mobileImageUrl: '../../images/popup/SnapshootPortfolioMobile.svg',
@@ -35,11 +35,11 @@ export let projects = [
       'html',
       'javascript',
       'css',
-      'React Js'
+      'React Js',
     ],
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     liveVersionLink: 'See live',
-    sourceLink: 'See source'
+    sourceLink: 'See source',
   },
   {
     mobileImageUrl: '../../images/popup/SnapshootPortfolioMobile.svg',
@@ -49,11 +49,11 @@ export let projects = [
       'html',
       'javascript',
       'css',
-      'React Js'
+      'React Js',
     ],
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     liveVersionLink: 'See live',
-    sourceLink: 'See source'
+    sourceLink: 'See source',
   },
   {
     mobileImageUrl: '../../images/popup/SnapshootPortfolioMobile.svg',
@@ -63,11 +63,11 @@ export let projects = [
       'html',
       'javascript',
       'css',
-      'React Js'
+      'React Js',
     ],
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     liveVersionLink: 'See live',
-    sourceLink: 'See source'
+    sourceLink: 'See source',
   },
   {
     mobileImageUrl: '../../images/popup/SnapshootPortfolioMobile.svg',
@@ -77,39 +77,24 @@ export let projects = [
       'html',
       'javascript',
       'css',
-      'React Js'
+      'React Js',
     ],
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     liveVersionLink: 'See live',
-    sourceLink: 'See source'
-  }
+    sourceLink: 'See source',
+  },
 ];
 
-/*FOR TESTING PURPOSE*/
-export const getProjectId = () => {
-  let project;
-  let projectId;
-  for(let i=0; i<projects.length; i+=1){
-    project = projects[i];
-    console.log(project);
-    projectId=i;
- }
-  return projectId;
-}
-
-// PROJECT CARDS
-
 export const projectsDivHTML = document.querySelector('.projects');
-//projectsDivHTML.classList.add('projects');
-let project;
-  //Adding the projects dynamically
-    //projects.forEach(project => {
-  for(let i=0; i<projects.length; i+=1){
-    project = projects[i];
-    let fetch = document.querySelector('.projects').innerHTML;
-    const projectCardHtml = document.createElement('div');
-    //projectCardHtml.classList.add('js-projectCards')
-    projectCardHtml.innerHTML=`
+// projectsDivHTML.classList.add('projects');
+// Adding the projects dynamically
+// projects.forEach(project => {
+for (let i = 0; i < projects.length; i += 1) {
+  const project = projects[i];
+  const fetch = document.querySelector('.projects').innerHTML;
+  const projectCardHtml = document.createElement('div');
+  // projectCardHtml.classList.add('js-projectCards')
+  projectCardHtml.innerHTML = `
       <div class="project">
         
         <div class="project-wrapped-text">
@@ -127,29 +112,26 @@ let project;
         <button class="project-buttons" id="projectPopup">See project</button>
       </div>
       <div id="project-image" class="project-image">
-        </div>` 
-            
-      let projectImageContainer = document.querySelector('#project-image');
-      //projectImageContainer.className=
-      let projectImage = document.createElement('div');
-      //projectImage.setAttribute('opacity', '100');
+        </div>`;
+  fetch;
 
-      if(window.innerWidth < 768) {  //--------------------TO FIX--------------------------------
-        projectImage.src = `${project.mobileImageUrl}`;
-        //projectImage.classList.add('js-projectCard-image-mobile'); 
-        projectCardHtml.appendChild(projectImage);
-        projectCardHtml.classList.add('js-mobile-projectCards');
-        //projectCardHtml.classList.add('js-projectCard-image-mobile'); 
-      } else {
-        projectImage.src = `${project.desktopImageUrl}`;
-        //projectImage.classList.add('js-projectCard-image-desktop'); 
-        projectCardHtml.appendChild(projectImage);
-        projectCardHtml.classList.add('js-desktop-projectCards');
-        projectCardHtml.classList.add('js-projectCard-image-desktop');
-      }
-      projectsDivHTML.appendChild(projectCardHtml);
-      +fetch;
-  };
+  // const projectImageContainer = document.querySelector('#project-image');
+  // projectImageContainer.className=
+  const projectImage = document.createElement('div');
+  // projectImage.setAttribute('opacity', '100');
 
-  export let projectButtons = document.querySelectorAll('.project-buttons');
-    
+  if (window.innerWidth < 768) { // --------------------TO FIX--------------------------------
+    projectImage.src = `${project.mobileImageUrl}`;
+    projectCardHtml.appendChild(projectImage);
+    projectCardHtml.classList.add('js-mobile-projectCards');
+    // projectCardHtml.classList.add('js-projectCard-image-mobile');
+  } else {
+    projectImage.src = `${project.desktopImageUrl}`;
+    projectCardHtml.appendChild(projectImage);
+    projectCardHtml.classList.add('js-desktop-projectCards');
+    // projectCardHtml.classList.add('js-projectCard-image-desktop');
+  }
+  projectsDivHTML.appendChild(projectCardHtml);
+}
+
+export const projectButtons = document.querySelectorAll('.project-buttons');
