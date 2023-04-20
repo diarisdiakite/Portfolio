@@ -91,7 +91,7 @@ export const projectsDivHTML = document.querySelector('.projects');
 // projects.forEach(project => {
 for (let i = 0; i < projects.length; i += 1) {
   const project = projects[i];
-  const fetch = document.querySelector('.projects').innerHTML;
+  // const content = document.querySelector('.projects').innerHTML;
   const projectCardHtml = document.createElement('div');
   // projectCardHtml.classList.add('js-projectCards')
   projectCardHtml.innerHTML = `
@@ -113,7 +113,6 @@ for (let i = 0; i < projects.length; i += 1) {
       </div>
       <div id="project-image" class="project-image">
         </div>`;
-  fetch;
 
   // const projectImageContainer = document.querySelector('#project-image');
   // projectImageContainer.className=
@@ -131,6 +130,7 @@ for (let i = 0; i < projects.length; i += 1) {
     projectCardHtml.classList.add('js-desktop-projectCards');
     // projectCardHtml.classList.add('js-projectCard-image-desktop');
   }
+  projectsDivHTML.innerHtml += projectCardHtml;
   projectsDivHTML.appendChild(projectCardHtml);
 }
 
