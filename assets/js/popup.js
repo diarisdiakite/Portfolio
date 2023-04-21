@@ -68,19 +68,21 @@ for (let i = 0; i < projectButtons.length; i += 1) {
 
     // I - CREATE THE TECHNOLOGIES LINKS
     const technologyList = project.technologies;
-    const technologyFragment = document.createDocumentFragment();
-    technologyFragment.className = ('technologyFragment');
-    const renderTechnologyList = (value) => {
-      const technology = document.createElement('button');
-      technology.textContent = value;
-      technology.style.display = 'flex';
-      technology.classList.add('technologyFragment.li');
-      technologyFragment.append(technology);
-    };
-    technologyList.forEach(renderTechnologyList);
-    technologyList.className = ('technologyFragment.li.a');
-
-    textDiv.append(technologyList);
+    console.log(technologyList);
+    //const technology = document.createElement('button');
+    let techLi = document.createElement('ul');
+    techLi.classList.add('technologyFragment');
+    let techName = document.createElement('li'); 
+    //technologyList.forEach(technolgy => {
+    for(let i=0; i<technologyList.length; i+=1){
+      console.log(technologyList[i]);
+      techName.textContent=`${technologyList[i]}`;
+      console.log(techName);
+      techName.classList.add('technologyFragment.li');
+      techLi.innerHTML += `${techName}`;
+      console.log(`${techLi}`);
+    }
+    textDiv.append(techLi);
 
     // Project description
     const description = document.createElement('p');
@@ -104,11 +106,15 @@ for (let i = 0; i < projectButtons.length; i += 1) {
     const modal = document.createElement('div');
     modal.classList.add('popup-modal');
     modal.appendChild(projectPopup);
-
-    // VI - ADD EVENT LISTERNER OPEN THE MODAL
-    const body = document.querySelector('body');
+    /*
+    const modalContainer = document.createElement('div');
+    modalContainer.className = ('modal-container');
+    modalContainer.appendChild(modal);
+    */
+    let body = document.querySelector('body');
     body.appendChild(modal);
 
+    // VI - ADD EVENT LISTERNER OPEN THE MODAL
     popupCloseButton.addEventListener('click', () => {
       body.removeChild(modal);
       projectsDivHTML.className = ('projects');

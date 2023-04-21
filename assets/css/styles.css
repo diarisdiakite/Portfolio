@@ -745,16 +745,24 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
       class declarations in the different sections
   - Add the class open-popup (to be added in the javascript open function)
 */
+.modal-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  top: 0;
+}
 
 .popup-modal {
-  position: absolute;
-  top: 0%;
+  position: fixed;
+  top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background: var(--my-competences-boxes-color);
   z-index: 1;
-  filter: blur(0.1px) brightness(99%);
+  backdrop-filter: blur(15px);
+  backdrop-filter: brightness(60%);
+  backdrop-filter: contrast(40%);
   overflow-y: hidden;
   overscroll-behavior: none;
 }
@@ -766,11 +774,14 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   border-radius: 1%;
   top: 0;
   left: 0;
-  transform: translate(-250%, -250%) scale(0.1);
   text-align: center;
   padding: 0;
   transition: transform 0.4s, visibility 0.4s, top 0.4s;
   visibility: visible;
+  z-index: 100;
+  backdrop-filter: blur(15px);
+  backdrop-filter: brightness(60%);
+  backdrop-filter: contrast(40%);
 }
 
 .js-project-popup-img {
