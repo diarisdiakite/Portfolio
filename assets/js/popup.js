@@ -13,6 +13,7 @@ for (let i = 0; i < projectButtons.length; i += 1) {
     const popupCloseButton = document.createElement('button');
     popupCloseButton.setAttribute('name', 'close');
     popupCloseButton.setAttribute('id', 'js-button-close');
+    popupCloseButton.setAttribute('background-color', 'transparent');
     popupCloseButton.setAttribute('class', 'js-button-close');
     projectCardJs.appendChild(popupCloseButton);
 
@@ -26,15 +27,15 @@ for (let i = 0; i < projectButtons.length; i += 1) {
     const image = document.createElement('img');
 
     if (window.innerWidth < 768) {
-      image.src = `${project.mobileImageUrl}`;
+      // image.src = `${project.mobileImageUrl}`;
       image.classList.add('project-popup-mobile-img');
+      popupImage.classList.remove('js-project-popup-img');
     } else {
-      image.src = `${project.desktopImageUrl}`;
+      // image.src = `${project.desktopImageUrl}`;
       image.classList.add('project-popup-desktop-img');
+      popupImage.classList.remove('js-project-popup-img');
     }
-
-    popupImage.appendChild(image);
-    textDiv.appendChild(popupImage);
+    textDiv.appendChild(image);
 
     // create div with Title and 2 links in display flex
     const titleLinksDiv = document.createElement('div');
@@ -80,6 +81,15 @@ for (let i = 0; i < projectButtons.length; i += 1) {
     technologyList.forEach(renderTechnologyList);
     technologyFragment.innerHtml += `<a class="technologyFragment.li.a">${technologyList.technology}</a>`;
     textDiv.append(technologyList);
+
+    // find out more ----------
+    const technologyFragment1 = document.createDocumentFragment();
+    const technologyList1 = document.createElement('div');
+    technologyList1.innerHTML += `
+    <ul class="project-built-with" name="technologies">
+      ${project.technologies.map((tool) => `<li class="popup-items"><a class="popup-links">${tool}</a></li>`).join('')}
+    </ul>`;
+    technologyFragment1.appendChild(technologyList1);
 
     // Project description
     const description = document.createElement('p');

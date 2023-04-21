@@ -468,6 +468,7 @@ Contains The 6 microverse projects
   margin-bottom: 5%;
 }
 
+.poupup-items,
 .project .project-built-with li {
   background-color: var(--image-placeholder-color1);
   border-radius: 8px;
@@ -482,6 +483,7 @@ Contains The 6 microverse projects
   padding: 3%;
 }
 
+.poupup-links,
 .project .project-built-with li a,
 .competences-card .list-competences li a {
   text-decoration: none;
@@ -759,7 +761,7 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   width: 100%;
   height: 100vh;
   background: var(--my-competences-boxes-color);
-  z-index: 1;
+  z-index: 999;
   filter: opacity(95%);
   overflow-y: hidden;
   overscroll-behavior: none;
@@ -788,6 +790,7 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
 }
 
 .project-popup-desktop-img {
+  aspect-ratio: 1/100;
   width: 100%;
   height: 50%;
   margin-top: 3%;
@@ -801,15 +804,9 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   margin-top: 3%;
   border-radius: 1%;
   border: 1px solid white;
+  background: url(../../images/popup/SnapshootPortfolioMobile.svg) no-repeat center;
+  background-size: 120%;
 }
-
-/*
-.project-popup-desktop-img img,
-.project-popup-mobile-img img {
-  width: 100% !important;
-  height: 100% !important;
-}
-*/
 
 .open-project-popup {
   width: 100%;
@@ -835,6 +832,7 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   left: 10%;
   background-color: white;
   z-index: 900;
+  border-radius: 5%;
 }
 
 /*
@@ -845,20 +843,21 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   position: absolute;
   width: 5%;
   height: 5%;
-  top: 0%;
-  right: 5%;
+  top: 4%;
+  right: 8%;
   margin: 0;
-  border: 1px solid var(--image-placeholder-color);
+  border: 0 solid var(--image-placeholder-color);
   border-radius: 5px;
-  background: url(../../images/popup/close.svg) no-repeat center;
+  background: url(../../images/popup/close-mobile.svg) no-repeat center;
   align-self: center;
+  background-color: transparent;
 }
 
 .js-text-container {
   width: 90%;
   height: 100%;
   padding: 0.1% 5%;
-  margin-top: 5%;
+  margin-top: 0%;
 }
 
 .js-title-div {
@@ -1368,12 +1367,26 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
     visibility: visible;
   }
 
+  .js-button-close {
+    position: absolute;
+    width: 5%;
+    height: 5%;
+    top: 0%;
+    right: 5%;
+    margin: 0;
+    border: 1px solid var(--image-placeholder-color);
+    border-radius: 5px;
+    background: url(../../images/popup/close.svg) no-repeat center;
+    align-self: center;
+  }
+
   .project-card-js {
     position: fixed;
     width: 60%;
     height: 90vh;
     top: 5%;
     left: 20%;
+    border-radius: 3%;
   }
 
   /*
@@ -1409,7 +1422,8 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
 
   .project-popup-desktop-img {
     height: 60% !important;
-    background-color: red;
+    background: url(../../images/popup/SnapshootPortfolioDesktop.svg) no-repeat;
+    background-size: cover;
   }
 }
 
@@ -1471,7 +1485,7 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
     width: 100%;
     position: absolute;
     background: var(--image-placeholder-color1);
-    border-radius: 1%;
+    border-radius: 5%;
     top: 0;
     left: 0;
     transform: translate(-250%, -250%) scale(0.1);
@@ -1487,6 +1501,7 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
     height: 90vh;
     top: 5%;
     left: 20%;
+    border-radius: 3%;
   }
 
   /*
@@ -1555,6 +1570,7 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
     height: 90vh;
     top: 5%;
     left: 20%;
+    border-radius: 3%;
   }
 
   /*
@@ -1623,6 +1639,7 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
     height: 90vh;
     top: 5%;
     left: 20%;
+    border-radius: 3%;
   }
 
   /*
