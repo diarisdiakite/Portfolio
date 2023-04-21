@@ -58,7 +58,7 @@ export const projects = [
   {
     mobileImageUrl: '../../images/popup/SnapshootPortfolioMobile.svg',
     desktopImageUrl: '../../images/popup/SnapshootPortfolioDesktop.svg',
-    title: 'Application deploy',
+    title: 'Deployment',
     technologies: [
       'html',
       'javascript',
@@ -72,7 +72,7 @@ export const projects = [
   {
     mobileImageUrl: '../../images/popup/SnapshootPortfolioMobile.svg',
     desktopImageUrl: '../../images/popup/SnapshootPortfolioDesktop.svg',
-    title: 'Evaluate accessibility',
+    title: 'Accessibility',
     technologies: [
       'html',
       'javascript',
@@ -86,14 +86,11 @@ export const projects = [
 ];
 
 export const projectsDivHTML = document.querySelector('.projects');
-// projectsDivHTML.classList.add('projects');
+
 // Adding the projects dynamically
-// projects.forEach(project => {
 for (let i = 0; i < projects.length; i += 1) {
   const project = projects[i];
-  // const content = document.querySelector('.projects').innerHTML;
   const projectCardHtml = document.createElement('div');
-  // projectCardHtml.classList.add('js-projectCards')
   projectCardHtml.innerHTML = `
       <div class="project">
         
@@ -114,21 +111,17 @@ for (let i = 0; i < projects.length; i += 1) {
       <div id="project-image" class="project-image">
         </div>`;
 
-  // const projectImageContainer = document.querySelector('#project-image');
-  // projectImageContainer.className=
   const projectImage = document.createElement('div');
-  // projectImage.setAttribute('opacity', '100');
+  projectImage.setAttribute('blur', '100');
 
-  if (window.innerWidth < 768) { // --------------------TO FIX--------------------------------
+  if (window.innerWidth < 768) {
     projectImage.src = `${project.mobileImageUrl}`;
     projectCardHtml.appendChild(projectImage);
     projectCardHtml.classList.add('js-mobile-projectCards');
-    // projectCardHtml.classList.add('js-projectCard-image-mobile');
   } else {
     projectImage.src = `${project.desktopImageUrl}`;
     projectCardHtml.appendChild(projectImage);
     projectCardHtml.classList.add('js-desktop-projectCards');
-    // projectCardHtml.classList.add('js-projectCard-image-desktop');
   }
   projectsDivHTML.innerHtml += projectCardHtml;
   projectsDivHTML.appendChild(projectCardHtml);

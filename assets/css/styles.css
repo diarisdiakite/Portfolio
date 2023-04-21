@@ -153,7 +153,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: transparent; /* FOR TESTING */
+  background-color: transparent;
   margin-top: 0%;
   z-index: 1;
 }
@@ -184,7 +184,7 @@ header {
   height: 40px;
   width: 80px;
   z-index: 300;
-  position: absolute; /* ADDED */
+  position: absolute;
   display: flex;
   flex-direction: column;
   cursor: pointer;
@@ -248,16 +248,13 @@ body .hamburger-menu.active {
 }
 
 .hamburger-navmenu {
-  /* POSITION FIXED DOESN'T WORK */
   top: 10%;
   width: 100%;
-  height: 110%; /* COME BACK LATER---------------------- */
+  height: 110%;
   gap: 2rem;
   display: flex;
   flex-direction: column;
   list-style-type: none;
-
-  /* margin: 0 auto 0 -120%; */
   background-color: white;
   text-align: center;
   transform: translateX(-500%);
@@ -285,7 +282,7 @@ Headline Section
 .headline {
   display: flex;
   height: auto;
-  width: 80%;   /* CHANGE THIS WIDTH TO 60% */ /* CHANGE THIS WIDTH TO 60% */ /* CHANGE THIS WIDTH TO 60% */
+  width: 80%;
   margin: 30% auto 20% auto;
 }
 
@@ -305,7 +302,7 @@ Headline Section
   height: 1.226rem;
   display: flex;
   justify-content: center;
-  align-items: center; /* Try to find out how to properly center with flex box */
+  align-items: center;
   list-style-type: none;
   margin: 10% auto;
 }
@@ -319,7 +316,7 @@ Headline Section
 .social li a {
   color: var(--my-gray-color);
   width: 5%;
-  height: 5%;           /* HEIGHT ISSUE TO FIX */
+  height: 5%;
   font-size: x-large;
 }
 
@@ -363,12 +360,12 @@ Recent-work section
 Contains The 6 microverse projects
 */
 
-.recent-work { /* See if relevant */
+.recent-work {
   width: 100%;
   height: max-content;
 }
 
-.recent-work-text { /* See if relevant */
+.recent-work-text {
   display: flex;
   flex-direction: column;
   width: 80%;
@@ -388,7 +385,7 @@ Contains The 6 microverse projects
 
 .projects {
   min-width: 100%;
-  min-height: 100%;                           /* HEIGHT ISSUE TO FIX */
+  min-height: 100%;
   display: grid;
   gap: 1%;
   margin: 0;
@@ -426,15 +423,14 @@ Contains The 6 microverse projects
 
 .img-placeholder_old {
   width: 100%;
-  height: max-content;                                 /* HEIGHT ISSUE TO FIX */
+  height: max-content;
 }
 
 /**** TO DELETE *****/
-
 .img-placeholder {
   width: 100%;
   height: 100%;
-  visibility: hidden;                                 /* HEIGHT ISSUE TO FIX */
+  visibility: hidden;
 }
 
 .project-wrapped-text {
@@ -448,7 +444,7 @@ Contains The 6 microverse projects
 }
 
 .sections-title h3 {
-  max-height: 10%;                            /* HEIGHT ISSUE TO FIX */
+  max-height: 10%;
   width: 100%;
   text-align: center;
   padding: 0;
@@ -531,7 +527,7 @@ languages, frameworks and skills
   flex-direction: column;
   width: 100%;
   height: 100%;
-  gap: 1%;                             /* HEIGHT ISSUE TO FIX */
+  gap: 1%;
 }
 
 .competences-card {
@@ -559,7 +555,7 @@ languages, frameworks and skills
 
 .competences .sections-title {
   width: 100%;
-  height: 20%;                              /* HEIGHT ISSUE TO FIX */
+  height: 20%;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -596,7 +592,7 @@ Contains a text in a header and the form
 
 .contact-form-container {
   width: 100%;
-  height: 100vh;                             /* HEIGHT ISSUE TO FIX */
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -774,17 +770,22 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   visibility: visible;
 }
 
+.js-project-popup-img {
+  width: 100%;
+  border-bottom: 0;
+}
+
 .project-popup-desktop-img {
   width: 100%;
-  height: 60%;
+  height: 50%;
   margin-top: 3%;
   border-radius: 1%;
   border: 1px solid white;
 }
 
 .project-popup-mobile-img {
-  width: 100% !important;
-  height: 40%;
+  width: 100%;
+  height: 40% !important;
   margin-top: 3%;
   border-radius: 1%;
   border: 1px solid white;
@@ -918,8 +919,7 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   text-align: justify;
 }
 
-.technologyFragment,
-.js-project-built-with {
+.technologyFragment {
   list-style-type: none;
   text-decoration: none;
   display: flex;
@@ -1113,12 +1113,6 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
 }
 
 @media (min-width: 768px) {
-  /*
-  This property is for testing purpose
-  body {
-    background: red;
-  }
-  */
   .hamburger-menu {
     visibility: hidden;
   }
@@ -1356,8 +1350,6 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
     border-radius: 1%;
     top: 0;
     left: 0;
-
-    /* transform: translateX(-250%, -250%) scale(0.1); */
     text-align: center;
     padding: 0;
     transition: transform 0.4s, visibility 0.4s, top 0.4s;
@@ -1385,12 +1377,11 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
 
   .js-title-div {
     width: 100%;
-    height: 8%;
   }
 
   .js-text-container button {
     width: 50%; /* TO CHANGE */
-    height: 50%;
+    height: 20%;
     font-size: small;
     border-radius: 6%;
     background-color: var(--my-green-color);
@@ -1400,7 +1391,13 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
 
   .js-link-list {
     width: 40%;
+    height: 200%;
     display: inline-flex;
+  }
+
+  .project-popup-desktop-img {
+    height: 60% !important;
+    background-color: red;
   }
 }
 
