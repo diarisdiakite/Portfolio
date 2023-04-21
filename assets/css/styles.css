@@ -760,9 +760,7 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   height: 100vh;
   background: var(--my-competences-boxes-color);
   z-index: 1;
-  backdrop-filter: blur(15px);
-  backdrop-filter: brightness(60%);
-  backdrop-filter: contrast(40%);
+  filter: opacity(95%);
   overflow-y: hidden;
   overscroll-behavior: none;
 }
