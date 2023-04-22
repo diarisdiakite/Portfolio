@@ -41,3 +41,15 @@ const isValidEmail = email => {
     return re.test(String(email).toLowerCase());
 }
 
+const validateInputs = () => {
+    const emailValue = email.value.trim();
+        
+    if(emailValue === '') {
+        setError(email, 'Email is required');
+    } else if (!isValidEmail(emailValue)) {
+        setError(email, 'Provide a valid email address');
+    } else {
+        setSuccess(email);
+    }
+
+};
