@@ -35,13 +35,12 @@ const validateInputs = () => {
     setError(email, 'Please provide a valid email address. Characters should be lowercased');
   } else {
     setSuccess(email);
+		form.submit();
   }
 };
 
-if (form) {
-  form.addEventListener('submit', (event) => {
-    event.preventDefault();
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
 
-    validateInputs();
-  });
-}
+  validateInputs();
+});
