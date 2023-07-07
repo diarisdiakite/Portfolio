@@ -352,7 +352,8 @@ button .arrow {
 
 .arrow img {
   width: 2%;
-  margin: 5% 48%;
+  margin: 0 49%;
+  z-index: -1;
 }
 
 /*
@@ -1201,7 +1202,7 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   }
 
   .arrow {  /* TO CENTER */
-    margin: -5% auto 2% auto;
+    margin: 5% auto 2% auto;
   }
 
   .recent-work {
@@ -1460,7 +1461,8 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
 
 @media (min-width: 912px) {
   .about-myself {
-    width: 92%;
+    width: 100%;
+    margin: 0;
   }
 
   .headline p,
