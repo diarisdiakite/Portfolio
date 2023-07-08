@@ -1,41 +1,29 @@
 const hamburgerMenu = document.querySelector('.hamburger-menu');
+const hamburgerNavMenu = document.querySelector('.hamburger-navmenu');
+const navbar = document.querySelector('.hamburger-container');
+
+let isMenuActive = false;
+
 hamburgerMenu.setAttribute('class', 'hamburger-menu');
 
-const hamburgerNavMenu = document.querySelector('.hamburger-navmenu');
-const navbar = document.querySelector('.not-navbar');
-
-// Menu when active
-const hamburgerToggle = document.createElement('div');
-hamburgerToggle.classList.add('hamburger-menu.active');
-
 hamburgerMenu.addEventListener('click', () => {
-  if (navbar.classList.contains('hidden')) {
-    navbar.classList.remove('hidden');
-  } else {
+  if (isMenuActive) {
     navbar.classList.add('hidden');
-    // hamburgerMenu.setAttribute('visibility', 'visible');
-  }
-
-  if (hamburgerNavMenu.classList.contains('hidden')) {
-    hamburgerNavMenu.classList.remove('hidden');
-  } else {
     hamburgerNavMenu.classList.add('hidden');
+    hamburgerMenu.classList.remove('active');
+    hamburgerNavMenu.classList.remove('showHamburgerNavMenu');
+    isMenuActive = false;
+  } else {
+    navbar.classList.remove('hidden');
+    hamburgerNavMenu.classList.remove('hidden');
+    hamburgerMenu.classList.add('active');
+    hamburgerNavMenu.classList.add('showHamburgerNavMenu');
+    isMenuActive = true;
   }
-  hamburgerMenu.classList.toggle('active');
-  hamburgerNavMenu.classList.toggle('active');
-  hamburgerNavMenu.classList.toggle('showHamburgerNavMenu');
 });
 
 document.querySelectorAll('.nav-link').forEach((n) => n.addEventListener('click', () => {
-  // hamburgerNavMenu.setAttribute('visibility', 'hidden');
   navbar.classList.add('hidden');
   hamburgerMenu.setAttribute('class', 'hamburger-menu');
-
-  // Add instruction for hamburger menu ---TO FIX -----------------------------
-  hamburgerMenu.addEventListener('click', () => {
-    if (navbar.classList.contains('hidden')) {
-      navbar.classList.remove('hidden');
-    }
-  });
-  // Add instruction for hamburger menu ---TO FIX -----------------------------
+  isMenuActive = false;
 }));
