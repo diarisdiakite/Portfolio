@@ -79,7 +79,7 @@ for (let i = 0; i < projectButtons.length; i += 1) {
       technologyLi.classList.add('poupup-items');
       const technologyLink = document.createElement('a');
       technologyLink.textContent = value;
-      //technologyLink.classList.add('poupup-items');
+      // technologyLink.classList.add('poupup-items');
       technologyLi.appendChild(technologyLink);
       technologyFragment.appendChild(technologyLi);
     };

@@ -1,7 +1,7 @@
 export const projects = [
   {
-    mobileImageUrl: '../../assets/img/screenshoots/datams/Capture8.png',
-    desktopImageUrl: '../../assets/img/screenshoots/datams/Capture8.png',
+    mobileImageUrl: '../../images/popup/SnapshootPortfolioMobile.svg',
+    desktopImageUrl: '../img/screenshoots/datams/Capture0.PNG',
     title: 'M&E App',
     technologies: [
       'Php',
@@ -15,8 +15,8 @@ export const projects = [
     sourceLink: 'See source',
   },
   {
-    mobileImageUrl: '../../assets/img/screenshoots/trem/Capture.png',
-    desktopImageUrl: '../../assets/img/screenshoots/trem/Capture.png',
+    mobileImageUrl: '../../images/popup/SnapshootPortfolioMobile.svg',
+    desktopImageUrl: '../../images/popup/SnapshootPortfolioDesktop.svg',
     title: 'Training For Employment',
     technologies: [
       'Php',
@@ -30,8 +30,8 @@ export const projects = [
     sourceLink: 'See source',
   },
   {
-    mobileImageUrl: '../../assets/img/screenshoots/annual_smse/Capture.png',
-    desktopImageUrl: '../../assets/img/screenshoots/annual_smse/Capture.png',
+    mobileImageUrl: '../../images/popup/SnapshootPortfolioMobile.svg',
+    desktopImageUrl: '../../images/popup/SnapshootPortfolioDesktop.svg',
     title: 'SMSE summit',
     technologies: [
       'html',
@@ -44,8 +44,8 @@ export const projects = [
     sourceLink: 'See source',
   },
   {
-    mobileImageUrl: '../../assets/img/screenshoots/ace/png/Capture3.png',
-    desktopImageUrl: '../../assets/img/screenshoots/ace/png/Capture5.png',
+    mobileImageUrl: '../../images/popup/SnapshootPortfolioMobile.svg',
+    desktopImageUrl: '../../images/popup/SnapshootPortfolioDesktop.svg',
     title: 'ACE(ace.org)',
     technologies: [
       'React Js',
@@ -60,8 +60,8 @@ export const projects = [
     sourceLink: 'See source',
   },
   {
-    mobileImageUrl: '../../assets/img/screenshoots/ace/Capture6.png',
-    desktopImageUrl: '../../assets/img/screenshoots/ace/Capture6.png',
+    mobileImageUrl: '../../images/popup/SnapshootPortfolioMobile.svg',
+    desktopImageUrl: '../../images/popup/SnapshootPortfolioDesktop.svg',
     title: 'SchoolApp',
     technologies: [
       'React Js',
@@ -76,14 +76,14 @@ export const projects = [
     sourceLink: 'See source',
   },
   {
-    mobileImageUrl: '../../assets/img/screenshoots/portfolio-project/Capture3.png',
-    desktopImageUrl: '../../assets/img/screenshoots/portfolio-project/Capture3.png',
+    mobileImageUrl: '',
+    desktopImageUrl: '',
     title: 'My portfolio project',
     technologies: [
       'html',
       'css',
       'javascript',
-      'JQuery',
+      'JQuery'
     ],
     description: 'My portfolio project is one of the first Microverse curriculum Projects. It is developed to showcase student\'s projects using features like hamburger menu, cards, popup windows in plain html, css and javascript through: desktop and mobile versions design, application deploy, accessibility, validate contact form, preserve data in browser.',
     liveVersionLink: 'See live',
@@ -96,46 +96,41 @@ export const projectsDivHTML = document.querySelector('.projects');
 // Adding the projects dynamically
 for (let i = 0; i < projects.length; i += 1) {
   const project = projects[i];
-  const projectCardHtml = document.createElement('div');
-  projectCardHtml.innerHTML = `
+  const projectCardHTML = document.createElement('div');
+  projectCardHTML.innerHTML = `
       <div class="project">
-        
-        <div class="project-image">
-          <img class="img-placeholder" src=${project.desktopImageUrl} alt="project-image" placeholder="image for project 1">
-          </img>
-        </div>
-        
         <div class="project-wrapped-text">
-        <div class="sections-title">
-          <h3>
-            ${project.title}
-          </h3>
+          <div class="sections-title">
+            <h3>${project.title}</h3>
+          </div>
+          <ul class="project-built-with" name="technologies">
+            <li><a href="tonhttps://rubyonrails.org/" rel="noopener" target="_blank">${project.technologies[0]}</a></li>
+            <li><a href="https://www.w3.org/Style/CSS/Overview.en.html" rel="noopener" target="_blank">${project.technologies[1]}</a></li>
+            <li><a href="https://www.javascript.com/" rel="noopener" target="_blank">${project.technologies[2]}</a></li>
+            <li><a href="https://html.com/" rel="noopener" target="_blank">${project.technologies[3]}</a></li>
+          </ul>
+          <button class="project-buttons" id="projectPopup">See project</button>
         </div>
-        <ul class="project-built-with" name="technologies">
-          <li><a href="tonhttps://rubyonrails.org/" rel="noopener" target="_blank">${project.technologies[0]}</a></li>
-          <li><a href="https://www.w3.org/Style/CSS/Overview.en.html" rel="noopener" target="_blank">${project.technologies[1]}</a></li>
-          <li><a href="https://www.javascript.com/" rel="noopener" target="_blank">${project.technologies[2]}</a></li>
-          <li><a href="https://html.com/" rel="noopener" target="_blank">${project.technologies[3]}</a></li>
-        </ul>
-        <button class="project-buttons" id="projectPopup">See project</button>
-      </div>
-      <div id="project-image" class="project-image">
-        </div>`;
+        <div id="project-image" class="project-image"></div>
+      </div>`;
 
-  const projectImage = document.createElement('div');
+  const projectImageDiv = document.createElement('div');
+  const projectImage = document.createElement('img');
   projectImage.setAttribute('blur', '100');
 
   if (window.innerWidth < 768) {
-    projectImage.src = `${project.mobileImageUrl}`;
-    projectCardHtml.appendChild(projectImage);
-    // projectCardHtml.classList.add('js-mobile-projectCards');
+    projectImage.src = project.mobileImageUrl;
+    projectImageDiv.appendChild(projectImage);
+    //projectImageDiv.classList.add('js-mobile-projectCards');
+    projectCardHTML.appendChild(projectImageDiv);
   } else {
-    projectImage.src = `${project.desktopImageUrl}`;
-    projectCardHtml.appendChild(projectImage);
-    // projectCardHtml.classList.add('js-desktop-projectCards');
+    projectImage.src = project.desktopImageUrl;
+    projectImageDiv.appendChild(projectImage);
+    //projectImageDiv.classList.add('js-desktop-projectCards');
+    projectCardHTML.appendChild(projectImageDiv);
   }
-  projectsDivHTML.innerHtml += projectCardHtml;
-  projectsDivHTML.appendChild(projectCardHtml);
+  projectsDivHTML.innerHTML += projectCardHTML;
+  projectsDivHTML.appendChild(projectCardHTML);
 }
 
 export const projectButtons = document.querySelectorAll('.project-buttons');
