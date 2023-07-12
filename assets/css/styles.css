@@ -136,7 +136,7 @@ button {
 
 /*
 Nav Section
-Contains the hamburger menue for mobile-version and the nav-links for desktop-version
+Contains the hamburger menu for mobile-version and the nav-links for desktop-version
 */
 
 header {
@@ -153,7 +153,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: transparent;
+  /* background-color: var(--my-project-boutton-color); */
   margin-top: 0%;
   z-index: 1;
 }
@@ -174,10 +174,23 @@ header {
 }
 
 /* ADDED HAMBURGER MENU */
-.hamburger-container {
+/* .hamburger-container {
   background-color: white;
   height: 100%;
   position: sticky;
+} */
+
+.hamburger-container {
+  width: 90%;
+  position: absolute;
+  top: 5%;
+  right: 0;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
 }
 
 .hamburger-menu {
@@ -207,8 +220,8 @@ header {
   ANIMATION TO TURN THE BARS TO AN "X"
   PSEUDO CLASS :ACTIVE TO BE ADDED DYNAMICLY WITH JAVASCRIPT
 */
-.hamburger-menu-image.active {
-  transform: scale(2);
+.hamburger-menu.active {
+  transform: scale(1);
   z-index: 100;
 }
 
@@ -226,11 +239,6 @@ header {
   z-index: 100;
 }
 
-body .hamburger-menu.active {
-  height: 100vh;
-  overflow: hidden;
-}
-
 /*
   NAV MENU WHEN WE CLIC ON THE HAMBURGER MENU
 */
@@ -243,9 +251,9 @@ body .hamburger-menu.active {
   display: none;
 }
 
-.not-navbar {
+/* .not-navbar {
   width: 100%;
-}
+} */
 
 .hamburger-navmenu {
   top: 10%;
@@ -397,16 +405,17 @@ Contains The 6 microverse projects
   width: 92%;
   height: 29.625rem;
   display: flex;
-  flex-direction: column-reverse;
+  /* flex-direction: column-reverse; */
   border: 1px solid var(--image-placeholder-color);
   margin: 0 4%;
   position: relative;
 }
 
-#project-image {
+.project-image div {
   background-color: transparent;
   width: 100%;
   height: 100%;
+  align-self: flex-start;
 }
 
 /**** TO DELETE *****/
@@ -422,17 +431,16 @@ Contains The 6 microverse projects
   height: 100%;
 }
 
-.img-placeholder_old {
-  width: 100%;
-  height: max-content;
-}
 
-/**** TO DELETE *****/
 .img-placeholder {
   width: 100%;
-  height: 100%;
-  visibility: hidden;
+  height: 75%;
 }
+
+/* .img-placeholder img{
+  width: 100%;
+  height: 100%;
+} */
 
 .project-wrapped-text {
   width: 100%;
@@ -469,12 +477,20 @@ Contains The 6 microverse projects
   margin-bottom: 5%;
 }
 
-.poupup-items,
 .project .project-built-with li {
   background-color: var(--image-placeholder-color1);
   border-radius: 8px;
   margin: 0.5%;
   padding: 3%;
+}
+
+.poupup-items {
+  width: fit-content;
+  display: inline-block;
+  background-color: var(--image-placeholder-color1);
+  border-radius: 8px;
+  margin: 0.5%;
+  padding: 1%;
 }
 
 .competences-card .list-competences li {
@@ -513,9 +529,9 @@ languages, frameworks and skills
   align-items: center;
   margin: 50% auto 50% auto;
   background:
-    url(../../images/mobile-bg/about-me-mobile1.svg) no-repeat left bottom 70%,
-    url(../../images/mobile-bg/about-me-mobile2.svg) no-repeat right top 0%;
-  background-size: 12%;
+    /* url(../../assets/img/bg-images/about-me-section.gif) no-repeat right bottom 0%, */
+    url(../../assets/img/bg-images/about-me-section.gif) no-repeat right top 0%;
+  background-size: 30%;
 }
 
 .about-myself-text {
@@ -991,8 +1007,8 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
 .js-desktop-projectCards {
   width: 100%;
   height: 100%;
-  background: url(../../images/popup/SnapshootPortfolioDesktop.svg) no-repeat;
-  background-size: 92%;
+  /* background: url(../../images/popup/SnapshootPortfolioDesktop.svg) no-repeat;
+  background-size: 92%; */
 }
 
 .js-mobile-projectCards {
@@ -1151,17 +1167,22 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   }
 
   .header {
-    height: 100%;
-    background: url(../../images/desktop-bg/Header-llustration-desktop.svg) no-repeat top;
-    background-size: 100%;
+    height: 90vh;
+    background: 
+      url(../../assets/img/bg-images/header.webp) no-repeat left top 10%,
+      url(../../assets/img/bg-images/header.webp) no-repeat right bottom 0%;
+    background-size: 25%;
+    filter: opacity(100%);
+    border-radius: 20%;
   }
 
   .header-nav {
     height: 5vh;
     position: fixed;
-    padding-top: 3%;
+    /* padding-top: 3%; */
     z-index: 1;
     background: white;
+    /* background-color: var(--my-project-boutton-color); */
   }
 
   .navbar {
@@ -1245,8 +1266,8 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
     width: 100%;
     margin: 0;
     background:
-      url(../../images/mobile-bg/about-me-mobile1.svg) no-repeat left top 25%,
-      url(../../images/mobile-bg/about-me-mobile2.svg) no-repeat right top 0%;
+      url(../../assets/img/bg-images/about-me-section.gif) no-repeat left top 25%,
+      url(../../assets/img/bg-images/about-me-section.gif) no-repeat right top 0%;
     background-size: 15%;
   }
 
@@ -1258,7 +1279,7 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
     align-items: center;
     flex: 1;
     order: 1;
-    margin: 0;
+    margin: 0 auto;
   }
 
   .competences-card {
@@ -1289,9 +1310,9 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
 
   .contact-form-container {
     background:
-      url(../../images/desktop-bg/footer1.svg) no-repeat left bottom 0%,
-      url(../../images/desktop-bg/footer2.svg) no-repeat bottom 0% left 20%,
-      url(../../images/desktop-bg/footer3.svg) no-repeat right bottom 0%;
+      url(../../assets/img/bg-images/footer.webp) no-repeat left bottom 0%;
+      /* url(../../images/desktop-bg/footer2.svg) no-repeat bottom 0% left 20%, */
+      /* url(../../images/desktop-bg/footer3.svg) no-repeat right bottom 0%; */
   }
 
   .contact-form-text {

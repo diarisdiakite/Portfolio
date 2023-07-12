@@ -1,85 +1,91 @@
 export const projects = [
   {
-    mobileImageUrl: '../../images/popup/SnapshootPortfolioMobile.svg',
-    desktopImageUrl: '../../images/popup/SnapshootPortfolioDesktop.svg',
-    title: 'Mobile version skeleton',
+    mobileImageUrl: '../../assets/img/screenshoots/datams/Capture8.png',
+    desktopImageUrl: '../../assets/img/screenshoots/datams/Capture8.png',
+    title: 'M&E App',
     technologies: [
-      'html',
-      'javascript',
-      'css',
-      'React Js',
-    ],
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    liveVersionLink: 'See live',
-    sourceLink: 'See source',
-  },
-  {
-    mobileImageUrl: '../../images/popup/SnapshootPortfolioMobile.svg',
-    desktopImageUrl: '../../images/popup/SnapshootPortfolioDesktop.svg',
-    title: 'Mobile version',
-    technologies: [
-      'Ruby on Rails',
-      'CSS',
-      'Javascript',
+      'Php',
+      'MySql',
       'HTML',
+      'CSS',
+      'Bootstrap',
     ],
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    description: 'M&E App is an application to monitor on a regular basis the main outputs from projects and programs activities. The data is aggregated per project and per program to give corporate global results for each outcome. The V001 of the Application was developped for the Monitoring and Evaluation Team of an UN Agency.',
     liveVersionLink: 'See live',
     sourceLink: 'See source',
   },
   {
-    mobileImageUrl: '../../images/popup/SnapshootPortfolioMobile.svg',
-    desktopImageUrl: '../../images/popup/SnapshootPortfolioDesktop.svg',
-    title: 'Contact form',
+    mobileImageUrl: '../../assets/img/screenshoots/trem/Capture.png',
+    desktopImageUrl: '../../assets/img/screenshoots/trem/Capture.png',
+    title: 'Training For Employment',
     technologies: [
-      'html',
-      'javascript',
-      'css',
-      'React Js',
+      'Php',
+      'MySql',
+      'HTML',
+      'CSS',
+      'Bootstrap',
     ],
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    description: 'The TrEM software package has been developed to design training programs using the Competency-Based Approach (CBA). It should be accompanied by a platform bringing together the various players in vocational training (this functionality is currently under development). The project was developed in 2018 and has been selected by several competitive programs at national level (10 best projects for the Prix Orange de l\'Entrepreneur Social in 2019) and also at international level (Winner of the Tony Elumelu Foundation entrepreneurship program). It aims to achieve greater qualification and specialization of employees in fields that are genuinely in demand by companies, as well as strengthening the vocational training system.',
     liveVersionLink: 'See live',
     sourceLink: 'See source',
   },
   {
-    mobileImageUrl: '../../images/popup/SnapshootPortfolioMobile.svg',
-    desktopImageUrl: '../../images/popup/SnapshootPortfolioDesktop.svg',
-    title: 'Desktop version',
+    mobileImageUrl: '../../assets/img/screenshoots/annual_smse/Capture.png',
+    desktopImageUrl: '../../assets/img/screenshoots/annual_smse/Capture.png',
+    title: 'SMSE summit',
     technologies: [
       'html',
       'javascript',
       'css',
-      'React Js',
+      'Bootstrap',
     ],
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    description: 'The SMSE summit is a Microverse capstone project developed for the validation of the first module. The project was developed based on a mobile-first approach with functionalities and templates layouts for differents pages and sections.',
     liveVersionLink: 'See live',
     sourceLink: 'See source',
   },
   {
-    mobileImageUrl: '../../images/popup/SnapshootPortfolioMobile.svg',
-    desktopImageUrl: '../../images/popup/SnapshootPortfolioDesktop.svg',
-    title: 'Deployment',
+    mobileImageUrl: '../../assets/img/screenshoots/ace/png/Capture3.png',
+    desktopImageUrl: '../../assets/img/screenshoots/ace/png/Capture5.png',
+    title: 'ACE(ace.org)',
     technologies: [
-      'html',
-      'javascript',
-      'css',
       'React Js',
+      'React-redux',
+      'html',
+      'css',
+      'Bootstrap',
+      'Postgres',
     ],
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    description: 'SMSE World is a worldwide concept to showcase outstanding actions, projects, people accross the world lauched by the Actions Culture de l\'Excellence (ACE) Association.',
     liveVersionLink: 'See live',
     sourceLink: 'See source',
   },
   {
-    mobileImageUrl: '../../images/popup/SnapshootPortfolioMobile.svg',
-    desktopImageUrl: '../../images/popup/SnapshootPortfolioDesktop.svg',
-    title: 'Accessibility',
+    mobileImageUrl: '../../assets/img/screenshoots/ace/Capture6.png',
+    desktopImageUrl: '../../assets/img/screenshoots/ace/Capture6.png',
+    title: 'SchoolApp',
+    technologies: [
+      'React Js',
+      'React-redux',
+      'html',
+      'css',
+      'Bootstrap',
+      'Postgres',
+    ],
+    description: 'SchoolApp is an school management application linked to the ACE plateform (ace.org). Each ..... .',
+    liveVersionLink: 'See live',
+    sourceLink: 'See source',
+  },
+  {
+    mobileImageUrl: '../../assets/img/screenshoots/portfolio-project/Capture3.png',
+    desktopImageUrl: '../../assets/img/screenshoots/portfolio-project/Capture3.png',
+    title: 'My portfolio project',
     technologies: [
       'html',
-      'javascript',
       'css',
-      'React Js',
+      'javascript',
+      'JQuery'
     ],
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    description: 'My portfolio project is one of the first Microverse curriculum Projects. It is developed to showcase student\'s projects using features like hamburger menu, cards, popup windows in plain html, css and javascript through: desktop and mobile versions design, application deploy, accessibility, validate contact form, preserve data in browser.',
     liveVersionLink: 'See live',
     sourceLink: 'See source',
   },
@@ -93,6 +99,11 @@ for (let i = 0; i < projects.length; i += 1) {
   const projectCardHtml = document.createElement('div');
   projectCardHtml.innerHTML = `
       <div class="project">
+        
+        <div class="project-image">
+          <img class="img-placeholder" src=${project.desktopImageUrl} alt="project-image" placeholder="image for project 1">
+          </img>
+        </div>
         
         <div class="project-wrapped-text">
         <div class="sections-title">
@@ -111,17 +122,18 @@ for (let i = 0; i < projects.length; i += 1) {
       <div id="project-image" class="project-image">
         </div>`;
 
+
   const projectImage = document.createElement('div');
   projectImage.setAttribute('blur', '100');
 
   if (window.innerWidth < 768) {
     projectImage.src = `${project.mobileImageUrl}`;
     projectCardHtml.appendChild(projectImage);
-    projectCardHtml.classList.add('js-mobile-projectCards');
+    //projectCardHtml.classList.add('js-mobile-projectCards');
   } else {
     projectImage.src = `${project.desktopImageUrl}`;
     projectCardHtml.appendChild(projectImage);
-    projectCardHtml.classList.add('js-desktop-projectCards');
+    //projectCardHtml.classList.add('js-desktop-projectCards');
   }
   projectsDivHTML.innerHtml += projectCardHtml;
   projectsDivHTML.appendChild(projectCardHtml);

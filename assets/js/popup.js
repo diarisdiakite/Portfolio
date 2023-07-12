@@ -27,11 +27,11 @@ for (let i = 0; i < projectButtons.length; i += 1) {
     const image = document.createElement('img');
 
     if (window.innerWidth < 768) {
-      // image.src = `${project.mobileImageUrl}`;
+      image.src = `${project.mobileImageUrl}`;
       image.classList.add('project-popup-mobile-img');
       popupImage.classList.remove('js-project-popup-img');
     } else {
-      // image.src = `${project.desktopImageUrl}`;
+      image.src = `${project.desktopImageUrl}`;
       image.classList.add('project-popup-desktop-img');
       popupImage.classList.remove('js-project-popup-img');
     }
@@ -68,28 +68,26 @@ for (let i = 0; i < projectButtons.length; i += 1) {
     textDiv.appendChild(titleLinksDiv);
 
     // I - CREATE THE TECHNOLOGIES LINKS
+    const technologiesUl = document.createElement('ul');
+    technologiesUl.classList.add('project-built-with');
+
     const technologyList = project.technologies;
     const technologyFragment = document.createDocumentFragment();
-    const technology = document.createElement('button');
-    technologyFragment.className = ('technologyFragment');
-    const renderTechnologyList = (value) => {
-      technology.textContent = `<li class="technologyFragment.li">${value}</li>`;
-      technology.style.display = 'flex';
-      technology.classList.add('technologyFragment.li');
-      technologyFragment.append(technology);
-    };
-    technologyList.forEach(renderTechnologyList);
-    technologyFragment.innerHtml += `<a class="technologyFragment.li.a">${technologyList.technology}</a>`;
-    textDiv.append(technologyList);
 
-    // find out more ----------
-    const technologyFragment1 = document.createDocumentFragment();
-    const technologyList1 = document.createElement('div');
-    technologyList1.innerHTML += `
-    <ul class="project-built-with" name="technologies">
-      ${project.technologies.map((tool) => `<li class="popup-items"><a class="popup-links">${tool}</a></li>`).join('')}
-    </ul>`;
-    technologyFragment1.appendChild(technologyList1);
+    const renderTechnologyList = (value) => {
+      const technologyLi = document.createElement('li');
+      technologyLi.classList.add('poupup-items');
+      const technologyLink = document.createElement('a');
+      technologyLink.textContent = value;
+      //technologyLink.classList.add('poupup-items');
+      technologyLi.appendChild(technologyLink);
+      technologyFragment.appendChild(technologyLi);
+    };
+
+    technologyList.forEach(renderTechnologyList);
+
+    technologiesUl.appendChild(technologyFragment);
+    textDiv.appendChild(technologiesUl);
 
     // Project description
     const description = document.createElement('p');
