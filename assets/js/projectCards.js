@@ -1,7 +1,15 @@
 export const projects = [
   {
-    mobileImageUrl: '/my-portfolio/assets/img/screenshoots/datams/Capture8.PNG',
-    desktopImageUrl: '/my-portfolio/assets/img/screenshoots/datams/Capture8.PNG',
+    mobileImageUrls: [
+      '../../assets/img/screenshoots/datams/Capture8.png', 
+      '../../assets/img/screenshoots/datams/Capture8.png', 
+      '../../assets/img/screenshoots/datams/Capture3.png'
+    ],
+    desktopImageUrls: [
+      '../../assets/img/screenshoots/datams/Capture6.png', 
+      '../../assets/img/screenshoots/datams/Capture6.png', 
+      '../../assets/img/screenshoots/datams/Capture3.png'
+    ],
     title: 'M&E App',
     technologies: [
       'Php',
@@ -15,8 +23,16 @@ export const projects = [
     sourceLink: 'See source',
   },
   {
-    mobileImageUrl: '/my-portfolio/assets/img/screenshoots/trem/Capture.PNG',
-    desktopImageUrl: '/my-portfolio/assets/img/screenshoots/trem/Capture.PNG',
+    mobileImageUrls: [
+      '../../assets/img/screenshoots/trem/Capture.png',
+      '../../assets/img/screenshoots/trem/Capture1.png',
+      '../../assets/img/screenshoots/trem/Capture2.png',
+    ],
+    desktopImageUrls: [
+      '../../assets/img/screenshoots/datams/Capture8.png', 
+      '../../assets/img/screenshoots/datams/Capture6.png', 
+      '../../assets/img/screenshoots/datams/Capture3.png'
+    ],
     title: 'Training For Employment',
     technologies: [
       'Php',
@@ -30,8 +46,16 @@ export const projects = [
     sourceLink: 'See source',
   },
   {
-    mobileImageUrl: '/my-portfolio/assets/img/screenshoots/annual_smse/Capture.PNG',
-    desktopImageUrl: '/my-portfolio/assets/img/screenshoots/annual_smse/Capture.PNG',
+    mobileImageUrls: [
+      '../../assets/img/screenshoots/annual_smse/Capture.png',
+      '../../assets/img/screenshoots/annual_smse/Capture1.png',
+      '../../assets/img/screenshoots/annual_smse/Capture2.png'
+    ],
+    desktopImageUrls: [
+      '../../assets/img/screenshoots/annual_smse/Capture.png',
+      '../../assets/img/screenshoots/annual_smse/Capture1.png',
+      '../../assets/img/screenshoots/annual_smse/Capture2.png'
+    ],
     title: 'SMSE summit',
     technologies: [
       'html',
@@ -44,8 +68,16 @@ export const projects = [
     sourceLink: 'See source',
   },
   {
-    mobileImageUrl: '/my-portfolio/assets/img/screenshoots/ace/png/Capture3.png',
-    desktopImageUrl: '/my-portfolio/assets/img/screenshoots/ace/png/Capture5.png',
+    mobileImageUrls: [
+      '../../assets/img/screenshoots/ace/png/Capture3.png',
+      '../../assets/img/screenshoots/ace/png/Capture4.png',
+      '../../assets/img/screenshoots/ace/png/Capture5.png'
+    ],
+    desktopImageUrls: [
+      '../../assets/img/screenshoots/ace/png/Capture3.png',
+      '../../assets/img/screenshoots/ace/png/Capture4.png',
+      '../../assets/img/screenshoots/ace/png/Capture5.png'
+    ],
     title: 'ACE(ace.org)',
     technologies: [
       'React Js',
@@ -60,8 +92,16 @@ export const projects = [
     sourceLink: 'See source',
   },
   {
-    mobileImageUrl: '/my-portfolio/assets/img/screenshoots/ace/Capture6.PNG',
-    desktopImageUrl: '/my-portfolio/assets/img/screenshoots/ace/Capture6.PNG',
+    mobileImageUrls: [
+      '../../assets/img/screenshoots/ace/Capture6.png',
+      '../../assets/img/screenshoots/ace/Capture5.png',
+      '../../assets/img/screenshoots/ace/Capture4.png',
+    ],
+    desktopImageUrls: [
+      '../../assets/img/screenshoots/ace/Capture6.png',
+      '../../assets/img/screenshoots/ace/Capture5.png',
+      '../../assets/img/screenshoots/ace/Capture4.png',
+    ],
     title: 'SchoolApp',
     technologies: [
       'React Js',
@@ -76,15 +116,22 @@ export const projects = [
     sourceLink: 'See source',
   },
   {
-    mobileImageUrl: 'my-portfolio/assets/img/screenshoots/portfolio-project/Capture3.PNG',
-    //dev path => mobileImageUrl: '../../assets/img/screenshoots/portfolio-project/Capture3.PNG',
-    desktopImageUrl: '/my-portfolio/assets/img/screenshoots/portfolio-project/Capture3.PNG',
+    mobileImageUrls: [
+      '../../assets/img/screenshoots/portfolio-project/Capture3.png',
+      '../../assets/img/screenshoots/portfolio-project/Capture4.png',
+      '../../assets/img/screenshoots/portfolio-project/Capture2.png',
+    ],
+    desktopImageUrls: [
+      '../../assets/img/screenshoots/portfolio-project/Capture3.png',
+      '../../assets/img/screenshoots/portfolio-project/Capture4.png',
+      '../../assets/img/screenshoots/portfolio-project/Capture2.png'
+    ],
     title: 'My portfolio project',
     technologies: [
       'html',
       'css',
       'javascript',
-      'JQuery',
+      'JQuery'
     ],
     description: 'My portfolio project is one of the first Microverse curriculum Projects. It is developed to showcase student\'s projects using features like hamburger menu, cards, popup windows in plain html, css and javascript through: desktop and mobile versions design, application deploy, accessibility, validate contact form, preserve data in browser.',
     liveVersionLink: 'See live',
@@ -102,7 +149,7 @@ for (let i = 0; i < projects.length; i += 1) {
       <div class="project">
         
         <div class="project-image">
-          <img class="img-placeholder" src=${project.desktopImageUrl} alt="project-image" placeholder="image for project 1">
+          <img class="img-placeholder" src=${project.desktopImageUrls[1]} alt="project-image" placeholder="image for project 1">
           </img>
         </div>
         

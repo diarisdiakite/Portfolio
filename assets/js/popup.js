@@ -1,8 +1,10 @@
 import { projects, projectButtons, projectsDivHTML } from './projectCards.js';
 
+
 for (let i = 0; i < projectButtons.length; i += 1) {
   const projectButton = projectButtons[i];
   const project = projects[i];
+  let imageIndex = 0;
 
   projectButton.addEventListener('click', () => {
     // Create projectCardJs element
@@ -17,7 +19,7 @@ for (let i = 0; i < projectButtons.length; i += 1) {
     popupCloseButton.setAttribute('class', 'js-button-close');
     projectCardJs.appendChild(popupCloseButton);
 
-    // Create a type with all the tect element and the image
+    // Create a type with all the text element and the image
     const textDiv = document.createElement('div');
     textDiv.classList.add('js-text-container');
 
@@ -26,16 +28,40 @@ for (let i = 0; i < projectButtons.length; i += 1) {
     popupImage.classList.add('js-project-popup-img');
     const image = document.createElement('img');
 
+    const imageButtonsContainer = document.createElement('div')
+    imageButtonsContainer.classList.add('image-buttons-container')
+    const previousButton = document.createElement("button");
+    previousButton.innerText = 'Prev';
+    previousButton.classList.add('image-buttons');
+    const nextButton = document.createElement("button")
+    nextButton.innerText = 'Next';
+    nextButton.classList.add('image-buttons');
+    imageButtonsContainer.appendChild(previousButton);
+    imageButtonsContainer.appendChild(nextButton);
+
+    image.src = window.innerWidth < 768 ? project.mobileImageUrls[imageIndex] : project.desktopImageUrls[imageIndex];
     if (window.innerWidth < 768) {
-      image.src = `${project.mobileImageUrl}`;
       image.classList.add('project-popup-mobile-img');
       popupImage.classList.remove('js-project-popup-img');
     } else {
-      image.src = `${project.desktopImageUrl}`;
       image.classList.add('project-popup-desktop-img');
       popupImage.classList.remove('js-project-popup-img');
     }
-    textDiv.appendChild(image);
+
+    nextButton.addEventListener('click', () => {
+      imageIndex = (imageIndex + 1) % project.mobileImageUrls.length;
+      image.src = window.innerWidth < 768 ? project.mobileImageUrls[imageIndex] : project.desktopImageUrls[imageIndex];
+    });
+    
+    previousButton.addEventListener('click', () => {
+      imageIndex = (imageIndex - 1 + project.mobileImageUrls.length) % project.mobileImageUrls.length;
+      image.src = window.innerWidth < 768 ? project.mobileImageUrls[imageIndex] : project.desktopImageUrls[imageIndex];
+    });
+
+    popupImage.appendChild(image);
+    textDiv.appendChild(imageButtonsContainer);
+    textDiv.appendChild(popupImage);
+
 
     // create div with Title and 2 links in display flex
     const titleLinksDiv = document.createElement('div');
@@ -53,13 +79,13 @@ for (let i = 0; i < projectButtons.length; i += 1) {
     // Project links
     // live link
     const liveLink = document.createElement('button');
-    liveLink.textContent = '';// `${project.liveVersionLink}`;
+    liveLink.textContent = 'Live demo';// `${project.liveVersionLink}`;
     liveLink.className = 'js-liveLink-button';
     liveLink.setAttribute('alt', 'link to the project live Demo');
     linksContainer.appendChild(liveLink);
     // Source link
     const sourceLink = document.createElement('button');
-    sourceLink.textContent = ''; // `${project.sourceLink}`;
+    sourceLink.textContent = 'Source'; // `${project.sourceLink}`;
     sourceLink.className = 'js-sourceLink-button';
     sourceLink.setAttribute('alt', 'Link to the project souce');
     linksContainer.appendChild(sourceLink);
@@ -79,7 +105,7 @@ for (let i = 0; i < projectButtons.length; i += 1) {
       technologyLi.classList.add('poupup-items');
       const technologyLink = document.createElement('a');
       technologyLink.textContent = value;
-      // technologyLink.classList.add('poupup-items');
+      //technologyLink.classList.add('poupup-items');
       technologyLi.appendChild(technologyLink);
       technologyFragment.appendChild(technologyLi);
     };
