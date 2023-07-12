@@ -1,7 +1,7 @@
 export const projects = [
   {
-    mobileImageUrl: '../../assets/img/screenshoots/datams/Capture8.PNG',
-    desktopImageUrl: '../../assets/img/screenshoots/datams/Capture8.PNG',
+    mobileImageUrl: '/my-portfolio/assets/img/screenshoots/datams/Capture8.PNG',
+    desktopImageUrl: '/my-portfolio/assets/img/screenshoots/datams/Capture8.PNG',
     title: 'M&E App',
     technologies: [
       'Php',
@@ -15,8 +15,8 @@ export const projects = [
     sourceLink: 'See source',
   },
   {
-    mobileImageUrl: '../../assets/img/screenshoots/trem/Capture.PNG',
-    desktopImageUrl: '../../assets/img/screenshoots/trem/Capture.PNG',
+    mobileImageUrl: '/my-portfolio/assets/img/screenshoots/trem/Capture.PNG',
+    desktopImageUrl: '/my-portfolio/assets/img/screenshoots/trem/Capture.PNG',
     title: 'Training For Employment',
     technologies: [
       'Php',
@@ -30,8 +30,8 @@ export const projects = [
     sourceLink: 'See source',
   },
   {
-    mobileImageUrl: '../../assets/img/screenshoots/annual_smse/Capture.PNG',
-    desktopImageUrl: '../../assets/img/screenshoots/annual_smse/Capture.PNG',
+    mobileImageUrl: '/my-portfolio/assets/img/screenshoots/annual_smse/Capture.PNG',
+    desktopImageUrl: '/my-portfolio/assets/img/screenshoots/annual_smse/Capture.PNG',
     title: 'SMSE summit',
     technologies: [
       'html',
@@ -44,8 +44,8 @@ export const projects = [
     sourceLink: 'See source',
   },
   {
-    mobileImageUrl: '../../assets/img/screenshoots/ace/png/Capture3.PNG',
-    desktopImageUrl: '../../assets/img/screenshoots/ace/png/Capture5.PNG',
+    mobileImageUrl: '/my-portfolio/assets/img/screenshoots/ace/png/Capture3.png',
+    desktopImageUrl: '/my-portfolio/assets/img/screenshoots/ace/png/Capture5.png',
     title: 'ACE(ace.org)',
     technologies: [
       'React Js',
@@ -60,8 +60,8 @@ export const projects = [
     sourceLink: 'See source',
   },
   {
-    mobileImageUrl: '../../assets/img/screenshoots/ace/Capture6.PNG',
-    desktopImageUrl: '../../assets/img/screenshoots/ace/Capture6.PNG',
+    mobileImageUrl: '/my-portfolio/assets/img/screenshoots/ace/Capture6.PNG',
+    desktopImageUrl: '/my-portfolio/assets/img/screenshoots/ace/Capture6.PNG',
     title: 'SchoolApp',
     technologies: [
       'React Js',
@@ -76,8 +76,9 @@ export const projects = [
     sourceLink: 'See source',
   },
   {
-    mobileImageUrl: '../../assets/img/screenshoots/portfolio-project/Capture3.PNG',
-    desktopImageUrl: '../../assets/img/screenshoots/portfolio-project/Capture3.PNG',
+    mobileImageUrl: 'my-portfolio/assets/img/screenshoots/portfolio-project/Capture3.PNG',
+    //dev path => mobileImageUrl: '../../assets/img/screenshoots/portfolio-project/Capture3.PNG',
+    desktopImageUrl: '/my-portfolio/assets/img/screenshoots/portfolio-project/Capture3.PNG',
     title: 'My portfolio project',
     technologies: [
       'html',
