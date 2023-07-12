@@ -1,14 +1,14 @@
 export const projects = [
   {
     mobileImageUrls: [
-      '../../assets/img/screenshoots/datams/Capture8.png', 
-      '../../assets/img/screenshoots/datams/Capture8.png', 
-      '../../assets/img/screenshoots/datams/Capture3.png'
+      '/my-portfolio/assets/img/screenshoots/datams/Capture8.PNG', 
+      '/my-portfolio/assets/img/screenshoots/datams/Capture8.PNG', 
+      '/my-portfolio/assets/img/screenshoots/datams/Capture3.PNG'
     ],
     desktopImageUrls: [
-      '../../assets/img/screenshoots/datams/Capture6.png', 
-      '../../assets/img/screenshoots/datams/Capture6.png', 
-      '../../assets/img/screenshoots/datams/Capture3.png'
+      '/my-portfolio/assets/img/screenshoots/datams/Capture6.PNG', 
+      '/my-portfolio/assets/img/screenshoots/datams/Capture6.PNG', 
+      '/my-portfolio/assets/img/screenshoots/datams/Capture3.PNG'
     ],
     title: 'M&E App',
     technologies: [
@@ -24,14 +24,14 @@ export const projects = [
   },
   {
     mobileImageUrls: [
-      '../../assets/img/screenshoots/trem/Capture.png',
-      '../../assets/img/screenshoots/trem/Capture1.png',
-      '../../assets/img/screenshoots/trem/Capture2.png',
+      '/my-portfolio/assets/img/screenshoots/trem/Capture.PNG',
+      '/my-portfolio/assets/img/screenshoots/trem/Capture1.PNG',
+      '/my-portfolio/assets/img/screenshoots/trem/Capture2.PNG',
     ],
     desktopImageUrls: [
-      '../../assets/img/screenshoots/datams/Capture8.png', 
-      '../../assets/img/screenshoots/datams/Capture6.png', 
-      '../../assets/img/screenshoots/datams/Capture3.png'
+      '/my-portfolio/assets/img/screenshoots/datams/Capture8.PNG', 
+      '/my-portfolio/assets/img/screenshoots/datams/Capture6.PNG', 
+      '/my-portfolio/assets/img/screenshoots/datams/Capture3.PNG'
     ],
     title: 'Training For Employment',
     technologies: [
@@ -47,14 +47,14 @@ export const projects = [
   },
   {
     mobileImageUrls: [
-      '../../assets/img/screenshoots/annual_smse/Capture.png',
-      '../../assets/img/screenshoots/annual_smse/Capture1.png',
-      '../../assets/img/screenshoots/annual_smse/Capture2.png'
+      '/my-portfolio/assets/img/screenshoots/annual_smse/Capture.PNG',
+      '/my-portfolio/assets/img/screenshoots/annual_smse/Capture1.PNG',
+      '/my-portfolio/assets/img/screenshoots/annual_smse/Capture2.PNG'
     ],
     desktopImageUrls: [
-      '../../assets/img/screenshoots/annual_smse/Capture.png',
-      '../../assets/img/screenshoots/annual_smse/Capture1.png',
-      '../../assets/img/screenshoots/annual_smse/Capture2.png'
+      '/my-portfolio/assets/img/screenshoots/annual_smse/Capture.PNG',
+      '/my-portfolio/assets/img/screenshoots/annual_smse/Capture1.PNG',
+      '/my-portfolio/assets/img/screenshoots/annual_smse/Capture2.PNG'
     ],
     title: 'SMSE summit',
     technologies: [
@@ -69,14 +69,14 @@ export const projects = [
   },
   {
     mobileImageUrls: [
-      '../../assets/img/screenshoots/ace/png/Capture3.png',
-      '../../assets/img/screenshoots/ace/png/Capture4.png',
-      '../../assets/img/screenshoots/ace/png/Capture5.png'
+      '/my-portfolio/assets/img/screenshoots/ace/PNG/Capture3.PNG',
+      '/my-portfolio/assets/img/screenshoots/ace/PNG/Capture4.PNG',
+      '/my-portfolio/assets/img/screenshoots/ace/PNG/Capture5.PNG'
     ],
     desktopImageUrls: [
-      '../../assets/img/screenshoots/ace/png/Capture3.png',
-      '../../assets/img/screenshoots/ace/png/Capture4.png',
-      '../../assets/img/screenshoots/ace/png/Capture5.png'
+      '/my-portfolio/assets/img/screenshoots/ace/PNG/Capture3.PNG',
+      '/my-portfolio/assets/img/screenshoots/ace/PNG/Capture4.PNG',
+      '/my-portfolio/assets/img/screenshoots/ace/PNG/Capture5.PNG'
     ],
     title: 'ACE(ace.org)',
     technologies: [
@@ -93,14 +93,14 @@ export const projects = [
   },
   {
     mobileImageUrls: [
-      '../../assets/img/screenshoots/ace/Capture6.png',
-      '../../assets/img/screenshoots/ace/Capture5.png',
-      '../../assets/img/screenshoots/ace/Capture4.png',
+      '/my-portfolio/assets/img/screenshoots/ace/Capture6.PNG',
+      '/my-portfolio/assets/img/screenshoots/ace/Capture5.PNG',
+      '/my-portfolio/assets/img/screenshoots/ace/Capture4.PNG',
     ],
     desktopImageUrls: [
-      '../../assets/img/screenshoots/ace/Capture6.png',
-      '../../assets/img/screenshoots/ace/Capture5.png',
-      '../../assets/img/screenshoots/ace/Capture4.png',
+      '/my-portfolio/assets/img/screenshoots/ace/Capture6.PNG',
+      '/my-portfolio/assets/img/screenshoots/ace/Capture5.PNG',
+      '/my-portfolio/assets/img/screenshoots/ace/Capture4.PNG',
     ],
     title: 'SchoolApp',
     technologies: [
@@ -117,14 +117,14 @@ export const projects = [
   },
   {
     mobileImageUrls: [
-      '../../assets/img/screenshoots/portfolio-project/Capture3.png',
-      '../../assets/img/screenshoots/portfolio-project/Capture4.png',
-      '../../assets/img/screenshoots/portfolio-project/Capture2.png',
+      '/my-portfolio/assets/img/screenshoots/portfolio-project/Capture3.PNG',
+      '/my-portfolio/assets/img/screenshoots/portfolio-project/Capture4.PNG',
+      '/my-portfolio/assets/img/screenshoots/portfolio-project/Capture2.PNG',
     ],
     desktopImageUrls: [
-      '../../assets/img/screenshoots/portfolio-project/Capture3.png',
-      '../../assets/img/screenshoots/portfolio-project/Capture4.png',
-      '../../assets/img/screenshoots/portfolio-project/Capture2.png'
+      '/my-portfolio/assets/img/screenshoots/portfolio-project/Capture3.PNG',
+      '/my-portfolio/assets/img/screenshoots/portfolio-project/Capture4.PNG',
+      '/my-portfolio/assets/img/screenshoots/portfolio-project/Capture2.PNG'
     ],
     title: 'My portfolio project',
     technologies: [
