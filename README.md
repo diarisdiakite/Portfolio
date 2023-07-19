@@ -20,13 +20,21 @@
 - [Run tests](#run-test)
 - [Deployment](#deployment)
 👥 [Authors](#authors)
+
 🔭 [Future Features](#future-features)
+
 🤝 [Contributing](#contributing)
+
 ⭐️ [Show your support](#show-your-support)
+
 🙏 [Acknowledgments](#acknowledgment)
+
 ❓ [FAQ (OPTIONAL)](#faq)
+
 📝 [Credit](#credit)
+
 📝 [License](#licence)
+
 
 <br><br>
 
@@ -163,3 +171,5 @@ You can reach out to me through email [diarisdiakite@gmail.com]().
 This project is [MIT](https://mit-license.org/) licensed.
 
 NOTE: we recommend using the MIT license - you can set it up quickly by using templates available on GitHub. You can also use any other license if you wish.
+
+[back to top](#my-portfolio)
