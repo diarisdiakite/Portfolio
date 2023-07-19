@@ -111,9 +111,9 @@ You can deploy the portfolio projects using: google cloud, Microsoft Azure, Netl
 
 👤 Didy
 
-GitHub: [](github.com/diarisdiakite)
-<br> Twitter: [@Twitter](@diarisdiakite)
-<br>LinkedIn: [@LinkedIn](https://www.linkedin.com/in/diariatou-diakite-67ab80165/)
+GitHub: [@diarisd](github.com/diarisdiakite)
+<br> Twitter: [@diarisd](@diarisdiakite)
+<br>LinkedIn: [@diarisd](https://www.linkedin.com/in/diariatou-diakite-67ab80165/)
 <br><br>
 
 👤 Contributor1: Romans Spilaks
