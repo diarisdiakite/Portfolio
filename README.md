@@ -20,12 +20,19 @@
 - [Run tests](#run-test)
 - [Deployment](#deployment)
 👥 [Authors](#authors)
+
 🔭 [Future Features](#future-features)
+
 🤝 [Contributing](#contributing)
+
 ⭐️ [Show your support](#show-your-support)
+
 🙏 [Acknowledgments](#acknowledgment)
+
 ❓ [FAQ (OPTIONAL)](#faq)
+
 📝 [Credit](#credit)
+
 📝 [License](#licence)
 
 <br><br>
@@ -47,7 +54,7 @@ client: HTML, CSS
 
 [My-Portfolio] key features are the following main projects:
 
-``
+```[Tech-stack]
 #### Setup and mobile version skeleton
 #### Mobile version
 #### Contact form
@@ -58,7 +65,7 @@ client: HTML, CSS
 #### Details modal
 #### Validate contact form
 #### Preserve data in the browser
-``
+```
 
 
 ### 🚀 Live Demo
