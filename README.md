@@ -1,4 +1,4 @@
-## 📖 [My-portfolio](#my-portfolio)
+## 📖 [My portfolio](#my-portfolio)
 
 📗 Table of Contents
 
@@ -47,7 +47,8 @@ client: HTML, CSS
 
 [My-Portfolio] key features are the following main projects:
 
-``
+```[Tech-stack]
+
 #### Setup and mobile version skeleton
 #### Mobile version
 #### Contact form
@@ -58,8 +59,9 @@ client: HTML, CSS
 #### Details modal
 #### Validate contact form
 #### Preserve data in the browser
-``
 
+```
+[back to top](#my-portfolio)
 
 ### 🚀 Live Demo
 
@@ -95,7 +97,7 @@ To run tests, run the following command: Open the project in code editor and run
 ### Deployment
 You can deploy the portfolio projects using: google cloud, Microsoft Azure, Netlify by giving credit on usign our template or contricute via pull requests (read more in the contributing section).
 
-(back to top)
+[back to top](#my-portfolio)
 
 ## 👥 Authors
 
@@ -119,30 +121,30 @@ GitHub: github.com/BenMKT
 ## 🔭 Future Features
 Upcoming features will include:
 
- [peer-rating-projects]
- [quizzes-templates]
+ [peer-rating-projects]()
+ [quizzes-templates]()
  
-(back to top)
+[back to top](#my-portfolio)
 
 ## 🤝 Contributing
 Contributions, issues, and feature requests are welcome!
 
 Feel free to check the issues page.
 
-(back to top)
+[back to top](#my-portfolio)
 
 ## ⭐️ Show your support
 If you like my [portfolio] you can support my work. Visit my personal page www.didy-developer.me.
 Please follow us on @linkedin.com/diarisd and @twitter.com/diarisd
 
-(back to top)
+[back to top](#my-portfolio)
 
 ## 🙏 Acknowledgments
 I would like to thank the Microverse community to inspire and encourage everyday programmers and aspiring programmers.
 
 Many thanks to my coding partners particularly to @Roman-adi (@obj583) for his great contribution and hints for this project. 
 
-(back to top)
+[back to top](#my-portfolio)
 
 ## ❓ FAQ (OPTIONAL)
 Here are the most common questions about this project.
@@ -155,7 +157,7 @@ Yes, definitely! I'm ready and available to work ideally as a Full stack develop
 ## Where can we reach out to you ?
 
 ### Answer
-You can reach out to me through email [diarisdiakite@gmail.com]. 
+You can reach out to me through email [diarisdiakite@gmail.com](). 
 
 ## 📝 License
 This project is [MIT](https://mit-license.org/) licensed.
