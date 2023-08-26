@@ -69,14 +69,14 @@ export const projects = [
   },
   {
     mobileImageUrls: [
-      '/my-portfolio/assets/img/screenshoots/ace/PNG/Capture3.PNG',
-      '/my-portfolio/assets/img/screenshoots/ace/PNG/Capture4.PNG',
-      '/my-portfolio/assets/img/screenshoots/ace/PNG/Capture5.PNG',
+      '/my-portfolio/assets/img/screenshoots/ace/Capture3.PNG',
+      '/my-portfolio/assets/img/screenshoots/ace/Capture4.PNG',
+      '/my-portfolio/assets/img/screenshoots/ace/Capture5.PNG',
     ],
     desktopImageUrls: [
-      '/my-portfolio/assets/img/screenshoots/ace/PNG/Capture3.PNG',
-      '/my-portfolio/assets/img/screenshoots/ace/PNG/Capture4.PNG',
-      '/my-portfolio/assets/img/screenshoots/ace/PNG/Capture5.PNG',
+      '/my-portfolio/assets/img/screenshoots/ace/Capture3.PNG',
+      '/my-portfolio/assets/img/screenshoots/ace/Capture4.PNG',
+      '/my-portfolio/assets/img/screenshoots/ace/Capture5.PNG',
     ],
     title: 'ACE(ace.org)',
     technologies: [
