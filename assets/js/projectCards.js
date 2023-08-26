@@ -70,13 +70,13 @@ export const projects = [
   {
     mobileImageUrls: [
       '/my-portfolio/assets/img/screenshoots/ace/Capture3.PNG',
-      '/my-portfolio/assets/img/screenshoots/ace/Capture4.PNG',
       '/my-portfolio/assets/img/screenshoots/ace/Capture5.PNG',
+      '/my-portfolio/assets/img/screenshoots/ace/Capture4.PNG',
     ],
     desktopImageUrls: [
-      '/my-portfolio/assets/img/screenshoots/ace/Capture3.PNG',
-      '/my-portfolio/assets/img/screenshoots/ace/Capture4.PNG',
+      '/my-portfolio/assets/img/screenshoots/ace/Capture2.PNG',
       '/my-portfolio/assets/img/screenshoots/ace/Capture5.PNG',
+      '/my-portfolio/assets/img/screenshoots/ace/Capture4.PNG',
     ],
     title: 'ACE(ace.org)',
     technologies: [
@@ -94,13 +94,9 @@ export const projects = [
   {
     mobileImageUrls: [
       '/my-portfolio/assets/img/screenshoots/ace/Capture6.PNG',
-      '/my-portfolio/assets/img/screenshoots/ace/Capture5.PNG',
-      '/my-portfolio/assets/img/screenshoots/ace/Capture4.PNG',
     ],
     desktopImageUrls: [
       '/my-portfolio/assets/img/screenshoots/ace/Capture6.PNG',
-      '/my-portfolio/assets/img/screenshoots/ace/Capture5.PNG',
-      '/my-portfolio/assets/img/screenshoots/ace/Capture4.PNG',
     ],
     title: 'SchoolApp',
     technologies: [
