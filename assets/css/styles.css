@@ -1469,6 +1469,7 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
     top: 5%;
     left: 20%;
     border-radius: 3%;
+    overflow: scroll;
   }
 
   /*

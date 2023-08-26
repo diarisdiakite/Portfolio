@@ -93,10 +93,10 @@ export const projects = [
   },
   {
     mobileImageUrls: [
-      '/my-portfolio/assets/img/screenshoots/ace/Capture6.PNG',
+      '/my-portfolio/assets/img/screenshoots/schoolApp/Capture6.PNG',
     ],
     desktopImageUrls: [
-      '/my-portfolio/assets/img/screenshoots/ace/Capture6.PNG',
+      '/my-portfolio/assets/img/screenshoots/schoolApp/Capture6.PNG',
     ],
     title: 'SchoolApp',
     technologies: [
