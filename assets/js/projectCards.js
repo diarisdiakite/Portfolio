@@ -2,12 +2,12 @@ export const projects = [
   {
     mobileImageUrls: [
       '/my-portfolio/assets/img/screenshoots/datams/Capture8.PNG',
-      '/my-portfolio/assets/img/screenshoots/datams/Capture8.PNG',
+      '/my-portfolio/assets/img/screenshoots/datams/Capture5.PNG',
       '/my-portfolio/assets/img/screenshoots/datams/Capture3.PNG',
     ],
     desktopImageUrls: [
       '/my-portfolio/assets/img/screenshoots/datams/Capture6.PNG',
-      '/my-portfolio/assets/img/screenshoots/datams/Capture6.PNG',
+      '/my-portfolio/assets/img/screenshoots/datams/Capture1.PNG',
       '/my-portfolio/assets/img/screenshoots/datams/Capture3.PNG',
     ],
     title: 'M&E App',
@@ -25,13 +25,13 @@ export const projects = [
   {
     mobileImageUrls: [
       '/my-portfolio/assets/img/screenshoots/trem/Capture.PNG',
-      '/my-portfolio/assets/img/screenshoots/trem/Capture1.PNG',
       '/my-portfolio/assets/img/screenshoots/trem/Capture2.PNG',
+      '/my-portfolio/assets/img/screenshoots/trem/Capture1.PNG',
     ],
     desktopImageUrls: [
       '/my-portfolio/assets/img/screenshoots/trem/Capture.PNG',
-      '/my-portfolio/assets/img/screenshoots/trem/Capture1.PNG',
       '/my-portfolio/assets/img/screenshoots/trem/Capture2.PNG',
+      '/my-portfolio/assets/img/screenshoots/trem/Capture1.PNG',
     ],
     title: 'Training For Employment',
     technologies: [
@@ -48,13 +48,13 @@ export const projects = [
   {
     mobileImageUrls: [
       '/my-portfolio/assets/img/screenshoots/annual_smse/Capture.PNG',
-      '/my-portfolio/assets/img/screenshoots/annual_smse/Capture1.PNG',
       '/my-portfolio/assets/img/screenshoots/annual_smse/Capture2.PNG',
+      '/my-portfolio/assets/img/screenshoots/annual_smse/Capture1.PNG',
     ],
     desktopImageUrls: [
       '/my-portfolio/assets/img/screenshoots/annual_smse/Capture.PNG',
-      '/my-portfolio/assets/img/screenshoots/annual_smse/Capture1.PNG',
       '/my-portfolio/assets/img/screenshoots/annual_smse/Capture2.PNG',
+      '/my-portfolio/assets/img/screenshoots/annual_smse/Capture1.PNG',
     ],
     title: 'SMSE summit',
     technologies: [
@@ -94,8 +94,10 @@ export const projects = [
   {
     mobileImageUrls: [
       '/my-portfolio/assets/img/screenshoots/schoolApp/Capture6.PNG',
+      '/my-portfolio/assets/img/screenshoots/schoolApp/Capture6.PNG',
     ],
     desktopImageUrls: [
+      '/my-portfolio/assets/img/screenshoots/schoolApp/Capture6.PNG',
       '/my-portfolio/assets/img/screenshoots/schoolApp/Capture6.PNG',
     ],
     title: 'SchoolApp',

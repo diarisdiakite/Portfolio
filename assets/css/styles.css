@@ -646,7 +646,7 @@ textarea {
 }
 
 textarea::-webkit-resizer {
-  background: url(../../images/Icons/Union.png) no-repeat center;
+  background: url(../img/Icons/Union.png) no-repeat center;
 }
 
 .input-control input::placeholder,
@@ -808,8 +808,8 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   background: var(--my-competences-boxes-color);
   z-index: 999;
   filter: opacity(95%);
-  overflow-y: hidden;
-  overscroll-behavior: none;
+  overflow-y: scroll;
+  /* overscroll-behavior: none; */
 }
 
 .project-popup {
@@ -913,7 +913,7 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   margin: 0;
   border: 0 solid var(--image-placeholder-color);
   border-radius: 5px;
-  background: url(../../images/popup/close-mobile.svg) no-repeat center;
+  background: url(../img/popup/close-mobile.svg) no-repeat center;
   align-self: center;
   background-color: transparent;
 }
@@ -943,13 +943,13 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
 .js-liveLink-img {
   width: 20%;
   height: 20%;
-  background: url(../../images/popup/icon-export.svg) no-repeat center;
+  background: url(../img/popup/button-see-live.svg) no-repeat center;
 }
 
 .js-sourceLink-img {
   width: 100%;
   height: 100%;
-  background: url(../../images/popup/icon-gitHub.svg) no-repeat center;
+  background: url(../img/popup/button-see-source.svg) no-repeat center;
 }
 
 .js-liveLink-button {
@@ -957,13 +957,13 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   width: 20%;
   height: 20%;
   */
-  background: url(../../images/popup/button-see-live.svg) no-repeat center;
+  background: url(../img/popup/button-see-live.svg) no-repeat center;
   background-size: 100%;
   color: transparent;
 }
 
 .js-sourceLink-button {
-  background: url(../../images/popup/button-see-source.svg) no-repeat center;
+  background: url(../img/popup/button-see-source.svg) no-repeat center;
   background-size: 100%;
   color: transparent;
 }
@@ -1458,7 +1458,7 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
     margin: 0;
     border: 1px solid var(--image-placeholder-color);
     border-radius: 5px;
-    background: url(../../images/popup/close.svg) no-repeat center;
+    background: url(../img/popup/close.svg) no-repeat center;
     align-self: center;
   }
 
@@ -1469,7 +1469,7 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
     top: 5%;
     left: 20%;
     border-radius: 3%;
-    overflow: scroll;
+    overflow: auto;
   }
 
   /*
@@ -1586,6 +1586,7 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
     top: 5%;
     left: 20%;
     border-radius: 3%;
+    overflow: auto;
   }
 
   /*
@@ -1653,6 +1654,7 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
     top: 5%;
     left: 20%;
     border-radius: 3%;
+    overflow: auto;
   }
 
   /*
@@ -1720,6 +1722,7 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
     top: 5%;
     left: 20%;
     border-radius: 3%;
+    overflow: auto;
   }
 
   /*
