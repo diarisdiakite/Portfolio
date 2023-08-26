@@ -1,14 +1,14 @@
 export const projects = [
   {
     mobileImageUrls: [
-      '/my-portfolio/assets/img/screenshoots/datams/Capture8.PNG', 
-      '/my-portfolio/assets/img/screenshoots/datams/Capture8.PNG', 
-      '/my-portfolio/assets/img/screenshoots/datams/Capture3.PNG'
+      '/my-portfolio/assets/img/screenshoots/datams/Capture8.PNG',
+      '/my-portfolio/assets/img/screenshoots/datams/Capture8.PNG',
+      '/my-portfolio/assets/img/screenshoots/datams/Capture3.PNG',
     ],
     desktopImageUrls: [
-      '/my-portfolio/assets/img/screenshoots/datams/Capture6.PNG', 
-      '/my-portfolio/assets/img/screenshoots/datams/Capture6.PNG', 
-      '/my-portfolio/assets/img/screenshoots/datams/Capture3.PNG'
+      '/my-portfolio/assets/img/screenshoots/datams/Capture6.PNG',
+      '/my-portfolio/assets/img/screenshoots/datams/Capture6.PNG',
+      '/my-portfolio/assets/img/screenshoots/datams/Capture3.PNG',
     ],
     title: 'M&E App',
     technologies: [
@@ -29,9 +29,9 @@ export const projects = [
       '/my-portfolio/assets/img/screenshoots/trem/Capture2.PNG',
     ],
     desktopImageUrls: [
-      '/my-portfolio/assets/img/screenshoots/datams/Capture8.PNG', 
-      '/my-portfolio/assets/img/screenshoots/datams/Capture6.PNG', 
-      '/my-portfolio/assets/img/screenshoots/datams/Capture3.PNG'
+      '/my-portfolio/assets/img/screenshoots/datams/Capture8.PNG',
+      '/my-portfolio/assets/img/screenshoots/datams/Capture6.PNG',
+      '/my-portfolio/assets/img/screenshoots/datams/Capture3.PNG',
     ],
     title: 'Training For Employment',
     technologies: [
@@ -49,12 +49,12 @@ export const projects = [
     mobileImageUrls: [
       '/my-portfolio/assets/img/screenshoots/annual_smse/Capture.PNG',
       '/my-portfolio/assets/img/screenshoots/annual_smse/Capture1.PNG',
-      '/my-portfolio/assets/img/screenshoots/annual_smse/Capture2.PNG'
+      '/my-portfolio/assets/img/screenshoots/annual_smse/Capture2.PNG',
     ],
     desktopImageUrls: [
       '/my-portfolio/assets/img/screenshoots/annual_smse/Capture.PNG',
       '/my-portfolio/assets/img/screenshoots/annual_smse/Capture1.PNG',
-      '/my-portfolio/assets/img/screenshoots/annual_smse/Capture2.PNG'
+      '/my-portfolio/assets/img/screenshoots/annual_smse/Capture2.PNG',
     ],
     title: 'SMSE summit',
     technologies: [
@@ -71,12 +71,12 @@ export const projects = [
     mobileImageUrls: [
       '/my-portfolio/assets/img/screenshoots/ace/PNG/Capture3.PNG',
       '/my-portfolio/assets/img/screenshoots/ace/PNG/Capture4.PNG',
-      '/my-portfolio/assets/img/screenshoots/ace/PNG/Capture5.PNG'
+      '/my-portfolio/assets/img/screenshoots/ace/PNG/Capture5.PNG',
     ],
     desktopImageUrls: [
       '/my-portfolio/assets/img/screenshoots/ace/PNG/Capture3.PNG',
       '/my-portfolio/assets/img/screenshoots/ace/PNG/Capture4.PNG',
-      '/my-portfolio/assets/img/screenshoots/ace/PNG/Capture5.PNG'
+      '/my-portfolio/assets/img/screenshoots/ace/PNG/Capture5.PNG',
     ],
     title: 'ACE(ace.org)',
     technologies: [
@@ -124,14 +124,14 @@ export const projects = [
     desktopImageUrls: [
       '/my-portfolio/assets/img/screenshoots/portfolio-project/Capture3.PNG',
       '/my-portfolio/assets/img/screenshoots/portfolio-project/Capture4.PNG',
-      '/my-portfolio/assets/img/screenshoots/portfolio-project/Capture2.PNG'
+      '/my-portfolio/assets/img/screenshoots/portfolio-project/Capture2.PNG',
     ],
     title: 'My portfolio project',
     technologies: [
       'html',
       'css',
       'javascript',
-      'JQuery'
+      'JQuery',
     ],
     description: 'My portfolio project is one of the first Microverse curriculum Projects. It is developed to showcase student\'s projects using features like hamburger menu, cards, popup windows in plain html, css and javascript through: desktop and mobile versions design, application deploy, accessibility, validate contact form, preserve data in browser.',
     liveVersionLink: 'See live',

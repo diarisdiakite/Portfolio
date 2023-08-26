@@ -1,6 +1,5 @@
 import { projects, projectButtons, projectsDivHTML } from './projectCards.js';
 
-
 for (let i = 0; i < projectButtons.length; i += 1) {
   const projectButton = projectButtons[i];
   const project = projects[i];
@@ -28,18 +27,20 @@ for (let i = 0; i < projectButtons.length; i += 1) {
     popupImage.classList.add('js-project-popup-img');
     const image = document.createElement('img');
 
-    const imageButtonsContainer = document.createElement('div')
-    imageButtonsContainer.classList.add('image-buttons-container')
-    const previousButton = document.createElement("button");
+    const imageButtonsContainer = document.createElement('div');
+    imageButtonsContainer.classList.add('image-buttons-container');
+    const previousButton = document.createElement('button');
     previousButton.innerText = 'Prev';
     previousButton.classList.add('image-buttons');
-    const nextButton = document.createElement("button")
+    const nextButton = document.createElement('button');
     nextButton.innerText = 'Next';
     nextButton.classList.add('image-buttons');
     imageButtonsContainer.appendChild(previousButton);
     imageButtonsContainer.appendChild(nextButton);
 
-    image.src = window.innerWidth < 768 ? project.mobileImageUrls[imageIndex] : project.desktopImageUrls[imageIndex];
+    image.src = window.innerWidth < 768
+      ? project.mobileImageUrls[imageIndex]
+      : project.desktopImageUrls[imageIndex];
     if (window.innerWidth < 768) {
       image.classList.add('project-popup-mobile-img');
       popupImage.classList.remove('js-project-popup-img');
@@ -50,18 +51,22 @@ for (let i = 0; i < projectButtons.length; i += 1) {
 
     nextButton.addEventListener('click', () => {
       imageIndex = (imageIndex + 1) % project.mobileImageUrls.length;
-      image.src = window.innerWidth < 768 ? project.mobileImageUrls[imageIndex] : project.desktopImageUrls[imageIndex];
+      image.src = window.innerWidth < 768
+        ? project.mobileImageUrls[imageIndex]
+        : project.desktopImageUrls[imageIndex];
     });
-    
+
     previousButton.addEventListener('click', () => {
-      imageIndex = (imageIndex - 1 + project.mobileImageUrls.length) % project.mobileImageUrls.length;
-      image.src = window.innerWidth < 768 ? project.mobileImageUrls[imageIndex] : project.desktopImageUrls[imageIndex];
+      imageIndex = (imageIndex - 1 + project.mobileImageUrls.length)
+                    % project.mobileImageUrls.length;
+      image.src = window.innerWidth < 768
+        ? project.mobileImageUrls[imageIndex]
+        : project.desktopImageUrls[imageIndex];
     });
 
     popupImage.appendChild(image);
     textDiv.appendChild(imageButtonsContainer);
     textDiv.appendChild(popupImage);
-
 
     // create div with Title and 2 links in display flex
     const titleLinksDiv = document.createElement('div');
@@ -105,7 +110,7 @@ for (let i = 0; i < projectButtons.length; i += 1) {
       technologyLi.classList.add('poupup-items');
       const technologyLink = document.createElement('a');
       technologyLink.textContent = value;
-      //technologyLink.classList.add('poupup-items');
+      // technologyLink.classList.add('poupup-items');
       technologyLi.appendChild(technologyLink);
       technologyFragment.appendChild(technologyLi);
     };
