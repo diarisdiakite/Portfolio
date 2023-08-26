@@ -897,7 +897,7 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   background-color: white;
   z-index: 900;
   border-radius: 5%;
-  overflow-y: scroll;
+  overflow-y: visible;
 }
 
 /*

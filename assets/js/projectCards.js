@@ -29,9 +29,9 @@ export const projects = [
       '/my-portfolio/assets/img/screenshoots/trem/Capture2.PNG',
     ],
     desktopImageUrls: [
-      '/my-portfolio/assets/img/screenshoots/datams/Capture8.PNG',
-      '/my-portfolio/assets/img/screenshoots/datams/Capture6.PNG',
-      '/my-portfolio/assets/img/screenshoots/datams/Capture3.PNG',
+      '/my-portfolio/assets/img/screenshoots/trem/Capture.PNG',
+      '/my-portfolio/assets/img/screenshoots/trem/Capture1.PNG',
+      '/my-portfolio/assets/img/screenshoots/trem/Capture2.PNG',
     ],
     title: 'Training For Employment',
     technologies: [
@@ -170,11 +170,11 @@ for (let i = 0; i < projects.length; i += 1) {
   projectImage.setAttribute('blur', '100');
 
   if (window.innerWidth < 768) {
-    projectImage.src = `${project.mobileImageUrl}`;
+    projectImage.src = `${project.mobileImageUrls[0]}`;
     projectCardHtml.appendChild(projectImage);
     // projectCardHtml.classList.add('js-mobile-projectCards');
   } else {
-    projectImage.src = `${project.desktopImageUrl}`;
+    projectImage.src = `${project.desktopImageUrls[0]}`;
     projectCardHtml.appendChild(projectImage);
     // projectCardHtml.classList.add('js-desktop-projectCards');
   }
