@@ -807,7 +807,7 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   min-height: 100vh;
   background: var(--my-competences-boxes-color);
   z-index: 999;
-  filter: opacity(95%);
+  filter: opacity(98%);
   overscroll-behavior: none;
 }
 
@@ -1469,7 +1469,7 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
     top: 5%;
     left: 20%;
     border-radius: 3%;
-    overflow: scroll;
+    overflow-y: scroll;
   }
 
   /*
@@ -1586,7 +1586,7 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
     top: 5%;
     left: 20%;
     border-radius: 3%;
-    overflow: scroll;
+    overflow-y: scroll;
   }
 
   /*
@@ -1654,7 +1654,7 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
     top: 5%;
     left: 20%;
     border-radius: 3%;
-    overflow: scroll;
+    overflow-y: scroll;
   }
 
   /*
@@ -1722,7 +1722,7 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
     top: 5%;
     left: 20%;
     border-radius: 3%;
-    overflow: scroll;
+    overflow-y: scroll;
   }
 
   /*
