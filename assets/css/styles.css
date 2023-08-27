@@ -804,7 +804,7 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   top: 0;
   left: 0;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   background: var(--my-competences-boxes-color);
   z-index: 999;
   overflow-y: scroll;
@@ -826,7 +826,7 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
 
 .project-popup {
   width: 100%;
-  min-height: 90vh;
+  height: 90vh;
   position: absolute;
   background: var(--image-placeholder-color1);
   border-radius: 1%;
@@ -905,7 +905,7 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
 .project-card-js {
   position: fixed;
   width: 80%;
-  min-height: 80vh;
+  height: 80vh;
   top: 10%;
   left: 10%;
   background-color: white;
@@ -1479,7 +1479,7 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   .project-card-js {
     position: fixed;
     width: 60%;
-    min-height: 90vh;
+    height: 90vh;
     top: 5%;
     left: 20%;
     border-radius: 3%;
@@ -1596,7 +1596,7 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   .project-card-js {
     position: fixed;
     width: 60%;
-    min-height: 90vh;
+    height: 90vh;
     top: 5%;
     left: 20%;
     border-radius: 3%;
@@ -1664,7 +1664,7 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   .project-card-js {
     position: fixed;
     width: 60%;
-    min-height: 90vh;
+    height: 90vh;
     top: 5%;
     left: 20%;
     border-radius: 3%;
@@ -1732,7 +1732,7 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   .project-card-js {
     position: fixed;
     width: 60%;
-    min-height: 90vh;
+    height: 90vh;
     top: 5%;
     left: 20%;
     border-radius: 3%;
