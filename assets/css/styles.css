@@ -808,8 +808,7 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   background: var(--my-competences-boxes-color);
   z-index: 999;
   filter: opacity(95%);
-  overflow-y: scroll;
-  overscroll-behavior: initial;
+  overscroll-behavior: none;
 }
 
 .project-popup {
@@ -827,6 +826,7 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   backdrop-filter: blur(15px);
   backdrop-filter: brightness(60%);
   backdrop-filter: contrast(40%);
+  overflow-y: scroll;
 }
 
 .image-buttons-container {
