@@ -807,6 +807,7 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   min-height: 100vh;
   background: var(--my-competences-boxes-color);
   z-index: 999;
+  overflow-y: scroll;
   filter: opacity(98%);
 }
 
