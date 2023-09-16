@@ -1022,7 +1022,6 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
 
   .headline {
     width: 100vw;
-    height: 100vh;
     display: flex;
     flex-direction: row;
     margin: auto;
@@ -1036,7 +1035,13 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
     width: 30%;
     height: 100%;
     color: white;
-    margin-top: 20%;
+    margin-top: 30%;
+  }
+
+  .headline-outline-text h4 {
+    text-align: left;
+    margin-right: 0;
+    margin-top: 40%;
   }
 
   .headline-text {
