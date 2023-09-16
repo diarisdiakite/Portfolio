@@ -27,7 +27,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1%;
-  background: black;
+  /* background: black; */
 
   /* color: white; */
 }
@@ -40,7 +40,7 @@ h1 {
   text-align: right;
 }
 
-.recent-work-text h2,
+/* .recent-work-text h2, */
 .headline-text h2,
 h3,
 span,
@@ -52,12 +52,11 @@ strong {
   color: white;
 }
 
-.recent-work-text h2,
-.recent-work-text p,
+/* .recent-work-text h2,
+.recent-work-text p, */
 .headline-text h2,
 .headline-text p {
   font-size: medium;
-  text-align: left;
   color: white;
 }
 
@@ -171,8 +170,8 @@ Headline Section
 }
 
 .headline-text {
-  width: 90%;
-  margin: 15% 5% 0 5%;
+  width: 100%;
+  margin: 12% 5% 0 5%;
   text-align: center;
 }
 
@@ -185,7 +184,7 @@ Headline Section
 
 .main-image img {
   width: 100%;
-  margin-top: 5%;
+  margin-top: 8%;
 
   /* background: url(../img/bg-images/header.webp) no-repeat; */
 }
@@ -998,6 +997,19 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
 }
 
 @media (min-width: 768px) {
+  body {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 1%;
+    background: black;
+  
+    /* color: white; */
+  }
+
   .mobile {
     width: 100%;
   }
