@@ -30,31 +30,19 @@ body {
 }
 
 h1 {
-  color: var(--my-text-color);
+  color: var(--my-green-color);
   font-style: normal;
-  font-weight: 800;
-  font-size: 2.5rem;
-  line-height: 3.25rem;
-  text-align: center;
-  letter-spacing: 1px;
+  font-weight: bolder;
+  font-size: x-large;
 }
 
 h2 {
   font-style: normal;
-  font-weight: 600;
-  font-size: 2.5rem;
-  line-height: 3.25rem;
-  text-align: center;
-  letter-spacing: 1px;
 }
 
 h3 {
-  color: #3a4a42;
+  color: var(--my-green-color);
   font-style: normal;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 32px;
-  text-align: center;
 }
 
 .spacing-default {
@@ -63,10 +51,10 @@ h3 {
 
 p {
   color: var(--my-text-color);
-  width: 100%;
-  font-style: normal;
-  text-align: center;
-  letter-spacing: 1px;
+}
+
+.right {
+  align-self: flex-end;
 }
 
 /*
@@ -146,154 +134,29 @@ header {
   background: url(../../images/mobile-bg/header-illsutration-mobile.svg) no-repeat;
 }
 
-.header-nav {
-  line-height: 3rem;
-  width: 100vw;
-  height: 5vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  /* background-color: var(--my-project-boutton-color); */
-  margin-top: 0%;
-  z-index: 1;
-}
-
-.nav-menu {
-  list-style-type: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-self: center;
-  visibility: hidden;
-}
-
-.nav-menu a {
-  text-decoration: none;
-  color: var(--my-text-color);
-  padding: 1% 5%;
-}
-
-/* ADDED HAMBURGER MENU */
-
-/* .hamburger-container {
-  background-color: white;
-  height: 100%;
-  position: sticky;
-} */
-
-.hamburger-container {
-  width: 90%;
-  position: absolute;
-  top: 5%;
-  right: 0;
-  margin-top: 1rem;
-  margin-right: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 0;
-}
-
-.hamburger-menu {
-  height: 40px;
-  width: 80px;
-  z-index: 300;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  cursor: pointer;
-  align-items: center;
-  right: 3rem;
-  top: 3rem;
-}
-
-.hamburger-bar {
-  width: 2rem;
-  height: 0.17rem;
-  background-color: var(--my-text-color);
-  transition: all 0.3s ease;
-  margin: 4% 0;
-  z-index: 999;
-  align-self: center;
-}
-
-/*
-  ANIMATION TO TURN THE BARS TO AN "X"
-  PSEUDO CLASS :ACTIVE TO BE ADDED DYNAMICLY WITH JAVASCRIPT
-*/
-.hamburger-menu.active {
-  transform: scale(1);
-  z-index: 100;
-}
-
-.hamburger-menu.active .hamburger-bar:nth-child(1) {
-  transform: translateY(0.5rem) rotate(45deg);
-  z-index: 100;
-}
-
-.hamburger-menu.active .hamburger-bar:nth-child(3) {
-  transform: translateY(-0.5rem) rotate(-45deg);
-}
-
-.hamburger-menu.active .hamburger-bar:nth-child(2) {
-  opacity: 0;
-  z-index: 100;
-}
-
-/*
-  NAV MENU WHEN WE CLIC ON THE HAMBURGER MENU
-*/
-.display-mobile {
-  position: relative;
-  margin-bottom: 0%;
-}
-
-.hidden {
-  display: none;
-}
-
-/* .not-navbar {
-  width: 100%;
-} */
-
-.hamburger-navmenu {
-  top: 10%;
-  width: 100%;
-  height: 110%;
-  gap: 2rem;
-  display: flex;
-  flex-direction: column;
-  list-style-type: none;
-  background-color: white;
-  text-align: center;
-  transform: translateX(-500%);
-  transition: 5s;
-  z-index: 20;
-  border-bottom: 1px solid gray;
-  border-bottom-left-radius: 5%;
-  border-bottom-right-radius: 5%;
-}
-
-/* ADDED CLASS .HAMBURGER-NAVMENU.ACTIVE */
-
-.hamburger-navmenu.active {
-  margin-right: 0;
-}
-
-.showHamburgerNavMenu {
-  transform: translate(0%);
-}
-
 /*
 Headline Section
 */
 
 .headline {
   display: flex;
-  height: auto;
-  width: 80%;
-  margin: 30% auto 20% auto;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+
+  /* margin: 10% auto 20% auto; */
+}
+
+.headline-text {
+  width: 90%;
+  margin: 0 5%;
+  text-align: center;
+}
+
+.main-image {
+  width: 100%;
+
+  /* background: url(../img/bg-images/header.webp) no-repeat; */
 }
 
 .green {
@@ -332,6 +195,10 @@ Headline Section
 
 header .social {
   margin-bottom: 1%;
+  width: 90%;
+  align-self: flex-end;
+  margin-right: 0;
+  color: white;
 }
 
 .nav-menu li,
@@ -530,9 +397,12 @@ languages, frameworks and skills
   justify-content: center;
   align-items: center;
   margin: 50% auto 50% auto;
-  background: /* url(../../assets/img/bg-images/about-me-section.gif) no-repeat right bottom 0%, */
-    url(../../assets/img/bg-images/about-me-section.gif) no-repeat right top 0%;
-  background-size: 30%;
+
+  /* background: /* url(../../assets/img/bg-images/about-me-section.gif) no-repeat right bottom 0%, */
+
+  /*   url(../../assets/img/bg-images/about-me-section.gif) no-repeat right top 0%; */
+
+  /* background-size: 30%; */
 }
 
 .about-myself-text {
@@ -811,19 +681,6 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   filter: opacity(98%);
 }
 
-.project-card-js::-webkit-scrollbar {
-  width: 12px;
-}
-
-.project-card-js::-webkit-scrollbar-thumb {
-  background-color: #888;
-  border-radius: 6px;
-}
-
-.project-card-js::-webkit-scrollbar-track {
-  background-color: #f0f0f0;
-}
-
 .project-popup {
   width: 100%;
   height: 90vh;
@@ -912,6 +769,19 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   z-index: 900;
   border-radius: 5%;
   overflow-y: scroll;
+}
+
+.project-card-js::-webkit-scrollbar {
+  width: 12px;
+}
+
+.project-card-js::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 6px;
+}
+
+.project-card-js::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
 }
 
 /*
@@ -1207,37 +1077,13 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
 
   .header {
     height: 90vh;
-    background:
+
+    /* background:
       url(../../assets/img/bg-images/header.webp) no-repeat left top 10%,
       url(../../assets/img/bg-images/header.webp) no-repeat right bottom 0%;
-    background-size: 25%;
+    background-size: 25%; */
     filter: opacity(100%);
     border-radius: 20%;
-  }
-
-  .header-nav {
-    height: 5vh;
-    position: fixed;
-
-    /* padding-top: 3%; */
-    z-index: 1;
-    background: white;
-
-    /* background-color: var(--my-project-boutton-color); */
-  }
-
-  .navbar {
-    padding-top: 0;
-    overflow: unset;
-  }
-
-  .header-nav .nav-menu {
-    width: 100%;
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    visibility: visible;
   }
 
   .display-mobile,
@@ -1253,10 +1099,53 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   }
 
   .headline {
-    width: 50%;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
     margin: auto;
     background: none;
-    padding-top: 10%;
+
+    /* padding: 5% 0; */
+    background-color: black;
+    color: white;
+  }
+
+  .headline-outline {
+    width: 30%;
+    height: 100%;
+    color: white;
+    margin-top: 20%;
+  }
+
+  .headline-text {
+    width: 15%;
+    text-align: right;
+    margin-top: 20%;
+  }
+
+  .main-image {
+    width: 33%;
+    height: 100%;
+    position: relative;
+
+    /* padding: 0 10%; */
+  }
+
+  .main-image img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .headline-text h2,
+  h3,
+  span,
+  strong,
+  p {
+    font-size: medium;
+
+    /* color: white; */
+    text-align: right;
   }
 
   .spacing-default {
@@ -1306,10 +1195,11 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
   .about-myself {
     width: 100%;
     margin: 0;
-    background:
+
+    /* background:
       url(../../assets/img/bg-images/about-me-section.gif) no-repeat left top 25%,
       url(../../assets/img/bg-images/about-me-section.gif) no-repeat right top 0%;
-    background-size: 15%;
+    background-size: 15%; */
   }
 
   .competences {
@@ -1349,13 +1239,14 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
     margin: 2% auto 5% auto;
   }
 
-  .contact-form-container {
+  /* .contact-form-container {
     background: url(../../assets/img/bg-images/footer.webp) no-repeat left bottom 0%;
 
     /* url(../../images/desktop-bg/footer2.svg) no-repeat bottom 0% left 20%, */
 
-    /* url(../../images/desktop-bg/footer3.svg) no-repeat right bottom 0%; */
-  }
+  /* url(../../images/desktop-bg/footer3.svg) no-repeat right bottom 0%; */
+
+  /* } */
 
   .contact-form-text {
     width: 50%;
@@ -1460,7 +1351,7 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
     text-align: center;
     padding: 0;
     transition: transform 0.4s, visibility 0.4s, top 0.4s;
-    visibility: visible;
+    visibility: hidden;   /* CHANGED FROM 'visible' SEPTEMBER 2023 */
   }
 
   .js-button-close {
