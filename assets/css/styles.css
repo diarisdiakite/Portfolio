@@ -28,7 +28,8 @@ body {
   flex-direction: column;
   gap: 1%;
   background: black;
-  color: white;
+
+  /* color: white; */
 }
 
 h1 {
@@ -51,9 +52,13 @@ strong {
   color: white;
 }
 
-p {
+.recent-work-text h2,
+.recent-work-text p,
+.headline-text h2,
+.headline-text p {
   font-size: medium;
   text-align: left;
+  color: white;
 }
 
 .spacing-default {
