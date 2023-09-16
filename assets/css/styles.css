@@ -41,27 +41,28 @@ h1 {
 
 .recent-work-text h2,
 .headline-text h2,
-  h3,
-  span,
-  strong {
-    font-size: medium;
+h3,
+span,
+strong {
+  font-size: medium;
 
-    /* color: white; */
-    text-align: right;
-    color: white;
-  }
+  /* color: white; */
+  text-align: right;
+  color: white;
+}
 
-  p {
-    font-size: medium;
-    text-align: left;
-  }
+p {
+  font-size: medium;
+  text-align: left;
+}
+
 .spacing-default {
   margin: 5% auto;
 }
 
-p {
+/* p {
   color: var(--my-text-color);
-}
+} */
 
 .right {
   align-self: flex-end;
@@ -141,6 +142,7 @@ header {
   position: relative;
   width: 100vw;
   margin: 0% auto 5% auto;
+
   /* background: url(../../images/mobile-bg/header-illsutration-mobile.svg) no-repeat; */
 }
 
@@ -172,12 +174,14 @@ Headline Section
 .main-image {
   width: 100%;
   position: absolute;
+
   /* background: url(../img/bg-images/header.webp) no-repeat; */
 }
 
-.main-image img{
+.main-image img {
   width: 100%;
   margin-top: 5%;
+
   /* background: url(../img/bg-images/header.webp) no-repeat; */
 }
 
@@ -263,6 +267,7 @@ Contains The 6 microverse projects
 .recent-work {
   width: 100%;
   height: max-content;
+  margin-top: 5%;
 }
 
 .recent-work-text {
@@ -274,7 +279,7 @@ Contains The 6 microverse projects
 
 .recent-work-text h2,
 .about-myself-text h2 {
-  color: var(--my-text-color);
+  color: white;
 }
 
 .recent-work-text img {
@@ -412,6 +417,7 @@ Contains The 6 microverse projects
 About-myself section
 languages, frameworks and skills
 */
+
 /* .about-myself {
   width: 100%;
   display: flex;
@@ -420,11 +426,13 @@ languages, frameworks and skills
   align-items: center;
   margin: 50% auto 50% auto;
  */
-  /* background: /* url(../../assets/img/bg-images/about-me-section.gif) no-repeat right bottom 0%, */
 
-  /*   url(../../assets/img/bg-images/about-me-section.gif) no-repeat right top 0%; */
+/* background: /* url(../../assets/img/bg-images/about-me-section.gif) no-repeat right bottom 0%, */
 
-  /* background-size: 30%; */
+/*   url(../../assets/img/bg-images/about-me-section.gif) no-repeat right top 0%; */
+
+/* background-size: 30%; */
+
 /* } */
 
 .about-myself-text {
@@ -1018,7 +1026,7 @@ HAMBURGER MENU DISPLACED DUE TO LINTERS ERROR
     display: flex;
     flex-direction: row;
     margin: auto;
-    
+
     /* padding: 5% 0; */
     background-color: black;
     color: white;
